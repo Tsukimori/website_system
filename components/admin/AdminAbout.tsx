@@ -35,6 +35,18 @@ const AdminAbout = () => {
     }
   }
 
+  const getImageClass = (isSelected: boolean) => {
+    return `relative cursor-pointer object-cover ${
+      isSelected ? "border-2 border-blue-300" : ""
+    }`
+  }
+
+  const overlayClass = (isSelected: boolean) => {
+    return isSelected
+      ? "absolute inset-0 bg-blue-300 bg-opacity-50 pointer-events-none"
+      : "absolute inset-0 pointer-events-none"
+  }
+
   const headerComponents = {
     Header1: <Header1 />,
     Header2: <Header2 />,
@@ -57,90 +69,108 @@ const AdminAbout = () => {
       </div>
 
       {isSidebarVisible && (
-        <aside className="w-44 mt-12 bg-gray-50 p-4 space-y-5 fixed h-[calc(100vh-3rem)] z-10 overflow-y-auto border-r">
+        <aside className="w-40 mt-12 bg-gray-50 p-4 space-y-5 fixed h-[calc(100vh-3rem)] z-10 overflow-y-auto border-r">
           <div className="font-bold text-sm">ヘッダー</div>
           <div className="space-y-4">
-            <Image
-              src="/admin/test1.png"
-              alt="Header1"
-              onClick={() => {
-                setSelectedHeader("Header1")
-                scrollToSection("header-section")
-              }}
-              className="cursor-pointer object-cover"
-              width={128}
-              height={72}
-            />
-            <Image
-              src="/admin/test2.png"
-              alt="Header2"
-              onClick={() => {
-                setSelectedHeader("Header2")
-                scrollToSection("header-section")
-              }}
-              className="cursor-pointer object-cover"
-              width={128}
-              height={72}
-            />
+            <div className="relative">
+              <Image
+                src="/admin/test1.png"
+                alt="Header1"
+                onClick={() => {
+                  setSelectedHeader("Header1")
+                  scrollToSection("header-section")
+                }}
+                className={getImageClass(selectedHeader === "Header1")}
+                width={128}
+                height={72}
+              />
+              <div className={overlayClass(selectedHeader === "Header1")}></div>
+            </div>
+            <div className="relative">
+              <Image
+                src="/admin/test2.png"
+                alt="Header2"
+                onClick={() => {
+                  setSelectedHeader("Header2")
+                  scrollToSection("header-section")
+                }}
+                className={getImageClass(selectedHeader === "Header2")}
+                width={128}
+                height={72}
+              />
+              <div className={overlayClass(selectedHeader === "Header2")}></div>
+            </div>
           </div>
 
           <div className="font-bold text-sm">メッセージ</div>
           <div className="space-y-4">
-            <Image
-              src="/admin/test1.png"
-              alt="About1"
-              onClick={() => {
-                setSelectedAbout("About1")
-                scrollToSection("about-section")
-              }}
-              className="cursor-pointer object-cover"
-              width={128}
-              height={72}
-            />
-            <Image
-              src="/admin/test2.png"
-              alt="About2"
-              onClick={() => {
-                setSelectedAbout("About2")
-                scrollToSection("about-section")
-              }}
-              className="cursor-pointer object-cover"
-              width={128}
-              height={72}
-            />
+            <div className="relative">
+              <Image
+                src="/admin/test1.png"
+                alt="About1"
+                onClick={() => {
+                  setSelectedAbout("About1")
+                  scrollToSection("about-section")
+                }}
+                className={getImageClass(selectedAbout === "About1")}
+                width={128}
+                height={72}
+              />
+              <div className={overlayClass(selectedAbout === "About1")}></div>
+            </div>
+            <div className="relative">
+              <Image
+                src="/admin/test2.png"
+                alt="About2"
+                onClick={() => {
+                  setSelectedAbout("About2")
+                  scrollToSection("about-section")
+                }}
+                className={getImageClass(selectedAbout === "About2")}
+                width={128}
+                height={72}
+              />
+              <div className={overlayClass(selectedAbout === "About2")}></div>
+            </div>
           </div>
 
           <div className="font-bold text-sm">フッター</div>
           <div className="space-y-4">
-            <Image
-              src="/admin/test1.png"
-              alt="Footer1"
-              onClick={() => {
-                setSelectedFooter("Footer1")
-                scrollToSection("footer-section")
-              }}
-              className="cursor-pointer object-cover"
-              width={128}
-              height={72}
-            />
-            <Image
-              src="/admin/test2.png"
-              alt="Footer2"
-              onClick={() => {
-                setSelectedFooter("Footer2")
-                scrollToSection("footer-section")
-              }}
-              className="cursor-pointer object-cover"
-              width={128}
-              height={72}
-            />
+            <div className="relative">
+              <Image
+                src="/admin/test1.png"
+                alt="Footer1"
+                onClick={() => {
+                  setSelectedFooter("Footer1")
+                  scrollToSection("footer-section")
+                }}
+                className={getImageClass(selectedFooter === "Footer1")}
+                width={128}
+                height={72}
+              />
+              <div className={overlayClass(selectedFooter === "Footer1")}></div>
+            </div>
+            <div className="relative">
+              <Image
+                src="/admin/test2.png"
+                alt="Footer2"
+                onClick={() => {
+                  setSelectedFooter("Footer2")
+                  scrollToSection("footer-section")
+                }}
+                className={getImageClass(selectedFooter === "Footer2")}
+                width={128}
+                height={72}
+              />
+              <div className={overlayClass(selectedFooter === "Footer2")}></div>
+            </div>
           </div>
         </aside>
       )}
 
       <main
         className={`flex-1 mt-12 transition-all duration-300 ${
-          isSidebarVisible ? "ml-44" : "ml-0"
+          isSidebarVisible ? "ml-40" : "ml-0"
         }`}
       >
         <section id="header-section">
