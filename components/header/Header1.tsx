@@ -6,7 +6,7 @@ import Image from "next/image"
 // ヘッダー
 const Header1 = () => {
   return (
-    <header className="border-b py-2">
+    <header className="border-b py-3">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between text-sm">
         <div className="flex items-center space-x-5">
           <Link href="/">

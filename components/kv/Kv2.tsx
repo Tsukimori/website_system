@@ -11,8 +11,9 @@ const Kv2 = () => {
       </div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center space-y-5">
-        <div className="text-white font-bold text-7xl">Lorem Ipsum</div>
-        <div className="text-white font-bold text-7xl">Lorem Ipsum</div>
+        <div className="text-white font-bold text-6xl">
+          この文章はダミーです
+        </div>
 
         <div className="text-white font-bold ">
           日本語見出し日本語見出し文入ります

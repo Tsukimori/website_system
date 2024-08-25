@@ -5,7 +5,7 @@ import Image from "next/image"
 // メッセージ
 const Solution1 = () => {
   return (
-    <div className="max-w-screen-lg mx-auto my-10 space-y-10">
+    <div className="max-w-screen-lg mx-auto py-10 space-y-10">
       <div className="font-bold text-2xl text-center">事業内容</div>
 
       <div className="grid grid-cols-2 gap-10">

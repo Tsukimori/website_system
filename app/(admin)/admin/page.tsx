@@ -1,12 +1,8 @@
+import AdminHome from "@/components/admin/AdminHome"
 
 // 管理者メインページ
-const AdminHome = async () => {
-
-  return (
-    <div>
-      AdminHome
-    </div>
-  )
+const AdminHomePage = async () => {
+  return <AdminHome />
 }
 
-export default AdminHome
+export default AdminHomePage
