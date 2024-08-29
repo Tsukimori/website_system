@@ -12,6 +12,27 @@ import About2 from "@/components/about/About2"
 import Footer1 from "@/components/footer/Footer1"
 import Footer2 from "@/components/footer/Footer2"
 
+// コンポーネントのマッピング用の型定義
+type ComponentMap = {
+  [key: string]: { [key: string]: JSX.Element }
+}
+
+// 動的にレンダリングするためのコンポーネントマッピング
+const componentsMap: ComponentMap = {
+  header: {
+    Header1: <Header1 />,
+    Header2: <Header2 />,
+  },
+  about: {
+    About1: <About1 />,
+    About2: <About2 />,
+  },
+  footer: {
+    Footer1: <Footer1 />,
+    Footer2: <Footer2 />,
+  },
+}
+
 const AdminAbout = () => {
   const [isHydrated, setIsHydrated] = useState(false)
   const selectedSections = useStore((state) => state.selectedSections)
@@ -26,15 +47,11 @@ const AdminAbout = () => {
 
   return (
     <AdminLayout sidebarContent={SidebarAbout}>
-      <section id="header-section">
-        {selectedSections["header"] === "Header1" ? <Header1 /> : <Header2 />}
-      </section>
-      <section id="about-section">
-        {selectedSections["about"] === "About1" ? <About1 /> : <About2 />}
-      </section>
-      <section id="footer-section">
-        {selectedSections["footer"] === "Footer1" ? <Footer1 /> : <Footer2 />}
-      </section>
+      {Object.entries(componentsMap).map(([sectionKey, sectionComponents]) => (
+        <section key={sectionKey} id={`${sectionKey}-section`}>
+          {sectionComponents[selectedSections[sectionKey]]}
+        </section>
+      ))}
     </AdminLayout>
   )
 }

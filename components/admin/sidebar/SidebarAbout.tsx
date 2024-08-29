@@ -7,6 +7,31 @@ interface SidebarAboutProps {
   selectedSections: Record<string, string>
 }
 
+// セクション情報のマッピング
+const sectionInfo = {
+  header: {
+    title: "ヘッダー",
+    options: [
+      { id: "Header1", src: "/admin/test1.png", alt: "Header1" },
+      { id: "Header2", src: "/admin/test2.png", alt: "Header2" },
+    ],
+  },
+  about: {
+    title: "メッセージ",
+    options: [
+      { id: "About1", src: "/admin/test1.png", alt: "About1" },
+      { id: "About2", src: "/admin/test2.png", alt: "About2" },
+    ],
+  },
+  footer: {
+    title: "フッター",
+    options: [
+      { id: "Footer1", src: "/admin/test1.png", alt: "Footer1" },
+      { id: "Footer2", src: "/admin/test2.png", alt: "Footer2" },
+    ],
+  },
+}
+
 const SidebarAbout = ({
   selectSection,
   selectedSections,
@@ -32,116 +57,35 @@ const SidebarAbout = ({
 
   return (
     <>
-      {/* ヘッダー */}
-      <div className="font-bold text-sm">ヘッダー</div>
-      <div className="space-y-4">
-        <div className="relative">
-          <Image
-            src="/admin/test1.png"
-            alt="Header1"
-            onClick={() => {
-              selectSection("header", "Header1")
-              scrollToSection("header-section")
-            }}
-            className={getImageClass(selectedSections["header"] === "Header1")}
-            width={128}
-            height={72}
-          />
-          <div
-            className={overlayClass(selectedSections["header"] === "Header1")}
-          ></div>
+      {Object.entries(sectionInfo).map(([sectionKey, sectionData]) => (
+        <div key={sectionKey}>
+          <div className="font-bold text-sm">{sectionData.title}</div>
+          <div className="space-y-4">
+            {sectionData.options.map((option) => (
+              <div key={option.id} className="relative">
+                <Image
+                  src={option.src}
+                  alt={option.alt}
+                  onClick={() => {
+                    selectSection(sectionKey, option.id)
+                    scrollToSection(`${sectionKey}-section`)
+                  }}
+                  className={getImageClass(
+                    selectedSections[sectionKey] === option.id
+                  )}
+                  width={128}
+                  height={72}
+                />
+                <div
+                  className={overlayClass(
+                    selectedSections[sectionKey] === option.id
+                  )}
+                ></div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="relative">
-          <Image
-            src="/admin/test2.png"
-            alt="Header2"
-            onClick={() => {
-              selectSection("header", "Header2")
-              scrollToSection("header-section")
-            }}
-            className={getImageClass(selectedSections["header"] === "Header2")}
-            width={128}
-            height={72}
-          />
-          <div
-            className={overlayClass(selectedSections["header"] === "Header2")}
-          ></div>
-        </div>
-      </div>
-
-      {/* メッセージ */}
-      <div className="font-bold text-sm">メッセージ</div>
-      <div className="space-y-4">
-        <div className="relative">
-          <Image
-            src="/admin/test1.png"
-            alt="About1"
-            onClick={() => {
-              selectSection("about", "About1")
-              scrollToSection("about-section")
-            }}
-            className={getImageClass(selectedSections["about"] === "About1")}
-            width={128}
-            height={72}
-          />
-          <div
-            className={overlayClass(selectedSections["about"] === "About1")}
-          ></div>
-        </div>
-        <div className="relative">
-          <Image
-            src="/admin/test2.png"
-            alt="About2"
-            onClick={() => {
-              selectSection("about", "About2")
-              scrollToSection("about-section")
-            }}
-            className={getImageClass(selectedSections["about"] === "About2")}
-            width={128}
-            height={72}
-          />
-          <div
-            className={overlayClass(selectedSections["about"] === "About2")}
-          ></div>
-        </div>
-      </div>
-
-      {/* フッター */}
-      <div className="font-bold text-sm">フッター</div>
-      <div className="space-y-4">
-        <div className="relative">
-          <Image
-            src="/admin/test1.png"
-            alt="Footer1"
-            onClick={() => {
-              selectSection("footer", "Footer1")
-              scrollToSection("footer-section")
-            }}
-            className={getImageClass(selectedSections["footer"] === "Footer1")}
-            width={128}
-            height={72}
-          />
-          <div
-            className={overlayClass(selectedSections["footer"] === "Footer1")}
-          ></div>
-        </div>
-        <div className="relative">
-          <Image
-            src="/admin/test2.png"
-            alt="Footer2"
-            onClick={() => {
-              selectSection("footer", "Footer2")
-              scrollToSection("footer-section")
-            }}
-            className={getImageClass(selectedSections["footer"] === "Footer2")}
-            width={128}
-            height={72}
-          />
-          <div
-            className={overlayClass(selectedSections["footer"] === "Footer2")}
-          ></div>
-        </div>
-      </div>
+      ))}
     </>
   )
 }

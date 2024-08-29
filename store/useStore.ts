@@ -4,6 +4,8 @@ import { persist } from "zustand/middleware"
 interface StoreState {
   selectedSections: Record<string, string>
   selectSection: (section: string, value: string) => void
+  clearSections: () => void
+  importSections: (data: Record<string, string>) => void
 }
 
 // ローカルストレージを使用したストレージ設定
@@ -35,6 +37,14 @@ export const useStore = create<StoreState>()(
             ...state.selectedSections,
             [section]: value,
           },
+        })),
+      clearSections: () =>
+        set(() => ({
+          selectedSections: {},
+        })),
+      importSections: (data) =>
+        set(() => ({
+          selectedSections: { ...data },
         })),
     }),
     {

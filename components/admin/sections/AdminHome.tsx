@@ -16,6 +16,34 @@ import Solution2 from "@/components/solution/Solution2"
 import Footer1 from "@/components/footer/Footer1"
 import Footer2 from "@/components/footer/Footer2"
 
+type ComponentMap = {
+  [key: string]: { [key: string]: JSX.Element }
+}
+
+// 動的にレンダリングするためのコンポーネントマッピング
+const componentsMap: ComponentMap = {
+  header: {
+    Header1: <Header1 />,
+    Header2: <Header2 />,
+  },
+  kv: {
+    Kv1: <Kv1 />,
+    Kv2: <Kv2 />,
+  },
+  message: {
+    Message1: <Message1 />,
+    Message2: <Message2 />,
+  },
+  solution: {
+    Solution1: <Solution1 />,
+    Solution2: <Solution2 />,
+  },
+  footer: {
+    Footer1: <Footer1 />,
+    Footer2: <Footer2 />,
+  },
+}
+
 const AdminHome = () => {
   const [isHydrated, setIsHydrated] = useState(false)
   const selectedSections = useStore((state) => state.selectedSections)
@@ -30,29 +58,11 @@ const AdminHome = () => {
 
   return (
     <AdminLayout sidebarContent={SidebarHome}>
-      <section id="header-section">
-        {selectedSections["header"] === "Header1" ? <Header1 /> : <Header2 />}
-      </section>
-      <section id="kv-section">
-        {selectedSections["kv"] === "Kv1" ? <Kv1 /> : <Kv2 />}
-      </section>
-      <section id="message-section">
-        {selectedSections["message"] === "Message1" ? (
-          <Message1 />
-        ) : (
-          <Message2 />
-        )}
-      </section>
-      <section id="solution-section">
-        {selectedSections["solution"] === "Solution1" ? (
-          <Solution1 />
-        ) : (
-          <Solution2 />
-        )}
-      </section>
-      <section id="footer-section">
-        {selectedSections["footer"] === "Footer1" ? <Footer1 /> : <Footer2 />}
-      </section>
+      {Object.entries(componentsMap).map(([sectionKey, sectionComponents]) => (
+        <section key={sectionKey} id={`${sectionKey}-section`}>
+          {sectionComponents[selectedSections[sectionKey]]}
+        </section>
+      ))}
     </AdminLayout>
   )
 }
