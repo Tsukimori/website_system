@@ -3,14 +3,20 @@
 import { ReactNode, useState } from "react"
 import { Menu } from "lucide-react"
 import { useStore } from "@/store/useStore"
+import { componentsConfig } from "@/lib/componentsConfig"
 import Navigation from "@/components/admin/Nvigation"
 
 interface AdminLayoutProps {
   children: ReactNode
   sidebarContent: (props: any) => ReactNode
+  pageName: keyof typeof componentsConfig
 }
 
-const AdminLayout = ({ children, sidebarContent }: AdminLayoutProps) => {
+const AdminLayout = ({
+  children,
+  sidebarContent,
+  pageName,
+}: AdminLayoutProps) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true)
   const selectSection = useStore((state) => state.selectSection)
   const selectedSections = useStore((state) => state.selectedSections)
@@ -31,7 +37,7 @@ const AdminLayout = ({ children, sidebarContent }: AdminLayoutProps) => {
 
       {isSidebarVisible && (
         <aside className="w-40 mt-12 bg-gray-50 p-4 space-y-5 fixed h-[calc(100vh-3rem)] z-10 overflow-y-auto border-r">
-          {sidebarContent({ selectSection, selectedSections })}
+          {sidebarContent({ selectSection, selectedSections, pageName })}
         </aside>
       )}
 

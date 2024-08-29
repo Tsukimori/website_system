@@ -7,7 +7,7 @@ interface MainLayoutProps {
   children: React.ReactNode
 }
 
-const MainLayout = async ({ children }: MainLayoutProps) => {
+const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className="flex min-h-screen flex-col">
       {/* <Header1 /> */}

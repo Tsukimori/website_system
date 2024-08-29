@@ -2,9 +2,9 @@ import About1 from "@/components/about/About1"
 import About2 from "@/components/about/About2"
 
 // 私たちについて
-const AboutPage = async () => {
+const AboutPage = () => {
   return (
-    <div className="space-y-20 mb-20">
+    <div>
       {/* <About1 /> */}
       <About2 />
     </div>

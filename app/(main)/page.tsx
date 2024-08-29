@@ -6,9 +6,9 @@ import Solution1 from "@/components/solution/Solution1"
 import Solution2 from "@/components/solution/Solution2"
 
 // メインページ
-const HomePage = async () => {
+const HomePage = () => {
   return (
-    <div className="space-y-20 mb-20">
+    <div>
       {/* <Kv1 /> */}
       <Kv2 />
       {/* <Message1 /> */}

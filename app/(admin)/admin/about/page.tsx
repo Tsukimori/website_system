@@ -1,7 +1,7 @@
-import AdminAbout from "@/components/admin/sections/AdminAbout"
+import Admin from "@/components/admin/Admin"
 
 const AdminAboutPage = () => {
-  return <AdminAbout />
+  return <Admin pageName="About" />
 }
 
 export default AdminAboutPage
