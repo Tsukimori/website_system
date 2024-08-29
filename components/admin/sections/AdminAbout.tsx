@@ -2,34 +2,26 @@
 
 import { useState } from "react"
 import { Menu } from "lucide-react"
+import { cn } from "@/lib/utils"
+import Navigation from "@/components/admin/Nvigation"
 import Image from "next/image"
 
 import Header1 from "@/components/header/Header1"
 import Header2 from "@/components/header/Header2"
-import Kv1 from "@/components/kv/Kv1"
-import Kv2 from "@/components/kv/Kv2"
-import Message1 from "@/components/message/Message1"
-import Message2 from "@/components/message/Message2"
-import Solution1 from "@/components/solution/Solution1"
-import Solution2 from "@/components/solution/Solution2"
+import About1 from "@/components/about/About1"
+import About2 from "@/components/about/About2"
 import Footer1 from "@/components/footer/Footer1"
 import Footer2 from "@/components/footer/Footer2"
 
 type HeaderType = "Header1" | "Header2"
-type KvType = "Kv1" | "Kv2"
-type MessageType = "Message1" | "Message2"
-type SolutionType = "Solution1" | "Solution2"
+type AboutType = "About1" | "About2"
 type FooterType = "Footer1" | "Footer2"
 
-const AdminHome = () => {
+const AdminAbout = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true)
 
   const [selectedHeader, setSelectedHeader] = useState<HeaderType>("Header1")
-  const [selectedKv, setSelectedKv] = useState<KvType>("Kv1")
-  const [selectedMessage, setSelectedMessage] =
-    useState<MessageType>("Message1")
-  const [selectedSolution, setSelectedSolution] =
-    useState<SolutionType>("Solution1")
+  const [selectedAbout, setSelectedAbout] = useState<AboutType>("About1")
   const [selectedFooter, setSelectedFooter] = useState<FooterType>("Footer1")
 
   const toggleSidebar = () => {
@@ -62,19 +54,9 @@ const AdminHome = () => {
     Header2: <Header2 />,
   }
 
-  const kvComponents = {
-    Kv1: <Kv1 />,
-    Kv2: <Kv2 />,
-  }
-
-  const messageComponents = {
-    Message1: <Message1 />,
-    Message2: <Message2 />,
-  }
-
-  const solutionComponents = {
-    Solution1: <Solution1 />,
-    Solution2: <Solution2 />,
+  const aboutComponents = {
+    About1: <About1 />,
+    About2: <About2 />,
   }
 
   const footerComponents = {
@@ -84,6 +66,8 @@ const AdminHome = () => {
 
   return (
     <div className="flex">
+      {isSidebarVisible && <Navigation />}
+
       <div className="fixed top-3 left-4 z-20">
         <Menu className="w-7 h-7 cursor-pointer" onClick={toggleSidebar} />
       </div>
@@ -122,107 +106,35 @@ const AdminHome = () => {
             </div>
           </div>
 
-          <div className="font-bold text-sm">キービジュアル</div>
-          <div className="space-y-4">
-            <div className="relative">
-              <Image
-                src="/admin/test1.png"
-                alt="Kv1"
-                onClick={() => {
-                  setSelectedKv("Kv1")
-                  scrollToSection("kv-section")
-                }}
-                className={getImageClass(selectedKv === "Kv1")}
-                width={128}
-                height={72}
-              />
-              <div className={overlayClass(selectedKv === "Kv1")}></div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/admin/test2.png"
-                alt="Kv2"
-                onClick={() => {
-                  setSelectedKv("Kv2")
-                  scrollToSection("kv-section")
-                }}
-                className={getImageClass(selectedKv === "Kv2")}
-                width={128}
-                height={72}
-              />
-              <div className={overlayClass(selectedKv === "Kv2")}></div>
-            </div>
-          </div>
-
           <div className="font-bold text-sm">メッセージ</div>
           <div className="space-y-4">
             <div className="relative">
               <Image
                 src="/admin/test1.png"
-                alt="Message1"
+                alt="About1"
                 onClick={() => {
-                  setSelectedMessage("Message1")
-                  scrollToSection("message-section")
+                  setSelectedAbout("About1")
+                  scrollToSection("about-section")
                 }}
-                className={getImageClass(selectedMessage === "Message1")}
+                className={getImageClass(selectedAbout === "About1")}
                 width={128}
                 height={72}
               />
-              <div
-                className={overlayClass(selectedMessage === "Message1")}
-              ></div>
+              <div className={overlayClass(selectedAbout === "About1")}></div>
             </div>
             <div className="relative">
               <Image
                 src="/admin/test2.png"
-                alt="Message2"
+                alt="About2"
                 onClick={() => {
-                  setSelectedMessage("Message2")
-                  scrollToSection("message-section")
+                  setSelectedAbout("About2")
+                  scrollToSection("about-section")
                 }}
-                className={getImageClass(selectedMessage === "Message2")}
+                className={getImageClass(selectedAbout === "About2")}
                 width={128}
                 height={72}
               />
-              <div
-                className={overlayClass(selectedMessage === "Message2")}
-              ></div>
-            </div>
-          </div>
-
-          <div className="font-bold text-sm">サービス</div>
-          <div className="space-y-4">
-            <div className="relative">
-              <Image
-                src="/admin/test1.png"
-                alt="Solution1"
-                onClick={() => {
-                  setSelectedSolution("Solution1")
-                  scrollToSection("solution-section")
-                }}
-                className={getImageClass(selectedSolution === "Solution1")}
-                width={128}
-                height={72}
-              />
-              <div
-                className={overlayClass(selectedSolution === "Solution1")}
-              ></div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/admin/test2.png"
-                alt="Solution2"
-                onClick={() => {
-                  setSelectedSolution("Solution2")
-                  scrollToSection("solution-section")
-                }}
-                className={getImageClass(selectedSolution === "Solution2")}
-                width={128}
-                height={72}
-              />
-              <div
-                className={overlayClass(selectedSolution === "Solution2")}
-              ></div>
+              <div className={overlayClass(selectedAbout === "About2")}></div>
             </div>
           </div>
 
@@ -261,20 +173,15 @@ const AdminHome = () => {
       )}
 
       <main
-        className={`flex-1 mt-12 transition-all duration-300 ${
-          isSidebarVisible ? "ml-40" : "ml-0"
-        }`}
+        className={cn(
+          "flex-1 transition-all duration-300",
+          isSidebarVisible ? "ml-40 mt-12" : "ml-0 mt-0"
+        )}
       >
         <section id="header-section">
           {headerComponents[selectedHeader]}
         </section>
-        <section id="kv-section">{kvComponents[selectedKv]}</section>
-        <section id="message-section">
-          {messageComponents[selectedMessage]}
-        </section>
-        <section id="solution-section">
-          {solutionComponents[selectedSolution]}
-        </section>
+        <section id="about-section">{aboutComponents[selectedAbout]}</section>
         <section id="footer-section">
           {footerComponents[selectedFooter]}
         </section>
@@ -283,4 +190,4 @@ const AdminHome = () => {
   )
 }
 
-export default AdminHome
+export default AdminAbout

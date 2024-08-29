@@ -17,9 +17,6 @@ const Header1 = () => {
             <Link href="/about">
               <div>私たちについて</div>
             </Link>
-            <div>メニュー2</div>
-            <div>メニュー3</div>
-            <div>メニュー4</div>
           </div>
         </div>
 

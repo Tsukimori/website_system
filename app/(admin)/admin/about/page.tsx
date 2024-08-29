@@ -1,4 +1,4 @@
-import AdminAbout from "@/components/admin/AdminAbout"
+import AdminAbout from "@/components/admin/sections/AdminAbout"
 
 const AdminAboutPage = () => {
   return <AdminAbout />
