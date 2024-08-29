@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { useStore } from "@/store/useStore"
 import { Download, Upload, Trash2 } from "lucide-react"
+import Link from "next/link"
 
 // ナビゲーション
 const Navigation = () => {
@@ -64,6 +64,7 @@ const Navigation = () => {
           >
             <Download size={18} />
           </button>
+
           <label className="cursor-pointer px-2 py-1 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200 rounded">
             <Upload size={18} />
             <input
@@ -73,6 +74,7 @@ const Navigation = () => {
               className="hidden"
             />
           </label>
+
           <button
             onClick={clearSections}
             className="px-2 py-1 hover:bg-red-100 hover:text-red-600 transition-colors duration-200 rounded"
