@@ -17,6 +17,7 @@ const Solution2 = () => {
                 src="/solution/solution2.png"
                 alt="solution"
                 className="object-cover rounded-lg"
+                priority
               />
             </div>
 

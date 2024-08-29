@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { useStore } from "@/store/useStore"
 
 import AdminLayout from "@/components/admin/AdminLayout"
@@ -16,7 +17,16 @@ import Footer1 from "@/components/footer/Footer1"
 import Footer2 from "@/components/footer/Footer2"
 
 const AdminHome = () => {
+  const [isHydrated, setIsHydrated] = useState(false)
   const selectedSections = useStore((state) => state.selectedSections)
+
+  useEffect(() => {
+    setIsHydrated(true)
+  }, [])
+
+  if (!isHydrated) {
+    return null
+  }
 
   return (
     <AdminLayout sidebarContent={SidebarHome}>

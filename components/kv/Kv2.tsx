@@ -7,7 +7,13 @@ const Kv2 = () => {
   return (
     <div className="relative">
       <div className="aspect-[16/9] relative overflow-hidden">
-        <Image fill src="/kv/kv2.png" alt="kv" className="object-cover" />
+        <Image
+          fill
+          src="/kv/kv2.png"
+          alt="kv"
+          className="object-cover"
+          priority
+        />
       </div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center space-y-5">

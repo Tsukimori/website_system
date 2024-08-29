@@ -23,8 +23,10 @@ const AdminLayout = ({ children, sidebarContent }: AdminLayoutProps) => {
     <div className="flex">
       {isSidebarVisible && <Navigation />}
 
-      <div className="fixed top-3 left-4 z-20">
-        <Menu className="w-7 h-7 cursor-pointer" onClick={toggleSidebar} />
+      <div className="fixed top-1 left-2 z-20">
+        <div className="bg-gray-50 p-1.5 rounded">
+          <Menu className="w-7 h-7 cursor-pointer" onClick={toggleSidebar} />
+        </div>
       </div>
 
       {isSidebarVisible && (
