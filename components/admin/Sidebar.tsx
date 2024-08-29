@@ -39,7 +39,6 @@ const Sidebar = ({
     <>
       {Object.entries(pageConfig.sections).map(([sectionKey, sectionData]) => (
         <div key={sectionKey}>
-          {/* セクションのタイトルを表示 */}
           <div className="font-bold text-sm">{sectionData.title}</div>
           <div className="space-y-4">
             {sectionData.options.map((option) => (
@@ -48,8 +47,12 @@ const Sidebar = ({
                   src={option.src}
                   alt={option.alt}
                   onClick={() => {
-                    selectSection(sectionKey, option.id)
-                    scrollToSection(`${sectionKey}-section`)
+                    if (selectedSections[sectionKey] === option.id) {
+                      selectSection(sectionKey, "")
+                    } else {
+                      selectSection(sectionKey, option.id)
+                      scrollToSection(`${sectionKey}-section`)
+                    }
                   }}
                   className={getImageClass(
                     selectedSections[sectionKey] === option.id
