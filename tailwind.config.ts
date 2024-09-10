@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        lato: ['Lato', 'sans-serif'], 
+      },
       colors: {
         accentColor:"#4270ED",
         borderGray:"#393939",

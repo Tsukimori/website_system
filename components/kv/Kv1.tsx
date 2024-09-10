@@ -15,13 +15,13 @@ const Kv1 = () => {
           priority
         />
       </div>
-
-      <div className="absolute inset-0 flex flex-col items-center justify-center space-y-5">
-        <div className="text-white font-bold text-7xl">Lorem Ipsum</div>
-        <div className="text-white font-bold text-7xl">Lorem Ipsum</div>
-
-        <div className="text-white font-bold ">
-          日本語見出し日本語見出し文入ります
+      <div className="max-w-screen-xl mx-auto relative">
+        <div className="absolute right-0 bottom-32 text-white">
+          <div className="font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px]">Lorem Ipsum</div>
+          <div className="font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px]">Lorem Ipsum</div>
+          <div className="text-xl font-semibold mt-4">
+            日本語見出し日本語見出し文入ります
+          </div>
         </div>
       </div>
     </div>
