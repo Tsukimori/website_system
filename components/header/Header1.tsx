@@ -9,14 +9,14 @@ import ContactButton from "@/components/ui/button/ContactButton"
 // ヘッダー
 const Header1 = () => {
   return (
-    <header className="border-b h-20">
+    <header className="border-b h-20 text-[#393939] tracking-wide">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between ">
         <div className="flex items-center space-x-10 ">
-          <Link href="/">
-            <h1>社名</h1>
+          <Link href="/" className="letter">
+            株式会社COMPANY
           </Link>
 
-          <ul className="flex items-center space-x-10 font-semibold">
+          <ul className="flex items-center space-x-10 font-semibold ">
             {menu.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>

@@ -1,11 +1,14 @@
 import "./globals.css"
 import type { Metadata, Viewport } from "next"
-import { M_PLUS_1 } from "next/font/google"
 import ToastProvider from "@/components/providers/ToastProvider"
 
-const mPlus1 = M_PLUS_1({
-  weight: ["400", "700", "900"],
-  subsets: ["latin"],
+import { Noto_Sans_JP } from 'next/font/google'
+
+// Noto Sans JP フォントの設定
+const notoSansJP = Noto_Sans_JP({
+  weight: ['400', '500','600', '700', '700','800', '900'],
+  subsets: ['latin'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -27,7 +30,7 @@ interface RootLayoutProps {
 const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     <html lang="ja">
-      <body className={mPlus1.className}>
+      <body className={`${notoSansJP.className}`}>
         <ToastProvider />
         {children}
       </body>
