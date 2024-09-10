@@ -13,7 +13,7 @@ const Header1 = () => {
       <div className="max-w-screen-xl mx-auto flex items-center justify-between ">
         <div className="flex items-center space-x-10 ">
           <Link href="/">
-            <Image src="/logo/logo1.svg" alt="logo" width={200} height={40} />
+            <h1>社名</h1>
           </Link>
 
           <ul className="flex items-center space-x-10 font-semibold">
