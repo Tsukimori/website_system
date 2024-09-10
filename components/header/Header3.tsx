@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import menu from "@/components/ui/navigation/Menu"
-import sns from "@/components/ui/navigation/SnsButton"
+import Menu from "@/components/ui/navigation/Menu"
+import Sns from "@/components/ui/navigation/SnsButton"
 import TelButton from "@/components/ui/button/TelButton"
 import ContactButton from "@/components/ui/button/ContactButton"
 import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
@@ -23,7 +23,7 @@ const Header3 = () => {
           <ContactButton height="h-10" />
           </div>
           <ul className="flex items-center space-x-10 font-semibold  ">
-            {menu.map((item, index) => (
+            {Menu.map((item, index) => (
               <li key={index} className="py-4">
                 <Link href={item.href}>
                   <div>{item.name}</div>

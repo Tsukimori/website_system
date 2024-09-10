@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import menu from "@/components/ui/navigation/Menu"
-import sns from "@/components/ui/navigation/SnsButton"
+import Menu from "@/components/ui/navigation/Menu"
+import Sns from "@/components/ui/navigation/SnsButton"
 import ContactButton from "@/components/ui/button/ContactButton"
 import CompanyInfo from "@/components/ui/navigation/CompanyInfo" 
 
@@ -19,7 +19,7 @@ const Header1 = () => {
           </Link>
 
           <ul className="flex items-center space-x-10 font-semibold ">
-            {menu.map((item, index) => (
+            {Menu.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
                   <div>{item.name}</div>
@@ -30,7 +30,7 @@ const Header1 = () => {
         </div>
         <div className="flex items-center space-x-10">
           <ul className="flex items-center justify-end font-semibold">
-            {sns.map((item, index) => (
+            {Sns.map((item, index) => (
               <li
                 key={index}
                 className="w-[60px] h-[60px] flex items-center justify-center"
