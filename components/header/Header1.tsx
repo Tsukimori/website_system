@@ -12,7 +12,7 @@ const Header1 = () => {
     <header className="border-b h-20 text-[#393939] tracking-wide">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between ">
         <div className="flex items-center space-x-10 ">
-          <Link href="/" className="letter">
+          <Link href="/">
             株式会社COMPANY
           </Link>
 
