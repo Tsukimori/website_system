@@ -1,3 +1,4 @@
+//components/ui/navigation/SnsButton.tsx
 export const SnsButton = [
   {
     name: 'facebook',

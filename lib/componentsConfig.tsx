@@ -1,5 +1,6 @@
 import Header1 from "@/components/header/Header1"
 import Header2 from "@/components/header/Header2"
+import Header3 from "@/components/header/Header3"
 import About1 from "@/components/about/About1"
 import About2 from "@/components/about/About2"
 import Footer1 from "@/components/footer/Footer1"
@@ -42,10 +43,12 @@ export const componentsConfig: ComponentsConfig = {
         options: [
           { id: "Header1", src: "/admin/1.png", alt: "Header1" },
           { id: "Header2", src: "/admin/2.png", alt: "Header2" },
+          { id: "Header3", src: "/admin/3.png", alt: "Header3" },
         ],
         components: {
           Header1: <Header1 />,
           Header2: <Header2 />,
+          Header3: <Header3 />,
         },
       },
       kv: {
@@ -103,10 +106,12 @@ export const componentsConfig: ComponentsConfig = {
         options: [
           { id: "Header1", src: "/admin/1.png", alt: "Header1" },
           { id: "Header2", src: "/admin/2.png", alt: "Header2" },
+          { id: "Header3", src: "/admin/3.png", alt: "Header3" },
         ],
         components: {
           Header1: <Header1 />,
           Header2: <Header2 />,
+          Header3: <Header3 />,
         },
       },
       about: {

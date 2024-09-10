@@ -5,15 +5,17 @@ import Image from "next/image"
 import menu from "@/components/ui/navigation/Menu"
 import sns from "@/components/ui/navigation/SnsButton"
 import ContactButton from "@/components/ui/button/ContactButton"
+import CompanyInfo from "@/components/ui/navigation/CompanyInfo" 
 
 // ヘッダー
 const Header1 = () => {
+  const { companyName } = CompanyInfo[0]; 
   return (
     <header className="border-b h-20 text-[#393939] tracking-wide">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between ">
         <div className="flex items-center space-x-10 ">
           <Link href="/">
-            株式会社COMPANY
+            {companyName}
           </Link>
 
           <ul className="flex items-center space-x-10 font-semibold ">

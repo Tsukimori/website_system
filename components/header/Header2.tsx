@@ -6,6 +6,7 @@ import Image from "next/image"
 import menu from "@/components/ui/navigation/Menu"
 import sns from "@/components/ui/navigation/SnsButton"
 import ContactButton from "@/components/ui/button/ContactButton"
+import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
 
 const Header2 = () => {
   // ハンバーガーメニューの開閉状態を管理するstate
@@ -16,12 +17,14 @@ const Header2 = () => {
     setMenuOpen(!menuOpen)
   }
 
+  const { companyName } = CompanyInfo[0]
+
   return (
     <header className="border-b border-black h-20 text-[#393939] tracking-wide">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between ">
         <div className="flex items-center space-x-10 ">
           <Link href="/" className="letter">
-            株式会社COMPANY
+            {companyName}
           </Link>
         </div>
 
@@ -61,13 +64,17 @@ const Header2 = () => {
 
       {/* ハンバーガーメニュー */}
       <div
-        className={`fixed top-0 right-0 h-screen w-[500px] bg-bgBlack text-white shadow-lg transform transition-transform duration-300 pt-14 ${
+        className={`fixed z-10 top-0 right-0 h-screen w-[500px] bg-bgBlack text-white shadow-lg transform transition-transform duration-300 pt-14 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* 閉じるボタン */}
         <div className="flex justify-end p-4">
-          <button aria-label="メニューを閉じる" onClick={toggleMenu} className="w-10 h-10">
+          <button
+            aria-label="メニューを閉じる"
+            onClick={toggleMenu}
+            className="w-10 h-10"
+          >
             <div className="w-[38px] h-[38px] relative">
               <div className="w-[53.74px] h-[0px] left-0 top-0 absolute origin-top-left rotate-45 border border-white"></div>
               <div className="w-[53.74px] h-[0px] left-[38px] top-0 absolute origin-top-left rotate-[135deg] border border-white"></div>
@@ -84,7 +91,7 @@ const Header2 = () => {
               </Link>
             </li>
           ))}
-        </ul> 
+        </ul>
         <div className="flex justify-center items-center w-[260px] mx-auto">
           <ContactButton />
         </div>
