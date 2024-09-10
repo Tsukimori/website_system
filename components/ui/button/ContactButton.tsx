@@ -1,12 +1,15 @@
-//components/ui/button/ContactButton.tsx
 import Link from "next/link"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 
-const ContactButton = ({ height = "h-20" }: { height?: string }) => {
+const ContactButton = ({
+  className = "",  
+}: {
+  className?: string
+}) => {
   return (
     <Link
       href="/contact"
-      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center w-full px-10 font-semibold ${height}`}
+      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center w-full px-10 font-semibold h-20 ${className}`} 
     >
       <EnvelopeIcon className="w-4 h-4 mr-1" />
       お問い合わせ
@@ -15,5 +18,3 @@ const ContactButton = ({ height = "h-20" }: { height?: string }) => {
 }
 
 export default ContactButton
-
-
