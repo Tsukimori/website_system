@@ -2,28 +2,49 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import menu from "@/components/ui/navigation/Menu"
+import sns from "@/components/ui/navigation/SnsButton"
+import ContactButton from "@/components/ui/button/ContactButton"
 
 // ヘッダー
 const Header1 = () => {
   return (
-    <header className="border-b py-3">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between text-sm">
-        <div className="flex items-center space-x-5">
+    <header className="border-b h-20">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between ">
+        <div className="flex items-center space-x-10 ">
           <Link href="/">
             <Image src="/logo/logo1.svg" alt="logo" width={200} height={40} />
           </Link>
 
-          <div className="flex items-center space-x-2">
-            <Link href="/about">
-              <div>私たちについて</div>
-            </Link>
-          </div>
+          <ul className="flex items-center space-x-10 font-semibold">
+            {menu.map((item, index) => (
+              <li key={index}>
+                <Link href={item.href}>
+                  <div>{item.name}</div>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        <div>
-          <div className="bg-blue-500 text-white p-3 font-bold">
-            お問い合わせ
-          </div>
+        <div className="flex items-center space-x-10">
+          <ul className="flex items-center justify-end font-semibold">
+            {sns.map((item, index) => (
+              <li
+                key={index}
+                className="w-[60px] h-[60px] flex items-center justify-center"
+              >
+                <Link href={item.href} className="">
+                  <Image
+                    src={item.src}
+                    alt={item.name}
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ContactButton />
         </div>
       </div>
     </header>
