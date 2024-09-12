@@ -64,7 +64,7 @@ const Header2 = () => {
 
       {/* ハンバーガーメニュー */}
       <div
-        className={`fixed z-10 top-0 right-0 h-screen w-[500px] bg-bgBlack text-white shadow-lg transform transition-transform duration-300 pt-14 ${
+        className={`fixed z-10 top-0 right-0 h-screen w-[500px] bg-bgBlack text-white shadow-lg transform transition-transform duration-300 ${
           MenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -93,7 +93,7 @@ const Header2 = () => {
           ))}
         </ul>
         <div className="flex justify-center items-center w-[260px] mx-auto">
-          <ContactButton />
+          <ContactButton className="h-[72px]" />
         </div>
       </div>
     </header>

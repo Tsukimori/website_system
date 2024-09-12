@@ -46,7 +46,7 @@ const Header1 = () => {
               </li>
             ))}
           </ul>
-          <ContactButton />
+          <ContactButton className="h-20" />
         </div>
       </div>
     </header>
