@@ -6,8 +6,8 @@ import About1 from "@/components/about/About1"
 import About2 from "@/components/about/About2"
 import Footer1 from "@/components/footer/Footer1"
 import Footer2 from "@/components/footer/Footer2"
-import Kv1 from "@/components/kv/Kv1"
-import Kv2 from "@/components/kv/Kv2"
+import Kv1 from "@/components/kv/KeyVisual_01"
+import KeyVisual_02 from "@/components/kv/KeyVisual_02"
 import Kv3 from "@/components/kv/Kv3"
 import Kv4 from "@/components/kv/Kv4"
 // import Kv5 from "@/components/kv/Kv5"
@@ -65,7 +65,7 @@ export const componentsConfig: ComponentsConfig = {
         title: "キービジュアル",
         options: [
           { id: "Kv1", src: "/admin/1.png", alt: "Kv1" },
-          { id: "Kv2", src: "/admin/2.png", alt: "Kv2" },
+          { id: "KeyVisual_02", src: "/admin/2.png", alt: "KeyVisual_02" },
           { id: "Kv3", src: "/admin/3.png", alt: "Kv3" },
           { id: "Kv4", src: "/admin/4.png", alt: "Kv4" },
           // { id: "Kv5", src: "/admin/5.png", alt: "Kv5" },
@@ -76,7 +76,7 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Kv1: <Kv1 />,
-          Kv2: <Kv2 />,
+          KeyVisual_02: <KeyVisual_02 />,
           Kv3: <Kv3 />,
           Kv4: <Kv4 />,
           // Kv5: <Kv5 />,

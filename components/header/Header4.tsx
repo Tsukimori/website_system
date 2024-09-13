@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import Menu from "@/components/ui/navigation/Menu"
-import Sns from "@/components/ui/navigation/SnsButton"
+import Sns from "@/components/ui/button/SnsButton"
 import TelButton from "@/components/ui/button/TelButton"
 import ContactButton from "@/components/ui/button/ContactButton"
 import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
@@ -19,8 +19,8 @@ const Header4 = () => {
         </div>
         <div className="flex flex-col justify-between items-end h-full">
           <div className="flex items-center justify-center w-full">
-          <TelButton />
-          <ContactButton className="h-10" />
+            <TelButton />
+            <ContactButton className="h-10" />
           </div>
           <ul className="flex items-center space-x-10 font-semibold  ">
             {Menu.map((item, index) => (

@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Menu from "@/components/ui/navigation/Menu"
-import Sns from "@/components/ui/navigation/SnsButton"
+import Sns from "@/components/ui/button/SnsButton"
 import ContactButton from "@/components/ui/button/ContactButton"
 import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
 

@@ -1,5 +1,6 @@
 
 //components/ui/navigation/CompanyInfo.tsx
+
 export const CompanyInfo = [
   {
     companyName: '株式会社COMPANY',
@@ -9,7 +10,6 @@ export const CompanyInfo = [
     companyTelHref: "tel:000000000",
     companyEmail: 'info@company.co.jp',
   },
-
 
 ]
 

@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import Menu from "@/components/ui/navigation/Menu"
-import Sns from "@/components/ui/navigation/SnsButton"
+import Sns from "@/components/ui/button/SnsButton"
 import FooterLinks from "@/components/ui/navigation/FooterLinks"
 import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
 import ContactButton from "@/components/ui/button/ContactButton"
@@ -33,7 +33,7 @@ const Footer1 = () => {
               ))}
             </ul>
             <div className="w-[198px] mt-7">
-              <ContactButton className="h-14 rounded-xl"/>
+              <ContactButton className="h-14 rounded-xl" />
             </div>
           </div>
         </div>
@@ -67,7 +67,9 @@ const Footer1 = () => {
             ))}
           </ul>
         </div>
-        <small className="mt-4 flex justify-end">©{companyName}. ALL Rights Reserved.</small>
+        <small className="mt-4 flex justify-end">
+          ©{companyName}. ALL Rights Reserved.
+        </small>
       </div>
     </footer>
   )
