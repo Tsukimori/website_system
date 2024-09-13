@@ -20,7 +20,7 @@ const Header3 = () => {
   const { companyName } = CompanyInfo[0]
 
   return (
-    <header className=" border-r border-black w-20 h-screen text-[#393939] tracking-wide py-6 bg-white fixed  z-10">
+    <header className=" border-r border-black w-32 h-screen text-[#393939] tracking-wide py-6 bg-white fixed  z-10">
       <div className="h-full flex flex-col items-center justify-between ">
         <div className="flex items-center">
           <Link href="/" className="text-center">
