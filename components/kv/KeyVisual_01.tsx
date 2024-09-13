@@ -12,9 +12,9 @@ const KeyVisual_01 = () => {
     <>
       <FirstViewContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <section className="mx-auto">
+        <section>
           {/* KeyVisualContentに高さを指定 */}
-          <KeyVisualContent className="h-[600px]" />
+          <KeyVisualContent className="h-[700px]" />
         </section>
         <div className="relative">
           <TopPageHeadline
@@ -25,7 +25,7 @@ const KeyVisual_01 = () => {
                 <span>Lorem Ipsum</span>
               </>
             }
-            subtitle="日本語のテキストが入ります。"
+            subtitleBottom="日本語のテキストが入ります。"
             className="w-[1200px] absolute left-1/2 transform -translate-x-1/2 bottom-20 text-white text-right"
           />
         </div>

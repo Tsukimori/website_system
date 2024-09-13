@@ -8,13 +8,10 @@ import Footer1 from "@/components/footer/Footer1"
 import Footer2 from "@/components/footer/Footer2"
 import KeyVisual_01 from "@/components/kv/KeyVisual_01"
 import KeyVisual_02 from "@/components/kv/KeyVisual_02"
-import Kv3 from "@/components/kv/Kv3"
+import KeyVisual_03 from "@/components/kv/KeyVisual_03"
 import KeyVisual_04 from "@/components/kv/KeyVisual_04"
-// import Kv5 from "@/components/kv/Kv5"
-// import Kv6 from "@/components/kv/Kv6"
-// import Kv7 from "@/components/kv/Kv7"
-// import Kv8 from "@/components/kv/Kv8"
-// import Kv9 from "@/components/kv/Kv9"
+import KeyVisual_05 from "@/components/kv/KeyVisual_05"
+import KeyVisual_06 from "@/components/kv/KeyVisual_06"
 import Message1 from "@/components/message/Message1"
 import Message2 from "@/components/message/Message2"
 import Message3 from "@/components/message/Message3"
@@ -53,6 +50,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
           { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
           { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+
         ],
         components: {
           Header_01: <Header_01 />,
@@ -66,19 +64,18 @@ export const componentsConfig: ComponentsConfig = {
         options: [
           { id: "KeyVisual_01", src: "/admin/1.png", alt: "KeyVisual_01" },
           { id: "KeyVisual_02", src: "/admin/2.png", alt: "KeyVisual_02" },
-          { id: "Kv3", src: "/admin/3.png", alt: "Kv3" },
+          { id: "KeyVisual_03", src: "/admin/3.png", alt: "KeyVisual_03" },
           { id: "KeyVisual_04", src: "/admin/4.png", alt: "KeyVisual_04" },
-          // { id: "Kv5", src: "/admin/5.png", alt: "Kv5" },
-          // { id: "Kv6", src: "/admin/6.png", alt: "Kv6" },
-          // { id: "Kv7", src: "/admin/7.png", alt: "Kv7" },
-          // { id: "Kv8", src: "/admin/8.png", alt: "Kv8" },
-          // { id: "Kv9", src: "/admin/9.png", alt: "Kv9" },
+          { id: "KeyVisual_05", src: "/admin/5.png", alt: "KeyVisual_05" },
+          { id: "KeyVisual_06", src: "/admin/6.png", alt: "KeyVisual_06" },
         ],
         components: {
           KeyVisual_01: <KeyVisual_01 />,
           KeyVisual_02: <KeyVisual_02 />,
-          Kv3: <Kv3 />,
+          KeyVisual_03: <KeyVisual_03 />,
           KeyVisual_04: <KeyVisual_04 />,
+          KeyVisual_05: <KeyVisual_05 />,
+          KeyVisual_06: <KeyVisual_06 />,
           // Kv5: <Kv5 />,
           // Kv6: <Kv6 />,
           // Kv7: <Kv7 />,
@@ -132,6 +129,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
           { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
           { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+
         ],
         components: {
           Header_01: <Header_01 />,

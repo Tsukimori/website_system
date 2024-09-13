@@ -1,26 +1,30 @@
-// components/kv/KeyVisual_02.tsx
-
 "use client"
 
+import Image from "next/image"
 import FirstViewContent from "../ui/frame/FirstViewContent"
 import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
 import ScrollButton from "../ui/button/ScrollButton"
 import KeyVisualContent from "../ui/frame/KeyVisualContent"
 
 // キービジュアル
-const KeyVisual_02 = () => {
+const KeyVisual_03 = () => {
+  // スクロールボタンが押された時に次のセクションに移動する関数
   const scrollToNextSection = () => {
     const kvElement = document.getElementById("kv-section")
     if (kvElement && kvElement.nextElementSibling) {
       kvElement.nextElementSibling.scrollIntoView({ behavior: "smooth" })
     }
   }
-
   return (
     <>
-      <FirstViewContent>
+      <FirstViewContent className="relative">
         {/* widthがフルサイズでない場合は指定する */}
-        <div className="w-11/12 mx-auto mt-40">
+         {/* キービジュアルの画像 */}
+        <section className="w-[65%] h-full absolute right-0 ">
+          {/* KeyVisualContentに高さを指定 */}
+          <KeyVisualContent className="h-full" />
+        </section>
+        <div className="max-w-screen-xl mx-auto flex flex-col justify-center h-full relative">
           <TopPageHeadline
             maintitle={
               <>
@@ -31,21 +35,14 @@ const KeyVisual_02 = () => {
             }
             subtitleBottom="日本語のテキストが入ります。"
           />
-          <section className="relative">
-            <div className="absolute right-0 -bottom-10">
-              <ScrollButton onClick={scrollToNextSection} />
-            </div>
-          </section>
-
-          {/* キービジュアルの画像 */}
-          <section className="mx-auto mt-16">
-            {/* KeyVisualContentに高さを指定 */}
-            <KeyVisualContent className="h-[600px]" />
-          </section>
+          {/* スクロールボタン */}
+          <div className="absolute left-0 bottom-20">
+            <ScrollButton onClick={scrollToNextSection} />
+          </div>
         </div>
       </FirstViewContent>
     </>
   )
 }
 
-export default KeyVisual_02
+export default KeyVisual_03

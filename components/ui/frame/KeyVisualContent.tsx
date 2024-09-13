@@ -8,7 +8,7 @@ interface KeyVisualContentProps {
 
 const KeyVisualContent: React.FC<KeyVisualContentProps> = ({ className }) => {
   return (
-    <div className={classNames("relative w-full ", className)}>
+    <div className={classNames("relative w-full", className)}>
       <Image
         src="/kv/Kv_img.png"
         alt="kv"

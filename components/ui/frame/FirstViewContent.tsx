@@ -13,7 +13,7 @@ const FirstViewContent: React.FC<FirstViewContentProps> = ({
   className,
 }) => {
   return (
-    <div className={classNames("w-full h-full", className)}>{children}</div>
+    <div className={classNames("w-full h-screen ", className)}>{children}</div>
   )
 }
 
