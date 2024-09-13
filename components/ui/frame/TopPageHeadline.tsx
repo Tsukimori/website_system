@@ -1,4 +1,5 @@
 // components/ui/frame/TopPageHeadline.tsx
+import classNames from 'classnames';
 
 interface TopPageHeadlineProps {
   maintitle: React.ReactNode;
@@ -15,24 +16,24 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   subtitle,
   parentDirectoryName,
   parentDirectoryLink,
-  className = "", // デフォルトは空文字列
+  className = "",
   titleClassName = "",
   subtitleClassName = ""
 }) => {
   return (
-    <>
-      <section className={`w-[1200px]  ${className}`}>
-        {/* <Breadcrumb
-          maintitle={maintitle}
-          parentDirectoryName={parentDirectoryName}
-          parentDirectoryLink={parentDirectoryLink}
-        /> */}
-        <h1 className={`font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px] ${titleClassName}`}>
-          {maintitle}
-        </h1>
-        <h2 className={`text-xl font-semibold mt-4 ${subtitleClassName}`}>{subtitle}</h2>
-      </section>
-    </>
+    <section className={classNames('w-[1200px]', className)}>
+      {/* <Breadcrumb
+        maintitle={maintitle}
+        parentDirectoryName={parentDirectoryName}
+        parentDirectoryLink={parentDirectoryLink}
+      /> */}
+      <h1 className={classNames('font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px]', titleClassName)}>
+        {maintitle}
+      </h1>
+      <h2 className={classNames('text-xl font-semibold mt-4', subtitleClassName)}>
+        {subtitle}
+      </h2>
+    </section>
   )
 }
 

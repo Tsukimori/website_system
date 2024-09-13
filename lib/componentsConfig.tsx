@@ -1,5 +1,5 @@
-import Header1 from "@/components/header/Header1"
-import Header2 from "@/components/header/Header2"
+import Header1 from "@/components/header/Header_01"
+import Header2 from "@/components/header/Header_02"
 import Header3 from "@/components/header/Header3"
 import Header4 from "@/components/header/Header4"
 import About1 from "@/components/about/About1"

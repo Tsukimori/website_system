@@ -20,7 +20,7 @@ const KeyVisual_02 = () => {
     <>
       <FirstViewContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <div className="w-11/12 mx-auto mt-20">
+        <div className="w-11/12 mx-auto mt-60">
           <TopPageHeadline
             maintitle={
               <>
