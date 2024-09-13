@@ -16,7 +16,7 @@ const Kv3 = () => {
       <div className="w-[65%] h-full absolute right-0 -z-10">
         <Image
           fill
-          src="/kv/kv1.png"
+          src="/kv/kv_img.png"
           alt="kv"
           className="object-cover"
           priority

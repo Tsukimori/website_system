@@ -9,7 +9,7 @@ import Footer2 from "@/components/footer/Footer2"
 import KeyVisual_01 from "@/components/kv/KeyVisual_01"
 import KeyVisual_02 from "@/components/kv/KeyVisual_02"
 import Kv3 from "@/components/kv/Kv3"
-import Kv4 from "@/components/kv/Kv4"
+import KeyVisual_04 from "@/components/kv/KeyVisual_04"
 // import Kv5 from "@/components/kv/Kv5"
 // import Kv6 from "@/components/kv/Kv6"
 // import Kv7 from "@/components/kv/Kv7"
@@ -67,7 +67,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "KeyVisual_01", src: "/admin/1.png", alt: "KeyVisual_01" },
           { id: "KeyVisual_02", src: "/admin/2.png", alt: "KeyVisual_02" },
           { id: "Kv3", src: "/admin/3.png", alt: "Kv3" },
-          { id: "Kv4", src: "/admin/4.png", alt: "Kv4" },
+          { id: "KeyVisual_04", src: "/admin/4.png", alt: "KeyVisual_04" },
           // { id: "Kv5", src: "/admin/5.png", alt: "Kv5" },
           // { id: "Kv6", src: "/admin/6.png", alt: "Kv6" },
           // { id: "Kv7", src: "/admin/7.png", alt: "Kv7" },
@@ -78,7 +78,7 @@ export const componentsConfig: ComponentsConfig = {
           KeyVisual_01: <KeyVisual_01 />,
           KeyVisual_02: <KeyVisual_02 />,
           Kv3: <Kv3 />,
-          Kv4: <Kv4 />,
+          KeyVisual_04: <KeyVisual_04 />,
           // Kv5: <Kv5 />,
           // Kv6: <Kv6 />,
           // Kv7: <Kv7 />,
