@@ -1,12 +1,13 @@
-// components/ui/frame/PageHeadline.tsx
-
-import Breadcrumb from "@/components/ui/module/Breadcrumb"
+// components/ui/frame/TopPageHeadline.tsx
 
 interface TopPageHeadlineProps {
-  maintitle: React.ReactNode // string から変更
-  subtitle: string
-  parentDirectoryName?: string
-  parentDirectoryLink?: string
+  maintitle: React.ReactNode;
+  subtitle: string;
+  parentDirectoryName?: string;
+  parentDirectoryLink?: string;
+  className?: string; // 親要素のclassName
+  titleClassName?: string; // h1用のclassName
+  subtitleClassName?: string; // h2用のclassName
 }
 
 const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
@@ -14,22 +15,25 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   subtitle,
   parentDirectoryName,
   parentDirectoryLink,
+  className = "", // デフォルトは空文字列
+  titleClassName = "",
+  subtitleClassName = ""
 }) => {
   return (
     <>
-      <section className=" ">
-        <Breadcrumb
+      <section className={`w-[1200px]  ${className}`}>
+        {/* <Breadcrumb
           maintitle={maintitle}
           parentDirectoryName={parentDirectoryName}
           parentDirectoryLink={parentDirectoryLink}
-        />
-        <h1 className="font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px]">
+        /> */}
+        <h1 className={`font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px] ${titleClassName}`}>
           {maintitle}
         </h1>
-        <h2 className="text-xl font-semibold mt-4">{subtitle}</h2>
+        <h2 className={`text-xl font-semibold mt-4 ${subtitleClassName}`}>{subtitle}</h2>
       </section>
     </>
   )
 }
 
-export default TopPageHeadline
+export default TopPageHeadline;

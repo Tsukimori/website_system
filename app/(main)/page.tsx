@@ -1,4 +1,4 @@
-import Kv1 from "@/components/kv/KeyVisual_01"
+import KeyVisual_01 from "@/components/kv/KeyVisual_01"
 import KeyVisual_02 from "@/components/kv/KeyVisual_02"
 import Message1 from "@/components/message/Message1"
 import Message2 from "@/components/message/Message2"
@@ -9,7 +9,7 @@ import Solution2 from "@/components/solution/Solution2"
 const HomePage = () => {
   return (
     <div>
-      {/* <Kv1 /> */}
+      {/* <KeyVisual_01 /> */}
       <KeyVisual_02 />
       {/* <Message1 /> */}
       <Message2 />
