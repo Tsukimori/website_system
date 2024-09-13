@@ -1,7 +1,7 @@
-import Header1 from "@/components/header/Header_01"
-import Header2 from "@/components/header/Header_02"
-import Header3 from "@/components/header/Header3"
-import Header4 from "@/components/header/Header4"
+import Header_01 from "@/components/header/Header_01"
+import Header_02 from "@/components/header/Header_02"
+import Header_03 from "@/components/header/Header_03"
+import Header_04 from "@/components/header/Header_04"
 import About1 from "@/components/about/About1"
 import About2 from "@/components/about/About2"
 import Footer1 from "@/components/footer/Footer1"
@@ -49,16 +49,16 @@ export const componentsConfig: ComponentsConfig = {
       header: {
         title: "ヘッダー",
         options: [
-          { id: "Header1", src: "/admin/1.png", alt: "Header1" },
-          { id: "Header2", src: "/admin/2.png", alt: "Header2" },
-          { id: "Header3", src: "/admin/3.png", alt: "Header3" },
-          { id: "Header4", src: "/admin/4.png", alt: "Header4" },
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
         ],
         components: {
-          Header1: <Header1 />,
-          Header2: <Header2 />,
-          Header3: <Header3 />,
-          Header4: <Header4 />,
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
         },
       },
       kv: {
@@ -128,16 +128,16 @@ export const componentsConfig: ComponentsConfig = {
       header: {
         title: "ヘッダー",
         options: [
-          { id: "Header1", src: "/admin/1.png", alt: "Header1" },
-          { id: "Header2", src: "/admin/2.png", alt: "Header2" },
-          { id: "Header3", src: "/admin/3.png", alt: "Header3" },
-          { id: "Header4", src: "/admin/4.png", alt: "Header4" },
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
         ],
         components: {
-          Header1: <Header1 />,
-          Header2: <Header2 />,
-          Header3: <Header3 />,
-          Header4: <Header4 />,
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
         },
       },
       about: {

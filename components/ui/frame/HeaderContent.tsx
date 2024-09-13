@@ -16,7 +16,7 @@ const HeaderContent: React.FC<HeaderContentProps> = ({
     <>
       <header
         className={classNames(
-          " w-[1400px] h-20 mx-auto text-[#393939] tracking-wide",
+          "w-[1400px] h-20 mx-auto text-[#393939] tracking-wide",
           className
         )}
       >

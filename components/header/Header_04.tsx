@@ -9,7 +9,7 @@ import ContactButton from "@/components/ui/button/ContactButton"
 import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
 
 // ヘッダー
-const Header4 = () => {
+const Header_04 = () => {
   const { companyName } = CompanyInfo[0]
   return (
     <header className="border-b h-[98px] text-[#393939] tracking-wide">
@@ -37,4 +37,4 @@ const Header4 = () => {
   )
 }
 
-export default Header4
+export default Header_04

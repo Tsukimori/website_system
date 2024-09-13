@@ -8,7 +8,7 @@ import Sns from "@/components/ui/button/SnsButton"
 import ContactButton from "@/components/ui/button/ContactButton"
 import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
 
-const Header3 = () => {
+const Header_03 = () => {
   // ハンバーガーメニューの開閉状態を管理するstate
   const [MenuOpen, setMenuOpen] = useState(false)
 
@@ -29,7 +29,7 @@ const Header3 = () => {
         </div>
         {/* ハンバーガーメニューボタン */}
         <div
-          className="border-l border-borderGray w-20 h-20 flex items-center justify-center cursor-pointer"
+          className="w-20 h-20 flex items-center justify-center cursor-pointer"
           onClick={toggleMenu}
         >
           <Image
@@ -98,4 +98,4 @@ const Header3 = () => {
   )
 }
 
-export default Header3
+export default Header_03

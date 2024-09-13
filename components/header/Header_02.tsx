@@ -23,9 +23,9 @@ const Header_02 = () => {
 
   return (
     <>
-      <HeaderContent >
+      <HeaderContent>
         <div className="flex items-center space-x-10 ">
-          <Link href="/" className="letter">
+          <Link href="/" className="">
             {companyName}
           </Link>
         </div>
