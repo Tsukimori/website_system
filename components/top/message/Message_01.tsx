@@ -2,35 +2,44 @@
 
 "use client"
 
+import MoreLinkButton from "@/components/ui/button/MoreButton"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import PageContent from "@/components/ui/frame/PageContent"
 import Image from "next/image"
 
 // メッセージ
 const Message_01 = () => {
   return (
-    <div className="max-w-screen-xl mx-auto py-10 space-y-10">
-      <div className="font-bold text-2xl max-w-screen-lg mx-auto">
-        私たちについて
-      </div>
-
-      <div className="grid grid-cols-2 gap-5 max-w-screen-lg mx-auto">
-        <div className="text-2xl">見出しテキストはいります見出し</div>
-
-        <div>
-          メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-          メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-          メッセージはいります。メッセージはいります。
-          メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-          メッセージはいります。メッセージはいります。
-        </div>
-      </div>
-
-      <Image
-        src="/message/message1.png"
-        alt="message"
-        width={1360}
-        height={480}
-      />
-    </div>
+    <>
+      <PageContent>
+        {/* widthがフルサイズでない場合は指定する */}
+        <section className=" w-1200 mx-auto ">
+          <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
+          <div className=" flex justify-start mt-16">
+            <h3 className=" w-[500px] text-5xl ">見出しテキスト</h3>
+            <div>
+              <p className=" w-[660px]">
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
+                メッセージはいります。メッセージはいります。
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
+                メッセージはいります。メッセージはいります。
+              </p>
+              <MoreLinkButton href="/" />
+            </div>
+          </div>
+        </section>
+        <section className="w-[95%] h-[380px] mx-auto mt-24  flex justify-center relative">
+          <Image
+            src="/top/message/message_img.png"
+            alt="message"
+            layout="fill" // 画像のサイズは親要素にフィット
+            objectFit="cover" // 画像を親要素に合わせてトリミング
+            className="block"
+          />
+        </section>
+      </PageContent>
+    </>
   )
 }
 

@@ -3,11 +3,11 @@ import type { Config } from "tailwindcss"
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,12 +19,12 @@ const config = {
     },
     extend: {
       fontFamily: {
-        lato: ['Lato', 'sans-serif'], 
+        lato: ["Lato", "sans-serif"],
       },
       colors: {
-        accentColor:"#4270ED",
-        borderGray:"#393939",
-        bgBlack:"#333333",
+        accentColor: "#4270ED",
+        borderGray: "#393939",
+        bgBlack: "#333333",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -63,6 +63,10 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      width: {
+        // 1200pxのカスタム幅を追加
+        "1200": "1200px",
       },
       keyframes: {
         "accordion-down": {

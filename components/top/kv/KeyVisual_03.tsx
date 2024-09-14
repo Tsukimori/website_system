@@ -1,11 +1,10 @@
 // components/kv/KeyVisual_03.tsx
 "use client"
 
-import Image from "next/image"
-import FirstViewContent from "@/components/ui/frame/FirstViewContent"
+import FirstViewContent from "@/components/top/kv/FirstViewContent"
 import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
 import ScrollButton from "@/components/ui/button/ScrollButton"
-import KeyVisualContent from "@/components/ui/frame/KeyVisualContent"
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
 
 // キービジュアル
 const KeyVisual_03 = () => {
@@ -20,7 +19,7 @@ const KeyVisual_03 = () => {
     <>
       <FirstViewContent className="relative">
         {/* widthがフルサイズでない場合は指定する */}
-         {/* キービジュアルの画像 */}
+        {/* キービジュアルの画像 */}
         <section className="w-[65%] h-full absolute right-0 ">
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-full" />

@@ -1,4 +1,4 @@
-// components/ui/main/frame/PageContent.tsx
+// components/ui/frame/PageContent.tsx
 
 import React, { ReactNode } from "react"
 import classNames from "classnames"
@@ -10,9 +10,9 @@ interface PageContentProps {
 
 const PageContent: React.FC<PageContentProps> = ({ children, className }) => {
   return (
-    <section className={classNames("py-10 md:py-20", className)}>
+    <div className={classNames(" mx-auto py-24 border-b-2", className)}>
       {children}
-    </section>
+    </div>
   )
 }
 

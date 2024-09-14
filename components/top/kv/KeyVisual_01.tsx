@@ -2,9 +2,9 @@
 
 "use client"
 
-import FirstViewContent from "@/components/ui/frame/FirstViewContent"
+import FirstViewContent from "@/components/top/kv/FirstViewContent"
 import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
-import KeyVisualContent from "@/components/ui/frame/KeyVisualContent"
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
 
 // キービジュアル
 const KeyVisual_01 = () => {
@@ -26,7 +26,7 @@ const KeyVisual_01 = () => {
               </>
             }
             subtitleBottom="日本語のテキストが入ります。"
-            className="w-[1200px] absolute left-1/2 transform -translate-x-1/2 bottom-20 text-white text-right"
+            className="w-1200 absolute left-1/2 transform -translate-x-1/2 bottom-20 text-white text-right"
           />
         </div>
       </FirstViewContent>

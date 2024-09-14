@@ -1,9 +1,9 @@
 // components/kv/KeyVisual_04.tsx
 "use client"
 
-import FirstViewContent from "@/components/ui/frame/FirstViewContent"
+import FirstViewContent from "@/components/top/kv/FirstViewContent"
 import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
-import KeyVisualContent from "@/components/ui/frame/KeyVisualContent"
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
 import ScrollButton from "@/components/ui/button/ScrollButton"
 
 // キービジュアル

@@ -1,7 +1,8 @@
-// components/ui/frame/TopPageHeadline.tsx
+// components/ui/frame/PageHeadline.tsx
 import classNames from "classnames"
+import Breadcrumb from "../module/Breadcrumb"
 
-interface TopPageHeadlineProps {
+interface PageHeadlineProps {
   maintitle: React.ReactNode
   subtitleTop?: React.ReactNode
   subtitleBottom?: string
@@ -14,7 +15,7 @@ interface TopPageHeadlineProps {
   discriptionClassName?: string // p用のclassName
 }
 
-const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
+const PageHeadline: React.FC<PageHeadlineProps> = ({
   maintitle,
   subtitleTop,
   subtitleBottom,
@@ -28,11 +29,11 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
 }) => {
   return (
     <section className={classNames("w-1200", className)}>
-      {/* <Breadcrumb
+      <Breadcrumb
         maintitle={maintitle}
         parentDirectoryName={parentDirectoryName}
         parentDirectoryLink={parentDirectoryLink}
-      /> */}
+      />
       <h2
         className={classNames(
           "text-2xl font-extrabold mb-4 font-lato",
@@ -49,11 +50,11 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       >
         {maintitle}
       </h1>
-      <h3
+      <h2
         className={classNames("text-xl font-semibold mt-4", subtitleClassName)}
       >
         {subtitleBottom}
-      </h3>
+      </h2>
       <p
         className={classNames(
           "font-semibold mt-4 text-lg",
@@ -66,4 +67,4 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   )
 }
 
-export default TopPageHeadline
+export default PageHeadline

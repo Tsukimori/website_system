@@ -1,5 +1,3 @@
-import PageContainer from "@/components/ui/frame/PageContainer"
-
 interface AdminLayoutProps {
   children: React.ReactNode
 }
@@ -7,7 +5,7 @@ interface AdminLayoutProps {
 const AdminMainLayout = ({ children }: AdminLayoutProps) => {
   return (
     <>
-      <PageContainer>{children}</PageContainer>
+      <div>{children}</div>
     </>
   )
 }

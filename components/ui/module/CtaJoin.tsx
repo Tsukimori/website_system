@@ -1,25 +1,25 @@
 // components/ui/main/module/CtaJoin.tsx
 
-"use client";
+"use client"
 
-import { useTransition } from "react";
-import { useRouter } from "next/navigation";
-import ContentHeadline from "@/components/ui/main/frame/ContentsHeadline";
-import { AllButtonBlue } from "@/components/ui/main/button/AllButtonBlue";
+import { useTransition } from "react"
+import { useRouter } from "next/navigation"
+import ContentHeadline from "@/components/ui/main/frame/ContentsHeadline"
+import { AllButtonBlue } from "@/components/ui/main/button/AllButtonBlue"
 
 const CtaJoin = () => {
-  const [isPending, startTransition] = useTransition();
-  const router = useRouter();
+  const [isPending, startTransition] = useTransition()
+  const router = useRouter()
 
   const handleClick = (href: string) => {
     startTransition(() => {
-      router.push(href);
-    });
-  };
+      router.push(href)
+    })
+  }
 
   return (
     <div className="py-16 bg-mainBlue">
-      <div className="md:w-[1200px] mx-auto text-white px-6 md:px-0">
+      <div className="md:w-1200 mx-auto text-white px-6 md:px-0">
         <ContentHeadline
           ImageSrc="/common/join_cta.svg"
           ImageWidth={35}
@@ -27,7 +27,8 @@ const CtaJoin = () => {
           title="入会のご案内"
         />
         <p className="text-center leading-8 -mt-8 text-lg">
-          通信販売広告に協会の会員であることをあらわすJADMAマークを使用することができ、<br className="hidden md:block"/>
+          通信販売広告に協会の会員であることをあらわすJADMAマークを使用することができ、
+          <br className="hidden md:block" />
           企業に対する信頼感を消費者に対してアピールできます。
         </p>
         <ul className="mt-6 md:flex items-center justify-center md:gap-x-4 ">
@@ -50,7 +51,7 @@ const CtaJoin = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CtaJoin;
+export default CtaJoin

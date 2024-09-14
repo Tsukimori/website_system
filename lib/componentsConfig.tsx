@@ -15,6 +15,7 @@ import KeyVisual_06 from "@/components/top/kv/KeyVisual_06"
 import Message_01 from "@/components/top/message/Message_01"
 import Message_02 from "@/components/top/message/Message_02"
 import Message_03 from "@/components/top/message/Message_03"
+import Message_04 from "@/components/top/message/Message_04"
 import Service_01 from "@/components/top/service/Service_01"
 import Service_02 from "@/components/top/service/Service_02"
 
@@ -88,11 +89,13 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Message_01", src: "/admin/1.png", alt: "Message_01" },
           { id: "Message_02", src: "/admin/2.png", alt: "Message_02" },
           { id: "Message_03", src: "/admin/3.png", alt: "Message_03" },
+          { id: "Message_04", src: "/admin/4.png", alt: "Message_04" },
         ],
         components: {
           Message_01: <Message_01 />,
           Message_02: <Message_02 />,
           Message_03: <Message_03 />,
+          Message_04: <Message_04 />,
         },
       },
       service: {

@@ -1,9 +1,9 @@
 // components/kv/KeyVisual_06.tsx
 "use client"
 
-import FirstViewContent from "@/components/ui/frame/FirstViewContent"
+import FirstViewContent from "@/components/top/kv/FirstViewContent"
 import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
-import KeyVisualContent from "@/components/ui/frame/KeyVisualContent"
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
 import ScrollButton from "@/components/ui/button/ScrollButton"
 
 // キービジュアル
@@ -22,7 +22,7 @@ const KeyVisual_06 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-screen" />
         </section>
-        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[1200px]">
+        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-1200">
           <TopPageHeadline
             maintitle={
               <>

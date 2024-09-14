@@ -1,4 +1,4 @@
-// components/message/Message_03.tsx
+// components/message/Message_04.tsx
 
 "use client"
 
@@ -8,17 +8,17 @@ import PageContent from "@/components/ui/frame/PageContent"
 import Image from "next/image"
 
 // メッセージ
-const Message_03 = () => {
+const Message_04 = () => {
   return (
     <>
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" w-1200 mx-auto ">
-          <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
-          <div className=" mt-16 flex justify-start space-x-20">
-            <div className="w-[600px]">
-              <h3 className="text-5xl ">見出しテキスト</h3>
-              <p>
+          <div className=" flex justify-start">
+            <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
+            <div>
+              <h3 className=" w-[500px] text-5xl mt-4 ">見出しテキスト</h3>
+              <p className=" w-[660px]">
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。
@@ -27,15 +27,6 @@ const Message_03 = () => {
               </p>
               <MoreLinkButton href="/" />
             </div>
-            <div className=" w-[520px] h-[767px] relative">
-              <Image
-                src="/top/message/message_img.png"
-                alt="message"
-                layout="fill" // 画像のサイズは親要素にフィット
-                objectFit="cover" // 画像を親要素に合わせてトリミング
-                className="block"
-              />
-            </div>
           </div>
         </section>
       </PageContent>
@@ -43,4 +34,4 @@ const Message_03 = () => {
   )
 }
 
-export default Message_03
+export default Message_04

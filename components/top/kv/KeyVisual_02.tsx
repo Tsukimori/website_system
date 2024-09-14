@@ -2,10 +2,10 @@
 
 "use client"
 
-import FirstViewContent from "@/components/ui/frame/FirstViewContent"
+import FirstViewContent from "@/components/top/kv/FirstViewContent"
 import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
 import ScrollButton from "@/components/ui/button/ScrollButton"
-import KeyVisualContent from "@/components/ui/frame/KeyVisualContent"
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
 
 // キービジュアル
 const KeyVisual_02 = () => {
@@ -20,7 +20,7 @@ const KeyVisual_02 = () => {
     <>
       <FirstViewContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <div className="w-11/12 mx-auto mt-40">
+        <div className="w-[95%] mx-auto mt-40">
           <TopPageHeadline
             maintitle={
               <>
