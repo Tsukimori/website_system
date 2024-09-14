@@ -11,6 +11,10 @@ import KeyVisual_02 from "@/components/top/kv/KeyVisual_02"
 import KeyVisual_03 from "@/components/top/kv/KeyVisual_03"
 import KeyVisual_04 from "@/components/top/kv/KeyVisual_04"
 import KeyVisual_05 from "@/components/top/kv/KeyVisual_05"
+import About_01 from "@/components/top/about/About_01"
+import About_02 from "@/components/top/about/About_02"
+import About_03 from "@/components/top/about/About_03"
+import About_04 from "@/components/top/about/About_04"
 import KeyVisual_06 from "@/components/top/kv/KeyVisual_06"
 import Message_01 from "@/components/top/message/Message_01"
 import Message_02 from "@/components/top/message/Message_02"
@@ -20,6 +24,8 @@ import Service_01 from "@/components/top/service/Service_01"
 import Service_02 from "@/components/top/service/Service_02"
 import Service_03 from "@/components/top/service/Service_03"
 import Service_04 from "@/components/top/service/Service_04"
+import Case_01 from "@/components/top/case/Case_01"
+import Case_02 from "@/components/top/case/Case_02"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -85,21 +91,36 @@ export const componentsConfig: ComponentsConfig = {
           // Kv9: <Kv9 />,
         },
       },
-      message: {
-        title: "メッセージ",
+      about: {
+        title: "私たちについて",
         options: [
-          { id: "Message_01", src: "/admin/1.png", alt: "Message_01" },
-          { id: "Message_02", src: "/admin/2.png", alt: "Message_02" },
-          { id: "Message_03", src: "/admin/3.png", alt: "Message_03" },
-          { id: "Message_04", src: "/admin/4.png", alt: "Message_04" },
+          { id: "About_01", src: "/admin/1.png", alt: "About_01" },
+          { id: "About_02", src: "/admin/2.png", alt: "About_02" },
+          { id: "About_03", src: "/admin/3.png", alt: "About_03" },
+          { id: "About_04", src: "/admin/4.png", alt: "About_04" },
         ],
         components: {
-          Message_01: <Message_01 />,
-          Message_02: <Message_02 />,
-          Message_03: <Message_03 />,
-          Message_04: <Message_04 />,
+          About_01: <About_01 />,
+          About_02: <About_02 />,
+          About_03: <About_03 />,
+          About_04: <About_04 />,
         },
       },
+      // message: {
+      //   title: "メッセージ",
+      //   options: [
+      //     { id: "Message_01", src: "/admin/1.png", alt: "Message_01" },
+      //     { id: "Message_02", src: "/admin/2.png", alt: "Message_02" },
+      //     { id: "Message_03", src: "/admin/3.png", alt: "Message_03" },
+      //     { id: "Message_04", src: "/admin/4.png", alt: "Message_04" },
+      //   ],
+      //   components: {
+      //     Message_01: <Message_01 />,
+      //     Message_02: <Message_02 />,
+      //     Message_03: <Message_03 />,
+      //     Message_04: <Message_04 />,
+      //   },
+      // },
       service: {
         title: "サービス",
         options: [
@@ -113,6 +134,19 @@ export const componentsConfig: ComponentsConfig = {
           Service_02: <Service_02 />,
           Service_03: <Service_03 />,
           Service_04: <Service_04 />,
+        },
+      },
+      case: {
+        title: "導入事例",
+        options: [
+          { id: "Case_01", src: "/admin/1.png", alt: "Case_01" },
+          { id: "Case_02", src: "/admin/2.png", alt: "Case_02" },
+          { id: "Case_03", src: "/admin/3.png", alt: "Case_03" },
+          { id: "Case_04", src: "/admin/4.png", alt: "Case_04" },
+        ],
+        components: {
+          Case_01: <Case_01 />,
+          Case_02: <Case_02 />,
         },
       },
       footer: {
