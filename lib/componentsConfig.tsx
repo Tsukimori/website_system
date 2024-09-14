@@ -18,6 +18,8 @@ import Message_03 from "@/components/top/message/Message_03"
 import Message_04 from "@/components/top/message/Message_04"
 import Service_01 from "@/components/top/service/Service_01"
 import Service_02 from "@/components/top/service/Service_02"
+import Service_03 from "@/components/top/service/Service_03"
+import Service_04 from "@/components/top/service/Service_04"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -103,10 +105,14 @@ export const componentsConfig: ComponentsConfig = {
         options: [
           { id: "Service_01", src: "/admin/1.png", alt: "Service_01" },
           { id: "Service_02", src: "/admin/2.png", alt: "Service_02" },
+          { id: "Service_03", src: "/admin/3.png", alt: "Service_03" },
+          { id: "Service_04", src: "/admin/4.png", alt: "Service_04" },
         ],
         components: {
           Service_01: <Service_01 />,
           Service_02: <Service_02 />,
+          Service_03: <Service_03 />,
+          Service_04: <Service_04 />,
         },
       },
       footer: {

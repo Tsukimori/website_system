@@ -1,37 +1,48 @@
+// components/service/Service_01.tsx
 "use client"
 
-import Image from "next/image"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import PageContent from "@/components/ui/frame/PageContent"
+import ServiceCard from "@/components/ui/ItemCard/ServiceCard"
+import { serviceData } from "@/components/data/top/ServiceData"
 
-// メッセージ
-const Solution1 = () => {
+const Service_01 = () => {
+  // 表示するサービス数をserviceDataのIDを指定して表示
+  const serviceIdsToDisplay = [1, 2, 3, 4, 5]
+
+  // 指定したIDに基づいてデータをフィルタリング
+  const servicesToDisplay = serviceData.filter((service) =>
+    serviceIdsToDisplay.includes(service.id)
+  )
+
   return (
-    <div className="max-w-screen-lg mx-auto py-10 space-y-10">
-      <div className="font-bold text-2xl text-center">事業内容</div>
+    <>
+      <PageContent>
+        <section className="w-1200 mx-auto space-y-10">
+          <ContentHeadline
+            entitle="Service"
+            maintitle="事業内容"
+            entitleClassName="text-center"
+            titleClassName="text-center"
+          />
 
-      <div className="grid grid-cols-2 gap-10">
-        {[1, 2, 3, 4].map((i) => (
-          <div key={i}>
-            <div className="aspect-[1/1] relative overflow-hidden">
-              <Image
-                fill
-                src="/solution/solution1.png"
-                alt="solution"
-                className="object-cover rounded-lg"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          <div className="grid grid-cols-2 gap-10">
+            {servicesToDisplay.map((service) => (
+              <ServiceCard
+                key={service.id}
+                id={service.id}
+                title={service.title}
+                description={service.description}
+                image={service.image} // 画像パスを渡す
+                href={service.href} // リンク先を渡す
+                className=" space-y-4"
               />
-            </div>
-
-            <div className="space-y-3">
-              <div className="font-bold text-blue-500">Solution0{i}</div>
-              <div className="font-bold text-lg">事業内容0{i}</div>
-              <div>見出しテキストはいります。見出しテキストはいります。</div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </section>
+      </PageContent>
+    </>
   )
 }
 
-export default Solution1
+export default Service_01

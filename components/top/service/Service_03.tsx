@@ -1,4 +1,4 @@
-// components/service/Service_02.tsx
+// components/service/Service_03.tsx
 "use client"
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
@@ -6,7 +6,7 @@ import PageContent from "@/components/ui/frame/PageContent"
 import ServiceCard from "@/components/ui/ItemCard/ServiceCard"
 import { serviceData } from "@/components/data/top/ServiceData"
 
-const Service_02 = () => {
+const Service_03 = () => {
   // 表示するサービス数をserviceDataのIDを指定して表示
   const serviceIdsToDisplay = [1, 2, 3, 4, 5]
 
@@ -26,7 +26,7 @@ const Service_02 = () => {
             titleClassName="text-center"
           />
 
-          <div className=" space-y-8">
+          <div className="grid grid-cols-2 gap-10">
             {servicesToDisplay.map((service) => (
               <ServiceCard
                 key={service.id}
@@ -35,7 +35,7 @@ const Service_02 = () => {
                 description={service.description}
                 image={service.image} // 画像パスを渡す
                 href={service.href} // リンク先を渡す
-                className=" flex"
+                className="overlay" // テキストを画像の上に配置するためにpositionを指定
               />
             ))}
           </div>
@@ -45,4 +45,4 @@ const Service_02 = () => {
   )
 }
 
-export default Service_02
+export default Service_03

@@ -10,7 +10,7 @@ interface ContentHeadlineProps {
   parentDirectoryLink?: string
   className?: string // 親要素のclassName
   titleClassName?: string // h1用のclassName
-  subtitleClassName?: string // h2用のclassName
+  entitleClassName?: string // h2用のclassName
 }
 
 const ContentHeadline: React.FC<ContentHeadlineProps> = ({
@@ -19,11 +19,11 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   entitle,
   className = "",
   titleClassName = "",
-  subtitleClassName = "",
+  entitleClassName = "",
 }) => {
   return (
     <section className={classNames("w-1200", className)}>
-      <h3 className={classNames(" text-lg mb-4 ", subtitleClassName)}>
+      <h3 className={classNames(" text-lg mb-4 ", entitleClassName)}>
         {entitle}
       </h3>
       <h1 className={classNames("text-4xl ", titleClassName)}>{maintitle}</h1>
