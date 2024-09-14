@@ -1,4 +1,4 @@
-// components/kv/KeyVisual_04.tsx
+// components/kv/KeyVisual_06.tsx
 "use client"
 
 import FirstViewContent from "@/components/ui/frame/FirstViewContent"

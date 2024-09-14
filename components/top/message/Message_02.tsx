@@ -1,9 +1,11 @@
+// components/message/Message_02.tsx
+
 "use client"
 
 import Image from "next/image"
 
 // メッセージ
-const Message2 = () => {
+const Message_02 = () => {
   return (
     <div className="max-w-screen-xl mx-auto py-10 space-y-10">
       <div className="font-bold text-2xl max-w-screen-lg mx-auto">
@@ -28,4 +30,4 @@ const Message2 = () => {
   )
 }
 
-export default Message2
+export default Message_02

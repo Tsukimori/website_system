@@ -1,10 +1,11 @@
+// components/kv/KeyVisual_03.tsx
 "use client"
 
 import Image from "next/image"
-import FirstViewContent from "../ui/frame/FirstViewContent"
+import FirstViewContent from "@/components/ui/frame/FirstViewContent"
 import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
-import ScrollButton from "../ui/button/ScrollButton"
-import KeyVisualContent from "../ui/frame/KeyVisualContent"
+import ScrollButton from "@/components/ui/button/ScrollButton"
+import KeyVisualContent from "@/components/ui/frame/KeyVisualContent"
 
 // キービジュアル
 const KeyVisual_03 = () => {

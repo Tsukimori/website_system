@@ -4,7 +4,7 @@ import { ReactNode, useState } from "react"
 import { Menu } from "lucide-react"
 import { useStore } from "@/store/useStore"
 import { componentsConfig } from "@/lib/componentsConfig"
-import Navigation from "@/components/admin/Nvigation"
+import Navigation from "@/components/admin/Navigation"
 
 interface AdminLayoutProps {
   children: ReactNode

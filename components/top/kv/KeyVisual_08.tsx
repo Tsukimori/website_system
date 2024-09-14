@@ -1,3 +1,5 @@
+// components/kv/KeyVisual_08.tsx
+
 "use client"
 
 import Image from "next/image"

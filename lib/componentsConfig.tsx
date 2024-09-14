@@ -6,17 +6,17 @@ import About1 from "@/components/about/About1"
 import About2 from "@/components/about/About2"
 import Footer1 from "@/components/footer/Footer1"
 import Footer2 from "@/components/footer/Footer2"
-import KeyVisual_01 from "@/components/kv/KeyVisual_01"
-import KeyVisual_02 from "@/components/kv/KeyVisual_02"
-import KeyVisual_03 from "@/components/kv/KeyVisual_03"
-import KeyVisual_04 from "@/components/kv/KeyVisual_04"
-import KeyVisual_05 from "@/components/kv/KeyVisual_05"
-import KeyVisual_06 from "@/components/kv/KeyVisual_06"
-import Message1 from "@/components/message/Message1"
-import Message2 from "@/components/message/Message2"
-import Message3 from "@/components/message/Message3"
-import Solution1 from "@/components/solution/Solution1"
-import Solution2 from "@/components/solution/Solution2"
+import KeyVisual_01 from "@/components/top/kv/KeyVisual_01"
+import KeyVisual_02 from "@/components/top/kv/KeyVisual_02"
+import KeyVisual_03 from "@/components/top/kv/KeyVisual_03"
+import KeyVisual_04 from "@/components/top/kv/KeyVisual_04"
+import KeyVisual_05 from "@/components/top/kv/KeyVisual_05"
+import KeyVisual_06 from "@/components/top/kv/KeyVisual_06"
+import Message_01 from "@/components/top/message/Message_01"
+import Message_02 from "@/components/top/message/Message_02"
+import Message_03 from "@/components/top/message/Message_03"
+import Service_01 from "@/components/top/service/Service_01"
+import Service_02 from "@/components/top/service/Service_02"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -50,7 +50,6 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
           { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
           { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
-
         ],
         components: {
           Header_01: <Header_01 />,
@@ -86,25 +85,25 @@ export const componentsConfig: ComponentsConfig = {
       message: {
         title: "メッセージ",
         options: [
-          { id: "Message1", src: "/admin/1.png", alt: "Message1" },
-          { id: "Message2", src: "/admin/2.png", alt: "Message2" },
-          { id: "Message3", src: "/admin/3.png", alt: "Message3" },
+          { id: "Message_01", src: "/admin/1.png", alt: "Message_01" },
+          { id: "Message_02", src: "/admin/2.png", alt: "Message_02" },
+          { id: "Message_03", src: "/admin/3.png", alt: "Message_03" },
         ],
         components: {
-          Message1: <Message1 />,
-          Message2: <Message2 />,
-          Message3: <Message3 />,
+          Message_01: <Message_01 />,
+          Message_02: <Message_02 />,
+          Message_03: <Message_03 />,
         },
       },
-      solution: {
+      service: {
         title: "サービス",
         options: [
-          { id: "Solution1", src: "/admin/1.png", alt: "Solution1" },
-          { id: "Solution2", src: "/admin/2.png", alt: "Solution2" },
+          { id: "Service_01", src: "/admin/1.png", alt: "Service_01" },
+          { id: "Service_02", src: "/admin/2.png", alt: "Service_02" },
         ],
         components: {
-          Solution1: <Solution1 />,
-          Solution2: <Solution2 />,
+          Service_01: <Service_01 />,
+          Service_02: <Service_02 />,
         },
       },
       footer: {
@@ -129,7 +128,6 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
           { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
           { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
-
         ],
         components: {
           Header_01: <Header_01 />,
