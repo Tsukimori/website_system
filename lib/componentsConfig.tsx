@@ -25,11 +25,20 @@ import Service_02 from "@/components/top/service/Service_02"
 import Service_03 from "@/components/top/service/Service_03"
 import Service_04 from "@/components/top/service/Service_04"
 import News_01 from "@/components/top/news/News_01"
-// import News_02 from "@/components/top/news/News_02"
-// import News_03 from "@/components/top/news/News_03"
-// import News_04 from "@/components/top/news/News_04"
+import News_02 from "@/components/top/news/News_02"
+import News_03 from "@/components/top/news/News_03"
+import News_04 from "@/components/top/news/News_04"
+import News_05 from "@/components/top/news/News_05"
 import Case_01 from "@/components/top/case/Case_01"
 import Case_02 from "@/components/top/case/Case_02"
+import Case_03 from "@/components/top/case/Case_03"
+import Case_04 from "@/components/top/case/Case_04"
+import Case_05 from "@/components/top/case/Case_05"
+import Blog_01 from "@/components/top/blog/Blog_01"
+import Blog_02 from "@/components/top/blog/Blog_02"
+import Blog_03 from "@/components/top/blog/Blog_03"
+import Blog_04 from "@/components/top/blog/Blog_04"
+import Blog_05 from "@/components/top/blog/Blog_05"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -139,15 +148,17 @@ export const componentsConfig: ComponentsConfig = {
         title: "お知らせ",
         options: [
           { id: "News_01", src: "/admin/1.png", alt: "News_01" },
-          // { id: "News_02", src: "/admin/1.png", alt: "News_02" },
-          // { id: "News_03", src: "/admin/1.png", alt: "News_03" },
-          // { id: "News_04", src: "/admin/1.png", alt: "News_04" },
+          { id: "News_02", src: "/admin/2.png", alt: "News_02" },
+          { id: "News_03", src: "/admin/3.png", alt: "News_03" },
+          { id: "News_04", src: "/admin/4.png", alt: "News_04" },
+          { id: "News_05", src: "/admin/5.png", alt: "News_05" },
         ],
         components: {
           News_01: <News_01 />,
-          // News_02: <News_02 />,
-          // News_03: <News_03 />,
-          // News_04: <News_04 />,
+          News_02: <News_02 />,
+          News_03: <News_03 />,
+          News_04: <News_04 />,
+          News_05: <News_05 />,
         },
       },
       case: {
@@ -157,10 +168,31 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Case_02", src: "/admin/2.png", alt: "Case_02" },
           { id: "Case_03", src: "/admin/3.png", alt: "Case_03" },
           { id: "Case_04", src: "/admin/4.png", alt: "Case_04" },
+          { id: "Case_05", src: "/admin/5.png", alt: "Case_05" },
         ],
         components: {
           Case_01: <Case_01 />,
           Case_02: <Case_02 />,
+          Case_03: <Case_03 />,
+          Case_04: <Case_04 />,
+          Case_05: <Case_05 />,
+        },
+      },
+      blog: {
+        title: "ブログ",
+        options: [
+          { id: "Blog_01", src: "/admin/1.png", alt: "Blog_01" },
+          { id: "Blog_02", src: "/admin/2.png", alt: "Blog_02" },
+          { id: "Blog_03", src: "/admin/3.png", alt: "Blog_03" },
+          { id: "Blog_04", src: "/admin/4.png", alt: "Blog_04" },
+          { id: "Blog_05", src: "/admin/5.png", alt: "Blog_05" },
+        ],
+        components: {
+          Blog_01: <Blog_01 />,
+          Blog_02: <Blog_02 />,
+          Blog_03: <Blog_03 />,
+          Blog_04: <Blog_04 />,
+          Blog_05: <Blog_05 />,
         },
       },
       footer: {
