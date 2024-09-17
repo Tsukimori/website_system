@@ -1,4 +1,4 @@
-// components/case/Case_02.tsx
+// components/case/Case_04.tsx
 
 "use client"
 
@@ -16,7 +16,7 @@ interface CaseProps {
   limit?: number
 }
 
-const Case_02 = ({ limit = 3 }: CaseProps) => {
+const Case_04 = ({ limit = 6 }: CaseProps) => {
   const [contents, setContents] = useState<Work[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -52,18 +52,19 @@ const Case_02 = ({ limit = 3 }: CaseProps) => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto space-y-10">
-          <ContentHeadline
-            entitle="Case study"
-            maintitle="導入事例"
-            entitleClassName=""
-            titleClassName=""
-          />
-
-          <div className=" grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
+        <section className="w-1200 mx-auto">
+          <div className="w-[300px]">
+            <ContentHeadline
+              entitle="Case study"
+              maintitle="導入事例"
+              entitleClassName=""
+              titleClassName=""
+            />
+          </div>
+          <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-16 ">
             {contents.map((post: Work) => (
-              <div key={post.id} className="w-full">
-                <div className="w-full  h-[250px]  mt-5 md:mt-0">
+              <div key={post.id} className="w-full flex space-x-6">
+                <div className="w-[180px]  h-[130px]  mt-5 md:mt-0">
                   {post.image && (
                     <Image
                       src={post.image.url}
@@ -90,7 +91,7 @@ const Case_02 = ({ limit = 3 }: CaseProps) => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center mt-16">
+          <div className="mt-16 flex justify-center">
             <MoreButton className="text-accentColor border-accentColor" />
           </div>
         </section>
@@ -99,4 +100,4 @@ const Case_02 = ({ limit = 3 }: CaseProps) => {
   )
 }
 
-export default Case_02
+export default Case_04

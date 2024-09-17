@@ -7,11 +7,6 @@ import { microcms } from "@/lib/microcms"
 import { Work } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import { Navigation, Pagination } from "swiper/modules"
 
 interface CaseProps {
   limit?: number
@@ -52,55 +47,73 @@ const Case_01 = ({ limit = 5 }: CaseProps) => {
 
   return (
     <>
-      <PageContent>
-        <section className="w-1200 mx-auto space-y-10">
+      <PageContent className="bg-bgLightBlue">
+        <section className="w-1200 mx-auto">
           <ContentHeadline
             entitle="Case study"
             maintitle="導入事例"
-            entitleClassName="text-center"
-            titleClassName="text-center"
+            entitleClassName=""
+            titleClassName=""
           />
-
-          {/* Swiperの設定 */}
-          <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={30}
-            slidesPerView={1} // 1つのスライドを表示
-            navigation // ナビゲーション矢印を有効化
-            pagination={{ clickable: true }} // ページネーションを有効化
-            loop={true} // ループさせる
-          >
-            {contents.map((post: Work) => (
-              <SwiperSlide key={post.id}>
-                <div className="bg-white text-black rounded-2xl py-10 px-5 md:p-16 flex-shrink-0 w-[600px] md:flex justify-between">
-                  <div className="md:w-[272px] flex flex-col justify-between">
-                    <div>
-                      <p className="inline-block bg-black text-xs text-center px-2 py-1 text-white">
-                        {Array.isArray(post.category) && post.category.length > 0
-                          ? post.category.join(", ")
-                          : "カテゴリーなし"}
-                      </p>
-                      <p className="text-lg text-black mt-2 font-bold">
-                        {post.title}
-                      </p>
-                    </div>
-                    <p className="mt-2 text-gray-400 ">{post.content}</p>
-                  </div>
-                  <div className="w-full md:w-[350px] h-[207px] border border-gray-300 rounded-2xl mt-5 md:mt-0">
-                    {post.image && (
-                      <Image
-                        src={post.image.url}
-                        alt="制作物サムネイル"
-                        width={350}
-                        height={207}
-                        className="w-full h-full rounded-2xl object-cover object-top"
-                      />
-                    )}
-                  </div>
+          <div className="mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {/* 1番目のコンテンツ */}
+              <div className="col-span-1 md:col-span-1 w-full h-[500px]">
+                <div className="w-full h-[500px] mt-5 md:mt-0">
+                  {contents[0].image && (
+                    <Image
+                      src={contents[0].image.url}
+                      alt="制作物サムネイル"
+                      width={370}
+                      height={223}
+                      className="w-full h-full rounded-t-2xl object-cover"
+                    />
+                  )}
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                <div className="bg-white p-6">
+                  <p className="text-lg font-bold">{contents[0].title}</p>
+                  <p className="mt-2 text-[#5f5f5f] text-xs">
+                    #
+                    {Array.isArray(contents[0].category) &&
+                    contents[0].category.length > 0
+                      ? contents[0].category.join(", ")
+                      : "カテゴリーなし"}
+                  </p>
+                </div>
+              </div>
+
+              {/* 2番目以降のコンテンツ */}
+              <div className="grid grid-cols-1">
+                <div className="grid grid-cols-2 gap-10">
+                  {contents.slice(1).map((post: Work) => (
+                    <div key={post.id} className="w-full ">
+                      <div className="w-full h-[150px] mt-5 md:mt-0">
+                        {post.image && (
+                          <Image
+                            src={post.image.url}
+                            alt="制作物サムネイル"
+                            width={370}
+                            height={223}
+                            className="w-full h-full rounded-t-2xl object-cover"
+                          />
+                        )}
+                      </div>
+                      <div className="bg-white p-6">
+                        <p className="text-lg font-bold">{post.title}</p>
+                        <p className="mt-2 text-[#5f5f5f] text-xs">
+                          #
+                          {Array.isArray(post.category) &&
+                          post.category.length > 0
+                            ? post.category.join(", ")
+                            : "カテゴリーなし"}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </PageContent>
     </>
