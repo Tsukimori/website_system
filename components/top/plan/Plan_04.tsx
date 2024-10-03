@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
+import PlanOption from "@/components/ui/module/PlanOption"
 
 const Plan_04 = () => {
   return (
@@ -81,6 +82,7 @@ const Plan_04 = () => {
             <li>※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります</li>
           </ul>
         </section>
+        <PlanOption/>
       </PageContent>
     </>
   )

@@ -7,6 +7,7 @@ import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import PlanCard from "@/components/ui/ItemCard/PlanCard_01"
+import PlanOption from "@/components/ui/module/PlanOption"
 
 const Plan_01 = () => {
   return (
@@ -78,6 +79,7 @@ const Plan_01 = () => {
             />
           </div>
         </section>
+        <PlanOption/>
       </PageContent>
     </>
   )

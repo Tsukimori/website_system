@@ -7,6 +7,7 @@ import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import PlanCard from "@/components/ui/ItemCard/PlanCard_02"
+import PlanOption from "@/components/ui/module/PlanOption"
 
 const Plan_03 = () => {
   return (
@@ -36,6 +37,7 @@ const Plan_03 = () => {
             <Link href="/" className="bg-accentColor text-white cursor-pointer rounded-full flex items-center justify-center w-[350px] h-[58px] font-semibold">申し込む</Link>
           </div>
         </section>
+        <PlanOption/>
       </PageContent>
     </>
   )
