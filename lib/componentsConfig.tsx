@@ -47,6 +47,12 @@ import Faq_01 from "@/components/top/faq/Faq_01"
 import Faq_02 from "@/components/top/faq/Faq_02"
 import Flow_01 from "@/components/top/flow/Flow_01"
 import Flow_02 from "@/components/top/flow/Flow_02"
+import Cta_01 from "@/components/ui/module/cta/Cta_01"
+import Cta_02 from "@/components/ui/module/cta/Cta_02"
+import Cta_03 from "@/components/ui/module/cta/Cta_03"
+import Cta_04 from "@/components/ui/module/cta/Cta_04"
+import Aside_01 from "@/components/ui/module/aside/Aside_01"
+import Aside_02 from "@/components/ui/module/aside/Aside_02"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -240,6 +246,32 @@ export const componentsConfig: ComponentsConfig = {
           Flow_01: <Flow_01 />,
           Flow_02: <Flow_02 />,
 
+        },
+      },
+      aside: {
+        title: "ASIDE",
+        options: [
+          { id: "Aside_01", src: "/admin/1.png", alt: "Aside_01" },
+          { id: "Aside_02", src: "/admin/2.png", alt: "Aside_02" },
+        ],
+        components: {
+          Aside_01: <Aside_01 />,
+          Aside_02: <Aside_02 />,
+        },
+      },
+      cta: {
+        title: "CTA",
+        options: [
+          { id: "Cta_01", src: "/admin/1.png", alt: "Cta_01" },
+          { id: "Cta_02", src: "/admin/2.png", alt: "Cta_02" },
+          { id: "Cta_03", src: "/admin/3.png", alt: "Cta_03" },
+          { id: "Cta_04", src: "/admin/4.png", alt: "Cta_04" },
+        ],
+        components: {
+          Cta_01: <Cta_01 />,
+          Cta_02: <Cta_02 />,
+          Cta_03: <Cta_03 />,
+          Cta_04: <Cta_04 />,
         },
       },
       footer: {
