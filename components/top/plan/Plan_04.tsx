@@ -1,4 +1,4 @@
-// components/plan/Plan_03.tsx
+// components/plan/Plan_04.tsx
 "use client"
 
 import { useState, useEffect } from "react"
@@ -6,7 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
-import PlanCard from "@/components/ui/ItemCard/PlanCard_02"
 
 const Plan_04 = () => {
   return (
