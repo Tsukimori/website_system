@@ -43,6 +43,8 @@ import Plan_01 from "@/components/top/plan/Plan_01"
 import Plan_02 from "@/components/top/plan/Plan_02"
 import Plan_03 from "@/components/top/plan/Plan_03"
 import Plan_04 from "@/components/top/plan/Plan_04"
+import Faq_01 from "@/components/top/faq/Faq_01"
+import Faq_02 from "@/components/top/faq/Faq_02"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -212,6 +214,18 @@ export const componentsConfig: ComponentsConfig = {
           Plan_02: <Plan_02 />,
           Plan_03: <Plan_03 />,
           Plan_04: <Plan_04 />,
+        },
+      },
+      faq: {
+        title: "よくある質問",
+        options: [
+          { id: "Faq_01", src: "/admin/1.png", alt: "Faq_01" },
+          { id: "Faq_02", src: "/admin/2.png", alt: "Faq_02" },
+        ],
+        components: {
+          Faq_01: <Faq_01 />,
+          Faq_02: <Faq_02 />,
+
         },
       },
       footer: {
