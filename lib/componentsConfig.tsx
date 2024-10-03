@@ -45,6 +45,8 @@ import Plan_03 from "@/components/top/plan/Plan_03"
 import Plan_04 from "@/components/top/plan/Plan_04"
 import Faq_01 from "@/components/top/faq/Faq_01"
 import Faq_02 from "@/components/top/faq/Faq_02"
+import Flow_01 from "@/components/top/flow/Flow_01"
+import Flow_02 from "@/components/top/flow/Flow_02"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -225,6 +227,18 @@ export const componentsConfig: ComponentsConfig = {
         components: {
           Faq_01: <Faq_01 />,
           Faq_02: <Faq_02 />,
+
+        },
+      },
+      flow: {
+        title: "ご利用の流れ",
+        options: [
+          { id: "Flow_01", src: "/admin/1.png", alt: "Flow_01" },
+          { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
+        ],
+        components: {
+          Flow_01: <Flow_01 />,
+          Flow_02: <Flow_02 />,
 
         },
       },

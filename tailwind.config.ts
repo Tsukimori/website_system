@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'flow-arrow': "url('/flow/arrow-right.svg')"
+      },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
       },
