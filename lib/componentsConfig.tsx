@@ -42,7 +42,7 @@ import Blog_05 from "@/components/top/blog/Blog_05"
 import Plan_01 from "@/components/top/plan/Plan_01"
 import Plan_02 from "@/components/top/plan/Plan_02"
 import Plan_03 from "@/components/top/plan/Plan_03"
-// import Plan_04 from "@/components/top/plan/Plan_04"
+import Plan_04 from "@/components/top/plan/Plan_04"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -205,13 +205,13 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Plan_01", src: "/admin/1.png", alt: "Plan_01" },
           { id: "Plan_02", src: "/admin/2.png", alt: "Plan_02" },
           { id: "Plan_03", src: "/admin/3.png", alt: "Plan_03" },
-          // { id: "Plan_04", src: "/admin/4.png", alt: "Plan_04" },
+          { id: "Plan_04", src: "/admin/4.png", alt: "Plan_04" },
         ],
         components: {
           Plan_01: <Plan_01 />,
           Plan_02: <Plan_02 />,
           Plan_03: <Plan_03 />,
-          // Plan_04: <Plan_04 />,
+          Plan_04: <Plan_04 />,
         },
       },
       footer: {
