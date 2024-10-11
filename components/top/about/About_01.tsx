@@ -15,17 +15,24 @@ const About_01 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" w-1200 mx-auto ">
           <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
-          <div className=" flex justify-start mt-16">
-            <h3 className=" w-[500px] text-5xl ">見出しテキスト</h3>
+          <div className=" flex justify-start">
+            <h3 className=" w-[500px] text-5xl font-light leading-[64px]">
+              見出しテキスト
+              <br />
+              はいります見出し
+            </h3>
             <div>
-              <p className=" w-[660px]">
+              <p className=" w-[660px] leading-[45px] text-lg">
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。
               </p>
-              <MoreLinkButton href="/" />
+              <MoreLinkButton
+                href="/"
+                className="mt-10 text-accentColor border-accentColor  "
+              />
             </div>
           </div>
         </section>

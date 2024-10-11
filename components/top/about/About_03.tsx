@@ -14,27 +14,18 @@ const About_03 = () => {
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" w-1200 mx-auto ">
-          <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
-          <div className=" mt-16 flex justify-start space-x-20">
-            <div className="w-[600px]">
-              <h3 className="text-5xl ">見出しテキスト</h3>
-              <p>
+          <div className=" flex justify-start">
+            <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
+            <div>
+              <h3 className=" w-[500px] text-5xl mt-4 font-light leading-[64px]">見出しテキスト<br/>はいります見出し</h3>
+              <p className=" w-[660px] mt-10 leading-[45px] text-lg">
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 メッセージはいります。メッセージはいります。
               </p>
-              <MoreLinkButton href="/" />
-            </div>
-            <div className=" w-[520px] h-[767px] relative">
-              <Image
-                src="/top/message/message_img.png"
-                alt="message"
-                layout="fill" // 画像のサイズは親要素にフィット
-                objectFit="cover" // 画像を親要素に合わせてトリミング
-                className="block"
-              />
+              <MoreLinkButton href="/" className="mt-10 text-accentColor border-accentColor" />
             </div>
           </div>
         </section>
