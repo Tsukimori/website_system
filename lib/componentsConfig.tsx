@@ -47,8 +47,8 @@ import Faq_01 from "@/components/top/faq/Faq_01"
 import Faq_02 from "@/components/top/faq/Faq_02"
 import Profile_01 from "@/components/top/profile/Profile_01"
 import Profile_02 from "@/components/top/profile/Profile_02"
-import Profile_03 from "@/components/top/profile/Profile_03"
-import Profile_04 from "@/components/top/profile/Profile_04"
+import Profile_03 from "@/components/top/profile/profile_03"
+import Profile_04 from "@/components/top/profile/profile_04"
 import Flow_01 from "@/components/top/flow/Flow_01"
 import Flow_02 from "@/components/top/flow/Flow_02"
 import Cta_01 from "@/components/ui/module/cta/Cta_01"
@@ -132,21 +132,21 @@ export const componentsConfig: ComponentsConfig = {
           About_04: <About_04 />,
         },
       },
-      message: {
-        title: "メッセージ",
-        options: [
-          { id: "Message_01", src: "/admin/1.png", alt: "Message_01" },
-          { id: "Message_02", src: "/admin/2.png", alt: "Message_02" },
-          { id: "Message_03", src: "/admin/3.png", alt: "Message_03" },
-          { id: "Message_04", src: "/admin/4.png", alt: "Message_04" },
-        ],
-        components: {
-          Message_01: <Message_01 />,
-          Message_02: <Message_02 />,
-          Message_03: <Message_03 />,
-          Message_04: <Message_04 />,
-        },
-      },
+      // message: {
+      //   title: "メッセージ",
+      //   options: [
+      //     { id: "Message_01", src: "/admin/1.png", alt: "Message_01" },
+      //     { id: "Message_02", src: "/admin/2.png", alt: "Message_02" },
+      //     { id: "Message_03", src: "/admin/3.png", alt: "Message_03" },
+      //     { id: "Message_04", src: "/admin/4.png", alt: "Message_04" },
+      //   ],
+      //   components: {
+      //     Message_01: <Message_01 />,
+      //     Message_02: <Message_02 />,
+      //     Message_03: <Message_03 />,
+      //     Message_04: <Message_04 />,
+      //   },
+      // },
       service: {
         title: "サービス",
         options: [
@@ -162,23 +162,7 @@ export const componentsConfig: ComponentsConfig = {
           Service_04: <Service_04 />,
         },
       },
-      news: {
-        title: "お知らせ",
-        options: [
-          { id: "News_01", src: "/admin/1.png", alt: "News_01" },
-          { id: "News_02", src: "/admin/2.png", alt: "News_02" },
-          { id: "News_03", src: "/admin/3.png", alt: "News_03" },
-          { id: "News_04", src: "/admin/4.png", alt: "News_04" },
-          { id: "News_05", src: "/admin/5.png", alt: "News_05" },
-        ],
-        components: {
-          News_01: <News_01 />,
-          News_02: <News_02 />,
-          News_03: <News_03 />,
-          News_04: <News_04 />,
-          News_05: <News_05 />,
-        },
-      },
+  
       case: {
         title: "導入事例",
         options: [
@@ -228,6 +212,35 @@ export const componentsConfig: ComponentsConfig = {
           Plan_04: <Plan_04 />,
         },
       },
+      flow: {
+        title: "ご利用の流れ",
+        options: [
+          { id: "Flow_01", src: "/admin/1.png", alt: "Flow_01" },
+          { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
+        ],
+        components: {
+          Flow_01: <Flow_01 />,
+          Flow_02: <Flow_02 />,
+
+        },
+      },
+      news: {
+        title: "お知らせ",
+        options: [
+          { id: "News_01", src: "/admin/1.png", alt: "News_01" },
+          { id: "News_02", src: "/admin/2.png", alt: "News_02" },
+          { id: "News_03", src: "/admin/3.png", alt: "News_03" },
+          { id: "News_04", src: "/admin/4.png", alt: "News_04" },
+          { id: "News_05", src: "/admin/5.png", alt: "News_05" },
+        ],
+        components: {
+          News_01: <News_01 />,
+          News_02: <News_02 />,
+          News_03: <News_03 />,
+          News_04: <News_04 />,
+          News_05: <News_05 />,
+        },
+      },
       faq: {
         title: "よくある質問",
         options: [
@@ -256,18 +269,7 @@ export const componentsConfig: ComponentsConfig = {
 
         },
       },
-      flow: {
-        title: "ご利用の流れ",
-        options: [
-          { id: "Flow_01", src: "/admin/1.png", alt: "Flow_01" },
-          { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
-        ],
-        components: {
-          Flow_01: <Flow_01 />,
-          Flow_02: <Flow_02 />,
-
-        },
-      },
+      
       aside: {
         title: "ASIDE",
         options: [
