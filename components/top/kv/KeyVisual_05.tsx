@@ -41,7 +41,7 @@ const KeyVisual_05 = () => {
             }
             className="  text-white "
           />
-          <MoreButton />
+          <MoreButton className="text-white" />
         </div>
         <div className="absolute left-1/2  transform -translate-x-1/2 bottom-20">
           <ScrollButton onClick={scrollToNextSection} color="white" />
