@@ -1,4 +1,4 @@
-// components/profile/Profile_01.tsx
+// components/profile/Profile_02.tsx
 "use client"
 
 import { useState, useEffect } from "react"
