@@ -17,7 +17,7 @@ const KeyVisual_03 = () => {
   }
   return (
     <>
-      <FirstViewContent className="relative">
+      <FirstViewContent className="relative h-screen">
         {/* widthがフルサイズでない場合は指定する */}
         {/* キービジュアルの画像 */}
         <section className="w-[65%] h-full absolute right-0 ">
