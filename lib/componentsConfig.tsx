@@ -16,6 +16,10 @@ import About_01 from "@/components/top/about/About_01"
 import About_02 from "@/components/top/about/About_02"
 import About_03 from "@/components/top/about/About_04"
 import About_04 from "@/components/top/about/About_03"
+import Strength_01 from "@/components/top/strength/Strength_01"
+import Strength_02 from "@/components/top/strength/Strength_02"
+import Strength_03 from "@/components/top/strength/Strength_03"
+import Strength_04 from "@/components/top/strength/Strength_04"
 import Message_01 from "@/components/top/message/Message_01"
 import Message_02 from "@/components/top/message/Message_02"
 import Message_03 from "@/components/top/message/Message_03"
@@ -130,6 +134,21 @@ export const componentsConfig: ComponentsConfig = {
           About_02: <About_02 />,
           About_03: <About_03 />,
           About_04: <About_04 />,
+        },
+      },
+      strength: {
+        title: "私たちの強み",
+        options: [
+          { id: "Strength_01", src: "/admin/1.png", alt: "Strength_01" },
+          { id: "Strength_02", src: "/admin/2.png", alt: "Strength_02" },
+          { id: "Strength_03", src: "/admin/3.png", alt: "Strength_03" },
+          { id: "Strength_04", src: "/admin/4.png", alt: "Strength_04" },
+        ],
+        components: {
+          Strength_01: <Strength_01 />,
+          Strength_02: <Strength_02 />,
+          Strength_03: <Strength_03 />,
+          Strength_04: <Strength_04 />,
         },
       },
       // message: {

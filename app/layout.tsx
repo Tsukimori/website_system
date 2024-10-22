@@ -2,7 +2,7 @@ import "./globals.css"
 import type { Metadata, Viewport } from "next"
 import ToastProvider from "@/components/providers/ToastProvider"
 
-import { Noto_Sans_JP, Lato } from 'next/font/google'
+import { Noto_Sans_JP, Lato, Spectral } from 'next/font/google'
 
 // Noto Sans JP フォントの設定
 const notoSansJP = Noto_Sans_JP({
@@ -15,6 +15,14 @@ const notoSansJP = Noto_Sans_JP({
 // Lato フォントの設定
 const lato = Lato({
   weight: ['100', '300', '400', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+// Spectral フォントの設定
+const spectral = Spectral({
+  weight: ['400', '700'],  // 通常と太字を指定
+  style: ['italic'],  // 通常とイタリック体を指定
   subsets: ['latin'],
   display: 'swap',
 })

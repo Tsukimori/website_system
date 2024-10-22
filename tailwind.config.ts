@@ -23,6 +23,7 @@ const config = {
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
+        spectral: ['Spectral', 'serif'],
       },
       colors: {
         accentColor: "#4270ED",
