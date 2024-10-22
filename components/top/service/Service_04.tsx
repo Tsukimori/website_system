@@ -3,7 +3,7 @@
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
-import ServiceCard from "@/components/ui/ItemCard/ServiceCard"
+import ServiceCard from "@/components/ui/ItemCard/ServiceCard_01"
 import { serviceData } from "@/components/data/top/ServiceData"
 
 const Service_04 = () => {
@@ -37,7 +37,7 @@ const Service_04 = () => {
                 href={service.href} // リンク先を渡す
                 className=" w-[282px] space-y-4"
                 imageContainerClass="  w-[282px] h-[280px]"
-
+                showButton={false}
               />
             ))}
           </div>

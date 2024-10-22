@@ -3,7 +3,7 @@
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
-import ServiceCard from "@/components/ui/ItemCard/ServiceCard"
+import ServiceCard from "@/components/ui/ItemCard/ServiceCard_01"
 import { serviceData } from "@/components/data/top/ServiceData"
 
 const Service_03 = () => {

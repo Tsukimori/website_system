@@ -1,6 +1,7 @@
 // components/ui/button/ArrowRightLinkButton.tsx
 
 import Link from "next/link"
+import { ChevronRight } from 'lucide-react';
 
 interface ArrowRightLinkButtonProps {
   href: string
@@ -12,9 +13,9 @@ const ArrowRightLinkButton: React.FC<ArrowRightLinkButtonProps> = ({
   label,
 }) => {
   return (
-    <Link href={href}>
-      <p className="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
-        {label}
+    <Link href={href} className="absolute right-0 top-1/4">
+      <p className="w-8 h-8 flex justify-center items-center bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">
+        {label}<ChevronRight size={12} color="white" />
       </p>
     </Link>
   )

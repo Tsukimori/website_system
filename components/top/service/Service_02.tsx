@@ -3,7 +3,7 @@
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
-import ServiceCard from "@/components/ui/ItemCard/ServiceCard"
+import ServiceCard from "@/components/ui/ItemCard/ServiceCard_02"
 import { serviceData } from "@/components/data/top/ServiceData"
 
 const Service_02 = () => {
@@ -26,7 +26,7 @@ const Service_02 = () => {
             titleClassName="text-center"
           />
 
-          <div className=" space-y-8">
+          <div className=" space-y-16">
             {servicesToDisplay.map((service) => (
               <ServiceCard
                 key={service.id}
@@ -35,7 +35,7 @@ const Service_02 = () => {
                 description={service.description}
                 image={service.image} // 画像パスを渡す
                 href={service.href} // リンク先を渡す
-                className=" flex"
+                className=" flex justify-between"
               />
             ))}
           </div>
