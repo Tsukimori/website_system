@@ -69,7 +69,31 @@ body,
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+/* swiper */
+
+.swiper-wrapper{
+  padding-bottom: 50px;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 100px!important;
+  height: 4px!important;
+  border-radius: inherit!important;
+  background-color: #d5d5d5!important;
+  margin: 0 12px!important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #393939 !important;
 }

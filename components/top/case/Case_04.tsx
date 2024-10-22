@@ -16,7 +16,7 @@ interface CaseProps {
   limit?: number
 }
 
-const Case_04 = ({ limit = 6 }: CaseProps) => {
+const Case_04 = ({ limit = 3 }: CaseProps) => {
   const [contents, setContents] = useState<Work[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -52,7 +52,7 @@ const Case_04 = ({ limit = 6 }: CaseProps) => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto">
+        <section className="w-1200 mx-auto flex justify-between">
           <div className="w-[300px]">
             <ContentHeadline
               entitle="Case study"
@@ -60,8 +60,11 @@ const Case_04 = ({ limit = 6 }: CaseProps) => {
               entitleClassName=""
               titleClassName=""
             />
+            <div className="mt-16 flex justify-center">
+              <MoreButton className="text-accentColor border-accentColor" />
+            </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-16 ">
+          <div className="w-[820px] grid grid-cols-1 gap-y-10 gap-x-16 ">
             {contents.map((post: Work) => (
               <div key={post.id} className="w-full flex space-x-6">
                 <div className="w-[180px]  h-[130px]  mt-5 md:mt-0">
@@ -90,9 +93,6 @@ const Case_04 = ({ limit = 6 }: CaseProps) => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="mt-16 flex justify-center">
-            <MoreButton className="text-accentColor border-accentColor" />
           </div>
         </section>
       </PageContent>
