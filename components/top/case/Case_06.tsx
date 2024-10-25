@@ -64,19 +64,16 @@ const Case_06 = ({ limit = 9 }: CaseProps) => {
               <MoreButton className="text-accentColor border-accentColor" />
             </div>
           </div>
-          <div className="w-[820px]  space-y-10 ">
+          <div className="w-[820px]  space-y-5 ">
             {contents.map((post: Work) => (
-              <div key={post.id} className="w-full flex space-x-6">
-                <p className="text-xs ">{post.date}</p>
-                <p className="mt-2 text-[#5f5f5f] text-xs">
+              <div key={post.id} className="w-full flex space-x-6 border-b border-[#eeeeee] pb-5">
+                <p className="font-medium ">{post.date}</p>
+                <p className=" h-[25px] px-4 py-1 bg-accentColor rounded-[5px] text-white  justify-center items-center text-xs">
                   {Array.isArray(post.category) && post.category.length > 0
                     ? post.category.join(", ")
                     : "カテゴリーなし"}
                 </p>
                 <p className="text-lg font-bold">{post.title}</p>
-                <p className="mt-2 text-[#5f5f5f] text-xs ">
-                  {contents[0].title}
-                </p>
               </div>
             ))}
           </div>

@@ -80,13 +80,6 @@ const Case_05 = ({ limit = 6 }: CaseProps) => {
                   <p className="mt-2 text-[#5f5f5f] text-xs ">
                     {contents[0].title}
                   </p>
-                  <Link
-                    href="/"
-                    className="mt-6 flex items-center text-accentColor font-semibold"
-                  >
-                    もっと見る
-                    <ChevronRightIcon className="ml-1 w-4 h-6" />
-                  </Link>
                 </div>
               </div>
             ))}

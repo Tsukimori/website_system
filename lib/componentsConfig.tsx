@@ -38,6 +38,7 @@ import Case_02 from "@/components/top/case/Case_02"
 import Case_03 from "@/components/top/case/Case_03"
 import Case_04 from "@/components/top/case/Case_04"
 import Case_05 from "@/components/top/case/Case_05"
+import Case_06 from "@/components/top/case/Case_06"
 import Blog_01 from "@/components/top/blog/Blog_01"
 import Blog_02 from "@/components/top/blog/Blog_02"
 import Blog_03 from "@/components/top/blog/Blog_03"
@@ -190,6 +191,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Case_03", src: "/admin/3.png", alt: "Case_03" },
           { id: "Case_04", src: "/admin/4.png", alt: "Case_04" },
           { id: "Case_05", src: "/admin/5.png", alt: "Case_05" },
+          { id: "Case_06", src: "/admin/6.png", alt: "Case_06" },
         ],
         components: {
           Case_01: <Case_01 />,
@@ -197,6 +199,7 @@ export const componentsConfig: ComponentsConfig = {
           Case_03: <Case_03 />,
           Case_04: <Case_04 />,
           Case_05: <Case_05 />,
+          Case_06: <Case_06 />,
         },
       },
       blog: {
