@@ -122,7 +122,7 @@ const Case_02 = ({ limit = 5 }: CaseProps) => {
           </Swiper>
 
           {/* ページネーションと一時停止ボタン */}
-          <div className="absolute right-60 -bottom-3">
+          <div className="absolute right-60 -bottom-3 z-10">
             <div className="swiper-pagination"></div>{" "}
             {/* Swiperのページネーション */}
             <button onClick={handlePlayPause} className="focus:outline-none">

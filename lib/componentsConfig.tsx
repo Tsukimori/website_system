@@ -44,6 +44,7 @@ import Blog_02 from "@/components/top/blog/Blog_02"
 import Blog_03 from "@/components/top/blog/Blog_03"
 import Blog_04 from "@/components/top/blog/Blog_04"
 import Blog_05 from "@/components/top/blog/Blog_05"
+import Blog_06 from "@/components/top/blog/Blog_06"
 import Plan_01 from "@/components/top/plan/Plan_01"
 import Plan_02 from "@/components/top/plan/Plan_02"
 import Plan_03 from "@/components/top/plan/Plan_03"
@@ -210,6 +211,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Blog_03", src: "/admin/3.png", alt: "Blog_03" },
           { id: "Blog_04", src: "/admin/4.png", alt: "Blog_04" },
           { id: "Blog_05", src: "/admin/5.png", alt: "Blog_05" },
+          { id: "Blog_06", src: "/admin/5.png", alt: "Blog_06" },
         ],
         components: {
           Blog_01: <Blog_01 />,
@@ -217,6 +219,7 @@ export const componentsConfig: ComponentsConfig = {
           Blog_03: <Blog_03 />,
           Blog_04: <Blog_04 />,
           Blog_05: <Blog_05 />,
+          Blog_06: <Blog_06 />,
         },
       },
       plan: {

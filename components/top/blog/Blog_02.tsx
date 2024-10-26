@@ -13,7 +13,6 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import { CirclePlay, PauseCircle } from "lucide-react" // Lucideアイコンをインポート
 import MoreButton from "@/components/ui/button/MoreButton"
-import { ChevronRightIcon } from "@heroicons/react/24/outline"
 
 // Swiper stylesをインポート
 import "swiper/css"
@@ -71,8 +70,8 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
 
   return (
     <>
-      <PageContent>
-        <section className="w-1200 mx-auto space-y-10">
+      <PageContent className="bg-bgLightBlue">
+        <section className="w-1200 mx-auto relative">
           <ContentHeadline
             entitle="Blog"
             maintitle="ブログ"
@@ -125,10 +124,10 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
           </Swiper>
 
           {/* ページネーションと一時停止ボタン */}
-          <div className="absolute right-60 -bottom-3">
+          <div className="absolute right-60 -bottom-3 z-10">
             <div className="swiper-pagination"></div>{" "}
             {/* Swiperのページネーション */}
-            <button onClick={handlePlayPause} className="focus:outline-none">
+            <button onClick={handlePlayPause} className="focus:outline-none ">
               {/* 再生/一時停止アイコンの切り替え */}
               {isPlaying ? (
                 <PauseCircle size={30} className="text-gray-600" />

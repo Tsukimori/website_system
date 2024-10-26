@@ -51,23 +51,19 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
 
   return (
     <>
-      <PageContent>
-        <section className="w-1200 mx-auto md:flex justify-between gap-x-20">
-          <div className="w-[300px]"> 
-            <ContentHeadline
-              entitle="Blog"
-              maintitle="ブログ"
-              entitleClassName=""
-              titleClassName=""
-            />
-            <div className="mt-16">
-              <MoreButton className="text-accentColor border-accentColor" />
-            </div>
-          </div>
-          <div className="w-[820px]  space-y-10 ">
+      <PageContent className="">
+        <section className="w-1200 mx-auto space-y-10">
+          <ContentHeadline
+            entitle="Blog"
+            maintitle="ブログ"
+            entitleClassName=""
+            titleClassName=""
+          />
+
+          <div className=" grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
             {contents.map((post: Work) => (
-              <div key={post.id} className="w-full flex space-x-6">
-                <div className="w-[250px]  h-[150px]  mt-5 md:mt-0">
+              <div key={post.id} className="w-full">
+                <div className="w-full  h-[250px]  rounded-[15px] mt-5 md:mt-0">
                   {post.image && (
                     <Image
                       src={post.image.url}
@@ -78,7 +74,7 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
                     />
                   )}
                 </div>
-                <div className="mt-6">
+                <div className="bg-white p-6">
                   <p className="text-lg font-bold">{post.title}</p>
                   <p className="mt-2 text-[#5f5f5f] text-xs ">
                     {contents[0].title}
@@ -93,6 +89,9 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="flex justify-center mt-16">
+            <MoreButton className="text-accentColor border-accentColor" />
           </div>
         </section>
       </PageContent>
