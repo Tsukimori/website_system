@@ -23,13 +23,13 @@ const PlanCard = ({
 }: PlanCardProps) => {
   return (
     <div>
-      <div className={`${bgColor} ${textColor} p-6 rounded-t-2xl`}>
-        <h3>{planName}</h3>
-        <p>{description}</p>
-        <p>
-          <span>￥</span>{price}
+      <div className={`${bgColor} ${textColor} p-6 rounded-t-2xl flex flex-col items-center text-center`}>
+        <h3 className="text-2xl font-bold leading-[38.40px] mb-1">{planName}</h3>
+        <p className="font-light">{description}</p>
+        <p className="my-4 text-[40px] font-bold ">
+          <span className="text-lg font-extrabold">￥</span>{price}
         </p>
-        <Link href={link}>申し込む</Link>
+        <Link href={link} className="w-full h-[58px] text-accentColor py-4 bg-white rounded-[30px] justify-center items-start font-semibold">申し込む</Link>
       </div>
       <ul className="mt-[2px] bg-white border border-[#EFEFEF] p-6 font-light text-[#393939] space-y-4">
         {features.map((feature, index) => (
