@@ -17,12 +17,18 @@ const Cta_02 = () => {
             width={500}
             height={363}
           />
-          <div className="">
-            <h4 className="text-white">見出しテキスト入ります見出しテキスト入ります</h4>
-            <p className="text-white">リード文はいりますリード文はいりますリード文はいりますリード文はいりますリード文はいりますリード文はいります</p>
+          <div className=" flex flex-col justify-center">
+            <h4 className="text-white text-[32px] font-bold">
+              見出しテキスト入ります見出しテキスト入ります
+            </h4>
+            <p
+              className="text-white text-lg font-semibold py-6"
+            >
+              リード文はいりますリード文はいりますリード文はいりますリード文はいりますリード文はいりますリード文はいります
+            </p>
             <div>
-            <FreeButtonWhite href="/" text="お問い合わせ" />
-          </div>
+              <FreeButtonWhite href="/" text="お問い合わせ" />
+            </div>
           </div>
         </section>
       </PageContent>
