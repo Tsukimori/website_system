@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
+import FlowCard from "@/components/ui/ItemCard/FlowCard_01"
 
 const Flow_01 = () => {
   return (
@@ -19,39 +20,62 @@ const Flow_01 = () => {
             titleClassName="text-center"
           />
           <div className="mt-16 grid grid-cols-4 gap-x-10 gap-y-6">
-            <div className="relative border-2 border-[#4270ed] after:content[] after:bg-[url('/flow/arrow-right.svg')] after:bg-no-repeat after:inline-block after:w-[20px] after:h-[40px] after:absolute after:top-1/2 after:-translate-y-1/2 after:-right-[34px]">
-              <p>STEP 1</p>
-              <p>01</p>
-              <h3>ステップ見出し入りますステップ見出し入ります</h3>
-              <p>
-                ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。
-              </p>
-            </div>
-            <div className="relative border-2 border-[#4270ed] after:content[] after:bg-[url('/flow/arrow-right.svg')] after:bg-no-repeat after:inline-block after:w-[20px] after:h-[40px] after:absolute after:top-1/2 after:-translate-y-1/2 after:-right-[34px]">
-              <p>STEP 1</p>
-              <p>01</p>
-              <h3>ステップ見出し入りますステップ見出し入ります</h3>
-              <p>
-                ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。
-              </p>
-            </div>
-            
-            <div className="relative border-2 border-[#4270ed] after:content[] after:bg-[url('/flow/arrow-right.svg')] after:bg-no-repeat after:inline-block after:w-[20px] after:h-[40px] after:absolute after:top-1/2 after:-translate-y-1/2 after:-right-[34px]">
-              <p>STEP 1</p>
-              <p>01</p>
-              <h3>ステップ見出し入りますステップ見出し入ります</h3>
-              <p>
-                ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。
-              </p>
-            </div>
-            <div className="border-2 border-[#4270ed] ">
-              <p>STEP 1</p>
-              <p>01</p>
-              <h3>ステップ見出し入りますステップ見出し入ります</h3>
-              <p>
-                ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。
-              </p>
-            </div>
+            <FlowCard
+              step="STEP 1"
+              number="01"
+              title="ステップ見出し入りますステップ見出し入ります"
+              description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
+              index={1}
+            />
+             <FlowCard
+              step="STEP 2"
+              number="02"
+              title="ステップ見出し入りますステップ見出し入ります"
+              description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
+              index={2}
+            />
+            <FlowCard
+              step="STEP 3"
+              number="03"
+              title="ステップ見出し入りますステップ見出し入ります"
+              description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
+              index={3}
+            />
+            <FlowCard
+              step="STEP 4"
+              number="04"
+              title="ステップ見出し入りますステップ見出し入ります"
+              description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
+              index={4}
+            />
+             <FlowCard
+              step="STEP 5"
+              number="05"
+              title="ステップ見出し入りますステップ見出し入ります"
+              description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
+              index={5}
+            />
+             <FlowCard
+              step="STEP 6"
+              number="06"
+              title="ステップ見出し入りますステップ見出し入ります"
+              description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
+              index={6}
+            />
+            <FlowCard
+              step="STEP 7"
+              number="07"
+              title="ステップ見出し入りますステップ見出し入ります"
+              description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
+              index={7}
+            />
+            <FlowCard
+              step="STEP 8"
+              number="08"
+              title="ステップ見出し入りますステップ見出し入ります"
+              description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
+              index={8}
+            />
           </div>
         </section>
       </PageContent>
