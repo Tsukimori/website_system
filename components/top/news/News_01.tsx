@@ -8,12 +8,13 @@ import { microcms } from "@/lib/microcms"
 import { Work } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
+import MoreButton from "@/components/ui/button/MoreButton"
 
 interface NewsProps {
   limit?: number
 }
 
-const News_01 = ({ limit = 5 }: NewsProps) => {
+const News_01 = ({ limit = 3 }: NewsProps) => {
   const [contents, setContents] = useState<Work[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -56,64 +57,31 @@ const News_01 = ({ limit = 5 }: NewsProps) => {
             entitleClassName=""
             titleClassName=""
           />
-          <div className="mt-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {/* 1番目のコンテンツ */}
-              <div className="col-span-1 md:col-span-1 w-full h-[500px]">
-                <div className="w-full h-[500px] mt-5 md:mt-0">
-                  {contents[0].image && (
+          <div className=" grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
+            {contents.map((post: Work) => (
+              <div key={post.id} className="w-full">
+                <div className="w-full  h-[250px]  mt-5 md:mt-0">
+                  {post.image && (
                     <Image
-                      src={contents[0].image.url}
+                      src={post.image.url}
                       alt="制作物サムネイル"
                       width={370}
                       height={223}
-                      className="w-full h-full rounded-t-2xl object-cover"
+                      className="w-full h-full rounded-2xl object-cover "
                     />
                   )}
                 </div>
                 <div className="bg-white p-6">
-                  <p className="text-lg font-bold">{contents[0].title}</p>
-                  <p className="mt-2 text-[#5f5f5f] text-xs">
-                    #
-                    {Array.isArray(contents[0].category) &&
-                    contents[0].category.length > 0
-                      ? contents[0].category.join(", ")
-                      : "カテゴリーなし"}
+                  <p className="text-lg font-bold">{post.title}</p>
+                  <p className="mt-2 text-[#5f5f5f] text-xs ">
+                    {contents[0].title}
                   </p>
                 </div>
               </div>
-
-              {/* 2番目以降のコンテンツ */}
-              <div className="grid grid-cols-1">
-                <div className="grid grid-cols-2 gap-10">
-                  {contents.slice(1).map((post: Work) => (
-                    <div key={post.id} className="w-full ">
-                      <div className="w-full h-[150px] mt-5 md:mt-0">
-                        {post.image && (
-                          <Image
-                            src={post.image.url}
-                            alt="制作物サムネイル"
-                            width={370}
-                            height={223}
-                            className="w-full h-full rounded-t-2xl object-cover"
-                          />
-                        )}
-                      </div>
-                      <div className="bg-white p-6">
-                        <p className="text-lg font-bold">{post.title}</p>
-                        <p className="mt-2 text-[#5f5f5f] text-xs">
-                          #
-                          {Array.isArray(post.category) &&
-                          post.category.length > 0
-                            ? post.category.join(", ")
-                            : "カテゴリーなし"}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
+          </div>
+          <div className="flex justify-center mt-16">
+            <MoreButton className="text-accentColor border-accentColor" />
           </div>
         </section>
       </PageContent>
