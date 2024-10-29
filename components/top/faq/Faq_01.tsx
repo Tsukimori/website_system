@@ -34,7 +34,7 @@ const Faq_01 = () => {
                 className="flex justify-between py-6 px-10 bg-bgLightBlue cursor-pointer "
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <div className="flex">
+                <div className="flex font-semibold text-lg">
                   <Image
                     src="/common/question-blue.svg"
                     alt="?マーク"
