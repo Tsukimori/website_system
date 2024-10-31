@@ -12,7 +12,7 @@ const Footer2 = () => {
 
   return (
     <footer className="border-t py-24">
-      <div className="w-1200 mx-auto">
+      <div className="w-[1400px]  mx-auto">
         <div className="flex flex-col items-center justify-center space-y-6">
           <h4>{companyName}</h4>
 

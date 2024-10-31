@@ -13,7 +13,7 @@ const Footer1 = () => {
   const { companyName, companyPostalCode, companyAddress } = CompanyInfo[0]
   return (
     <footer className="border-t py-24">
-      <div className="w-1200 mx-auto">
+      <div className="w-[1400px] mx-auto">
         <div className="flex justify-between">
           <div className="space-y-3">
             <h4>{companyName}</h4>
