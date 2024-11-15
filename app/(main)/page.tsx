@@ -1,20 +1,22 @@
-import Kv1 from "@/components/kv/Kv1"
-import Kv2 from "@/components/kv/Kv2"
-import Message1 from "@/components/message/Message1"
-import Message2 from "@/components/message/Message2"
-import Solution1 from "@/components/solution/Solution1"
-import Solution2 from "@/components/solution/Solution2"
+import KeyVisual_01 from "@/components/top/kv/KeyVisual_01"
+import KeyVisual_02 from "@/components/top/kv/KeyVisual_02"
+import About_01 from "@/components/top/about/About_01"
+import About_02 from "@/components/top/about/About_02"
+import Service_01 from "@/components/top/service/Service_01"
+import Service_02 from "@/components/top/service/Service_02"
+import Case_01 from "@/components/top/case/Case_01"
 
 // メインページ
 const HomePage = () => {
   return (
     <div>
-      {/* <Kv1 /> */}
-      <Kv2 />
-      {/* <Message1 /> */}
-      <Message2 />
-      {/* <Solution1 /> */}
-      <Solution2 />
+      {/* <KeyVisual_01 /> */}
+      <KeyVisual_02 />
+      {/* <About_01 /> */}
+      <About_02 />
+      {/* <Service_01 /> */}
+      <Service_02 />
+      <Case_01 />
     </div>
   )
 }

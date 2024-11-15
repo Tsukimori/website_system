@@ -121,13 +121,13 @@ npm install
 
 4. **選択したデザインを準備する**
 
-   エクスポートした JSON ファイルと画面全体のスクリーンショットを用意します。  
+   エクスポートした JSON ファイルと画面全体のスクリーンショットを用意します。
    JSON ファイルの例：
 
    ```json
    {
      "header": "Header2",
-     "kv": "Kv1",
+     "kv": "KeyVisual_01",
      "message": "Message2",
      "solution": "Solution1",
      "footer": "Footer1",

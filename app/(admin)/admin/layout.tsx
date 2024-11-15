@@ -3,7 +3,11 @@ interface AdminLayoutProps {
 }
 
 const AdminMainLayout = ({ children }: AdminLayoutProps) => {
-  return <div>{children}</div>
+  return (
+    <>
+      <div>{children}</div>
+    </>
+  )
 }
 
 export default AdminMainLayout
