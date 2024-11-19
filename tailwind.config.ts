@@ -24,9 +24,11 @@ const config = {
       fontFamily: {
         lato: ["Lato", "sans-serif"],
         spectral: ['Spectral', 'serif'],
+        zenKaku: ["'Zen Kaku Gothic New'", "sans-serif"],
       },
       colors: {
-        accentColor: "#4270ED",
+        accentColor: "#003461",
+        baseColor:"#003461",
         borderGray: "#393939",
         bgBlack: "#333333",
         bgLightBlue: "#f7fcff",

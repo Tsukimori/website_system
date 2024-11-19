@@ -46,7 +46,7 @@ interface RootLayoutProps {
 const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     <html lang="ja">
-      <body className={`${notoSansJP.className}`}>
+      <body className="font-zenKaku text-baseColor">
         <ToastProvider />
         {children}
       </body>
