@@ -20,7 +20,7 @@ const Header_01 = () => {
           <div className="flex items-center space-x-10 ">
             <Link href="/">{companyName}</Link>
 
-            <ul className="flex items-center space-x-10 font-semibold ">
+            <ul className="flex items-center space-x-10 font-medium ">
               {Menu.map((item, index) => (
                 <li key={index}>
                   <Link href={item.href}>
@@ -31,7 +31,7 @@ const Header_01 = () => {
             </ul>
           </div>
           <div className="flex items-center space-x-10">
-            <ul className="flex items-center justify-end font-semibold">
+            {/* <ul className="flex items-center justify-end font-semibold">
               {SnsButton.map((item, index) => (
                 <li
                   key={index}
@@ -47,7 +47,7 @@ const Header_01 = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
             <ContactButton className="h-20" />
           </div>
 
