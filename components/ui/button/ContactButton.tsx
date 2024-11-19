@@ -9,7 +9,7 @@ const ContactButton = ({
   return (
     <Link
       href="/contact"
-      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center w-full px-10 font-semibold ${className}`} 
+      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center w-full px-10 font-bold ${className}`} 
     >
       <EnvelopeIcon className="w-4 h-4 mr-1" />
       お問い合わせ
