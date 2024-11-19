@@ -14,19 +14,24 @@ const KeyVisual_01 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section>
           {/* KeyVisualContentに高さを指定 */}
-          <KeyVisualContent className="h-[700px]" />
+          <KeyVisualContent className="h-[810px]" />
         </section>
-        <div className="relative">
+        <div className="relative w-1200 mx-auto">
           <TopPageHeadline
-            maintitle={
+            subtitleTop={
               <>
-                <span>Lorem Ipsum</span>
+                <span>Optimal SolutionSolution</span>
                 <br />
-                <span>Lorem Ipsum</span>
+                <span>For your Company</span>
               </>
             }
-            subtitleBottom="日本語のテキストが入ります。"
-            className="w-1200 absolute left-1/2 transform -translate-x-1/2 bottom-20 text-white text-right"
+            maintitle={
+              <>
+                <span>常にベストな決断を</span>
+              </>
+            }
+            subtitleBottom="1,000社以上の実績で御社の決算も安心してお任せください"
+            className="absolute left-0 bottom-60 text-white text-left"
           />
         </div>
       </FirstViewContent>

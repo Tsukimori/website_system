@@ -17,7 +17,7 @@ const KeyVisualContent: React.FC<KeyVisualContentProps> = ({ className }) => {
         priority
       />
       {/* 黒30%のオーバーレイ */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
     </div>
   );
 };
