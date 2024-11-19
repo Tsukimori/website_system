@@ -14,20 +14,24 @@ const About_01 = () => {
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" w-1200 mx-auto ">
-          <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
-          <div className=" flex justify-start">
+          {/* <ContentHeadline entitle="Who we are" maintitle="私たちについて" /> */}
+          <div className=" flex justify-between">
             <h3 className=" w-[500px] text-5xl font-light leading-[64px]">
-              見出しテキスト
+              無数の選択肢の中から
               <br />
-              はいります見出し
+              ベストな選択を
             </h3>
             <div>
               <p className=" w-[660px] leading-[45px] text-lg">
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。
+                経営者は日々悩んでいます。そして、日々決断しています。<br/><br/>
+                
+                一番成果が上がる選択はどれか。一番効率のいい選択はどれか。<br/>
+                無数の選択肢の中からベストな選択ができるよう、<br/>
+                常に試行錯誤し決断しています。<br/><br/>
+                
+                私たちはその決断が本当にベストなのか、検討しています。<br/>
+                そして、その決断が本当のベストになるためのサポートを<br/>
+                常に用意しています。<br/>
               </p>
               <MoreLinkButton
                 href="/"

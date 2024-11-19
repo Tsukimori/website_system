@@ -35,7 +35,7 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       /> */}
       <h2
         className={classNames(
-          "text-2xl font-extrabold mb-4 font-lato",
+          "text-2xl font-bold mb-4 font-lato",
           subtitleClassName
         )}
       >
@@ -43,14 +43,14 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       </h2>
       <h1
         className={classNames(
-          "font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px]",
+          "text-[50px] leading-[88px] font-medium tracking-[4px]",
           titleClassName
         )}
       >
         {maintitle}
       </h1>
       <h3
-        className={classNames("text-xl font-semibold mt-4", subtitleClassName)}
+        className={classNames("text-lg mt-4", subtitleClassName)}
       >
         {subtitleBottom}
       </h3>
