@@ -11,18 +11,18 @@ import Image from "next/image"
 const About_01 = () => {
   return (
     <>
-      <PageContent>
+      <PageContent className="pb-10">
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" w-1200 mx-auto ">
           {/* <ContentHeadline entitle="Who we are" maintitle="私たちについて" /> */}
-          <div className=" flex justify-between">
-            <h3 className=" w-[500px] text-5xl font-light leading-[64px]">
+          <div className="flex justify-between">
+            <h3 className=" w-[500px] text-5xl font-light leading-[84px] tracking-wide">
               無数の選択肢の中から
               <br />
               ベストな選択を
             </h3>
             <div>
-              <p className=" w-[660px] leading-[45px] text-lg">
+              <p className=" w-[660px] leading-[45px] text-lg mt-3">
                 経営者は日々悩んでいます。そして、日々決断しています。<br/><br/>
                 
                 一番成果が上がる選択はどれか。一番効率のいい選択はどれか。<br/>
