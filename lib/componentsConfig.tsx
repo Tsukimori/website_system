@@ -281,22 +281,7 @@ export const componentsConfig: ComponentsConfig = {
 
       //   },
       // },
-      // profile: {
-      //   title: "会社概要",
-      //   options: [
-      //     { id: "Profile_01", src: "/admin/1.png", alt: "Profile_01" },
-      //     { id: "Profile_02", src: "/admin/2.png", alt: "Profile_02" },
-      //     { id: "Profile_03", src: "/admin/3.png", alt: "Profile_03" },
-      //     { id: "Profile_04", src: "/admin/4.png", alt: "Profile_04" },
-      //   ],
-      //   components: {
-      //     Profile_01: <Profile_01 />,
-      //     Profile_02: <Profile_02 />,
-      //     Profile_03: <Profile_03 />,
-      //     Profile_04: <Profile_04 />,
-
-      //   },
-      // },
+      
       
       aside: {
         title: "ASIDE",
@@ -307,6 +292,22 @@ export const componentsConfig: ComponentsConfig = {
         components: {
           Aside_01: <Aside_01 />,
           Aside_02: <Aside_02 />,
+        },
+      },
+      profile: {
+        title: "会社概要",
+        options: [
+          { id: "Profile_01", src: "/admin/1.png", alt: "Profile_01" },
+          { id: "Profile_02", src: "/admin/2.png", alt: "Profile_02" },
+          { id: "Profile_03", src: "/admin/3.png", alt: "Profile_03" },
+          { id: "Profile_04", src: "/admin/4.png", alt: "Profile_04" },
+        ],
+        components: {
+          Profile_01: <Profile_01 />,
+          Profile_02: <Profile_02 />,
+          Profile_03: <Profile_03 />,
+          Profile_04: <Profile_04 />,
+
         },
       },
       cta: {

@@ -10,15 +10,14 @@ const Aside_01 = () => {
   return (
     <>
       <PageContent className="bg-white">
-        <section className="w-1200  py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center rounded-lg text-white">
-          <p className="text-lg font-semibold">見出し</p>
-          <h4 className="text-[40px] font-lato font-bold">asideaside</h4>
-          <p className="text-center text-lg font-semibold w-[495px] pt-1 pb-6">
-            見出しはいります。見出しはいります。見出しはいります。
-            見出しはいります。見出しはいります。見出しはいります。
+        <section className="w-1200  py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center  text-white">
+          <p className="text-lg font-bold">料金プラン</p>
+          <h4 className="text-[40px] font-lato font-bold">Plan</h4>
+          <p className="text-center text-lg font-medium w-[495px] my-6">
+            御社のニーズに沿ったプランをご用意しております。
           </p>
           <div>
-          <MoreButton className="bg-white text-accentColor" />
+            <MoreButton className="!bg-white !text-accentColor" />
           </div>
         </section>
       </PageContent>
