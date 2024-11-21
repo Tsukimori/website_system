@@ -31,7 +31,7 @@ const KeyVisual_01 = () => {
               </>
             }
             subtitleBottom="1,000社以上の実績で御社の決算も安心してお任せください"
-            className="absolute left-0 bottom-60 text-white text-left"
+            className="absolute left-0 bottom-64 text-white text-left"
           />
         </div>
       </FirstViewContent>
