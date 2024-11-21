@@ -11,7 +11,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className="flex min-h-screen flex-col">
       {/* <Header1 /> */}
-      <Header2 />
+      <Header1 />
       <main className="flex-1">{children}</main>
       {/* <Footer1 /> */}
       <Footer2 />

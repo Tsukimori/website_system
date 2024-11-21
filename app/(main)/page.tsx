@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <div>
       {/* <KeyVisual_01 /> */}
-      <KeyVisual_02 />
+      <KeyVisual_01 />
       {/* <About_01 /> */}
       <About_02 />
       {/* <Service_01 /> */}
