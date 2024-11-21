@@ -49,7 +49,7 @@ const Header_01 = () => {
           isScrolled ? "bg-gray-800 bg-opacity-30" : "bg-transparent"
         }`}
       >
-        <div className="flex items-center  w-1400 mx-auto h-20 px-4">
+        <div className="flex items-center justify-between md:justify-start  w-1400 mx-auto h-20 px-4">
           {/* ロゴ */}
           <Link href="/">
             <div className="text-lg font-bold">{companyName}</div>
