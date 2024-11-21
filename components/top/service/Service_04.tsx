@@ -5,6 +5,7 @@ import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import ServiceCard from "@/components/ui/ItemCard/ServiceCard_01"
 import { serviceData } from "@/components/data/top/ServiceData"
+import MoreLinkButton from "@/components/ui/button/MoreButton"
 
 const Service_04 = () => {
   // 表示するサービス数をserviceDataのIDを指定して表示
@@ -20,10 +21,10 @@ const Service_04 = () => {
       <PageContent>
         <section className="w-1200 mx-auto space-y-10">
           <ContentHeadline
-            entitle="Service"
-            maintitle="事業内容"
-            entitleClassName="text-center"
-            titleClassName="text-center"
+            entitle="Plan"
+            maintitle="提供プラン"
+            entitleClassName=""
+            titleClassName=""
           />
 
           <div className="grid grid-cols-4 gap-10">
@@ -40,6 +41,12 @@ const Service_04 = () => {
                 showButton={false}
               />
             ))}
+          </div>
+          <div className="flex justify-center">
+            <MoreLinkButton
+              href="/"
+              className="mt-10 text-accentColor border-accentColor   "
+            />
           </div>
         </section>
       </PageContent>

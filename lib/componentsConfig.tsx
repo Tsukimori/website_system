@@ -139,21 +139,21 @@ export const componentsConfig: ComponentsConfig = {
           About_04: <About_04 />,
         },
       },
-      strength: {
-        title: "私たちの強み",
-        options: [
-          { id: "Strength_01", src: "/admin/1.png", alt: "Strength_01" },
-          { id: "Strength_02", src: "/admin/2.png", alt: "Strength_02" },
-          { id: "Strength_03", src: "/admin/3.png", alt: "Strength_03" },
-          { id: "Strength_04", src: "/admin/4.png", alt: "Strength_04" },
-        ],
-        components: {
-          Strength_01: <Strength_01 />,
-          Strength_02: <Strength_02 />,
-          Strength_03: <Strength_03 />,
-          Strength_04: <Strength_04 />,
-        },
-      },
+      // strength: {
+      //   title: "私たちの強み",
+      //   options: [
+      //     { id: "Strength_01", src: "/admin/1.png", alt: "Strength_01" },
+      //     { id: "Strength_02", src: "/admin/2.png", alt: "Strength_02" },
+      //     { id: "Strength_03", src: "/admin/3.png", alt: "Strength_03" },
+      //     { id: "Strength_04", src: "/admin/4.png", alt: "Strength_04" },
+      //   ],
+      //   components: {
+      //     Strength_01: <Strength_01 />,
+      //     Strength_02: <Strength_02 />,
+      //     Strength_03: <Strength_03 />,
+      //     Strength_04: <Strength_04 />,
+      //   },
+      // },
       // message: {
       //   title: "メッセージ",
       //   options: [

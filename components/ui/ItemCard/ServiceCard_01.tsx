@@ -41,7 +41,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           src={image}
           alt={`solution ${id}`}
           objectFit="cover"
-          className="block rounded-2xl"
+          className="block"
           priority
         />
       </div>
@@ -54,17 +54,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         })}
       >
         <div
-          className={classNames("font-black font-lato", {
+          className={classNames("font-medium text-[22px] font-lato text-center", {
             "text-white": className.includes("overlay"),
-            "text-accentColor": !className.includes("overlay"),
-          })}
-        >
-          Service0{id}
-        </div>
-        <div
-          className={classNames("font-medium text-[22px]", {
-            "text-white": className.includes("overlay"),
-            "text-black": !className.includes("overlay"),
+            "text-baseColor": !className.includes("overlay"),
           })}
         >
           {title}
@@ -72,7 +64,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div
           className={classNames({
             "text-white": className.includes("overlay"),
-            "text-black": !className.includes("overlay"),
+            "text-baseColor": !className.includes("overlay"),
           })}
         >
           {description}

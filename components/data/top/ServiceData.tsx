@@ -1,44 +1,31 @@
 export const serviceData = [
     {
       id: 1,
-      title: "事業内容01",
-      description: "こちらは事業内容01の説明文です。",
+      title: "Cloud Plan",
+      description: "クラウド会計の利用を前提としたプラン。やり取りは、原則としてメールや電話などになります。",
       image: "/top/service/service_img_01.png",
       href: "/service/1", // リンク先を追加
     },
     {
       id: 2,
-      title: "事業内容02",
-      description: "こちらは事業内容02の説明文です。",
+      title: "Meeting Plan",
+      description: "毎月お会いして打ち合わせ。節税やフローの見直しを検討されている場合にお勧め",
       image: "/top/service/service_img_02.png",
       href: "/service/2",
     },
     {
       id: 3,
-      title: "事業内容03",
-      description: "こちらは事業内容03の説明文です。",
-      image: "/top/service/service_img_01.png",
+      title: "Full Plan",
+      description: "経理に関するすべての業務おまかせ。労力や時間を合理化",
+      image: "/top/service/service_img_03.png",
       href: "/service/3",
     },
     {
       id: 4,
-      title: "事業内容04",
-      description: "こちらは事業内容04の説明文です。",
-      image: "/top/service/service_img_02.png",
-      href: "/service/4",
+      title: "Custom Plan",
+      description: "ニーズをヒアリングのうえ、御社だけのPlanをカスタマイズ",
+      image: "/top/service/service_img_04.png",
+      href: "/service/3",
     },
-    {
-      id: 5,
-      title: "事業内容05",
-      description: "こちらは事業内容04の説明文です。",
-      image: "/top/service/service_img_01.png",
-      href: "/service/4",
-    },
-    {
-      id: 6,
-      title: "事業内容06",
-      description: "こちらは事業内容04の説明文です。",
-      image: "/top/service/service_img_02.png",
-      href: "/service/4",
-    },
+    
   ]
