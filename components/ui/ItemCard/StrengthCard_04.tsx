@@ -23,16 +23,18 @@ const StrengthCard = ({
           src={image}
           alt={title}
           objectFit="cover"
-          className="rounded-l-[10px]"
+          className=""
           priority
         />
       </div>
       <div className="w-[390px]">
-        <p className="text-accentColor text-lg font-extrabold font-lato mt-6">
-          Feauture_{number}
+        <p className="text-accentColor text-lg font-bold font-lato mt-6">
+          Strength_{number}
         </p>
-        <h3 className="mt-2 text-[22px] font-semibold text-accentColor">{title}</h3>
-        <p className="font-light mt-6">{description}</p>
+        <h3 className="mt-6 text-[22px] font-medium text-accentColor">
+          {title}
+        </h3>
+        <p className="mt-6">{description}</p>
       </div>
     </div>
   )

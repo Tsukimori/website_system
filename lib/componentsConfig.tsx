@@ -139,21 +139,7 @@ export const componentsConfig: ComponentsConfig = {
           About_04: <About_04 />,
         },
       },
-      // strength: {
-      //   title: "私たちの強み",
-      //   options: [
-      //     { id: "Strength_01", src: "/admin/1.png", alt: "Strength_01" },
-      //     { id: "Strength_02", src: "/admin/2.png", alt: "Strength_02" },
-      //     { id: "Strength_03", src: "/admin/3.png", alt: "Strength_03" },
-      //     { id: "Strength_04", src: "/admin/4.png", alt: "Strength_04" },
-      //   ],
-      //   components: {
-      //     Strength_01: <Strength_01 />,
-      //     Strength_02: <Strength_02 />,
-      //     Strength_03: <Strength_03 />,
-      //     Strength_04: <Strength_04 />,
-      //   },
-      // },
+      
       // message: {
       //   title: "メッセージ",
       //   options: [
@@ -184,119 +170,133 @@ export const componentsConfig: ComponentsConfig = {
           Service_04: <Service_04 />,
         },
       },
-  
-      case: {
-        title: "導入事例",
+      strength: {
+        title: "私たちの強み",
         options: [
-          { id: "Case_01", src: "/admin/1.png", alt: "Case_01" },
-          { id: "Case_02", src: "/admin/2.png", alt: "Case_02" },
-          { id: "Case_03", src: "/admin/3.png", alt: "Case_03" },
-          { id: "Case_04", src: "/admin/4.png", alt: "Case_04" },
-          { id: "Case_05", src: "/admin/5.png", alt: "Case_05" },
-          { id: "Case_06", src: "/admin/6.png", alt: "Case_06" },
+          { id: "Strength_01", src: "/admin/1.png", alt: "Strength_01" },
+          { id: "Strength_02", src: "/admin/2.png", alt: "Strength_02" },
+          { id: "Strength_03", src: "/admin/3.png", alt: "Strength_03" },
+          { id: "Strength_04", src: "/admin/4.png", alt: "Strength_04" },
         ],
         components: {
-          Case_01: <Case_01 />,
-          Case_02: <Case_02 />,
-          Case_03: <Case_03 />,
-          Case_04: <Case_04 />,
-          Case_05: <Case_05 />,
-          Case_06: <Case_06 />,
+          Strength_01: <Strength_01 />,
+          Strength_02: <Strength_02 />,
+          Strength_03: <Strength_03 />,
+          Strength_04: <Strength_04 />,
         },
       },
-      blog: {
-        title: "ブログ",
-        options: [
-          { id: "Blog_01", src: "/admin/1.png", alt: "Blog_01" },
-          { id: "Blog_02", src: "/admin/2.png", alt: "Blog_02" },
-          { id: "Blog_03", src: "/admin/3.png", alt: "Blog_03" },
-          { id: "Blog_04", src: "/admin/4.png", alt: "Blog_04" },
-          { id: "Blog_05", src: "/admin/5.png", alt: "Blog_05" },
-          { id: "Blog_06", src: "/admin/5.png", alt: "Blog_06" },
-        ],
-        components: {
-          Blog_01: <Blog_01 />,
-          Blog_02: <Blog_02 />,
-          Blog_03: <Blog_03 />,
-          Blog_04: <Blog_04 />,
-          Blog_05: <Blog_05 />,
-          Blog_06: <Blog_06 />,
-        },
-      },
-      plan: {
-        title: "料金プラン",
-        options: [
-          { id: "Plan_01", src: "/admin/1.png", alt: "Plan_01" },
-          { id: "Plan_02", src: "/admin/2.png", alt: "Plan_02" },
-          { id: "Plan_03", src: "/admin/3.png", alt: "Plan_03" },
-          { id: "Plan_04", src: "/admin/4.png", alt: "Plan_04" },
-        ],
-        components: {
-          Plan_01: <Plan_01 />,
-          Plan_02: <Plan_02 />,
-          Plan_03: <Plan_03 />,
-          Plan_04: <Plan_04 />,
-        },
-      },
-      flow: {
-        title: "ご利用の流れ",
-        options: [
-          { id: "Flow_01", src: "/admin/1.png", alt: "Flow_01" },
-          { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
-        ],
-        components: {
-          Flow_01: <Flow_01 />,
-          Flow_02: <Flow_02 />,
+      // case: {
+      //   title: "導入事例",
+      //   options: [
+      //     { id: "Case_01", src: "/admin/1.png", alt: "Case_01" },
+      //     { id: "Case_02", src: "/admin/2.png", alt: "Case_02" },
+      //     { id: "Case_03", src: "/admin/3.png", alt: "Case_03" },
+      //     { id: "Case_04", src: "/admin/4.png", alt: "Case_04" },
+      //     { id: "Case_05", src: "/admin/5.png", alt: "Case_05" },
+      //     { id: "Case_06", src: "/admin/6.png", alt: "Case_06" },
+      //   ],
+      //   components: {
+      //     Case_01: <Case_01 />,
+      //     Case_02: <Case_02 />,
+      //     Case_03: <Case_03 />,
+      //     Case_04: <Case_04 />,
+      //     Case_05: <Case_05 />,
+      //     Case_06: <Case_06 />,
+      //   },
+      // },
+      // blog: {
+      //   title: "ブログ",
+      //   options: [
+      //     { id: "Blog_01", src: "/admin/1.png", alt: "Blog_01" },
+      //     { id: "Blog_02", src: "/admin/2.png", alt: "Blog_02" },
+      //     { id: "Blog_03", src: "/admin/3.png", alt: "Blog_03" },
+      //     { id: "Blog_04", src: "/admin/4.png", alt: "Blog_04" },
+      //     { id: "Blog_05", src: "/admin/5.png", alt: "Blog_05" },
+      //     { id: "Blog_06", src: "/admin/5.png", alt: "Blog_06" },
+      //   ],
+      //   components: {
+      //     Blog_01: <Blog_01 />,
+      //     Blog_02: <Blog_02 />,
+      //     Blog_03: <Blog_03 />,
+      //     Blog_04: <Blog_04 />,
+      //     Blog_05: <Blog_05 />,
+      //     Blog_06: <Blog_06 />,
+      //   },
+      // },
+      // plan: {
+      //   title: "料金プラン",
+      //   options: [
+      //     { id: "Plan_01", src: "/admin/1.png", alt: "Plan_01" },
+      //     { id: "Plan_02", src: "/admin/2.png", alt: "Plan_02" },
+      //     { id: "Plan_03", src: "/admin/3.png", alt: "Plan_03" },
+      //     { id: "Plan_04", src: "/admin/4.png", alt: "Plan_04" },
+      //   ],
+      //   components: {
+      //     Plan_01: <Plan_01 />,
+      //     Plan_02: <Plan_02 />,
+      //     Plan_03: <Plan_03 />,
+      //     Plan_04: <Plan_04 />,
+      //   },
+      // },
+      // flow: {
+      //   title: "ご利用の流れ",
+      //   options: [
+      //     { id: "Flow_01", src: "/admin/1.png", alt: "Flow_01" },
+      //     { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
+      //   ],
+      //   components: {
+      //     Flow_01: <Flow_01 />,
+      //     Flow_02: <Flow_02 />,
 
-        },
-      },
-      news: {
-        title: "お知らせ",
-        options: [
-          { id: "News_01", src: "/admin/1.png", alt: "News_01" },
-          { id: "News_02", src: "/admin/2.png", alt: "News_02" },
-          { id: "News_03", src: "/admin/3.png", alt: "News_03" },
-          { id: "News_04", src: "/admin/4.png", alt: "News_04" },
-          { id: "News_05", src: "/admin/5.png", alt: "News_05" },
-          { id: "News_06", src: "/admin/6.png", alt: "News_06" },
-        ],
-        components: {
-          News_01: <News_01 />,
-          News_02: <News_02 />,
-          News_03: <News_03 />,
-          News_04: <News_04 />,
-          News_05: <News_05 />,
-          News_06: <News_06 />,
-        },
-      },
-      faq: {
-        title: "よくある質問",
-        options: [
-          { id: "Faq_01", src: "/admin/1.png", alt: "Faq_01" },
-          { id: "Faq_02", src: "/admin/2.png", alt: "Faq_02" },
-        ],
-        components: {
-          Faq_01: <Faq_01 />,
-          Faq_02: <Faq_02 />,
+      //   },
+      // },
+      // news: {
+      //   title: "お知らせ",
+      //   options: [
+      //     { id: "News_01", src: "/admin/1.png", alt: "News_01" },
+      //     { id: "News_02", src: "/admin/2.png", alt: "News_02" },
+      //     { id: "News_03", src: "/admin/3.png", alt: "News_03" },
+      //     { id: "News_04", src: "/admin/4.png", alt: "News_04" },
+      //     { id: "News_05", src: "/admin/5.png", alt: "News_05" },
+      //     { id: "News_06", src: "/admin/6.png", alt: "News_06" },
+      //   ],
+      //   components: {
+      //     News_01: <News_01 />,
+      //     News_02: <News_02 />,
+      //     News_03: <News_03 />,
+      //     News_04: <News_04 />,
+      //     News_05: <News_05 />,
+      //     News_06: <News_06 />,
+      //   },
+      // },
+      // faq: {
+      //   title: "よくある質問",
+      //   options: [
+      //     { id: "Faq_01", src: "/admin/1.png", alt: "Faq_01" },
+      //     { id: "Faq_02", src: "/admin/2.png", alt: "Faq_02" },
+      //   ],
+      //   components: {
+      //     Faq_01: <Faq_01 />,
+      //     Faq_02: <Faq_02 />,
 
-        },
-      },
-      profile: {
-        title: "会社概要",
-        options: [
-          { id: "Profile_01", src: "/admin/1.png", alt: "Profile_01" },
-          { id: "Profile_02", src: "/admin/2.png", alt: "Profile_02" },
-          { id: "Profile_03", src: "/admin/3.png", alt: "Profile_03" },
-          { id: "Profile_04", src: "/admin/4.png", alt: "Profile_04" },
-        ],
-        components: {
-          Profile_01: <Profile_01 />,
-          Profile_02: <Profile_02 />,
-          Profile_03: <Profile_03 />,
-          Profile_04: <Profile_04 />,
+      //   },
+      // },
+      // profile: {
+      //   title: "会社概要",
+      //   options: [
+      //     { id: "Profile_01", src: "/admin/1.png", alt: "Profile_01" },
+      //     { id: "Profile_02", src: "/admin/2.png", alt: "Profile_02" },
+      //     { id: "Profile_03", src: "/admin/3.png", alt: "Profile_03" },
+      //     { id: "Profile_04", src: "/admin/4.png", alt: "Profile_04" },
+      //   ],
+      //   components: {
+      //     Profile_01: <Profile_01 />,
+      //     Profile_02: <Profile_02 />,
+      //     Profile_03: <Profile_03 />,
+      //     Profile_04: <Profile_04 />,
 
-        },
-      },
+      //   },
+      // },
       
       aside: {
         title: "ASIDE",
