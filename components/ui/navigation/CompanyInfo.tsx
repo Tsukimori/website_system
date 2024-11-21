@@ -8,6 +8,7 @@ export const CompanyInfo = [
         alt="MARC税理士事務所"
         width={200} // 適切な幅を指定
         height={40} // 適切な高さを指定
+        className="w-full h-full object-contain"
       />
     ),
     companyPostalCode: "107-0062",

@@ -13,6 +13,10 @@ export const Menu = [
     name: '料金プラン',
     href: '/#plan',
   },
+  {
+    name: 'お問い合わせ',
+    href: '/contact',
+  },
   // {
   //   name: 'Case study',
   //   href: '/#casestudy',
@@ -33,6 +37,7 @@ export const Menu = [
 //     name: 'FAQ',
 //     href: '/#faq',
 //   },
+
 
 ]
 

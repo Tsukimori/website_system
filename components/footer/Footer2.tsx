@@ -11,8 +11,8 @@ const Footer2 = () => {
   const { companyName } = CompanyInfo[0]
 
   return (
-    <footer className="border-t py-24">
-      <div className="w-[1400px]  mx-auto">
+    <footer className="py-24 bg-black text-white">
+      <div className="w-1200 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-6">
           <h4>{companyName}</h4>
 
@@ -26,7 +26,9 @@ const Footer2 = () => {
             ))}
           </ul>
         </div>
-        <div className="border-t border-borderGray mt-6 pt-6">
+        <div className="border-t border-[#eeeeee] w-1200 my-6"></div>
+
+        {/* <div className="border-t border-borderGray mt-6 pt-6">
           <ul className="flex items-center justify-center font-semibold">
             {Sns.map((item, index) => (
               <li
@@ -44,9 +46,9 @@ const Footer2 = () => {
               </li>
             ))}
           </ul>
-        </div>
-        <small className="mt-6 flex justify-center">
-          ©{companyName}. ALL Rights Reserved.
+        </div> */}
+        <small className="mt-6 flex justify-center items-center text-base ">
+          ©2024　<span className="w-36 mt-[2px]">{companyName}</span>　ALL Rights Reserved.
         </small>
       </div>
     </footer>
