@@ -9,7 +9,7 @@ import FreeButtonWhite from "@/components/ui/button/FreeButtonWhite"
 const Cta_03 = () => {
   return (
     <>
-      <PageContent className="py-0">
+      <PageContent className="!py-0">
         <section className=" mx-auto grid grid-cols-2">
           <div className="text-white text-center bg-accentColor py-16">
             <p className="text-lg font-bold">お電話でのお問い合わせ</p>

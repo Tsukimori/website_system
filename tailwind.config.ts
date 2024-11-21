@@ -72,8 +72,8 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       width: {
-        // 1200pxのカスタム幅を追加
         "1200": "1200px",
+        "1400": "1400px",
       },
       keyframes: {
         "accordion-down": {
