@@ -11,26 +11,26 @@ import Image from "next/image"
 const About_01 = () => {
   return (
     <>
-      <PageContent className="pb-10">
+      <PageContent className="pb-0 md:pb-10 px-0">
         {/* widthがフルサイズでない場合は指定する */}
-        <section className=" md:w-1200 mx-auto ">
+        <section className=" md:w-1200 mx-auto px-4 md:px-0">
           {/* <ContentHeadline entitle="Who we are" maintitle="私たちについて" /> */}
-          <div className="flex justify-between">
-            <h3 className=" w-[500px] text-5xl font-light leading-[84px] tracking-wide">
+          <div className="md:flex justify-between">
+            <h3 className=" md:w-[500px] text-3xl md:text-5xl font-light leading-relaxed md:leading-[84px] tracking-wide">
               無数の選択肢の中から
               <br />
               ベストな選択を
             </h3>
             <div>
-              <p className=" w-[660px] leading-[45px] text-lg mt-3">
+              <p className=" md:w-[660px] leading-relaxed md:leading-[45px] md:text-lg mt-10 md:mt-3">
                 経営者は日々悩んでいます。そして、日々決断しています。<br/><br/>
                 
                 一番成果が上がる選択はどれか。一番効率のいい選択はどれか。<br/>
-                無数の選択肢の中からベストな選択ができるよう、<br/>
+                無数の選択肢の中からベストな選択ができるよう、<br  className="hidden md:block"/>
                 常に試行錯誤し決断しています。<br/><br/>
                 
                 私たちはその決断が本当にベストなのか、検討しています。<br/>
-                そして、その決断が本当のベストになるためのサポートを<br/>
+                そして、その決断が本当のベストになるためのサポートを<br className="hidden md:block"/>
                 常に用意しています。<br/>
               </p>
               <MoreLinkButton
@@ -40,13 +40,13 @@ const About_01 = () => {
             </div>
           </div>
         </section>
-        <section className="w-[95%] h-[380px] mx-auto mt-24  flex justify-center relative">
+        <section className="md:w-[95%] h-[250px] md:h-[380px] mx-auto mt-10 md:mt-24  flex justify-center relative">
           <Image
             src="/top/message/message_img.png"
             alt="message"
             layout="fill" // 画像のサイズは親要素にフィット
             objectFit="cover" // 画像を親要素に合わせてトリミング
-            className="block"
+            className="block "
           />
         </section>
       </PageContent>

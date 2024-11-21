@@ -27,7 +27,7 @@ const Service_04 = () => {
             titleClassName=""
           />
 
-          <div className="grid grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             {servicesToDisplay.map((service) => (
               <ServiceCard
                 key={service.id}
@@ -36,8 +36,8 @@ const Service_04 = () => {
                 description={service.description}
                 image={service.image} // 画像パスを渡す
                 href={service.href} // リンク先を渡す
-                className=" w-[282px] space-y-4"
-                imageContainerClass="  w-[282px] h-[280px]"
+                className=" md:w-[282px] space-y-4"
+                imageContainerClass="  md:w-[282px] h-[280px]"
                 showButton={false}
               />
             ))}
@@ -45,7 +45,7 @@ const Service_04 = () => {
           <div className="flex justify-center">
             <MoreLinkButton
               href="/"
-              className="mt-10 text-accentColor border-accentColor   "
+              className="md:mt-10 text-accentColor border-accentColor   "
             />
           </div>
         </section>

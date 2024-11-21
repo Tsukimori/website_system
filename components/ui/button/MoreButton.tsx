@@ -13,7 +13,7 @@ const MoreLinkButton = ({
   return (
     <Link
       href={href}
-      className={`bg-baseColor text-white cursor-pointer flex items-center justify-center w-[350px] h-[58px] font-lato font-bold relative group ${className}`}
+      className={`bg-baseColor text-white cursor-pointer flex items-center justify-center w-full md:w-[350px] h-[58px] font-lato font-bold relative group ${className}`}
     >
       View more<ArrowRightIcon className="w-4 h-4 absolute top-1/2 right-[100px] -translate-y-1/2 group-hover:right-[90px]
        duration-300 transform ease-in-out" />

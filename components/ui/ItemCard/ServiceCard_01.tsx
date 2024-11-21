@@ -29,8 +29,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div
         className={classNames(
           {
-            "h-[400px]": !className.includes("overlay"),
-            "h-[600px]": className.includes("overlay"),
+            "h-[250px] md:h-[400px]": !className.includes("overlay"),
+            "h-[250px] md:h-[600px]": className.includes("overlay"),
           },
           "w-full aspect-[1/1] relative",
           imageContainerClass
@@ -41,7 +41,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           src={image}
           alt={`solution ${id}`}
           objectFit="cover"
-          className="block"
+          className="block object-top"
           priority
         />
       </div>
