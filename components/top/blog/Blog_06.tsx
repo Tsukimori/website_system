@@ -52,7 +52,7 @@ const Blog_06 = ({ limit = 9 }: BlogProps) => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto md:flex justify-between gap-x-20">
+        <section className="md:w-1200 mx-auto md:flex justify-between gap-x-20">
           <div className="w-[300px]">
             <ContentHeadline
               entitle="Blog"

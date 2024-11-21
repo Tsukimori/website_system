@@ -52,7 +52,7 @@ const Case_04 = ({ limit = 3 }: CaseProps) => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto flex justify-between">
+        <section className="md:w-1200 mx-auto flex justify-between">
           <div className="w-[300px]">
             <ContentHeadline
               entitle="Case study"

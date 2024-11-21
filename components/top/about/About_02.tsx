@@ -13,7 +13,7 @@ const About_02 = () => {
     <>
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <section className=" w-1200 mx-auto ">
+        <section className=" md:w-1200 mx-auto ">
           <ContentHeadline
             entitle="Who we are"
             maintitle="私たちについて"

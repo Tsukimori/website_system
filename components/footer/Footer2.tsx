@@ -12,7 +12,7 @@ const Footer2 = () => {
 
   return (
     <footer className="py-24 bg-black text-white">
-      <div className="w-1200 mx-auto">
+      <div className="md:w-1200 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-6">
           <h4>{companyName}</h4>
 
@@ -26,7 +26,7 @@ const Footer2 = () => {
             ))}
           </ul>
         </div>
-        <div className="border-t border-[#eeeeee] w-1200 my-6"></div>
+        <div className="border-t border-[#eeeeee] md:w-1200 my-6"></div>
 
         {/* <div className="border-t border-borderGray mt-6 pt-6">
           <ul className="flex items-center justify-center font-semibold">

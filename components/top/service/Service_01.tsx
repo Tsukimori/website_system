@@ -18,7 +18,7 @@ const Service_01 = () => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto space-y-10">
+        <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
             entitle="Service"
             maintitle="事業内容"

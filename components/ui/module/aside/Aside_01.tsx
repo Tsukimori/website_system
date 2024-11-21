@@ -10,7 +10,7 @@ const Aside_01 = () => {
   return (
     <>
       <PageContent className="bg-white">
-        <section className="w-1200  py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center  text-white">
+        <section className="md:w-1200  py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center  text-white">
           <p className="text-lg font-bold">料金プラン</p>
           <h4 className="text-[40px] font-lato font-bold">Plan</h4>
           <p className="text-center text-lg font-medium w-[495px] my-6">

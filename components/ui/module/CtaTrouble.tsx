@@ -16,7 +16,7 @@ const CtaTrouble = () => {
 
   return (
     <div className="py-10 md:py-16 bg-white text-center  px-6 md:px-0">
-      <div className="bg-mainGreen md:w-1200 mx-auto text-white px-5 md:px-0 py-10 md:py-16 rounded-3xl">
+      <div className="bg-mainGreen md:md:w-1200 mx-auto text-white px-5 md:px-0 py-10 md:py-16 rounded-3xl">
         <h3 className="text-[22px] md:text-[28px]">
           トラブルにあってしまったら
         </h3>

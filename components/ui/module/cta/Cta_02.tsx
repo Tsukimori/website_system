@@ -10,7 +10,7 @@ const Cta_02 = () => {
   return (
     <>
       <PageContent className="bg-accentColor">
-        <section className="w-1200 mx-auto grid grid-cols-2 gap-x-20">
+        <section className="md:w-1200 mx-auto grid grid-cols-2 gap-x-20">
           <Image
             src="/cta/cta.png"
             alt="ctaイメージ画像"

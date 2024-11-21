@@ -52,7 +52,7 @@ const News_04 = ({ limit = 3 }: NewsProps) => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto  md:flex justify-between">
+        <section className="md:w-1200 mx-auto  md:flex justify-between">
           <div className="w-[300px]">
             <ContentHeadline
               entitle="News"

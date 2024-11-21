@@ -22,7 +22,7 @@ const Profile_04 = () => {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-        <section className="w-1200 mx-auto">
+        <section className="md:w-1200 mx-auto">
           <div className="grid grid-cols-2">
             <div>
               <ContentHeadline

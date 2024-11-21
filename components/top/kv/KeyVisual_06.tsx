@@ -22,7 +22,7 @@ const KeyVisual_06 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-screen" />
         </section>
-        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-1200">
+        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:w-1200">
           <TopPageHeadline
             maintitle={
               <>

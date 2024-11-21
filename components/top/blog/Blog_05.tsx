@@ -52,7 +52,7 @@ const Blog_05 = ({ limit = 6 }: BlogProps) => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto">
+        <section className="md:w-1200 mx-auto">
           <div className="w-[300px]">
             <ContentHeadline
               entitle="Blog"

@@ -28,7 +28,7 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
   discriptionClassName = "",
 }) => {
   return (
-    <section className={classNames("w-1200", className)}>
+    <section className={classNames("md:w-1200", className)}>
       <Breadcrumb
         maintitle={maintitle}
         parentDirectoryName={parentDirectoryName}

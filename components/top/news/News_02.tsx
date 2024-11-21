@@ -69,7 +69,7 @@ const News_02 = ({ limit = 5 }: NewsProps) => {
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="w-1200 mx-auto relative">
+        <section className="md:w-1200 mx-auto relative">
 
           <ContentHeadline
             entitle="News"

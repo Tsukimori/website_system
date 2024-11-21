@@ -10,7 +10,7 @@ const Aside_02 = () => {
   return (
     <>
       <PageContent className="bg-white">
-        <section className="w-1200  py-16 mx-auto grid grid-cols-2 ">
+        <section className="md:w-1200  py-16 mx-auto grid grid-cols-2 ">
           <div className="bg-accentColor rounded-l-lg flex flex-col items-center text-white py-16">
             <p className="text-lg font-semibold">見出し</p>
             <h4 className="text-[40px] font-lato font-bold">asideaside</h4>

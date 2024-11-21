@@ -49,7 +49,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="w-1200 mx-auto">
+        <section className="md:w-1200 mx-auto">
           <ContentHeadline
             entitle="Blog"
             maintitle="ブログ"

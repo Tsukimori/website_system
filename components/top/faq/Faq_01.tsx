@@ -20,7 +20,7 @@ const Faq_01 = () => {
 
   return (
     <PageContent className="bg-white">
-      <section className="w-1200 mx-auto">
+      <section className="md:w-1200 mx-auto">
         <ContentHeadline
           entitle="FAQ"
           maintitle="よくある質問"

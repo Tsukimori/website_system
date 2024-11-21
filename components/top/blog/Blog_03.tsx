@@ -52,7 +52,7 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
   return (
     <>
       <PageContent className="">
-        <section className="w-1200 mx-auto space-y-10">
+        <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
             entitle="Blog"
             maintitle="ブログ"
