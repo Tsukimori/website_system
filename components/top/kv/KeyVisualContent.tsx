@@ -15,6 +15,7 @@ const KeyVisualContent: React.FC<KeyVisualContentProps> = ({ className }) => {
         layout="fill" // 画像のサイズは親要素にフィット
         objectFit="cover" // 画像を親要素に合わせてトリミング
         priority
+        className="object-left"
       />
       {/* 黒30%のオーバーレイ */}
       {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
