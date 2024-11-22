@@ -11,8 +11,8 @@ import ProfileCard from "@/components/ui/ItemCard/ProfileCard"
 const Profile_04 = () => {
   return (
     <>
-      <PageContent className="pt-0">
-        <div className="mb-20">
+      <PageContent className="!pt-0">
+        <div className="mb-10 md:mb-20">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5201488915804!2d139.71568836148265!3d35.664192380795214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b4530b99601%3A0x86b1876ad2ed28c3!2z44Kw44Op44Oz4oCL44Kr44O844K14oCL5Y2X6Z2S5bGx!5e0!3m2!1sja!2sfr!4v1732195905422!5m2!1sja!2sfr"
             width="100%"
@@ -20,10 +20,11 @@ const Profile_04 = () => {
             style={{ border: "0" }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            className="h-[250px] md:h-[400px]"
           />
         </div>
         <section className="md:w-1200 mx-auto">
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             <div>
               <ContentHeadline
                 entitle="Profile"
@@ -32,8 +33,8 @@ const Profile_04 = () => {
                 titleClassName=""
               />
             </div>
-            <div className="w-[720px]">
-              <div>
+            <div className="md:w-[720px] ">
+              <div className="">
                 {/* <ProfileCard label="社名" value="企業名" />
               <ProfileCard label="設立" value="0000年00月00日" />
               <ProfileCard label="資本金" value="000円" /> */}
