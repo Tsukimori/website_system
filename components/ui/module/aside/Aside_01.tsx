@@ -9,14 +9,14 @@ import MoreButton from "@/components/ui/button/MoreButton"
 const Aside_01 = () => {
   return (
     <>
-      <PageContent className="bg-white">
-        <section className="md:w-1200  py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center  text-white">
-          <p className="text-lg font-bold">料金プラン</p>
-          <h4 className="text-[40px] font-lato font-bold">Plan</h4>
-          <p className="text-center text-lg font-medium w-[495px] my-6">
+      <PageContent className="bg-white px-0">
+        <section className="md:w-1200 py-10 md:py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center  text-white px-4">
+          <p className="md:text-lg font-bold">料金プラン</p>
+          <h4 className="text-3xl md:text-[40px] font-lato font-bold">Plan</h4>
+          <p className="text-center md:text-lg font-medium md:w-[495px] my-6">
             御社のニーズに沿ったプランをご用意しております。
           </p>
-          <div>
+          <div className="w-full flex justify-center">
             <MoreButton className="!bg-white !text-accentColor" />
           </div>
         </section>
