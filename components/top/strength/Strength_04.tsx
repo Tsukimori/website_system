@@ -38,7 +38,7 @@ const Strength_04 = () => {
         </section>
         <MoreLinkButton
             href="/"
-            className="mt-16 text-accentColor border-accentColor mx-auto"
+            className="mt-10 md:mt-16 text-accentColor border-accentColor mx-auto"
           />
       </PageContent>
     </>
