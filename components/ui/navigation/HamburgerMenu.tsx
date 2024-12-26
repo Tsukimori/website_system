@@ -16,7 +16,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
 }) => {
   return (
     <div
-      className={`fixed z-10 top-0 right-0 h-screen w-[500px] bg-bgBlack text-white shadow-lg transform transition-transform duration-300 ${
+      className={`fixed z-10 top-0 right-0 h-screen w-full md:w-[500px] bg-bgBlack text-white shadow-lg transform transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
@@ -28,8 +28,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           className="w-10 h-10"
         >
           <div className="w-[38px] h-[38px] relative">
-            <div className="w-[53.74px] h-[0px] left-0 top-0 absolute origin-top-left rotate-45 border border-white"></div>
-            <div className="w-[53.74px] h-[0px] left-[38px] top-0 absolute origin-top-left rotate-[135deg] border border-white"></div>
+            <div className="w-[53.74px] bg-white h-[1px] left-0 top-0 absolute origin-top-left rotate-45 border border-white"></div>
+            <div className="w-[53.74px] h-[1px] left-[38px] top-0 absolute bg-white origin-top-left rotate-[135deg] border border-white"></div>
           </div>
         </button>
       </div>

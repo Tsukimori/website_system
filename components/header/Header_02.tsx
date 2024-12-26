@@ -23,19 +23,24 @@ const Header_02 = () => {
 
   return (
     <>
-      <HeaderContent>
-        <div className="flex items-center space-x-10 ">
-          <Link href="/" className="">
-            {companyName}
+      <HeaderContent className="">
+        <div className="flex items-center space-x-5  md:space-x-10">
+          <Link href="/" className="w-[60px] md:w-[200px]">
+            <div className="block md:hidden">
+              {CompanyInfo[0].companyName("tertiary")} {/* SP用ロゴ */}
+            </div>
+            <div className="hidden md:block">
+              {CompanyInfo[0].companyName("secondary")} {/* PC用ロゴ */}
+            </div>
           </Link>
         </div>
 
-        <div className="flex items-center space-x-10">
-          <ul className="flex items-center justify-end font-semibold">
+        <div className="flex items-center space-x-3 md:space-x-10">
+          <ul className="flex items-center justify-end font-semibold  space-x-2 md:space-x-0">
             {Sns.map((item, index) => (
               <li
                 key={index}
-                className="w-[60px] h-[60px] flex items-center justify-center"
+                className="w-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
               >
                 <Link href={item.href}>
                   <Image
@@ -51,7 +56,7 @@ const Header_02 = () => {
 
           {/* ハンバーガーメニューボタン */}
           <div
-            className="border-l border-borderGray w-20 h-20 flex items-center justify-center cursor-pointer"
+            className="border-l border-borderGray w-10 md:w-20 h-20 flex items-center justify-end md:justify-center cursor-pointer"
             onClick={toggleMenu}
           >
             <Image

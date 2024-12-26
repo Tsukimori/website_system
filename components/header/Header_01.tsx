@@ -51,8 +51,8 @@ const Header_01 = () => {
       >
         <div className="flex items-center justify-between md:justify-start  w-1400 mx-auto h-20 px-4">
           {/* ロゴ */}
-          <Link href="/">
-            <div className="text-lg font-bold">{companyName}</div>
+          <Link href="/"  className="w-[150px] md:w-[200px]">
+            <div className="text-lg font-bold ">{CompanyInfo[0].companyName("primary")}</div>
           </Link>
 
           {/* デスクトップ用メニュー */}
