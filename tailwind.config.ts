@@ -27,8 +27,8 @@ const config = {
         zenKaku: ["'Zen Kaku Gothic New'", "sans-serif"],
       },
       colors: {
-        accentColor: "#003461",
-        baseColor:"#003461",
+        accentColor: "#4270ED",
+        baseColor:"#393939",
         borderGray: "#393939",
         bgBlack: "#333333",
         bgLightBlue: "#f7fcff",

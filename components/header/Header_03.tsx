@@ -29,7 +29,7 @@ const Header_03 = () => {
         </div>
 
         {/* snsボタンSP */}
-        <div className="md:hidden border-t-0 md:border-t border-solid border-b-0 border-r-0 border-l-0 border-borderGray md:w-3/4  md:pt-5">
+        <div className="md:hidden md:border-t  border-borderGray md:w-3/4  md:pt-5">
           <ul className="flex md:flex-col items-center font-semibold space-x-2">
             {Sns.map((item, index) => (
               <li

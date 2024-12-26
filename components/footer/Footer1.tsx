@@ -12,18 +12,18 @@ import ContactButton from "@/components/ui/button/ContactButton"
 const Footer1 = () => {
   const { companyName, companyPostalCode, companyAddress } = CompanyInfo[0]
   return (
-    <footer className="border-t py-24">
-      <div className="w-[1400px] mx-auto">
-        <div className="flex justify-between">
+    <footer className="border-t py-10 md:py-24 px-4 md:px-0">
+      <div className="md:w-[1400px] mx-auto">
+        <div className="md:flex justify-between">
           <div className="space-y-3">
-            <h4>{companyName}</h4>
+            <h4 className="w-[100px]">{CompanyInfo[0].companyName("tertiary")}</h4>
             <p>
               <span className="">{companyPostalCode}</span>
               {companyAddress}
             </p>
           </div>
-          <div className="flex flex-col items-end">
-            <ul className="flex items-center space-x-10 font-light">
+          <div className="flex flex-col md:items-end mt-5 md:mt-0">
+            <ul className="md:flex items-center md:space-x-10 font-light space-y-5 md:space-y-0">
               {Menu.map((item, index) => (
                 <li key={index}>
                   <Link href={item.href}>
@@ -32,18 +32,18 @@ const Footer1 = () => {
                 </li>
               ))}
             </ul>
-            <div className="w-[198px] mt-7">
+            <div className="md:w-[198px] mt-7">
               <ContactButton className="h-14 rounded-xl" />
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center border-t border-borderGray mt-4 pt-4 ">
+        <div className="md:flex justify-between items-center !border-t border-borderGray mt-4 pt-4 ">
           <div className="flex flex-col items-center justify-center text-sm space-y-5">
-            <ul className="flex items-center justify-end font-semibold">
+            <ul className="flex items-center justify-end font-semibold  space-x-5 md:space-x-0">
               {Sns.map((item, index) => (
                 <li
                   key={index}
-                  className="w-[60px] h-[60px] flex items-center justify-center"
+                  className="-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
                 >
                   <Link href={item.href} className="">
                     <Image
@@ -57,7 +57,7 @@ const Footer1 = () => {
               ))}
             </ul>
           </div>
-          <ul className="flex items-center space-x-10 font-light">
+          <ul className="md:flex items-center md:space-x-10 font-light mt-5 md:mt-0 space-y-5 md:space-y-0">
             {FooterLinks.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
@@ -67,8 +67,8 @@ const Footer1 = () => {
             ))}
           </ul>
         </div>
-        <small className="mt-4 flex justify-end">
-          ©{companyName}. ALL Rights Reserved.
+        <small className="mt-4 flex justify-end items-center">
+          ©<span className="w-[130px] px-1">{CompanyInfo[0].companyName("secondary")}</span>. ALL Rights Reserved.
         </small>
       </div>
     </footer>
