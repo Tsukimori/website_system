@@ -20,7 +20,7 @@ const Header_03 = () => {
   const { companyName } = CompanyInfo[0]
 
   return (
-    <header className=" border-r border-black w-full md:w-32 h-20 md:h-screen text-[#393939] tracking-wide py-6 bg-white fixed z-10 px-4 md:px-0 ">
+    <header className=" md:border-r border-black w-full md:w-32 h-20 md:h-screen text-[#393939] tracking-wide py-6 bg-white fixed z-10 px-4 md:px-0 ">
       <div className="h-full flex md:flex-col items-center justify-between ">
         <div className="flex items-center">
           <Link href="/" className="text-center ">
@@ -63,7 +63,7 @@ const Header_03 = () => {
         </div>
 
         {/* SNSボタン */}
-        <div className="hidden md:block border-l border-t-0 md:border-t border-solid border-b-0 border-r-0 md:border-l-0 border-borderGray md:w-3/4 pl-2 md:pl-0 md:pt-5">
+        <div className="hidden md:block  md:border-t  border-borderGray md:w-3/4 pl-2 md:pl-0 md:pt-5">
           <ul className="flex md:flex-col items-center font-semibold space-x-1">
             {Sns.map((item, index) => (
               <li

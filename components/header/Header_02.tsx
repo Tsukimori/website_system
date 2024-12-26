@@ -56,7 +56,7 @@ const Header_02 = () => {
 
           {/* ハンバーガーメニューボタン */}
           <div
-            className="border-l border-borderGray w-10 md:w-20 h-20 flex items-center justify-end md:justify-center cursor-pointer"
+            className="md:border-l border-borderGray w-10 md:w-20 h-20 flex items-center justify-end md:justify-center cursor-pointer"
             onClick={toggleMenu}
           >
             <Image
