@@ -45,7 +45,7 @@ const Header_01 = () => {
   return (
     <>
       <HeaderContent
-        className={`fixed h-20 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 ${
+        className={`fixed h-20 top-0 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 ${
           isScrolled ? "bg-gray-800 bg-opacity-30" : "bg-transparent"
         }`}
       >
@@ -64,8 +64,8 @@ const Header_01 = () => {
                 </Link>
               </li>
             ))}
-            <li>
-              <ContactButton className="h-20 absolute top-0 right-0 w-52" />
+            <li className="">
+              <ContactButton className="h-20 absolute top-0 right-0 !w-52" />
             </li>
           </ul>
 
