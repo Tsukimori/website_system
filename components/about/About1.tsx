@@ -5,8 +5,8 @@ import Image from "next/image"
 // 私たちについて
 const About1 = () => {
   return (
-    <div className="max-w-screen-xl mx-auto py-10 space-y-10">
-      <div className="font-bold text-2xl max-w-screen-xl mx-auto">
+    <div className="md:max-w-screen-xl mx-auto py-10 space-y-10">
+      <div className="font-bold text-2xl md:max-w-screen-xl mx-auto">
         私たちについて
       </div>
 

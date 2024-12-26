@@ -20,7 +20,7 @@ const HeaderContent: React.FC<HeaderContentProps> = ({
           className
         )}
       >
-        <section className=" w-[1400px]  mx-auto flex items-center justify-between ">
+        <section className=" md:w-[1400px]  mx-auto flex items-center justify-between ">
           {children}
         </section>
       </header>
