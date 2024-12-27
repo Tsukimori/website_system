@@ -21,8 +21,8 @@ const Service_04 = () => {
       <PageContent>
         <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
-            entitle="Plan"
-            maintitle="提供プラン"
+            entitle="Service"
+            maintitle="事業内容"
             entitleClassName=""
             titleClassName=""
           />
@@ -31,6 +31,7 @@ const Service_04 = () => {
             {servicesToDisplay.map((service) => (
               <ServiceCard
                 key={service.id}
+                subTitle={service.subTitle}
                 id={service.id}
                 title={service.title}
                 description={service.description}
@@ -38,7 +39,7 @@ const Service_04 = () => {
                 href={service.href} // リンク先を渡す
                 className=" md:w-[282px] space-y-4"
                 imageContainerClass="  md:w-[282px] h-[280px]"
-                showButton={false}
+                showButton={true}
               />
             ))}
           </div>

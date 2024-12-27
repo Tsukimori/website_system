@@ -1,6 +1,7 @@
 export const serviceData = [
     {
       id: 1,
+      subTitle: "Service 01",
       title: "Cloud Plan",
       description: "クラウド会計の利用を前提としたプラン。やり取りは、原則としてメールや電話などになります。",
       image: "/top/service/service_img_01.png",
@@ -8,6 +9,7 @@ export const serviceData = [
     },
     {
       id: 2,
+      subTitle: "Service 02",
       title: "Meeting Plan",
       description: "毎月お会いして打ち合わせ。節税やフローの見直しを検討されている場合にお勧め",
       image: "/top/service/service_img_02.png",
@@ -15,6 +17,7 @@ export const serviceData = [
     },
     {
       id: 3,
+      subTitle: "Service 03",
       title: "Full Plan",
       description: "経理に関するすべての業務おまかせ。労力や時間を合理化",
       image: "/top/service/service_img_03.png",
@@ -22,6 +25,7 @@ export const serviceData = [
     },
     {
       id: 4,
+      subTitle: "Service 04",
       title: "Custom Plan",
       description: "ニーズをヒアリングのうえ、御社だけのPlanをカスタマイズ",
       image: "/top/service/service_img_04.png",

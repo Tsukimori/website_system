@@ -22,6 +22,7 @@ const config = {
         'flow-arrow': "url('/flow/arrow-right.svg')"
       },
       fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
         lato: ["Lato", "sans-serif"],
         spectral: ['Spectral', 'serif'],
         zenKaku: ["'Zen Kaku Gothic New'", "sans-serif"],

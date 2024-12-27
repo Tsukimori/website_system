@@ -5,6 +5,7 @@ import ArrowRightLinkButton from "@/components/ui/button/ArroeRightLinkButton"
 
 interface ServiceCardProps {
   id: number
+  subTitle: string
   title: string
   description: string
   image: string // 画像パスを受け取る
@@ -17,6 +18,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({
   id,
   title,
+  subTitle,
   description,
   image,
   href,
@@ -29,10 +31,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div
         className={classNames(
           {
-            "h-[250px] md:h-[400px]": !className.includes("overlay"),
+            "h-[250px] md:h-[400px] ": !className.includes("overlay"),
             "h-[250px] md:h-[600px]": className.includes("overlay"),
           },
-          "w-full aspect-[1/1] relative",
+          "w-full aspect-[1/1] relative rounded-[30px]",
           imageContainerClass
         )}
       >
@@ -41,20 +43,28 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           src={image}
           alt={`solution ${id}`}
           objectFit="cover"
-          className="block object-top"
+          className="block object-top rounded-[30px]"
           priority
         />
       </div>
 
       <div
         className={classNames("space-y-3 ", {
-          "w-full h-[600px] rounded-2xl absolute inset-0 flex flex-col justify-center items-center bg-black/50 text-white":
+          "w-full md:h-[600px]  rounded-[30px] absolute inset-0 flex flex-col justify-center items-center bg-black/50 text-white":
             className.includes("overlay"),
-          "relative text-black": !className.includes("overlay"),
+          "relative text-black ": !className.includes("overlay"),
         })}
       >
         <div
-          className={classNames("font-medium text-[22px] font-lato text-center", {
+          className={classNames("font-bold text-[16px] font-poppins text-left text-accentColor ", {
+            "text-white": className.includes("overlay"),
+            "text-accentColor": !className.includes("overlay"),
+          })}
+        >
+          {subTitle}
+        </div>
+        <div
+          className={classNames("font-medium text-[22px] font-poppins text-left  ", {
             "text-white": className.includes("overlay"),
             "text-baseColor": !className.includes("overlay"),
           })}
@@ -62,8 +72,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           {title}
         </div>
         <div
-          className={classNames({
-            "text-white": className.includes("overlay"),
+          className={classNames("font-light",{
+            "text-white  px-10 md:px-20": className.includes("overlay"),
             "text-baseColor": !className.includes("overlay"),
           })}
         >

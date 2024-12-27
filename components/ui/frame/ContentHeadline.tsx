@@ -23,7 +23,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
 }) => {
   return (
     <section className={classNames("md:w-1200 mb-16 tracking-wide", className)}>
-      <h3 className={classNames("text-lg text-accentColor font-bold font-lato", entitleClassName)}>
+      <h3 className={classNames("text-lg text-accentColor font-bold font-poppins", entitleClassName)}>
         {entitle}
       </h3>
       <h1 className={classNames("text-[28px] font-bold", titleClassName)}>{maintitle}</h1>

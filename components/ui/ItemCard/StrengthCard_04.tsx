@@ -28,7 +28,7 @@ const StrengthCard = ({
         />
       </div>
       <div className="w-full md:w-[390px]">
-        <p className="text-accentColor text-lg font-bold font-lato mt-6">
+        <p className="text-accentColor text-lg font-bold font-poppins mt-6">
           Strength_{number}
         </p>
         <h3 className="my-3 md:my-6 text-[22px] font-medium text-accentColor">

@@ -35,7 +35,7 @@ const Service_02 = () => {
                 description={service.description}
                 image={service.image} // 画像パスを渡す
                 href={service.href} // リンク先を渡す
-                className=" flex justify-between"
+                className=" md:flex justify-between"
               />
             ))}
           </div>

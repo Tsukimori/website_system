@@ -35,7 +35,7 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       /> */}
       <h2
         className={classNames(
-          "text-lg md:text-2xl font-bold mb-4 font-lato leading-normal",
+          "text-lg md:text-2xl font-bold mb-4 font-poppins leading-normal",
           subtitleClassName
         )}
       >

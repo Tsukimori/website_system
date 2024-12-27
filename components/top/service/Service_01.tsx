@@ -26,11 +26,12 @@ const Service_01 = () => {
             titleClassName="text-center"
           />
 
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {servicesToDisplay.map((service) => (
               <ServiceCard
                 key={service.id}
                 id={service.id}
+                subTitle={service.subTitle}
                 title={service.title}
                 description={service.description}
                 image={service.image} // 画像パスを渡す
