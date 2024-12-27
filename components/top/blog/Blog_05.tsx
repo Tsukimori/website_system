@@ -53,7 +53,7 @@ const Blog_05 = ({ limit = 6 }: BlogProps) => {
     <>
       <PageContent>
         <section className="md:w-1200 mx-auto">
-          <div className="w-[300px]">
+          <div className="md:w-[300px]">
             <ContentHeadline
               entitle="Blog"
               maintitle="ブログ"
@@ -61,10 +61,10 @@ const Blog_05 = ({ limit = 6 }: BlogProps) => {
               titleClassName=""
             />
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-16 ">
+          <div className="mt-0 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-y-10 gap-x-10 md:gap-x-16">
             {contents.map((post: Work) => (
-              <div key={post.id} className="w-full flex space-x-6">
-                <div className="w-[180px]  h-[130px]  mt-5 md:mt-0">
+              <div key={post.id} className="w-full md:flex space-x-6">
+                <div className="w-full md:w-[180px] h-[250px] md:h-[130px] mt-5 md:mt-0">
                   {post.image && (
                     <Image
                       src={post.image.url}
@@ -80,18 +80,11 @@ const Blog_05 = ({ limit = 6 }: BlogProps) => {
                   <p className="mt-2 text-[#5f5f5f] text-xs ">
                     {contents[0].title}
                   </p>
-                  <Link
-                    href="/"
-                    className="mt-6 flex items-center text-accentColor font-semibold"
-                  >
-                    もっと見る
-                    <ChevronRightIcon className="ml-1 w-4 h-6" />
-                  </Link>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-16 flex justify-center">
+          <div className="mt-10 md:mt-16 flex justify-center">
             <MoreButton className="text-accentColor border-accentColor" />
           </div>
         </section>

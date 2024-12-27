@@ -53,22 +53,22 @@ const Blog_06 = ({ limit = 9 }: BlogProps) => {
     <>
       <PageContent>
         <section className="md:w-1200 mx-auto md:flex justify-between gap-x-20">
-          <div className="w-[300px]">
+          <div className="md:w-[300px]">
             <ContentHeadline
               entitle="Blog"
               maintitle="ブログ"
               entitleClassName=""
               titleClassName=""
             />
-            <div className="mt-16">
+            <div className="mt-0 md:mt-16">
               <MoreButton className="text-accentColor border-accentColor" />
             </div>
           </div>
-          <div className="w-[820px]  space-y-5 ">
+          <div className="mt-10 md:mt-0 md:w-[820px]  space-y-5 ">
             {contents.map((post: Work) => (
-              <div key={post.id} className="w-full flex space-x-6 border-b border-[#eeeeee] pb-5">
+              <div key={post.id} className="w-full md:flex md:space-x-6 border-b border-[#eeeeee] pb-5">
                 <p className="font-medium">{post.date}</p>
-                <p className=" h-[25px] px-4 py-1 bg-accentColor rounded-[5px] text-white  justify-center items-center text-xs">
+                <p className="mt-1 md:mt-0 inline-block h-[25px] px-4 py-1 bg-accentColor rounded-[5px] text-white  justify-center items-center text-xs">
                   {Array.isArray(post.category) && post.category.length > 0
                     ? post.category.join(", ")
                     : "カテゴリーなし"}

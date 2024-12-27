@@ -94,6 +94,14 @@ body,
   margin: 0 12px!important;
 }
 
+@media screen and (max-width: 767px){
+  .swiper-pagination-bullet {
+    width: 30px!important;
+    height: 4px!important;
+    margin: 0 10px!important;
+  }
+}
+
 .swiper-pagination-bullet-active {
   background-color: #393939 !important;
 }
