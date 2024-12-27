@@ -21,22 +21,22 @@ const PlanCard: React.FC<PlanCardProps> = ({
   return (
     <div>
       {/* プランの概要部分 */}
-      <div className={`${colorClass} text-white p-6 rounded-t-2xl flex flex-col items-center text-center ${isLargePadding ? 'py-[123px]' : ''}`}>
-        <h3 className="text-2xl font-bold leading-[38.40px] mb-1">{title}</h3>
+      <div className={`${colorClass} text-white p-6 rounded-t-2xl flex flex-col items-center text-center ${isLargePadding ? 'py-[110px] md:py-[123px]' : ''}`}>
+        <h3 className="text-lg md:text-2xl font-bold leading-relaxed md:leading-[38.40px] mb-1">{title}</h3>
 
         {/* descriptionがある場合のみ表示 */}
         {description && <p className="font-light">{description}</p>}
 
         {/* priceがある場合のみ表示 */}
         {price && (
-          <p className="my-4 text-[40px] font-bold">
+          <p className="my-4 text-[30px] md:text-[40px] font-bold">
             <span className="text-lg font-extrabold">￥</span>{price}
           </p>
         )}
 
         {/* priceがある場合のみ"申し込む"ボタンを表示 */}
         {price && (
-          <Link href="/" className="w-full h-[58px] text-accentColor py-4 bg-white rounded-[30px] justify-center items-start font-semibold">
+          <Link href="/" className="w-full h-12 mdh-[58px] text-accentColor py-4 bg-white rounded-[30px] justify-center items-start font-semibold">
             申し込む
           </Link>
         )}

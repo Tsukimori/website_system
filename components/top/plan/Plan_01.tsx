@@ -20,7 +20,7 @@ const Plan_01 = () => {
             entitleClassName=""
             titleClassName=""
           />
-          <div className="mt-16 grid grid-cols-4 gap-x-1">
+          <div className="mt-0 md:mt-16 grid grid-cols-1 md:grid-cols-4 gap-y-10 md:gap-y-0 gap-x-1">
             <PlanCard
               planName="プラン_A"
               description="説明文入ります説明文入ります説明文入ります"

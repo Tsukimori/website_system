@@ -16,7 +16,7 @@ const Plan_04 = () => {
           entitleClassName=""
           titleClassName=""
         />
-        <div className="mt-16">
+        <div className="mt-10 md:mt-16">
           {/* PlanCard_04に各プランの情報を渡して表示 */}
           <PlanCard_04 
             title="プラン_A" 
