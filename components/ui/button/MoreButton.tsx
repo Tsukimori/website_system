@@ -1,6 +1,7 @@
 // components/ui/button/MoreLinkButton.tsx
 
 import Link from "next/link"
+import classNames from "classnames" 
 
 const MoreLinkButton = ({
   href = "/", // デフォルトの href を "/" に設定
@@ -12,7 +13,10 @@ const MoreLinkButton = ({
   return (
     <Link
       href={href}
-      className={`border border-white rounded-full text-white cursor-pointer flex items-center justify-center w-full md:w-[350px] h-12 md:h-[58px] font-semibold relative group ${className}`}
+      className={classNames(
+        "border rounded-full cursor-pointer flex items-center justify-center w-full md:w-[350px] h-12 md:h-[58px] font-semibold relative group",
+        className 
+      )}
     >
       もっと見る
     </Link>

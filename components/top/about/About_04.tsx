@@ -15,14 +15,14 @@ const About_04 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:w-1200 mx-auto ">
           <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
-          <div className=" mt-16 flex justify-start space-x-20">
-            <div className="w-[600px]">
-              <h3 className="text-5xl font-light leading-[64px]">
+          <div className=" md:mt-16 md:flex justify-start md:space-x-20">
+            <div className="md:w-[600px]">
+              <h3 className="text-3xl md:text-5xl font-light leading-relaxed md:leading-[64px]">
                 見出しテキスト
                 <br />
                 はいります見出し
               </h3>
-              <p className="mt-10 leading-[45px] text-lg">
+              <p className="mt-10 leading-relaxed md:leading-[45px] md:text-lg">
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 <br />
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。<br/>
@@ -36,13 +36,13 @@ const About_04 = () => {
                 className="mt-10 text-accentColor border-accentColor"
               />
             </div>
-            <div className=" w-[520px] h-[761px] relative">
+            <div className="w-full md:w-[520px] h-[300px] md:h-[761px] relative mt-10 md:mt-0">
               <Image
                 src="/top/message/message_img.png"
                 alt="message"
-                layout="fill" // 画像のサイズは親要素にフィット
-                objectFit="cover" // 画像を親要素に合わせてトリミング
-                className="block"
+                width="520"
+                height="761"
+                className="block md:w-fit object-cover w-full h-full"
               />
             </div>
           </div>

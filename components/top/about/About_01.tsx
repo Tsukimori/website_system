@@ -13,7 +13,7 @@ const About_01 = () => {
     <>
       <PageContent className="pb-0 md:pb-10 px-0">
         {/* widthがフルサイズでない場合は指定する */}
-        <section className="w-full md:w-1200 mx-auto px-4 md:px-0">
+        <section className="w-full md:w-1200 mx-auto">
           {/* <ContentHeadline entitle="Who we are" maintitle="私たちについて" /> */}
           <div className="md:flex justify-between">
             <h3 className="w-fullmd:w-[500px] text-3xl md:text-5xl font-light leading-relaxed md:leading-[84px] tracking-wide">
