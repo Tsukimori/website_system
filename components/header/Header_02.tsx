@@ -23,7 +23,7 @@ const Header_02 = () => {
 
   return (
     <>
-      <HeaderContent className="">
+      <HeaderContent className="border-b border-borderGray">
         <div className="flex items-center space-x-5  md:space-x-10">
           <Link href="/" className="w-[60px] md:w-[200px]">
             <div className="block md:hidden">
@@ -56,7 +56,7 @@ const Header_02 = () => {
 
           {/* ハンバーガーメニューボタン */}
           <div
-            className="md:border-l border-borderGray w-10 md:w-20 h-20 flex items-center justify-end md:justify-center cursor-pointer"
+            className="md:border-l  border-borderGray w-10 md:w-20 h-20 flex items-center justify-end md:justify-center cursor-pointer"
             onClick={toggleMenu}
           >
             <Image

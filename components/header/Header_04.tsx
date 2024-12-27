@@ -21,7 +21,7 @@ const Header_04 = () => {
 
   const { companyName } = CompanyInfo[0]
   return (
-    <header className="border-b h-20 md:h-[98px] text-[#393939] tracking-wide px-4 md:px-0">
+    <header className="w-full h-20 md:h-[98px] text-[#393939] tracking-wide px-4 md:px-0 fixed top-0 left-0 z-10 bg-white">
       <div className="md:max-w-screen-xl h-full mx-auto flex items-center justify-between ">
         <div className="flex items-center space-x-10 ">
           <Link href="/">{CompanyInfo[0].companyName("secondary")}</Link>

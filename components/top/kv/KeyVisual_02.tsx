@@ -40,7 +40,7 @@ const KeyVisual_02 = () => {
           {/* キービジュアルの画像 */}
           <section className="mx-auto mt-16">
             {/* KeyVisualContentに高さを指定 */}
-            <KeyVisualContent className="h-[600px]" />
+            <KeyVisualContent className="h-[300px] md:h-[600px]" />
           </section>
         </div>
       </FirstViewContent>

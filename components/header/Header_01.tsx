@@ -45,8 +45,8 @@ const Header_01 = () => {
   return (
     <>
       <HeaderContent
-        className={`fixed h-20 top-0 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 ${
-          isScrolled ? "bg-gray-800 bg-opacity-30" : "bg-transparent"
+        className={`fixed h-20 top-0 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300   ${
+          isScrolled ? "!bg-gray-800 !bg-opacity-30" : " bg-opacity-0"
         }`}
       >
         <div className="flex items-center justify-between md:justify-start  w-1400 mx-auto h-20 px-4">
