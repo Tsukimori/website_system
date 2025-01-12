@@ -10,7 +10,7 @@ const Cta_01 = () => {
   return (
     <>
       <PageContent className="bg-accentColor">
-        <section className="w-1200 mx-auto flex justify-center items-center">
+        <section className="md:w-1200 mx-auto flex justify-center items-center">
           <p className="text-center text-[22px] text-white font-bold mr-10">
             詳しく知りたい方は
             <br />

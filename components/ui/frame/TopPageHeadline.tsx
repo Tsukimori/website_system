@@ -4,7 +4,7 @@ import classNames from "classnames"
 interface TopPageHeadlineProps {
   maintitle: React.ReactNode
   subtitleTop?: React.ReactNode
-  subtitleBottom?: string
+  subtitleBottom?: React.ReactNode
   discription?: React.ReactNode
   parentDirectoryName?: string
   parentDirectoryLink?: string
@@ -27,7 +27,7 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   discriptionClassName = "",
 }) => {
   return (
-    <section className={classNames("w-1200", className)}>
+    <section className={classNames("md:md:w-1200 w-full px-4 md:px-0", className)}>
       {/* <Breadcrumb
         maintitle={maintitle}
         parentDirectoryName={parentDirectoryName}
@@ -35,7 +35,7 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       /> */}
       <h2
         className={classNames(
-          "text-2xl font-extrabold mb-4 font-lato",
+          "text-lg md:text-2xl font-bold mb-4 font-poppins leading-normal",
           subtitleClassName
         )}
       >
@@ -43,20 +43,20 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       </h2>
       <h1
         className={classNames(
-          "font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px]",
+          "text-4xl leading-normal md:text-[50px] md:leading-[88px] font-medium tracking-[4px]",
           titleClassName
         )}
       >
         {maintitle}
       </h1>
       <h3
-        className={classNames("text-xl font-semibold mt-4", subtitleClassName)}
+        className={classNames("md:text-lg mt-4", subtitleClassName)}
       >
         {subtitleBottom}
       </h3>
       <p
         className={classNames(
-          "font-semibold mt-4 text-lg",
+          "mt-4 md:text-lg ",
           discriptionClassName
         )}
       >

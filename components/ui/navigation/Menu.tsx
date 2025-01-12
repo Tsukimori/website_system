@@ -1,26 +1,30 @@
 //components/ui/navigation/Menu.tsx
 export const Menu = [
   {
-    name: 'Messege',
-    href: '/#message',
+    name: '提供プラン',
+    href: '/#services',
   },
   {
-    name: 'Services',
-    href: '/#services',
+    name: '事業所のご案内',
+    href: '/#about',
   },
 
   {
-    name: 'News',
-    href: '/#news',
+    name: '料金プラン',
+    href: '/#plan',
   },
   {
-    name: 'Case study',
-    href: '/#casestudy',
+    name: 'お問い合わせ',
+    href: '/contact',
   },
-  {
-    name: 'Blog',
-    href: '/#blog',
-  },
+  // {
+  //   name: 'Case study',
+  //   href: '/#casestudy',
+  // },
+  // {
+  //   name: 'Blog',
+  //   href: '/#blog',
+  // },
 //   {
 //     name: 'Plan',
 //     href: '/#plan',
@@ -33,6 +37,7 @@ export const Menu = [
 //     name: 'FAQ',
 //     href: '/#faq',
 //   },
+
 
 ]
 

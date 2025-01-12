@@ -14,8 +14,8 @@ import KeyVisual_05 from "@/components/top/kv/KeyVisual_05"
 import KeyVisual_06 from "@/components/top/kv/KeyVisual_06"
 import About_01 from "@/components/top/about/About_01"
 import About_02 from "@/components/top/about/About_02"
-import About_03 from "@/components/top/about/About_04"
-import About_04 from "@/components/top/about/About_03"
+import About_03 from "@/components/top/about/About_03"
+import About_04 from "@/components/top/about/About_04"
 import Strength_01 from "@/components/top/strength/Strength_01"
 import Strength_02 from "@/components/top/strength/Strength_02"
 import Strength_03 from "@/components/top/strength/Strength_03"
@@ -139,21 +139,7 @@ export const componentsConfig: ComponentsConfig = {
           About_04: <About_04 />,
         },
       },
-      strength: {
-        title: "私たちの強み",
-        options: [
-          { id: "Strength_01", src: "/admin/1.png", alt: "Strength_01" },
-          { id: "Strength_02", src: "/admin/2.png", alt: "Strength_02" },
-          { id: "Strength_03", src: "/admin/3.png", alt: "Strength_03" },
-          { id: "Strength_04", src: "/admin/4.png", alt: "Strength_04" },
-        ],
-        components: {
-          Strength_01: <Strength_01 />,
-          Strength_02: <Strength_02 />,
-          Strength_03: <Strength_03 />,
-          Strength_04: <Strength_04 />,
-        },
-      },
+      
       // message: {
       //   title: "メッセージ",
       //   options: [
@@ -184,7 +170,21 @@ export const componentsConfig: ComponentsConfig = {
           Service_04: <Service_04 />,
         },
       },
-  
+      // strength: {
+      //   title: "私たちの強み",
+      //   options: [
+      //     { id: "Strength_01", src: "/admin/1.png", alt: "Strength_01" },
+      //     { id: "Strength_02", src: "/admin/2.png", alt: "Strength_02" },
+      //     { id: "Strength_03", src: "/admin/3.png", alt: "Strength_03" },
+      //     { id: "Strength_04", src: "/admin/4.png", alt: "Strength_04" },
+      //   ],
+      //   components: {
+      //     Strength_01: <Strength_01 />,
+      //     Strength_02: <Strength_02 />,
+      //     Strength_03: <Strength_03 />,
+      //     Strength_04: <Strength_04 />,
+      //   },
+      // },
       case: {
         title: "導入事例",
         options: [
@@ -281,6 +281,19 @@ export const componentsConfig: ComponentsConfig = {
 
         },
       },
+      
+      
+      aside: {
+        title: "ASIDE",
+        options: [
+          { id: "Aside_01", src: "/admin/1.png", alt: "Aside_01" },
+          { id: "Aside_02", src: "/admin/2.png", alt: "Aside_02" },
+        ],
+        components: {
+          Aside_01: <Aside_01 />,
+          Aside_02: <Aside_02 />,
+        },
+      },
       profile: {
         title: "会社概要",
         options: [
@@ -295,18 +308,6 @@ export const componentsConfig: ComponentsConfig = {
           Profile_03: <Profile_03 />,
           Profile_04: <Profile_04 />,
 
-        },
-      },
-      
-      aside: {
-        title: "ASIDE",
-        options: [
-          { id: "Aside_01", src: "/admin/1.png", alt: "Aside_01" },
-          { id: "Aside_02", src: "/admin/2.png", alt: "Aside_02" },
-        ],
-        components: {
-          Aside_01: <Aside_01 />,
-          Aside_02: <Aside_02 />,
         },
       },
       cta: {

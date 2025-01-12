@@ -14,7 +14,7 @@ const Strength_04 = () => {
     <>
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <section className="w-1200 mx-auto space-y-10">
+        <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
             entitle="Strength"
             maintitle="私たちの強み"
@@ -38,7 +38,7 @@ const Strength_04 = () => {
         </section>
         <MoreLinkButton
             href="/"
-            className="mt-16 text-accentColor border-accentColor mx-auto"
+            className="mt-10 md:mt-16 text-accentColor border-accentColor mx-auto"
           />
       </PageContent>
     </>

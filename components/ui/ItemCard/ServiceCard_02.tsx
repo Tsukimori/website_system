@@ -29,7 +29,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       <div
         className={classNames(
-          "w-[560px] h-[400px] aspect-[1/1] relative",
+          "md:w-[560px] h-[250px] md:h-[400px] md:aspect-[1/1] relative",
           imageContainerClass
         )}
       >
@@ -46,14 +46,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
 
       <div
-        className={classNames("space-y-6 w-[560px]" , {
-          "w-[560px] h-[480px] rounded-2xl absolute inset-0 flex flex-col  bg-black/50 text-white":
+        className={classNames("mt-5 md:mt-0 space-y-5 md:w-[560px]" , {
+          "md:w-[560px] h-[480px] rounded-2xl absolute inset-0 flex flex-col  bg-black/50 text-white":
             className.includes("overlay"),
           "relative text-black": !className.includes("overlay"),
         })}
       >
         <div
-          className={classNames("font-black font-lato", {
+          className={classNames("font-black font-poppins", {
             "text-white": className.includes("overlay"),
             "text-accentColor": !className.includes("overlay"),
           })}
@@ -61,7 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           Service0{id}
         </div>
         <div
-          className={classNames("font-medium text-[22px] border-b border-borderGray pb-6", {
+          className={classNames("font-medium font-poppins text-[22px] border-b border-borderGray pb-6", {
             "text-white": className.includes("overlay"),
             "text-black": !className.includes("overlay"),
           })}

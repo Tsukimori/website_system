@@ -27,7 +27,7 @@ const StrengthCard = ({
           priority
         />
       </div>
-      <p className="text-accentColor text-lg font-extrabold font-lato mt-6">
+      <p className="text-accentColor text-lg font-extrabold font-poppins mt-6">
         Feauture{number}
       </p>
       <h3 className="mt-2 text-lg font-semibold">{title}</h3>

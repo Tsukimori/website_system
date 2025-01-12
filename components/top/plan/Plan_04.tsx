@@ -9,14 +9,14 @@ import PlanCard_04 from "@/components/ui/ItemCard/PlanCard_04"
 const Plan_04 = () => {
   return (
     <PageContent className="bg-bgLightBlue">
-      <section className="w-1200 mx-auto">
+      <section className="md:w-1200 mx-auto">
         <ContentHeadline
           entitle="Plan"
           maintitle="料金プラン"
           entitleClassName=""
           titleClassName=""
         />
-        <div className="mt-16">
+        <div className="mt-10 md:mt-16">
           {/* PlanCard_04に各プランの情報を渡して表示 */}
           <PlanCard_04 
             title="プラン_A" 

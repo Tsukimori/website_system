@@ -19,7 +19,7 @@ const CtaJoin = () => {
 
   return (
     <div className="py-16 bg-mainBlue">
-      <div className="md:w-1200 mx-auto text-white px-6 md:px-0">
+      <div className="md:md:w-1200 mx-auto text-white px-6 md:px-0">
         <ContentHeadline
           ImageSrc="/common/join_cta.svg"
           ImageWidth={35}

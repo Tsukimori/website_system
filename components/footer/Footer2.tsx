@@ -11,12 +11,12 @@ const Footer2 = () => {
   const { companyName } = CompanyInfo[0]
 
   return (
-    <footer className="border-t py-24">
-      <div className="w-[1400px]  mx-auto">
+    <footer className="py-10 md:py-24 px-4 md:px-0">
+      <div className="md:w-1200 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-6">
-          <h4>{companyName}</h4>
+          <h4>{CompanyInfo[0].companyName("secondary")}</h4>
 
-          <ul className="flex items-center space-x-10 font-light">
+          <ul className="flex flex-col md:flex-row items-center space-y-5 md:space-y-0 md:space-x-10 font-light">
             {Menu.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
@@ -26,12 +26,13 @@ const Footer2 = () => {
             ))}
           </ul>
         </div>
+
         <div className="border-t border-borderGray mt-6 pt-6">
-          <ul className="flex items-center justify-center font-semibold">
+          <ul className="flex items-center justify-center font-semibold  space-x-5 md:space-x-0">
             {Sns.map((item, index) => (
               <li
                 key={index}
-                className="w-[60px] h-[60px] flex items-center justify-center"
+                className="w-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
               >
                 <Link href={item.href} className="">
                   <Image
@@ -45,8 +46,8 @@ const Footer2 = () => {
             ))}
           </ul>
         </div>
-        <small className="mt-6 flex justify-center">
-          ©{companyName}. ALL Rights Reserved.
+        <small className="mt-6 flex justify-center items-center text-sm md:text-base ">
+          ©2024　<span className=" md:w-36 mt-[2px] w-[130px] px-1">{CompanyInfo[0].companyName("secondary")}</span>　ALL Rights Reserved.
         </small>
       </div>
     </footer>

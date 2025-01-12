@@ -20,16 +20,38 @@ const Header_03 = () => {
   const { companyName } = CompanyInfo[0]
 
   return (
-    <header className=" border-r border-black w-32 h-screen text-[#393939] tracking-wide py-6 bg-white fixed  z-10">
-      <div className="h-full flex flex-col items-center justify-between ">
+    <header className=" md:border-r border-black w-full md:w-32 h-20 md:h-screen text-[#393939] tracking-wide py-6 bg-white fixed z-10 px-4 md:px-0 ">
+      <div className="h-full flex md:flex-col items-center justify-between ">
         <div className="flex items-center">
-          <Link href="/" className="text-center">
-            {companyName}
+          <Link href="/" className="text-center ">
+            {CompanyInfo[0].companyName("tertiary")}
           </Link>
         </div>
+
+        {/* snsボタンSP */}
+        <div className="md:hidden md:border-t  border-borderGray md:w-3/4  md:pt-5">
+          <ul className="flex md:flex-col items-center font-semibold space-x-2">
+            {Sns.map((item, index) => (
+              <li
+                key={index}
+                className="w-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
+              >
+                <Link href={item.href}>
+                  <Image
+                    src={item.src}
+                    alt={item.name}
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* ハンバーガーメニューボタン */}
         <div
-          className="w-20 h-20 flex items-center justify-center cursor-pointer"
+          className="w-10 md:w-20 h-20 flex items-center ustify-end md:justify-center cursor-pointer"
           onClick={toggleMenu}
         >
           <Image
@@ -39,12 +61,14 @@ const Header_03 = () => {
             height={38}
           />
         </div>
-        <div className="border-t border-borderGray w-full ">
-          <ul className="flex flex-col items-center font-semibold">
+
+        {/* SNSボタン */}
+        <div className="hidden md:block  md:border-t  border-borderGray md:w-3/4 pl-2 md:pl-0 md:pt-5">
+          <ul className="flex md:flex-col items-center font-semibold space-x-1">
             {Sns.map((item, index) => (
               <li
                 key={index}
-                className="w-[60px] h-[60px] flex items-center justify-center"
+                className="w-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
               >
                 <Link href={item.href}>
                   <Image
@@ -62,7 +86,7 @@ const Header_03 = () => {
 
       {/* ハンバーガーメニュー */}
       <div
-        className={`fixed z-10 top-0 right-0 h-screen w-[500px] bg-bgBlack text-white shadow-lg transform transition-transform duration-300 ${
+        className={`fixed z-10 top-0 right-0 h-screen w-full md:w-[500px] bg-bgBlack text-white shadow-lg transform transition-transform duration-300 ${
           MenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -74,8 +98,8 @@ const Header_03 = () => {
             className="w-10 h-10"
           >
             <div className="w-[38px] h-[38px] relative">
-              <div className="w-[53.74px] h-[0px] left-0 top-0 absolute origin-top-left rotate-45 border border-white"></div>
-              <div className="w-[53.74px] h-[0px] left-[38px] top-0 absolute origin-top-left rotate-[135deg] border border-white"></div>
+              <div className="w-[53.74px] bg-white h-[1px] left-0 top-0 absolute origin-top-left rotate-45 border border-white"></div>
+              <div className="w-[53.74px] bg-white h-[1px] left-[38px] top-0 absolute origin-top-left rotate-[135deg] border border-white"></div>
             </div>
           </button>
         </div>

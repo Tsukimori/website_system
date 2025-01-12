@@ -54,7 +54,7 @@ const Case_03 = ({ limit = 3 }: CaseProps) => {
   return (
     <>
       <PageContent className="">
-        <section className="w-1200 mx-auto space-y-10">
+        <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
             entitle="Case study"
             maintitle="導入事例"
@@ -77,8 +77,8 @@ const Case_03 = ({ limit = 3 }: CaseProps) => {
                   )}
                 </div>
                 <div className="bg-white p-6">
-                  <p className="text-lg font-bold">{post.title}</p>
-                  <p className="mt-2 text-[#5f5f5f] text-xs ">
+                  <p className="text-lg font-bold md:min-h-14">{post.title}</p>
+                  <p className="mt-2 text-[#5f5f5f] text-xs">
                     {contents[0].title}
                   </p>
                   <Link

@@ -71,7 +71,7 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="w-1200 mx-auto relative">
+        <section className="md:w-1200 mx-auto relative">
           <ContentHeadline
             entitle="Blog"
             maintitle="ブログ"
@@ -82,8 +82,8 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
           {/* Swiper を追加 */}
           <Swiper
             modules={[Navigation, Pagination, Autoplay]} // Autoplayモジュールを追加
-            spaceBetween={40}
-            slidesPerView={1.5}
+            spaceBetween={10}
+            slidesPerView={1.3}
             centeredSlides={true}
             loop={true}
             pagination={{ clickable: true }}
@@ -91,14 +91,20 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
               delay: 3000, // 3秒ごとに自動スライド
               disableOnInteraction: false, // ユーザーが操作しても自動再生が停止しない
             }}
+            breakpoints={{
+              768: {
+                slidesPerView: 1.5, // 768px以上では1.5スライド表示
+                spaceBetween: 40,  // 768px以上ではスライド間の余白を広げる
+              },
+            }}
             onSwiper={(swiper) => (swiperRef.current = swiper)} // Swiperインスタンスを取得して参照に保存
             className="mt-16"
           >
             {/* 全てのコンテンツをループで表示 */}
             {contents.map((post: Work) => (
               <SwiperSlide key={post.id} className="w-[700px]">
-                <div className="w-[800px] h-[400px] relative">
-                  <div className="w-full h-[400px] mt-5 md:mt-0">
+                <div className="md:w-[800px] h-[250px] md:h-[400px] relative">
+                  <div className="w-full h-[250px] md:h-[400px] mt-5 md:mt-0">
                     {post.image && (
                       <Image
                         src={post.image.url}
@@ -109,9 +115,9 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
                       />
                     )}
                   </div>
-                  <div className="absolute bottom-0 left-0 bg-black/50 py-8 px-10 text-white">
-                    <p className="text-lg font-bold">{post.title}</p>
-                    <p className="mt-4 text-white text-xs">
+                  <div className="absolute bottom-0 left-0 w-full md:w-[400px] bg-black/50 py-3 md:py-8 px-3 md:px-10 text-white">
+                    <p className="md:text-lg font-bold min-h-12 md:min-h-0">{post.title}</p>
+                    <p className="mt-2 md:mt-4 text-white text-xs min-h-8 md:min-h-0">
                       #
                       {Array.isArray(post.category) && post.category.length > 0
                         ? post.category.join(", ")
@@ -124,7 +130,7 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
           </Swiper>
 
           {/* ページネーションと一時停止ボタン */}
-          <div className="absolute right-60 -bottom-3 z-10">
+          <div className="absolute right-4 md:right-60 -bottom-3 z-10">
             <div className="swiper-pagination"></div>{" "}
             {/* Swiperのページネーション */}
             <button onClick={handlePlayPause} className="focus:outline-none ">

@@ -10,7 +10,7 @@ const Cta_04 = () => {
   return (
     <>
       <PageContent className="bg-accentColor">
-        <section className="w-1200 mx-auto grid grid-cols-2 gap-x-10">
+        <section className="md:w-1200 mx-auto grid grid-cols-2 gap-x-10">
           <div className="bg-white text-accentColor text-center px-16 py-6 flex flex-col items-center">
           <Image
             src="/cta/tel.svg"

@@ -17,14 +17,14 @@ const KeyVisual_03 = () => {
   }
   return (
     <>
-      <FirstViewContent className="relative h-screen">
+      <FirstViewContent className="relative h-screen ">
         {/* widthがフルサイズでない場合は指定する */}
         {/* キービジュアルの画像 */}
         <section className="w-[65%] h-full absolute right-0 ">
           {/* KeyVisualContentに高さを指定 */}
-          <KeyVisualContent className="h-full" />
+          <KeyVisualContent className="h-screen md:h-full" />
         </section>
-        <div className="max-w-screen-xl mx-auto flex flex-col justify-center h-full relative">
+        <div className="md:max-w-screen-xl mx-auto flex flex-col justify-center h-full relative">
           <TopPageHeadline
             maintitle={
               <>
@@ -36,7 +36,7 @@ const KeyVisual_03 = () => {
             subtitleBottom="日本語のテキストが入ります。"
           />
           {/* スクロールボタン */}
-          <div className="absolute left-0 bottom-20">
+          <div className="absolute left-4 md:left-0 bottom-4 md:bottom-20">
             <ScrollButton onClick={scrollToNextSection} />
           </div>
         </div>

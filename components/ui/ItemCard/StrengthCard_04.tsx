@@ -16,23 +16,25 @@ const StrengthCard = ({
   image,
 }: StrengthCardProps) => {
   return (
-    <div className="flex flex-row-reverse justify-between items-center">
-      <div className="relative w-[714px] h-[475px] rounded-l-[10px]">
+    <div className="flex flex-col md:flex-row-reverse justify-between items-center">
+      <div className="relative w-full md:w-[714px] h-[250px] md:h-[475px] rounded-l-[10px]">
         <Image
           fill
           src={image}
           alt={title}
           objectFit="cover"
-          className="rounded-l-[10px]"
+          className=""
           priority
         />
       </div>
-      <div className="w-[390px]">
-        <p className="text-accentColor text-lg font-extrabold font-lato mt-6">
-          Feauture_{number}
+      <div className="w-full md:w-[390px]">
+        <p className="text-accentColor text-lg font-bold font-poppins mt-6">
+          Strength_{number}
         </p>
-        <h3 className="mt-2 text-[22px] font-semibold text-accentColor">{title}</h3>
-        <p className="font-light mt-6">{description}</p>
+        <h3 className="my-3 md:my-6 text-[22px] font-medium text-accentColor">
+          {title}
+        </h3>
+        <p className="">{description}</p>
       </div>
     </div>
   )

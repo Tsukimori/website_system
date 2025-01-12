@@ -94,6 +94,36 @@ body,
   margin: 0 12px!important;
 }
 
+@media screen and (max-width: 767px){
+  .swiper-pagination-bullet {
+    width: 30px!important;
+    height: 4px!important;
+    margin: 0 10px!important;
+  }
+}
+
 .swiper-pagination-bullet-active {
   background-color: #393939 !important;
+}
+
+
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  src: url('/fonts/zen-kaku-gothic-new/ZenKakuGothicNew-Regular.ttf') format('truetype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  src: url('/fonts/zen-kaku-gothic-new/ZenKakuGothicNew-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  src: url('/fonts/zen-kaku-gothic-new/ZenKakuGothicNew-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
 }

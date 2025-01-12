@@ -52,7 +52,7 @@ const News_03 = ({ limit = 3 }: NewsProps) => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto space-y-10">
+        <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
             entitle="News"
             maintitle="お知らせ"

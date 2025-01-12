@@ -52,7 +52,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="w-1200 mx-auto space-y-10">
+        <section className="md:w-1200 mx-auto md:space-y-10">
           <ContentHeadline
             entitle="Case study"
             maintitle="導入事例"
@@ -63,19 +63,19 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
           <div className=" grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
             {contents.map((post: Work) => (
               <div key={post.id} className="w-full">
-                <div className="w-full  h-[250px]  mt-5 md:mt-0">
+                <div className="w-full  h-[250px]  mt-5 md:mt-0 rounded-t-2xl">
                   {post.image && (
                     <Image
                       src={post.image.url}
                       alt="制作物サムネイル"
                       width={370}
                       height={223}
-                      className="w-full h-full rounded-2xl object-cover "
+                      className="w-full h-full rounded-t-2xl object-cover "
                     />
                   )}
                 </div>
                 <div className="bg-white p-6">
-                  <p className="text-lg font-bold">{post.title}</p>
+                  <p className="text-lg font-bold break-words min-h-14">{post.title}</p>
                   <p className="mt-2 text-[#5f5f5f] text-xs ">
                     {contents[0].title}
                   </p>

@@ -16,11 +16,11 @@ const HeaderContent: React.FC<HeaderContentProps> = ({
     <>
       <header
         className={classNames(
-          "w-[1400px] h-20 mx-auto text-[#393939] tracking-wide",
+          "w-full fixed top-0 left-0 h-20 text-[#393939] tracking-wide px-4 md:px-0 z-10 bg-white",
           className
         )}
       >
-        <section className="flex items-center justify-between ">
+        <section className="w-full md:w-[1400px]  mx-auto flex items-center justify-between ">
           {children}
         </section>
       </header>

@@ -28,7 +28,7 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
   discriptionClassName = "",
 }) => {
   return (
-    <section className={classNames("w-1200", className)}>
+    <section className={classNames("md:w-1200", className)}>
       <Breadcrumb
         maintitle={maintitle}
         parentDirectoryName={parentDirectoryName}
@@ -36,7 +36,7 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
       />
       <h2
         className={classNames(
-          "text-2xl font-extrabold mb-4 font-lato",
+          "text-2xl font-extrabold mb-4 font-poppins",
           subtitleClassName
         )}
       >
@@ -44,7 +44,7 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
       </h2>
       <h1
         className={classNames(
-          "font-extrabold text-[80px] leading-[88px] font-lato tracking-[4px]",
+          "font-extrabold text-[80px] leading-[88px] font-poppins tracking-[4px]",
           titleClassName
         )}
       >

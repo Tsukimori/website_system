@@ -12,7 +12,7 @@ const Profile_02 = () => {
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="w-1200 mx-auto">
+        <section className="md:w-1200 mx-auto">
           <ContentHeadline
             entitle="Profile"
             maintitle="会社概要"

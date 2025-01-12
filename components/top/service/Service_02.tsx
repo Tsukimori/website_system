@@ -18,7 +18,7 @@ const Service_02 = () => {
   return (
     <>
       <PageContent>
-        <section className="w-1200 mx-auto space-y-10">
+        <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
             entitle="Service"
             maintitle="事業内容"
@@ -35,7 +35,7 @@ const Service_02 = () => {
                 description={service.description}
                 image={service.image} // 画像パスを渡す
                 href={service.href} // リンク先を渡す
-                className=" flex justify-between"
+                className=" md:flex justify-between"
               />
             ))}
           </div>

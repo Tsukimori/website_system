@@ -4,39 +4,27 @@
 import Image from "next/image"
 import Link from "next/link"
 import PageContent from "@/components/ui/frame/PageContent"
-import FreeButtonBlue from "@/components/ui/button/FreeButtonBlue"
+import FreeButtonWhite from "@/components/ui/button/FreeButtonWhite"
 
 const Cta_03 = () => {
   return (
     <>
-      <PageContent className="bg-accentColor">
-        <section className="w-1200 mx-auto grid grid-cols-2 gap-x-10">
-          <div className="bg-white text-accentColor text-center px-16 py-6 flex flex-col items-center rounded-xl">
-          <Image
-            src="/cta/tel.svg"
-            alt="電話イメージ"
-            width={50}
-            height={40}
-            className="mx-auto mb-4"
-          />
-            <h4 className="relative inline-block after:content[] after:bg-[url('/cta/line-right.svg')] after:bg-no-repeat after:inline-block after:w-[10px] after:h-[20px] after:absolute after:top-1/2 after:-translate-y-1/2 after:-right-4 
-            before:content[] before:bg-[url('/cta/line-left.svg')] before:bg-no-repeat before:inline-block before:w-[10px] before:h-[14px] before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-4">いますぐ資料を請求する</h4>
-            <div className="flex justify-center mt-2">
-              <FreeButtonBlue href="/" text="無料資料請求・お問い合わせ" />
+      <PageContent className="!py-0 px-0 ">
+        <section className="mx-auto grid md:grid-cols-2">
+          <div className="text-white text-center bg-accentColor py-10 md:py-16">
+            <p className="md:text-lg font-bold">お電話でのお問い合わせ</p>
+            <h4 className="text-3xl md:text-[40px] font-bold font-poppins">TEL</h4>
+            <p className="md:text-lg my-3 md:my-6">営業時間 9:00〜18:00（土日祝日休業）</p>
+            <div className="flex justify-center">
+              <FreeButtonWhite href="tel:0364555380" text="03-6455-5380" className="!bg-white !text-accentColor" />
             </div>
           </div>
-          <div className="bg-white text-[#4270ed] text-center px-16 py-6 flex flex-col items-center rounded-xl">
-          <Image
-            src="/cta/mail.svg"
-            alt="メールイメージ"
-            width={50}
-            height={40}
-            className="mx-auto mb-4"
-          />
-            <h4 className="relative inline-block after:content[] after:bg-[url('/cta/line-right.svg')] after:bg-no-repeat after:inline-block after:w-[10px] after:h-[20px] after:absolute after:top-1/2 after:-translate-y-1/2 after:-right-4 
-            before:content[] before:bg-[url('/cta/line-left.svg')] before:bg-no-repeat before:inline-block before:w-[10px] before:h-[14px] before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-4 ">先ずはお試ししてみる</h4>
-            <div className="flex justify-center mt-2">
-              <FreeButtonBlue href="/" text="無料テスト利用申し込み" />
+          <div className="bg-[#393939] text-white text-center py-10 md:py-16">
+            <p className="md:text-lg font-bold">メールでのお問い合わせ</p>
+            <h4 className="text-3xl md:text-[40px] font-bold font-poppins">MAIL</h4>
+            <p className="md:text-lg my-3 md:my-6">お問い合わせフォームはこちら</p>
+            <div className="flex justify-center">
+              <FreeButtonWhite href="/contact" text="Contatc form" className="!bg-white !text-[#393939]" />
             </div>
           </div>
         </section>
