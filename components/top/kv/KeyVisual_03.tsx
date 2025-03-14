@@ -26,7 +26,7 @@ const KeyVisual_03 = () => {
         </section>
         <div className="md:max-w-screen-xl mx-auto flex flex-col justify-center h-full relative">
           <TopPageHeadline
-            maintitle={
+            mainTitle={
               <>
                 <span>Lorem Ipsum</span>
                 <br />

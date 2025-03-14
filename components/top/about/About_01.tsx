@@ -14,7 +14,7 @@ const About_01 = () => {
       <PageContent className="pb-0 md:pb-10 px-0">
         {/* widthがフルサイズでない場合は指定する */}
         <section className="w-full md:w-1200 mx-auto">
-          {/* <ContentHeadline entitle="Who we are" maintitle="私たちについて" /> */}
+          {/* <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" /> */}
           <div className="md:flex justify-between">
             <h3 className="w-fullmd:w-[500px] text-3xl md:text-5xl font-light leading-relaxed md:leading-[84px] tracking-wide">
               無数の選択肢の中から
@@ -23,15 +23,22 @@ const About_01 = () => {
             </h3>
             <div>
               <p className="w-full md:w-[660px] leading-relaxed md:leading-[45px] md:text-lg mt-10 md:mt-3">
-                経営者は日々悩んでいます。そして、日々決断しています。<br/><br/>
-                
-                一番成果が上がる選択はどれか。一番効率のいい選択はどれか。<br/>
-                無数の選択肢の中からベストな選択ができるよう、<br  className="hidden md:block"/>
-                常に試行錯誤し決断しています。<br/><br/>
-                
-                私たちはその決断が本当にベストなのか、検討しています。<br/>
-                そして、その決断が本当のベストになるためのサポートを<br className="hidden md:block"/>
-                常に用意しています。<br/>
+                経営者は日々悩んでいます。そして、日々決断しています。
+                <br />
+                <br />
+                一番成果が上がる選択はどれか。一番効率のいい選択はどれか。
+                <br />
+                無数の選択肢の中からベストな選択ができるよう、
+                <br className="hidden md:block" />
+                常に試行錯誤し決断しています。
+                <br />
+                <br />
+                私たちはその決断が本当にベストなのか、検討しています。
+                <br />
+                そして、その決断が本当のベストになるためのサポートを
+                <br className="hidden md:block" />
+                常に用意しています。
+                <br />
               </p>
               <MoreLinkButton
                 href="/"

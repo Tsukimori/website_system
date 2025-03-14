@@ -55,9 +55,9 @@ const Case_05 = ({ limit = 6 }: CaseProps) => {
         <section className="md:w-1200 mx-auto">
           <div className="md:w-[300px]">
             <ContentHeadline
-              entitle="Case study"
-              maintitle="導入事例"
-              entitleClassName=""
+              enTitle="Case study"
+              mainTitle="導入事例"
+              enTitleClassName=""
               titleClassName=""
             />
           </div>

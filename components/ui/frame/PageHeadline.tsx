@@ -3,7 +3,7 @@ import classNames from "classnames"
 import Breadcrumb from "../module/Breadcrumb"
 
 interface PageHeadlineProps {
-  maintitle: React.ReactNode
+  mainTitle: React.ReactNode
   subtitleTop?: React.ReactNode
   subtitleBottom?: string
   discription?: React.ReactNode
@@ -16,7 +16,7 @@ interface PageHeadlineProps {
 }
 
 const PageHeadline: React.FC<PageHeadlineProps> = ({
-  maintitle,
+  mainTitle,
   subtitleTop,
   subtitleBottom,
   discription,
@@ -30,7 +30,7 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
   return (
     <section className={classNames("md:w-1200", className)}>
       <Breadcrumb
-        maintitle={maintitle}
+        mainTitle={mainTitle}
         parentDirectoryName={parentDirectoryName}
         parentDirectoryLink={parentDirectoryLink}
       />
@@ -48,7 +48,7 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
           titleClassName
         )}
       >
-        {maintitle}
+        {mainTitle}
       </h1>
       <h2
         className={classNames("text-xl font-semibold mt-4", subtitleClassName)}

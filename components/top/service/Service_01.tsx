@@ -20,9 +20,9 @@ const Service_01 = () => {
       <PageContent>
         <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
-            entitle="Service"
-            maintitle="事業内容"
-            entitleClassName="text-center"
+            enTitle="Service"
+            mainTitle="事業内容"
+            enTitleClassName="text-center"
             titleClassName="text-center"
           />
 

@@ -14,9 +14,9 @@ const Flow_01 = () => {
       <PageContent className="">
         <section className="md:w-1200 mx-auto">
           <ContentHeadline
-            entitle="Flow"
-            maintitle="ご利用の流れ"
-            entitleClassName="text-center"
+            enTitle="Flow"
+            mainTitle="ご利用の流れ"
+            enTitleClassName="text-center"
             titleClassName="text-center"
           />
           <div className="mt-16 grid grid-cols-4 gap-x-10 gap-y-6">
@@ -27,7 +27,7 @@ const Flow_01 = () => {
               description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
               index={1}
             />
-             <FlowCard
+            <FlowCard
               step="STEP 2"
               number="02"
               title="ステップ見出し入りますステップ見出し入ります"
@@ -48,14 +48,14 @@ const Flow_01 = () => {
               description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
               index={4}
             />
-             <FlowCard
+            <FlowCard
               step="STEP 5"
               number="05"
               title="ステップ見出し入りますステップ見出し入ります"
               description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"
               index={5}
             />
-             <FlowCard
+            <FlowCard
               step="STEP 6"
               number="06"
               title="ステップ見出し入りますステップ見出し入ります"

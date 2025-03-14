@@ -8,10 +8,27 @@ import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 
 const questions = [
-  { question: "質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1", answerTitle: "回答1タイトルが入ります", answer: "回答1が入ります" },
-  { question: "質問2",answerTitle: "回答2タイトルが入ります", answer: "回答2が入ります回答2が入ります回答2が入ります" },
-  { question: "質問3",answerTitle: "回答3タイトルが入ります", answer: "回答3が入ります回答3が入ります回答3が入ります" },
-  { question: "質問4",answerTitle: "回答4タイトルが入ります", answer: "回答4が入ります" },
+  {
+    question:
+      "質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1",
+    answerTitle: "回答1タイトルが入ります",
+    answer: "回答1が入ります",
+  },
+  {
+    question: "質問2",
+    answerTitle: "回答2タイトルが入ります",
+    answer: "回答2が入ります回答2が入ります回答2が入ります",
+  },
+  {
+    question: "質問3",
+    answerTitle: "回答3タイトルが入ります",
+    answer: "回答3が入ります回答3が入ります回答3が入ります",
+  },
+  {
+    question: "質問4",
+    answerTitle: "回答4タイトルが入ります",
+    answer: "回答4が入ります",
+  },
 ]
 
 const Faq_02 = () => {
@@ -19,9 +36,9 @@ const Faq_02 = () => {
     <PageContent className="bg-white">
       <section className="md:w-1200 mx-auto">
         <ContentHeadline
-          entitle="FAQ"
-          maintitle="よくある質問"
-          entitleClassName="text-center"
+          enTitle="FAQ"
+          mainTitle="よくある質問"
+          enTitleClassName="text-center"
           titleClassName="text-center"
         />
         <div className="mt-16 grid grid-cols-2 gap-10">
@@ -46,9 +63,11 @@ const Faq_02 = () => {
                     height={24}
                     className="mr-2"
                   />
-                  <h3 className="text-[#d93d69] text-lg font-semibold">{item.answerTitle}</h3>
+                  <h3 className="text-[#d93d69] text-lg font-semibold">
+                    {item.answerTitle}
+                  </h3>
                 </div>
-                <p className="mt-2 pl-8">{item.answer}</p> 
+                <p className="mt-2 pl-8">{item.answer}</p>
               </div>
             </div>
           ))}

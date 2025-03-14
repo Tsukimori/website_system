@@ -4,13 +4,13 @@ import Link from "next/link"
 import { ChevronRight } from "react-feather"
 
 interface BreadcrumbProps {
-  maintitle: React.ReactNode;
+  mainTitle: React.ReactNode
   parentDirectoryName?: string
   parentDirectoryLink?: string
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({
-  maintitle,
+  mainTitle,
   parentDirectoryName,
   parentDirectoryLink,
 }) => {
@@ -24,7 +24,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
           <ChevronRight className="w-4 h-4" />
         </>
       )}
-      <div>{maintitle}</div>
+      <div>{mainTitle}</div>
     </div>
   )
 }

@@ -51,9 +51,9 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
       <PageContent className="bg-bgLightBlue">
         <section className="md:w-1200 mx-auto md:space-y-10">
           <ContentHeadline
-            entitle="Blog"
-            maintitle="ブログ"
-            entitleClassName=""
+            enTitle="Blog"
+            mainTitle="ブログ"
+            enTitleClassName=""
             titleClassName=""
           />
           <div className=" grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
@@ -71,7 +71,9 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                   )}
                 </div>
                 <div className="bg-white p-6">
-                  <p className="text-lg font-bold break-words min-h-14">{post.title}</p>
+                  <p className="text-lg font-bold break-words min-h-14">
+                    {post.title}
+                  </p>
                   <p className="mt-2 text-[#5f5f5f] text-xs ">
                     {contents[0].title}
                   </p>

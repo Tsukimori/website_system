@@ -25,7 +25,7 @@ const KeyVisual_05 = () => {
         </section>
         <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full md:w-1200">
           <TopPageHeadline
-            maintitle={
+            mainTitle={
               <>
                 <span className=" block text-[35px] md:text-[50px] leading-normal md:w-[600px]">
                   日本語見出し文日本語見出し文はいります

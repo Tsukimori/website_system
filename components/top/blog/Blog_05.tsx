@@ -55,9 +55,9 @@ const Blog_05 = ({ limit = 6 }: BlogProps) => {
         <section className="md:w-1200 mx-auto">
           <div className="md:w-[300px]">
             <ContentHeadline
-              entitle="Blog"
-              maintitle="ブログ"
-              entitleClassName=""
+              enTitle="Blog"
+              mainTitle="ブログ"
+              enTitleClassName=""
               titleClassName=""
             />
           </div>

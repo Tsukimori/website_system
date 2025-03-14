@@ -15,9 +15,9 @@ const About_02 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:w-1200 mx-auto ">
           <ContentHeadline
-            entitle="Who we are"
-            maintitle="私たちについて"
-            entitleClassName="text-center"
+            enTitle="Who we are"
+            mainTitle="私たちについて"
+            enTitleClassName="text-center"
             titleClassName="text-center"
           />
           <div className=" md:mt-16 md:flex justify-start md:space-x-20">
@@ -39,10 +39,12 @@ const About_02 = () => {
               <p className="mt-10 leading-relaxed md:leading-[45px] md:text-lg">
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。 <br />
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
+                <br />
                 メッセージはいります。メッセージはいります。
                 <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。 <br />
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
+                <br />
                 メッセージはいります。メッセージはいります。
               </p>
               <MoreLinkButton

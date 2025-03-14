@@ -8,7 +8,11 @@ import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 
 const questions = [
-  { question: "質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1", answer: "回答1が入ります" },
+  {
+    question:
+      "質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1質問1",
+    answer: "回答1が入ります",
+  },
   { question: "質問2", answer: "回答2が入ります" },
   { question: "質問3", answer: "回答3が入ります" },
   { question: "質問4", answer: "回答4が入ります" },
@@ -22,9 +26,9 @@ const Faq_01 = () => {
     <PageContent className="bg-white">
       <section className="md:w-1200 mx-auto">
         <ContentHeadline
-          entitle="FAQ"
-          maintitle="よくある質問"
-          entitleClassName="text-center"
+          enTitle="FAQ"
+          mainTitle="よくある質問"
+          enTitleClassName="text-center"
           titleClassName="text-center"
         />
         <div className="mt-16">
@@ -72,13 +76,13 @@ const Faq_01 = () => {
               {/* アコーディオンの内容 */}
               {openIndex === index && (
                 <div className=" py-6 px-10 bg-white border  flex">
-                    <Image
-                src="/common/answer-red.svg"
-                alt="?マーク"
-                width={24}
-                height={24}
-                className="mr-2"
-              />
+                  <Image
+                    src="/common/answer-red.svg"
+                    alt="?マーク"
+                    width={24}
+                    height={24}
+                    className="mr-2"
+                  />
                   {item.answer}
                 </div>
               )}

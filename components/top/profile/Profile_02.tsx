@@ -14,17 +14,20 @@ const Profile_02 = () => {
       <PageContent className="bg-bgLightBlue">
         <section className="md:w-1200 mx-auto">
           <ContentHeadline
-            entitle="Profile"
-            maintitle="会社概要"
-            entitleClassName=""
+            enTitle="Profile"
+            mainTitle="会社概要"
+            enTitleClassName=""
             titleClassName=""
           />
           <div className="mt-16 bg-white p-10 flex justify-between">
             <div>
-            <ProfileCard label="社名" value="企業名" />
+              <ProfileCard label="社名" value="企業名" />
               <ProfileCard label="設立" value="0000年00月00日" />
               <ProfileCard label="資本金" value="000円" />
-              <ProfileCard label="所在地" value={`000-000\n○○県○○市○○町00-00\n○○○○○ビル00F`} />
+              <ProfileCard
+                label="所在地"
+                value={`000-000\n○○県○○市○○町00-00\n○○○○○ビル00F`}
+              />
               <ProfileCard label="電話番号" value="000-000-0000" />
               <ProfileCard label="FAX" value="000-000-0000" />
               <ProfileCard label="代表者" value="氏名　氏名" />

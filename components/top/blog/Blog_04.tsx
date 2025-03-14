@@ -53,11 +53,11 @@ const Blog_04 = ({ limit = 3 }: BlogProps) => {
     <>
       <PageContent>
         <section className="md:w-1200 mx-auto md:flex justify-between ">
-          <div className="md:w-[300px]"> 
+          <div className="md:w-[300px]">
             <ContentHeadline
-              entitle="Blog"
-              maintitle="ブログ"
-              entitleClassName=""
+              enTitle="Blog"
+              mainTitle="ブログ"
+              enTitleClassName=""
               titleClassName=""
             />
             <div className="mt-10 md:mt-16 flex justify-center">

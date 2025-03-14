@@ -15,7 +15,7 @@ const Message_04 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:w-1200 mx-auto ">
           <div className=" flex justify-start">
-            <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
+            <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" />
             <div>
               <h3 className=" w-[500px] text-5xl mt-4 ">見出しテキスト</h3>
               <p className=" w-[660px]">

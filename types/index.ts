@@ -46,6 +46,32 @@ export interface TopContentProps {
   linkTitle?: string // オプショナルに変更
 }
 
+export interface FrameProps {
+  children?: React.ReactNode
+  className?: string
+  id?: string // id属性を追加
+  ImageSrc?: string
+  ImageWidth?: number
+  ImageHeight?: number
+}
+
+export interface ContentHeadlineProps extends FrameProps {
+  mainTitle: React.ReactNode
+  subTitle?: React.ReactNode
+  enTitle?: string
+  parentDirectoryName?: string
+  parentDirectoryLink?: string
+  titleClassName?: string // h1用のclassName
+  enTitleClassName?: string // h2用のclassName
+}
+
+export interface ButtonProps {
+  children: React.ReactNode // ボタンの中身（テキストや要素など）
+  className?: string // オプショナルなクラス名
+  onClick?: () => void // クリックイベントハンドラー
+  disabled?: boolean // disabledプロパティを追加
+}
+
 export interface TextProps {
   title: React.ReactNode
   subTitle: React.ReactNode
@@ -55,17 +81,4 @@ export interface TextProps {
   subTitleElement?: React.ElementType
   numberElement?: React.ElementType
   bodyElement?: React.ElementType
-}
-
-export interface FrameProps {
-  children: React.ReactNode
-  className?: string
-  id?: string // id属性を追加
-}
-
-export interface ButtonProps {
-  children: React.ReactNode // ボタンの中身（テキストや要素など）
-  className?: string // オプショナルなクラス名
-  onClick?: () => void // クリックイベントハンドラー
-  disabled?: boolean // disabledプロパティを追加
 }

@@ -55,9 +55,9 @@ const Case_04 = ({ limit = 3 }: CaseProps) => {
         <section className="md:w-1200 mx-auto md:flex justify-between">
           <div className="md:w-[300px]">
             <ContentHeadline
-              entitle="Case study"
-              maintitle="導入事例"
-              entitleClassName=""
+              enTitle="Case study"
+              mainTitle="導入事例"
+              enTitleClassName=""
               titleClassName=""
             />
             <div className="mt-0 md:mt-16 flex justify-center">

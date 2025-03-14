@@ -1,4 +1,3 @@
-
 // components/case/Case_03.tsx
 
 "use client"
@@ -12,7 +11,6 @@ import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
-
 
 interface CaseProps {
   limit?: number
@@ -56,9 +54,9 @@ const Case_03 = ({ limit = 3 }: CaseProps) => {
       <PageContent className="">
         <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
-            entitle="Case study"
-            maintitle="導入事例"
-            entitleClassName=""
+            enTitle="Case study"
+            mainTitle="導入事例"
+            enTitleClassName=""
             titleClassName=""
           />
 
@@ -102,4 +100,3 @@ const Case_03 = ({ limit = 3 }: CaseProps) => {
 }
 
 export default Case_03
-

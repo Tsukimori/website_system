@@ -14,7 +14,7 @@ const Message_03 = () => {
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:w-1200 mx-auto ">
-          <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
+          <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" />
           <div className=" mt-16 flex justify-start space-x-20">
             <div className="w-[600px]">
               <h3 className="text-5xl ">見出しテキスト</h3>

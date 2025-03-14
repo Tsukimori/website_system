@@ -14,7 +14,7 @@ const About_04 = () => {
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:w-1200 mx-auto ">
-          <ContentHeadline entitle="Who we are" maintitle="私たちについて" />
+          <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" />
           <div className=" md:mt-16 md:flex justify-start md:space-x-20">
             <div className="md:w-[600px]">
               <h3 className="text-3xl md:text-5xl font-light leading-relaxed md:leading-[64px]">
@@ -25,10 +25,12 @@ const About_04 = () => {
               <p className="mt-10 leading-relaxed md:leading-[45px] md:text-lg">
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。<br/>
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
+                <br />
                 メッセージはいります。メッセージはいります。
                 <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。<br/>
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
+                <br />
                 メッセージはいります。メッセージはいります。
               </p>
               <MoreLinkButton

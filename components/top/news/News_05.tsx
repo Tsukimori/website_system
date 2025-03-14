@@ -55,9 +55,9 @@ const News_05 = ({ limit = 6 }: NewsProps) => {
         <section className="md:w-1200 mx-auto">
           <div className="w-[300px]">
             <ContentHeadline
-              entitle="News"
-              maintitle="お知らせ"
-              entitleClassName=""
+              enTitle="News"
+              mainTitle="お知らせ"
+              enTitleClassName=""
               titleClassName=""
             />
           </div>

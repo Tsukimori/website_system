@@ -71,9 +71,9 @@ const Case_02 = ({ limit = 5 }: CaseProps) => {
       <PageContent className="bg-bgLightBlue">
         <section className="md:w-1200 mx-auto relative">
           <ContentHeadline
-            entitle="Case study"
-            maintitle="導入事例"
-            entitleClassName=""
+            enTitle="Case study"
+            mainTitle="導入事例"
+            enTitleClassName=""
             titleClassName=""
           />
 
@@ -92,7 +92,7 @@ const Case_02 = ({ limit = 5 }: CaseProps) => {
             breakpoints={{
               768: {
                 slidesPerView: 1.5, // 768px以上では1.5スライド表示
-                spaceBetween: 40,  // 768px以上ではスライド間の余白を広げる
+                spaceBetween: 40, // 768px以上ではスライド間の余白を広げる
               },
             }}
             onSwiper={(swiper) => (swiperRef.current = swiper)} // Swiperインスタンスを取得して参照に保存
@@ -114,7 +114,9 @@ const Case_02 = ({ limit = 5 }: CaseProps) => {
                     )}
                   </div>
                   <div className="absolute bottom-0 left-0 w-full md:w-[400px] bg-black/50 py-3 md:py-8 px-3 md:px-10 text-white">
-                    <p className="md:text-lg font-bold min-h-12 md:min-h-0">{post.title}</p>
+                    <p className="md:text-lg font-bold min-h-12 md:min-h-0">
+                      {post.title}
+                    </p>
                     <p className="mt-2 md:mt-4 text-white text-xs min-h-8 md:min-h-0">
                       #
                       {Array.isArray(post.category) && post.category.length > 0

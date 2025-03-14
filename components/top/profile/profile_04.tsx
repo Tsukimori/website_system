@@ -27,9 +27,9 @@ const Profile_04 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div>
               <ContentHeadline
-                entitle="Profile"
-                maintitle="事務所概要"
-                entitleClassName=""
+                enTitle="Profile"
+                mainTitle="事務所概要"
+                enTitleClassName=""
                 titleClassName=""
               />
             </div>

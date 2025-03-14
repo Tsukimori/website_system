@@ -54,9 +54,9 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
       <PageContent className="">
         <section className="md:w-1200 mx-auto space-y-10">
           <ContentHeadline
-            entitle="Blog"
-            maintitle="ブログ"
-            entitleClassName=""
+            enTitle="Blog"
+            mainTitle="ブログ"
+            enTitleClassName=""
             titleClassName=""
           />
 

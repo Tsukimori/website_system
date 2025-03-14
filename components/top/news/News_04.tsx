@@ -55,9 +55,9 @@ const News_04 = ({ limit = 3 }: NewsProps) => {
         <section className="md:w-1200 mx-auto  md:flex justify-between">
           <div className="w-[300px]">
             <ContentHeadline
-              entitle="News"
-              maintitle="お知らせ"
-              entitleClassName=""
+              enTitle="News"
+              mainTitle="お知らせ"
+              enTitleClassName=""
               titleClassName=""
             />
             <div className="mt-16 flex justify-center">

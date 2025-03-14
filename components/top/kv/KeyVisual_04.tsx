@@ -23,7 +23,7 @@ const KeyVisual_04 = () => {
           <KeyVisualContent className="h-screen" />
         </section>
         <TopPageHeadline
-          maintitle={
+          mainTitle={
             <>
               <span>Lorem Ipsum</span>
               <br />

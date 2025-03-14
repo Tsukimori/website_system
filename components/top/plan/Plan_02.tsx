@@ -9,9 +9,9 @@ const Plan_02 = () => {
     <PageContent className="bg-bgLightBlue">
       <section className="w-full md:w-1200 mx-auto overflow-hidden">
         <ContentHeadline
-          entitle="Plan"
-          maintitle="料金プラン"
-          entitleClassName=""
+          enTitle="Plan"
+          mainTitle="料金プラン"
+          enTitleClassName=""
           titleClassName=""
         />
         <div className="overflow-x-scroll md:overflow-y-auto">

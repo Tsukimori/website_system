@@ -1,4 +1,3 @@
-
 // components/case/Case_01.tsx
 
 "use client"
@@ -54,9 +53,9 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
       <PageContent className="bg-bgLightBlue">
         <section className="md:w-1200 mx-auto md:space-y-10">
           <ContentHeadline
-            entitle="Case study"
-            maintitle="導入事例"
-            entitleClassName=""
+            enTitle="Case study"
+            mainTitle="導入事例"
+            enTitleClassName=""
             titleClassName=""
           />
 
@@ -75,7 +74,9 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
                   )}
                 </div>
                 <div className="bg-white p-6">
-                  <p className="text-lg font-bold break-words min-h-14">{post.title}</p>
+                  <p className="text-lg font-bold break-words min-h-14">
+                    {post.title}
+                  </p>
                   <p className="mt-2 text-[#5f5f5f] text-xs ">
                     {contents[0].title}
                   </p>
@@ -93,4 +94,3 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
 }
 
 export default Case_01
-

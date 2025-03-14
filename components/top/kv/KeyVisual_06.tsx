@@ -24,7 +24,7 @@ const KeyVisual_06 = () => {
         </section>
         <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full md:w-1200 ">
           <TopPageHeadline
-            maintitle={
+            mainTitle={
               <>
                 <span className=" block text-[35px] md:text-[50px] leading-normal w-full md:w-[600px]">
                   日本語見出し文日本語見出し文はいります
@@ -48,10 +48,9 @@ const KeyVisual_06 = () => {
             className="  text-white "
           />
           <div className="absolute left-1/2  transform -translate-x-1/2 md:left-10 -bottom-36 md:-bottom-40">
-          <ScrollButton onClick={scrollToNextSection} color="white" />
+            <ScrollButton onClick={scrollToNextSection} color="white" />
+          </div>
         </div>
-        </div>
-        
       </FirstViewContent>
     </>
   )

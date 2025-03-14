@@ -15,9 +15,9 @@ const Plan_01 = () => {
       <PageContent className="bg-bgLightBlue">
         <section className="md:w-1200 mx-auto">
           <ContentHeadline
-            entitle="Plan"
-            maintitle="料金プラン"
-            entitleClassName=""
+            enTitle="Plan"
+            mainTitle="料金プラン"
+            enTitleClassName=""
             titleClassName=""
           />
           <div className="mt-0 md:mt-16 grid grid-cols-1 md:grid-cols-4 gap-y-10 md:gap-y-0 gap-x-1">
@@ -79,13 +79,21 @@ const Plan_01 = () => {
             />
           </div>
           <ul className="mt-6 text-xs gap-y-2">
-            <li className="mb-2">※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります</li>
-            <li className="mb-2">※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります</li>
-            <li className="mb-2">※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります</li>
-            <li>※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります</li>
+            <li className="mb-2">
+              ※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります
+            </li>
+            <li className="mb-2">
+              ※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります
+            </li>
+            <li className="mb-2">
+              ※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります
+            </li>
+            <li>
+              ※注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります注釈はいります
+            </li>
           </ul>
         </section>
-        <PlanOption/>
+        <PlanOption />
       </PageContent>
     </>
   )

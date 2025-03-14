@@ -52,9 +52,9 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
       <PageContent className="bg-bgLightBlue">
         <section className="md:w-1200 mx-auto">
           <ContentHeadline
-            entitle="News"
-            maintitle="お知らせ"
-            entitleClassName=""
+            enTitle="News"
+            mainTitle="お知らせ"
+            enTitleClassName=""
             titleClassName=""
           />
           <div className=" grid grid-cols-1 md:grid-cols-3 md:gap-x-10">

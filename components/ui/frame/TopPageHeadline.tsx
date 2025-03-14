@@ -2,7 +2,7 @@
 import classNames from "classnames"
 
 interface TopPageHeadlineProps {
-  maintitle: React.ReactNode
+  mainTitle: React.ReactNode
   subtitleTop?: React.ReactNode
   subtitleBottom?: React.ReactNode
   discription?: React.ReactNode
@@ -15,7 +15,7 @@ interface TopPageHeadlineProps {
 }
 
 const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
-  maintitle,
+  mainTitle,
   subtitleTop,
   subtitleBottom,
   discription,
@@ -27,9 +27,11 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   discriptionClassName = "",
 }) => {
   return (
-    <section className={classNames("md:md:w-1200 w-full px-4 md:px-0", className)}>
+    <section
+      className={classNames("md:md:w-1200 w-full px-4 md:px-0", className)}
+    >
       {/* <Breadcrumb
-        maintitle={maintitle}
+        mainTitle={mainTitle}
         parentDirectoryName={parentDirectoryName}
         parentDirectoryLink={parentDirectoryLink}
       /> */}
@@ -47,19 +49,12 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
           titleClassName
         )}
       >
-        {maintitle}
+        {mainTitle}
       </h1>
-      <h3
-        className={classNames("md:text-lg mt-4", subtitleClassName)}
-      >
+      <h3 className={classNames("md:text-lg mt-4", subtitleClassName)}>
         {subtitleBottom}
       </h3>
-      <p
-        className={classNames(
-          "mt-4 md:text-lg ",
-          discriptionClassName
-        )}
-      >
+      <p className={classNames("mt-4 md:text-lg ", discriptionClassName)}>
         {discription}
       </p>
     </section>
