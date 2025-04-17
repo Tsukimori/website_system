@@ -15,9 +15,9 @@ const Message_01 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className="w-full md:w-1200 mx-auto">
           <ContentHeadline
-            entitle="Message"
-            maintitle="代表挨拶"
-            entitleClassName="text-center"
+            enTitle="Message"
+            mainTitle="代表挨拶"
+            enTitleClassName="text-center"
             titleClassName="text-center"
           />
           <div className="md:flex justify-between">
@@ -37,8 +37,9 @@ const Message_01 = () => {
                 メッセージはいります。メッセージはいります。
               </p>
               <p className="mt-10 text-lg leading-[250%]">
-              役職役職<br />
-              氏名　氏名
+                役職役職
+                <br />
+                氏名　氏名
               </p>
             </div>
           </div>
