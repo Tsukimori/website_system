@@ -1,18 +1,18 @@
 // components/profile/Profile_03.tsx
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import ProfileCard from "@/components/ui/ItemCard/ProfileCard"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import ProfileCard from "@/components/ui/ItemCard/ProfileCard";
 
 const Profile_03 = () => {
   return (
     <>
       <PageContent className="">
-        <section className="md:w-1200 mx-auto">
+        <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
             enTitle="Profile"
             mainTitle="会社概要"
@@ -53,6 +53,7 @@ const Profile_03 = () => {
               style={{ border: "0" }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className="w-full max-w-[600px] md:max-w-[1200px]"
             />
 
             <p className="mt-4 font-light">
@@ -64,7 +65,7 @@ const Profile_03 = () => {
         </section>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Profile_03
+export default Profile_03;

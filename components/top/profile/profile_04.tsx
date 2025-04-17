@@ -23,7 +23,7 @@ const Profile_04 = () => {
             className="h-[250px] md:h-[400px]"
           />
         </div>
-        <section className="md:w-1200 mx-auto">
+        <section className="md:max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div>
               <ContentHeadline
@@ -33,7 +33,7 @@ const Profile_04 = () => {
                 titleClassName=""
               />
             </div>
-            <div className="md:w-[720px] ">
+            <div className="md:max-w-[720px] ">
               <div className="">
                 {/* <ProfileCard label="社名" value="企業名" />
               <ProfileCard label="設立" value="0000年00月00日" />
