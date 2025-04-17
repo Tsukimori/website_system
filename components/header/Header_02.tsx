@@ -22,7 +22,7 @@ const Header_02 = () => {
   const { companyName } = CompanyInfo[0]
 
   return (
-    <>
+    <div className="h-[80px]">
       <HeaderContent className="border-b border-borderGray">
         <div className="flex items-center space-x-5  md:space-x-10">
           <Link href="/" className="w-[60px] md:w-[200px]">
@@ -70,7 +70,7 @@ const Header_02 = () => {
         {/* ハンバーガーメニューの表示 */}
         <HamburgerMenu isOpen={MenuOpen} toggleMenu={toggleMenu} />
       </HeaderContent>
-    </>
+    </div>
   )
 }
 
