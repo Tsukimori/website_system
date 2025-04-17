@@ -19,7 +19,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   return (
     <section
       id={id}
-      className={classNames("w-full md:max-w-1200 mb-16 tracking-wide", className)}
+      className={classNames("w-full md:max-w-[1200px] mb-16 tracking-wide", className)}
     >
       {ImageSrc && (
         <Image
