@@ -86,6 +86,7 @@ import LowerPlan_03 from "@/components/price/plan/Plan_03";
 import LowerPlan_04 from "@/components/price/plan/Plan_04";
 import LowerFaq_01 from "@/components/faq/faq/Faq_01";
 import LowerFaq_02 from "@/components/faq/faq/Faq_02";
+import Contact_01 from "@/components/contact/contact/Contact_01";
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -603,6 +604,75 @@ export const componentsConfig: ComponentsConfig = {
         components: {
           LowerFaq_01: <LowerFaq_01 />,
           LowerFaq_02: <LowerFaq_02 />,
+        },
+      },
+      cta: {
+        title: "CTA",
+        options: [
+          { id: "Cta_01", src: "/admin/1.png", alt: "Cta_01" },
+          { id: "Cta_02", src: "/admin/2.png", alt: "Cta_02" },
+          { id: "Cta_03", src: "/admin/3.png", alt: "Cta_03" },
+          { id: "Cta_04", src: "/admin/4.png", alt: "Cta_04" },
+        ],
+        components: {
+          Cta_01: <Cta_01 />,
+          Cta_02: <Cta_02 />,
+          Cta_03: <Cta_03 />,
+          Cta_04: <Cta_04 />,
+        },
+      },
+      footer: {
+        title: "フッター",
+        options: [
+          { id: "Footer1", src: "/admin/1.png", alt: "Footer1" },
+          { id: "Footer2", src: "/admin/2.png", alt: "Footer2" },
+        ],
+        components: {
+          Footer1: <Footer1 />,
+          Footer2: <Footer2 />,
+        },
+      },
+    },
+  },
+  Contact: {
+    sections: {
+      header: {
+        title: "ヘッダー",
+        options: [
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+        ],
+        components: {
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
+        },
+      },
+      lowerkv: {
+        title: "下層キービジュアル",
+        options: [
+          { id: "Lowerkv_01", src: "/admin/1.png", alt: "Lowerkv_01" },
+          { id: "Lowerkv_02", src: "/admin/2.png", alt: "Lowerkv_02" },
+          { id: "Lowerkv_03", src: "/admin/3.png", alt: "Lowerkv_03" },
+          { id: "Lowerkv_04", src: "/admin/4.png", alt: "Lowerkv_04" },
+        ],
+        components: {
+          Lowerkv_01: <Lowerkv_01 />,
+          Lowerkv_02: <Lowerkv_02 />,
+          Lowerkv_03: <Lowerkv_03 />,
+          Lowerkv_04: <Lowerkv_04 />,
+        },
+      },
+      plan: {
+        title: "お問い合わせ",
+        options: [
+          { id: "Contact_01", src: "/admin/1.png", alt: "Contact_01" },
+        ],
+        components: {
+          Contact_01: <Contact_01 />,
         },
       },
       cta: {

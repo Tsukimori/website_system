@@ -5,7 +5,7 @@ import Image from "next/image";
 // 私たちについて
 const Lowerkv_04 = () => {
   return (
-    <div className="md:h-[900px] mx-auto relative overflow-hidden">
+    <div className="md:max-h-[900px] mx-auto relative overflow-hidden">
       <div className="md:max-w-[1240px] mx-auto pt-[96px] space-y-10 px-5">
         <h1 className="text-3xl md:text-5xl font-semibold tracking-[0.05em] leading-[120%] mx-auto">
           <span className="block text-accentColor font-lato text-lg font-extrabold mb-1 ![line-height:120%]">
