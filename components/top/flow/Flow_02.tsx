@@ -8,10 +8,10 @@ import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import FlowCard from "@/components/ui/ItemCard/FlowCard_02"
 
-const Flow_02 = () => {
+const Flow_02 = ({ className = "" }) => {
   return (
     <>
-      <PageContent className="">
+      <PageContent className={className}>
         <section className="md:w-1200 mx-auto">
           <ContentHeadline
             enTitle="Flow"

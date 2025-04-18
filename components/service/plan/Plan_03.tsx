@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
+import SectionContent from "@/components/ui/frame/SectionContent";
 import PlanCard from "@/components/ui/ItemCard/PlanCard_03";
 import PlanOption from "@/components/ui/module/PlanOption";
 import PlanList from "@/components/ui/ItemCard/PlanList_03";
@@ -13,7 +13,7 @@ import PlanList from "@/components/ui/ItemCard/PlanList_03";
 const Plan_03 = () => {
   return (
     <>
-      <PageContent className="bg-bgLightBlue">
+      <SectionContent className="bg-bgLightBlue">
         <section className="md:w-1200 mx-auto">
           <ContentHeadline
             enTitle="Plan"
@@ -33,7 +33,7 @@ const Plan_03 = () => {
           </div>
         </section>
         <PlanOption />
-      </PageContent>
+      </SectionContent>
     </>
   );
 };

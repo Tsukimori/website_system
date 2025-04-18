@@ -1,17 +1,17 @@
 // components/flow/Flow_01.tsx
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import FlowCard from "@/components/ui/ItemCard/FlowCard_01"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import FlowCard from "@/components/ui/ItemCard/FlowCard_01";
 
-const Flow_01 = () => {
+const Flow_01 = ({ className = "" }) => {
   return (
     <>
-      <PageContent className="">
+      <PageContent className={className}>
         <section className="md:w-1200 mx-auto">
           <ContentHeadline
             enTitle="Flow"
@@ -80,7 +80,7 @@ const Flow_01 = () => {
         </section>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Flow_01
+export default Flow_01;

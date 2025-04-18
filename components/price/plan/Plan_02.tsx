@@ -1,5 +1,5 @@
 // components/plan/Plan_02.tsx
-import PageContent from "@/components/ui/frame/PageContent"
+import SectionContent from "@/components/ui/frame/SectionContent"
 import PlanCard from "@/components/ui/ItemCard/PlanCard_02"
 import PlanOption from "@/components/ui/module/PlanOption"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
@@ -7,7 +7,7 @@ import PlanList from "@/components/ui/ItemCard/PlanList_02";
 
 const Plan_02 = () => {
   return (
-    <PageContent className="bg-bgLightBlue">
+    <SectionContent className="bg-bgLightBlue">
       <section className="w-full md:w-1200 mx-auto overflow-hidden">
         <ContentHeadline
           enTitle="Plan"
@@ -18,7 +18,7 @@ const Plan_02 = () => {
         <PlanList />
       </section>
       <PlanOption />
-    </PageContent>
+    </SectionContent>
   )
 }
 

@@ -2,14 +2,14 @@
 "use client"
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
+import SectionContent from "@/components/ui/frame/SectionContent"
 import PlanOption from "@/components/ui/module/PlanOption"
 import PlanCard_04 from "@/components/ui/ItemCard/PlanCard_04"
 import PlanList from "@/components/ui/ItemCard/PlanList_04";
 
 const Plan_04 = () => {
   return (
-    <PageContent className="bg-bgLightBlue">
+    <SectionContent className="bg-bgLightBlue">
       <section className="md:w-1200 mx-auto">
         <ContentHeadline
           enTitle="Plan"
@@ -20,7 +20,7 @@ const Plan_04 = () => {
          <PlanList />
       </section>
       <PlanOption />
-    </PageContent>
+    </SectionContent>
   )
 }
 

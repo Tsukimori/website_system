@@ -13,7 +13,7 @@ interface FlowCardProps {
 const FlowCard = ({ step, number, title, description, index }: FlowCardProps) => {
   return (
     <div
-      className={`relative border-2 border-accentColor rounded-xl p-6 flex justify-center flex-col items-center ${
+      className={`relative border-2 border-accentColor rounded-xl p-6 flex justify-center flex-col items-center bg-white ${
         index === 4 || index === 8 // 4つ目と8つ目のindex（0始まりなので3と7）で after スタイルを除外
           ? ""
           : "after:content-[''] after:bg-[url('/flow/arrow-right.svg')] after:bg-no-repeat after:inline-block after:w-[20px] after:h-[40px] after:absolute after:top-1/2 after:-translate-y-1/2 after:-right-[34px]"

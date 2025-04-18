@@ -1,11 +1,12 @@
 // components/plan/Plan_01.tsx
 "use client";
 
+import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
+import SectionContent from "@/components/ui/frame/SectionContent";
 import PlanCard from "@/components/ui/ItemCard/PlanCard_01";
 import PlanOption from "@/components/ui/module/PlanOption";
 import PlanList from "@/components/ui/ItemCard/PlanList_01";
@@ -13,18 +14,27 @@ import PlanList from "@/components/ui/ItemCard/PlanList_01";
 const Plan_01 = () => {
   return (
     <>
-      <PageContent className="bg-bgLightBlue">
+      <SectionContent className="bg-bgLightBlue">
         <section className="md:w-1200 mx-auto">
-          <ContentHeadline
+          <div className="mb-24">
+            <h2 className="text-center text-[28px] font-bold leading-[150%]">
+              様々な料金プランをご用意しております。
+            </h2>
+            <p className="mt-4 text-center text-base font-light leading-[160%]">
+              様々な料金プランをご用意しております
+            </p>
+          </div>
+
+          {/* <ContentHeadline
             enTitle="Plan"
             mainTitle="料金プラン"
             enTitleClassName=""
             titleClassName=""
-          />
+          /> */}
           <PlanList />
         </section>
         <PlanOption />
-      </PageContent>
+      </SectionContent>
     </>
   );
 };

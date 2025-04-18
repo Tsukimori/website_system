@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { componentsConfig } from "@/lib/componentsConfig"
-import Image from "next/image"
+import { componentsConfig } from "@/lib/componentsConfig";
+import Image from "next/image";
 
 interface SidebarProps {
-  pageName: keyof typeof componentsConfig
-  selectSection: (section: string, value: string) => void
-  selectedSections: Record<string, string>
+  pageName: keyof typeof componentsConfig;
+  selectSection: (section: string, value: string) => void;
+  selectedSections: Record<string, string>;
 }
 
 const Sidebar = ({
@@ -15,25 +15,29 @@ const Sidebar = ({
   selectedSections,
 }: SidebarProps) => {
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
     if (section) {
-      const yOffset = -48 // 12 * 4 (mt-12 のスペースを考慮)
-      const y = section.getBoundingClientRect().top + window.scrollY + yOffset
-      window.scrollTo({ top: y, behavior: "smooth" })
+      const yOffset = -48; // 12 * 4 (mt-12 のスペースを考慮)
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
-  }
+  };
 
   const getImageClass = (isSelected: boolean) =>
     `relative cursor-pointer object-cover ${
       isSelected ? "border-2 border-blue-300" : ""
-    }`
+    }`;
 
   const overlayClass = (isSelected: boolean) =>
     isSelected
       ? "absolute inset-0 bg-blue-300 bg-opacity-50 pointer-events-none"
-      : "absolute inset-0 pointer-events-none"
+      : "absolute inset-0 pointer-events-none";
 
-  const pageConfig = componentsConfig[pageName]
+  const pageConfig = componentsConfig[pageName];
+
+  if (!pageConfig) {
+    return null;
+  }
 
   return (
     <>
@@ -48,10 +52,10 @@ const Sidebar = ({
                   alt={option.alt}
                   onClick={() => {
                     if (selectedSections[sectionKey] === option.id) {
-                      selectSection(sectionKey, "")
+                      selectSection(sectionKey, "");
                     } else {
-                      selectSection(sectionKey, option.id)
-                      scrollToSection(`${sectionKey}-section`)
+                      selectSection(sectionKey, option.id);
+                      scrollToSection(`${sectionKey}-section`);
                     }
                   }}
                   className={getImageClass(
@@ -71,7 +75,7 @@ const Sidebar = ({
         </div>
       ))}
     </>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
