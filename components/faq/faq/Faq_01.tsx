@@ -11,16 +11,16 @@ const Faq_01 = () => {
   return (
     <PageContent className="bg-white">
       <section className="md:w-1200 mx-auto">
-        <ContentHeadline
+        {/* <ContentHeadline
           enTitle="FAQ"
           mainTitle="よくある質問"
           enTitleClassName="text-center"
           titleClassName="text-center"
-        />
-        <FaqList hideTab />
-        <div className="mt-16 flex justify-center">
+        /> */}
+        <FaqList />
+        {/* <div className="mt-16 flex justify-center">
           <MoreButton className="text-accentColor border-accentColor" />
-        </div>
+        </div> */}
       </section>
     </PageContent>
   );

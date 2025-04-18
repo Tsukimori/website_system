@@ -1,29 +1,29 @@
-// components/faq/faq_01.tsx
+// components/faq/Faq_02.tsx
 
 "use client";
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
 import PageContent from "@/components/ui/frame/PageContent";
-import FaqList from "@/components/ui/module/FaqList_01";
+import FaqList_02 from "@/components/ui/module/FaqList_02";
 import MoreButton from "@/components/ui/button/MoreButton";
 
-const Faq_01 = () => {
+const Faq_02 = () => {
   return (
     <PageContent className="bg-white">
       <section className="md:w-1200 mx-auto">
-        <ContentHeadline
+        {/* <ContentHeadline
           enTitle="FAQ"
           mainTitle="よくある質問"
           enTitleClassName="text-center"
           titleClassName="text-center"
-        />
-        <FaqList hideTab />
-        <div className="mt-16 flex justify-center">
+        /> */}
+        <FaqList_02 />
+        {/* <div className="mt-16 flex justify-center">
           <MoreButton className="text-accentColor border-accentColor" />
-        </div>
+        </div> */}
       </section>
     </PageContent>
   );
 };
 
-export default Faq_01;
+export default Faq_02;
