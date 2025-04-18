@@ -1,12 +1,12 @@
 // components/strength/Strength_04.tsx
 
-"use client"
+"use client";
 
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import StrengthCard from "@/components/ui/ItemCard/StrengthCard_04"
-import { strengthData } from "@/components/data/top/StrengthData"
-import MoreLinkButton from "@/components/ui/button/MoreButton"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import StrengthCard from "@/components/ui/ItemCard/StrengthCard_04";
+import { strengthData } from "@/components/data/top/StrengthData";
+import MoreLinkButton from "@/components/ui/button/MoreButton";
 
 // 強み
 const Strength_04 = () => {
@@ -14,7 +14,7 @@ const Strength_04 = () => {
     <>
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <section className="md:w-1200 mx-auto space-y-10">
+        <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadline
             enTitle="Strength"
             mainTitle="私たちの強み"
@@ -41,7 +41,7 @@ const Strength_04 = () => {
         />
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Strength_04
+export default Strength_04;

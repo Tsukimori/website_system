@@ -1,11 +1,11 @@
 // components/message/Message_03.tsx
 
-"use client"
+"use client";
 
-import MoreLinkButton from "@/components/ui/button/MoreButton"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import SectionContent from "@/components/ui/frame/SectionContent"
-import Image from "next/image"
+import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import SectionContent from "@/components/ui/frame/SectionContent";
+import Image from "next/image";
 
 // メッセージ
 const Message_03 = () => {
@@ -13,7 +13,7 @@ const Message_03 = () => {
     <>
       <SectionContent className="![padding-bottom:0]">
         {/* widthがフルサイズでない場合は指定する */}
-        <section className=" md:w-1200 mx-auto ">
+        <section className=" md:max-w-[1200px] mx-auto ">
           {/* <ContentHeadline
             entitle="Who we are"
             maintitle="私たちについて"
@@ -21,7 +21,6 @@ const Message_03 = () => {
             titleClassName="text-center"
           /> */}
           <div className=" md:mt-16 md:flex justify-start md:space-x-20 border-b-2 pb-24">
-            
             <div className="md:w-[600px] ">
               <h3 className="text-3xl md:text-5xl  font-light leading-relaxed md:leading-[64px] mt-10 md:mt-0">
                 見出しテキスト
@@ -31,10 +30,12 @@ const Message_03 = () => {
               <p className="mt-10 leading-relaxed md:leading-[250%] md:text-lg">
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。 <br />
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
+                <br />
                 メッセージはいります。メッセージはいります。
                 <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。 <br />
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
+                <br />
                 メッセージはいります。メッセージはいります。
               </p>
               {/* <MoreLinkButton
@@ -55,7 +56,7 @@ const Message_03 = () => {
         </section>
       </SectionContent>
     </>
-  )
-}
+  );
+};
 
-export default Message_03
+export default Message_03;

@@ -1,11 +1,11 @@
 // components/message/Message_02.tsx
 
-"use client"
+"use client";
 
-import MoreLinkButton from "@/components/ui/button/MoreButton"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import SectionContent from "@/components/ui/frame/SectionContent"
-import Image from "next/image"
+import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import SectionContent from "@/components/ui/frame/SectionContent";
+import Image from "next/image";
 
 // メッセージ
 const Message_02 = () => {
@@ -13,7 +13,7 @@ const Message_02 = () => {
     <>
       <SectionContent className="![padding-bottom:0]">
         {/* widthがフルサイズでない場合は指定する */}
-        <section className=" md:w-1200 mx-auto ">
+        <section className=" md:max-w-[1200px] mx-auto ">
           {/* <ContentHeadline
             entitle="Who we are"
             maintitle="私たちについて"
@@ -39,10 +39,12 @@ const Message_02 = () => {
               <p className="mt-10 leading-relaxed md:leading-[250%] md:text-lg">
                 メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
                 <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。 <br />
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
+                <br />
                 メッセージはいります。メッセージはいります。
                 <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。 <br />
+                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
+                <br />
                 メッセージはいります。メッセージはいります。
               </p>
               {/* <MoreLinkButton
@@ -54,7 +56,7 @@ const Message_02 = () => {
         </section>
       </SectionContent>
     </>
-  )
-}
+  );
+};
 
-export default Message_02
+export default Message_02;

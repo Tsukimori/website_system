@@ -1,10 +1,10 @@
 // components/kv/KeyVisual_01.tsx
 
-"use client"
+"use client";
 
-import FirstViewContent from "@/components/top/kv/FirstViewContent"
-import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
-import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
+import FirstViewContent from "@/components/top/kv/FirstViewContent";
+import TopPageHeadline from "@/components/ui/frame/TopPageHeadline";
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent";
 
 // キービジュアル
 const KeyVisual_01 = () => {
@@ -16,7 +16,7 @@ const KeyVisual_01 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-screen md:h-[810px]" />
         </section>
-        <div className="relative  md:md:w-1200 mx-auto ">
+        <div className="relative  md:md:max-w-[1200px] mx-auto ">
           <TopPageHeadline
             subtitleTop={
               <>
@@ -46,7 +46,7 @@ const KeyVisual_01 = () => {
         </div>
       </FirstViewContent>
     </>
-  )
-}
+  );
+};
 
-export default KeyVisual_01
+export default KeyVisual_01;

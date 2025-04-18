@@ -55,7 +55,7 @@ const Purpose_01 = () => {
 
   return (
     <SectionContent>
-      <section className="md:w-1200 mx-auto">
+      <section className="md:max-w-[1200px] mx-auto">
         <ContentHeadline
           enTitle="Purpose"
           mainTitle="私たちの想い"

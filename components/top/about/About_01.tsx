@@ -1,11 +1,11 @@
 // components/message/About_01.tsx
 
-"use client"
+"use client";
 
-import MoreLinkButton from "@/components/ui/button/MoreButton"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import Image from "next/image"
+import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import Image from "next/image";
 
 // メッセージ
 const About_01 = () => {
@@ -13,7 +13,7 @@ const About_01 = () => {
     <>
       <PageContent className="pb-0 md:pb-10 px-0">
         {/* widthがフルサイズでない場合は指定する */}
-        <section className="w-full md:w-1200 mx-auto">
+        <section className="w-full md:max-w-[1200px] mx-auto">
           {/* <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" /> */}
           <div className="md:flex justify-between">
             <h3 className="w-fullmd:w-[500px] text-3xl md:text-5xl font-light leading-relaxed md:leading-[84px] tracking-wide">
@@ -58,7 +58,7 @@ const About_01 = () => {
         </section>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default About_01
+export default About_01;

@@ -1,11 +1,11 @@
 // components/message/About_04.tsx
 
-"use client"
+"use client";
 
-import MoreLinkButton from "@/components/ui/button/MoreButton"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import Image from "next/image"
+import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import Image from "next/image";
 
 // メッセージ
 const About_04 = () => {
@@ -13,7 +13,7 @@ const About_04 = () => {
     <>
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <section className=" md:w-1200 mx-auto ">
+        <section className=" md:max-w-[1200px] mx-auto ">
           <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" />
           <div className=" md:mt-16 md:flex justify-start md:space-x-20">
             <div className="md:w-[600px]">
@@ -51,7 +51,7 @@ const About_04 = () => {
         </section>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default About_04
+export default About_04;

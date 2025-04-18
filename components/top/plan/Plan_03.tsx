@@ -14,7 +14,7 @@ const Plan_03 = () => {
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="md:w-1200 mx-auto">
+        <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
             enTitle="Plan"
             mainTitle="料金プラン"
