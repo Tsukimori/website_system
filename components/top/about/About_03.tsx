@@ -4,39 +4,39 @@
 
 import MoreLinkButton from "@/components/ui/button/MoreButton";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
+import SectionContent from "@/components/ui/frame/SectionContent";
 import Image from "next/image";
+import AboutSection from "@/components/ui/module/AboutSection_03";
 
 // メッセージ
 const About_03 = () => {
   return (
     <>
-      <PageContent>
+      <SectionContent className="![padding-bottom:0]">
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
           <div className=" md:flex justify-start">
             <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" />
-            <div>
-              <h3 className="md:w-[500px] text-3xl md:text-5xl md:mt-4 font-light leading-relaxed md:leading-[64px]">
-                見出しテキスト
-                <br />
-                はいります見出し
-              </h3>
-              <p className=" md:w-[660px] mt-10 leading-relaxed md:leading-[45px] md:text-lg">
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。
-              </p>
-              <MoreLinkButton
-                href="/"
-                className="mt-10 text-accentColor border-accentColor"
-              />
-            </div>
+            <AboutSection
+            title="無数の選択肢の中から\nベストな選択を"
+            description={`経営者は日々悩んでいます。そして、日々決断しています。
+
+一番成果が上がる選択はどれか。一番効率のいい選択はどれか。
+無数の選択肢の中からベストな選択ができるよう、
+常に試行錯誤し決断しています。
+
+私たちはその決断が本当にベストなのか、検討しています。
+そして、その決断が本当のベストになるためのサポートを
+常に用意しています。`}
+            buttonHref="/about"
+            // 以下は任意
+            // imageUrl="/path/to/image.jpg"
+            // position="代表取締役"
+            // name="山田太郎"
+          />
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   );
 };

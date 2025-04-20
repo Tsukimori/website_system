@@ -6,6 +6,7 @@ import MoreLinkButton from "@/components/ui/button/MoreButton";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
 import SectionContent from "@/components/ui/frame/SectionContent";
 import Image from "next/image";
+import AboutSection from "@/components/ui/module/AboutSection_04";
 
 // メッセージ
 const About_04 = () => {
@@ -20,30 +21,22 @@ const About_04 = () => {
             entitleClassName="text-center"
             titleClassName="text-center"
           /> */}
-          <div className=" md:mt-16 md:flex justify-start md:space-x-20 border-b-2 pb-24">
-            <div className="">
-              <h3 className="text-3xl md:text-5xl  font-light leading-relaxed md:leading-[64px] mt-10 md:mt-0">
-                見出しテキスト
-                <br />
-                はいります見出し
-              </h3>
-              <p className="mt-10 leading-relaxed md:leading-[250%] md:text-lg">
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
-                <br />
-                メッセージはいります。メッセージはいります。
-                <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
-                <br />
-                メッセージはいります。メッセージはいります。
-              </p>
-              {/* <MoreLinkButton
-                href="/"
-                className="mt-10 text-accentColor border-accentColor"
-              /> */}
-            </div>
-          </div>
+                  <AboutSection
+            title="無数の選択肢の中から\nベストな選択を"
+            description={`経営者は日々悩んでいます。そして、日々決断しています。
+
+一番成果が上がる選択はどれか。一番効率のいい選択はどれか。
+無数の選択肢の中からベストな選択ができるよう、
+常に試行錯誤し決断しています。
+
+私たちはその決断が本当にベストなのか、検討しています。
+そして、その決断が本当のベストになるためのサポートを
+常に用意しています。`}
+            // 以下は任意
+            // imageUrl="/path/to/image.jpg"
+            // position="代表取締役"
+            // name="山田太郎"
+          />
         </section>
       </SectionContent>
     </>
