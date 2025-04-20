@@ -1,20 +1,20 @@
 // components/kv/KeyVisual_05.tsx
-"use client"
+"use client";
 
-import FirstViewContent from "@/components/top/kv/FirstViewContent"
-import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
-import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
-import ScrollButton from "@/components/ui/button/ScrollButton"
-import MoreButton from "@/components/ui/button/MoreButton"
+import FirstViewContent from "@/components/top/kv/FirstViewContent";
+import TopPageHeadline from "@/components/ui/frame/TopPageHeadline";
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent";
+import ScrollButton from "@/components/ui/button/ScrollButton";
+import MoreButton from "@/components/ui/button/MoreButton";
 
 // キービジュアル
 const KeyVisual_05 = () => {
   const scrollToNextSection = () => {
-    const kvElement = document.getElementById("kv-section")
+    const kvElement = document.getElementById("kv-section");
     if (kvElement && kvElement.nextElementSibling) {
-      kvElement.nextElementSibling.scrollIntoView({ behavior: "smooth" })
+      kvElement.nextElementSibling.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
   return (
     <>
       <FirstViewContent className="relative">
@@ -23,7 +23,7 @@ const KeyVisual_05 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-screen" />
         </section>
-        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full md:w-1200">
+        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full md:max-w-[1200px]">
           <TopPageHeadline
             mainTitle={
               <>
@@ -50,7 +50,7 @@ const KeyVisual_05 = () => {
         </div>
       </FirstViewContent>
     </>
-  )
-}
+  );
+};
 
-export default KeyVisual_05
+export default KeyVisual_05;

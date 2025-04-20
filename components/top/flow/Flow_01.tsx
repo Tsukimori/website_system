@@ -1,25 +1,25 @@
 // components/flow/Flow_01.tsx
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import FlowCard from "@/components/ui/ItemCard/FlowCard_01"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import FlowCard from "@/components/ui/ItemCard/FlowCard_01";
 
-const Flow_01 = () => {
+const Flow_01 = ({ className = "" }) => {
   return (
     <>
-      <PageContent className="">
-        <section className="md:w-1200 mx-auto">
+      <PageContent className={className}>
+        <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
             enTitle="Flow"
             mainTitle="ご利用の流れ"
             enTitleClassName="text-center"
             titleClassName="text-center"
           />
-          <div className="mt-16 grid grid-cols-4 gap-x-10 gap-y-6">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-6">
             <FlowCard
               step="STEP 1"
               number="01"
@@ -80,7 +80,7 @@ const Flow_01 = () => {
         </section>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Flow_01
+export default Flow_01;

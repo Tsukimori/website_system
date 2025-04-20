@@ -1,62 +1,47 @@
 // components/message/About_02.tsx
 
-"use client"
+"use client";
 
-import MoreLinkButton from "@/components/ui/button/MoreButton"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import Image from "next/image"
+import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import SectionContent from "@/components/ui/frame/SectionContent";
+import Image from "next/image";
+import AboutSection from "@/components/ui/module/AboutSection_02";
 
 // メッセージ
 const About_02 = () => {
   return (
     <>
-      <PageContent>
+      <SectionContent className="![padding-bottom:0]">
         {/* widthがフルサイズでない場合は指定する */}
-        <section className=" md:w-1200 mx-auto ">
+        <section className=" md:max-w-[1200px] mx-auto ">
           <ContentHeadline
             enTitle="Who we are"
             mainTitle="私たちについて"
             enTitleClassName="text-center"
             titleClassName="text-center"
           />
-          <div className=" md:mt-16 md:flex justify-start md:space-x-20">
-            <div className=" md:w-[520px] h-[300px] md:h-[761px] relative">
-              <Image
-                src="/top/message/message_img.png"
-                alt="message"
-                layout="fill" // 画像のサイズは親要素にフィット
-                objectFit="cover" // 画像を親要素に合わせてトリミング
-                className="block"
-              />
-            </div>
-            <div className="md:w-[600px] ">
-              <h3 className="text-3xl md:text-5xl  font-light leading-relaxed md:leading-[64px] mt-10 md:mt-0">
-                見出しテキスト
-                <br />
-                はいります見出し
-              </h3>
-              <p className="mt-10 leading-relaxed md:leading-[45px] md:text-lg">
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
-                <br />
-                メッセージはいります。メッセージはいります。
-                <br />
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。{" "}
-                <br />
-                メッセージはいります。メッセージはいります。
-              </p>
-              <MoreLinkButton
-                href="/"
-                className="mt-10 text-accentColor border-accentColor"
-              />
-            </div>
-          </div>
-        </section>
-      </PageContent>
-    </>
-  )
-}
+          <AboutSection
+            title="無数の選択肢の中から\nベストな選択を"
+            description={`経営者は日々悩んでいます。そして、日々決断しています。
 
-export default About_02
+一番成果が上がる選択はどれか。一番効率のいい選択はどれか。
+無数の選択肢の中からベストな選択ができるよう、
+常に試行錯誤し決断しています。
+
+私たちはその決断が本当にベストなのか、検討しています。
+そして、その決断が本当のベストになるためのサポートを
+常に用意しています。`}
+            buttonHref="/about"
+            // 以下は任意
+            // imageUrl="/path/to/image.jpg"
+            // position="役職役職"
+            // name="氏名　氏名"
+          />
+        </section>
+      </SectionContent>
+    </>
+  );
+};
+
+export default About_02;

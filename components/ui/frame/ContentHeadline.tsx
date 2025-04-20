@@ -1,7 +1,8 @@
 // components/ui/frame/ContentHeadline.tsx
-import classNames from "classnames"
-import { ContentHeadlineProps } from "@/types"
-import Image from "next/image"
+import React from "react";
+import classNames from "classnames";
+import { ContentHeadlineProps } from "@/types";
+import Image from "next/image";
 
 const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   mainTitle,
@@ -18,7 +19,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   return (
     <section
       id={id}
-      className={classNames("md:w-1200 mb-16 tracking-wide", className)}
+      className={classNames("w-full md:max-w-[1200px] mb-16 tracking-wide", className)}
     >
       {ImageSrc && (
         <Image
@@ -37,12 +38,17 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
       >
         {enTitle}
       </h3>
-      <h1 className={classNames("text-[28px] font-bold", titleClassName)}>
+      <h1
+        className={classNames(
+          "text-[28px] md:text-[40px] font-bold",
+          titleClassName
+        )}
+      >
         {mainTitle}
       </h1>
       {subTitle && <h2>{subTitle}</h2>}
     </section>
-  )
-}
+  );
+};
 
-export default ContentHeadline
+export default ContentHeadline;

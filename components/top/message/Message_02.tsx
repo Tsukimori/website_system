@@ -1,11 +1,11 @@
 // components/message/Message_02.tsx
 
-"use client"
+"use client";
 
-import MoreLinkButton from "@/components/ui/button/MoreButton"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import Image from "next/image"
+import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import Image from "next/image";
 
 // メッセージ
 const Message_02 = () => {
@@ -13,7 +13,7 @@ const Message_02 = () => {
     <>
       <PageContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <section className=" md:w-1200 mx-auto ">
+        <section className=" md:max-w-[1200px] mx-auto ">
           <ContentHeadline
             enTitle="Who we are"
             mainTitle="私たちについて"
@@ -45,7 +45,7 @@ const Message_02 = () => {
         </section>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Message_02
+export default Message_02;

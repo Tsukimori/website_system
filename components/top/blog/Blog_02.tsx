@@ -1,33 +1,33 @@
 // components/blog/Blog_02.tsx
 
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { microcms } from "@/lib/microcms"
-import { Work } from "@/types"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Autoplay } from "swiper/modules"
-import { CirclePlay, PauseCircle } from "lucide-react" // Lucideアイコンをインポート
-import MoreButton from "@/components/ui/button/MoreButton"
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { microcms } from "@/lib/microcms";
+import { Work } from "@/types";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { CirclePlay, PauseCircle } from "lucide-react"; // Lucideアイコンをインポート
+import MoreButton from "@/components/ui/button/MoreButton";
 
 // Swiper stylesをインポート
-import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/navigation"
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 interface BlogProps {
-  limit?: number
+  limit?: number;
 }
 
 const Blog_02 = ({ limit = 5 }: BlogProps) => {
-  const [contents, setContents] = useState<Work[]>([])
-  const [loading, setLoading] = useState(true)
-  const [isPlaying, setIsPlaying] = useState(true) // 再生/一時停止状態を管理
-  const swiperRef = useRef<any>(null) // Swiperインスタンスへの参照
+  const [contents, setContents] = useState<Work[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true); // 再生/一時停止状態を管理
+  const swiperRef = useRef<any>(null); // Swiperインスタンスへの参照
 
   useEffect(() => {
     const getWorks = async () => {
@@ -35,43 +35,43 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
         const data = await microcms.get({
           endpoint: "works",
           queries: { limit },
-        })
+        });
         if (data && Array.isArray(data.contents)) {
-          setContents(data.contents)
+          setContents(data.contents);
         } else {
-          console.error("Unexpected data format:", data)
+          console.error("Unexpected data format:", data);
         }
       } catch (error) {
-        console.error("Failed to fetch works:", error)
+        console.error("Failed to fetch works:", error);
       }
-      setLoading(false)
-    }
+      setLoading(false);
+    };
 
-    getWorks()
-  }, [limit])
+    getWorks();
+  }, [limit]);
 
   if (loading) {
-    return <h1>Loading...</h1>
+    return <h1>Loading...</h1>;
   }
 
   if (!contents || contents.length === 0) {
-    return <h1>No contents</h1>
+    return <h1>No contents</h1>;
   }
 
   // 再生/一時停止ボタンのクリックイベント
   const handlePlayPause = () => {
     if (isPlaying) {
-      swiperRef.current?.autoplay.stop() // 自動再生を停止
+      swiperRef.current?.autoplay.stop(); // 自動再生を停止
     } else {
-      swiperRef.current?.autoplay.start() // 自動再生を再開
+      swiperRef.current?.autoplay.start(); // 自動再生を再開
     }
-    setIsPlaying(!isPlaying) // 状態を切り替える
-  }
+    setIsPlaying(!isPlaying); // 状態を切り替える
+  };
 
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="md:w-1200 mx-auto relative">
+        <section className="md:max-w-[1200px] mx-auto relative">
           <ContentHeadline
             enTitle="Blog"
             mainTitle="ブログ"
@@ -150,7 +150,7 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
         </div>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Blog_02
+export default Blog_02;
