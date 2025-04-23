@@ -103,6 +103,8 @@ import LowerService3_03 from "@/components/service/service3/Service_03";
 import LowerBlog_01 from "@/components/blog/blog/Blog_01";
 import LowerBlog_02 from "@/components/blog/blog/Blog_02";
 import LowerBlog_03 from "@/components/blog/blog/Blog_03";
+import BlogDetail_01 from "@/components/blog/blogDetail/BlogDetail_01";
+import BlogDetail_02 from "@/components/blog/blogDetail/BlogDetail_02";
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -1046,6 +1048,47 @@ export const componentsConfig: ComponentsConfig = {
         options: [{ id: "Site_01", src: "/admin/1.png", alt: "Site_01" }],
         components: {
           Site_01: <Site_01 />,
+        },
+      },
+      footer: {
+        title: "フッター",
+        options: [
+          { id: "Footer1", src: "/admin/1.png", alt: "Footer1" },
+          { id: "Footer2", src: "/admin/2.png", alt: "Footer2" },
+        ],
+        components: {
+          Footer1: <Footer1 />,
+          Footer2: <Footer2 />,
+        },
+      },
+    },
+  },
+  BlogDetail: {
+    sections: {
+      header: {
+        title: "ヘッダー",
+        options: [
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+        ],
+        components: {
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
+        },
+      },
+      blogDetail: {
+        title: "記事詳細",
+        options: [
+          { id: "BlogDetail_01", src: "/admin/1.png", alt: "BlogDetail_01" },
+          { id: "BlogDetail_02", src: "/admin/2.png", alt: "BlogDetail_02" },
+        ],
+        components: {
+          BlogDetail_01: <BlogDetail_01 params={{ id: "" }} />,
+          BlogDetail_02: <BlogDetail_02 params={{ id: "" }} />,
         },
       },
       footer: {
