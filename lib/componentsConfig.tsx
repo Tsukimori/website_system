@@ -100,6 +100,11 @@ import LowerService2_03 from "@/components/service/service2/Service_03";
 import LowerService3_01 from "@/components/service/service3/Service_01";
 import LowerService3_02 from "@/components/service/service3/Service_02";
 import LowerService3_03 from "@/components/service/service3/Service_03";
+import LowerBlog_01 from "@/components/blog/blog/Blog_01";
+import LowerBlog_02 from "@/components/blog/blog/Blog_02";
+import LowerBlog_03 from "@/components/blog/blog/Blog_03";
+import BlogDetail_01 from "@/components/blog/blogDetail/BlogDetail_01";
+import BlogDetail_02 from "@/components/blog/blogDetail/BlogDetail_02";
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -355,6 +360,64 @@ export const componentsConfig: ComponentsConfig = {
           Cta_02: <Cta_02 />,
           Cta_03: <Cta_03 />,
           Cta_04: <Cta_04 />,
+        },
+      },
+      footer: {
+        title: "フッター",
+        options: [
+          { id: "Footer1", src: "/admin/1.png", alt: "Footer1" },
+          { id: "Footer2", src: "/admin/2.png", alt: "Footer2" },
+        ],
+        components: {
+          Footer1: <Footer1 />,
+          Footer2: <Footer2 />,
+        },
+      },
+    },
+  },
+  Blog: {
+    sections: {
+      header: {
+        title: "ヘッダー",
+        options: [
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+        ],
+        components: {
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
+        },
+      },
+      lowerkv: {
+        title: "下層キービジュアル",
+        options: [
+          { id: "Lowerkv_01", src: "/admin/1.png", alt: "Lowerkv_01" },
+          { id: "Lowerkv_02", src: "/admin/2.png", alt: "Lowerkv_02" },
+          { id: "Lowerkv_03", src: "/admin/3.png", alt: "Lowerkv_03" },
+          { id: "Lowerkv_04", src: "/admin/4.png", alt: "Lowerkv_04" },
+        ],
+        components: {
+          Lowerkv_01: <Lowerkv_01 />,
+          Lowerkv_02: <Lowerkv_02 />,
+          Lowerkv_03: <Lowerkv_03 />,
+          Lowerkv_04: <Lowerkv_04 />,
+        },
+      },
+      blog: {
+        title: "記事一覧",
+        options: [
+          { id: "LowerBlog_01", src: "/admin/1.png", alt: "LowerBlog_01" },
+          { id: "LowerBlog_02", src: "/admin/2.png", alt: "LowerBlog_02" },
+          { id: "LowerBlog_03", src: "/admin/3.png", alt: "LowerBlog_03" },
+        ],
+        components: {
+          LowerBlog_01: <LowerBlog_01 />,
+          LowerBlog_02: <LowerBlog_02 />,
+          LowerBlog_03: <LowerBlog_03 />,
         },
       },
       footer: {
@@ -749,10 +812,26 @@ export const componentsConfig: ComponentsConfig = {
       about: {
         title: "私たちについて",
         options: [
-          { id: "ServiceAbout_01", src: "/admin/1.png", alt: "ServiceAbout_01" },
-          { id: "ServiceAbout_02", src: "/admin/2.png", alt: "ServiceAbout_02" },
-          { id: "ServiceAbout_03", src: "/admin/3.png", alt: "ServiceAbout_03" },
-          { id: "ServiceAbout_04", src: "/admin/4.png", alt: "ServiceAbout_04" },
+          {
+            id: "ServiceAbout_01",
+            src: "/admin/1.png",
+            alt: "ServiceAbout_01",
+          },
+          {
+            id: "ServiceAbout_02",
+            src: "/admin/2.png",
+            alt: "ServiceAbout_02",
+          },
+          {
+            id: "ServiceAbout_03",
+            src: "/admin/3.png",
+            alt: "ServiceAbout_03",
+          },
+          {
+            id: "ServiceAbout_04",
+            src: "/admin/4.png",
+            alt: "ServiceAbout_04",
+          },
         ],
         components: {
           ServiceAbout_01: <ServiceAbout_01 />,
@@ -779,40 +858,76 @@ export const componentsConfig: ComponentsConfig = {
       service1: {
         title: "サービス1",
         options: [
-          { id: "LowerService1_01", src: "/admin/1.png", alt: "LowerService1_01" },
-          { id: "LowerService1_02", src: "/admin/2.png", alt: "LowerService1_02" },
-          { id: "LowerService1_03", src: "/admin/3.png", alt: "LowerService1_03" },
+          {
+            id: "LowerService1_01",
+            src: "/admin/1.png",
+            alt: "LowerService1_01",
+          },
+          {
+            id: "LowerService1_02",
+            src: "/admin/2.png",
+            alt: "LowerService1_02",
+          },
+          {
+            id: "LowerService1_03",
+            src: "/admin/3.png",
+            alt: "LowerService1_03",
+          },
         ],
         components: {
-          LowerService1_01: <LowerService1_01/>,
-          LowerService1_02: <LowerService1_02/>,
-          LowerService1_03: <LowerService1_03/>,
+          LowerService1_01: <LowerService1_01 />,
+          LowerService1_02: <LowerService1_02 />,
+          LowerService1_03: <LowerService1_03 />,
         },
       },
       service2: {
         title: "サービス2",
         options: [
-          { id: "LowerService2_01", src: "/admin/1.png", alt: "LowerService2_01" },
-          { id: "LowerService2_02", src: "/admin/2.png", alt: "LowerService2_02" },
-          { id: "LowerService2_03", src: "/admin/3.png", alt: "LowerService2_03" },
+          {
+            id: "LowerService2_01",
+            src: "/admin/1.png",
+            alt: "LowerService2_01",
+          },
+          {
+            id: "LowerService2_02",
+            src: "/admin/2.png",
+            alt: "LowerService2_02",
+          },
+          {
+            id: "LowerService2_03",
+            src: "/admin/3.png",
+            alt: "LowerService2_03",
+          },
         ],
         components: {
-          LowerService2_01: <LowerService2_01/>,
-          LowerService2_02: <LowerService2_02/>,
-          LowerService2_03: <LowerService2_03/>,
+          LowerService2_01: <LowerService2_01 />,
+          LowerService2_02: <LowerService2_02 />,
+          LowerService2_03: <LowerService2_03 />,
         },
       },
       service3: {
         title: "サービス3",
         options: [
-          { id: "LowerService3_01", src: "/admin/1.png", alt: "LowerService3_01" },
-          { id: "LowerService3_02", src: "/admin/2.png", alt: "LowerService3_02" },
-          { id: "LowerService3_03", src: "/admin/3.png", alt: "LowerService3_03" },
+          {
+            id: "LowerService3_01",
+            src: "/admin/1.png",
+            alt: "LowerService3_01",
+          },
+          {
+            id: "LowerService3_02",
+            src: "/admin/2.png",
+            alt: "LowerService3_02",
+          },
+          {
+            id: "LowerService3_03",
+            src: "/admin/3.png",
+            alt: "LowerService3_03",
+          },
         ],
         components: {
-          LowerService3_01: <LowerService3_01/>,
-          LowerService3_02: <LowerService3_02/>,
-          LowerService3_03: <LowerService3_03/>,
+          LowerService3_01: <LowerService3_01 />,
+          LowerService3_02: <LowerService3_02 />,
+          LowerService3_03: <LowerService3_03 />,
         },
       },
 
@@ -933,6 +1048,47 @@ export const componentsConfig: ComponentsConfig = {
         options: [{ id: "Site_01", src: "/admin/1.png", alt: "Site_01" }],
         components: {
           Site_01: <Site_01 />,
+        },
+      },
+      footer: {
+        title: "フッター",
+        options: [
+          { id: "Footer1", src: "/admin/1.png", alt: "Footer1" },
+          { id: "Footer2", src: "/admin/2.png", alt: "Footer2" },
+        ],
+        components: {
+          Footer1: <Footer1 />,
+          Footer2: <Footer2 />,
+        },
+      },
+    },
+  },
+  BlogDetail: {
+    sections: {
+      header: {
+        title: "ヘッダー",
+        options: [
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+        ],
+        components: {
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
+        },
+      },
+      blogDetail: {
+        title: "記事詳細",
+        options: [
+          { id: "BlogDetail_01", src: "/admin/1.png", alt: "BlogDetail_01" },
+          { id: "BlogDetail_02", src: "/admin/2.png", alt: "BlogDetail_02" },
+        ],
+        components: {
+          BlogDetail_01: <BlogDetail_01 params={{ id: "" }} />,
+          BlogDetail_02: <BlogDetail_02 params={{ id: "" }} />,
         },
       },
       footer: {
