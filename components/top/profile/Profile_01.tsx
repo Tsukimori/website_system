@@ -12,30 +12,39 @@ const Profile_01 = () => {
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="md:w-1200 mx-auto">
+        <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
-            entitle="Profile"
-            maintitle="会社概要"
-            entitleClassName="text-center"
+            enTitle="Profile"
+            mainTitle="会社概要"
+            enTitleClassName="text-center"
             titleClassName="text-center"
           />
-          <div className="mt-16 bg-white grid grid-cols-2 gap-x-20 p-10">
+          <div className="mt-16 bg-white grid md:grid-cols-2 gap-x-20 p-10">
             <div>
               <ProfileCard label="社名" value="企業名" />
               <ProfileCard label="設立" value="0000年00月00日" />
               <ProfileCard label="資本金" value="000円" />
-              <ProfileCard label="所在地" value={`000-000\n○○県○○市○○町00-00\n○○○○○ビル00F`} />
+              <ProfileCard
+                label="所在地"
+                value={`000-000\n○○県○○市○○町00-00\n○○○○○ビル00F`}
+              />
               <ProfileCard label="電話番号" value="000-000-0000" />
               <ProfileCard label="FAX" value="000-000-0000" />
               <ProfileCard label="代表者" value="氏名　氏名" />
               <ProfileCard label="URL" value="example@aa.aaaa" />
             </div>
             <div>
-              <ProfileCard label="役員" value={`役職　○○○○○○\n役職　○○○○○○\n役職　○○○○○○`} />
+              <ProfileCard
+                label="役員"
+                value={`役職　○○○○○○\n役職　○○○○○○\n役職　○○○○○○`}
+              />
               <ProfileCard label="従業員" value="0000名" />
               <ProfileCard label="事業内容" value={`○○○○○○○○○○\n○○○○○○○○○`} />
               <ProfileCard label="主要取引先" value={`○○○○○○○○○○\n○○○○○○○○○`} />
-              <ProfileCard label="主要取引銀行" value={`○○○○○○○○○○\n○○○○○○○○○`} />
+              <ProfileCard
+                label="主要取引銀行"
+                value={`○○○○○○○○○○\n○○○○○○○○○`}
+              />
             </div>
           </div>
           <div className="mt-16">
@@ -45,7 +54,8 @@ const Profile_01 = () => {
               height="400"
               style={{ border: "0" }}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full max-w-[600px] md:max-w-[1200px]"
             />
             <p className="mt-4 font-light">
               000-000

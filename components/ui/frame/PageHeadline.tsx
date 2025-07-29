@@ -1,22 +1,22 @@
 // components/ui/frame/PageHeadline.tsx
-import classNames from "classnames"
-import Breadcrumb from "../module/Breadcrumb"
+import classNames from "classnames";
+import Breadcrumb from "../module/Breadcrumb";
 
 interface PageHeadlineProps {
-  maintitle: React.ReactNode
-  subtitleTop?: React.ReactNode
-  subtitleBottom?: string
-  discription?: React.ReactNode
-  parentDirectoryName?: string
-  parentDirectoryLink?: string
-  className?: string // 親要素のclassName
-  titleClassName?: string // h1用のclassName
-  subtitleClassName?: string // h2用のclassName
-  discriptionClassName?: string // p用のclassName
+  mainTitle: React.ReactNode;
+  subtitleTop?: React.ReactNode;
+  subtitleBottom?: string;
+  discription?: React.ReactNode;
+  parentDirectoryName?: string;
+  parentDirectoryLink?: string;
+  className?: string; // 親要素のclassName
+  titleClassName?: string; // h1用のclassName
+  subtitleClassName?: string; // h2用のclassName
+  discriptionClassName?: string; // p用のclassName
 }
 
 const PageHeadline: React.FC<PageHeadlineProps> = ({
-  maintitle,
+  mainTitle,
   subtitleTop,
   subtitleBottom,
   discription,
@@ -28,9 +28,9 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
   discriptionClassName = "",
 }) => {
   return (
-    <section className={classNames("md:w-1200", className)}>
+    <section className={classNames("md:max-w-[1200px]", className)}>
       <Breadcrumb
-        maintitle={maintitle}
+        mainTitle={mainTitle}
         parentDirectoryName={parentDirectoryName}
         parentDirectoryLink={parentDirectoryLink}
       />
@@ -48,7 +48,7 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
           titleClassName
         )}
       >
-        {maintitle}
+        {mainTitle}
       </h1>
       <h2
         className={classNames("text-xl font-semibold mt-4", subtitleClassName)}
@@ -64,7 +64,7 @@ const PageHeadline: React.FC<PageHeadlineProps> = ({
         {discription}
       </p>
     </section>
-  )
-}
+  );
+};
 
-export default PageHeadline
+export default PageHeadline;

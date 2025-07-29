@@ -1,16 +1,16 @@
 // components/module/cta/Cta_02.tsx
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import PageContent from "@/components/ui/frame/PageContent"
-import FreeButtonWhite from "@/components/ui/button/FreeButtonWhite"
+import Image from "next/image";
+import Link from "next/link";
+import PageContent from "@/components/ui/frame/PageContent";
+import FreeButtonWhite from "@/components/ui/button/FreeButtonWhite";
 
 const Cta_02 = () => {
   return (
     <>
       <PageContent className="bg-accentColor">
-        <section className="md:w-1200 mx-auto grid grid-cols-2 gap-x-20">
+        <section className="md:max-w-[1200px] mx-auto grid grid-cols-2 gap-x-20">
           <Image
             src="/cta/cta.png"
             alt="ctaイメージ画像"
@@ -21,9 +21,7 @@ const Cta_02 = () => {
             <h4 className="text-white text-[32px] font-bold">
               見出しテキスト入ります見出しテキスト入ります
             </h4>
-            <p
-              className="text-white text-lg font-semibold py-6"
-            >
+            <p className="text-white text-lg font-semibold py-6">
               リード文はいりますリード文はいりますリード文はいりますリード文はいりますリード文はいりますリード文はいります
             </p>
             <div>
@@ -33,7 +31,7 @@ const Cta_02 = () => {
         </section>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Cta_02
+export default Cta_02;

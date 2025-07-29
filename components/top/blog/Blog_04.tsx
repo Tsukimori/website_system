@@ -1,24 +1,24 @@
 // components/blog/Blog_04.tsx
 
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { microcms } from "@/lib/microcms"
-import { Work } from "@/types"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import MoreButton from "@/components/ui/button/MoreButton"
-import { ChevronRightIcon } from "@heroicons/react/24/outline"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { microcms } from "@/lib/microcms";
+import { Work } from "@/types";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import MoreButton from "@/components/ui/button/MoreButton";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 interface BlogProps {
-  limit?: number
+  limit?: number;
 }
 
 const Blog_04 = ({ limit = 3 }: BlogProps) => {
-  const [contents, setContents] = useState<Work[]>([])
-  const [loading, setLoading] = useState(true)
+  const [contents, setContents] = useState<Work[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getWorks = async () => {
@@ -26,38 +26,38 @@ const Blog_04 = ({ limit = 3 }: BlogProps) => {
         const data = await microcms.get({
           endpoint: "works",
           queries: { limit },
-        })
+        });
         if (data && Array.isArray(data.contents)) {
-          setContents(data.contents)
+          setContents(data.contents);
         } else {
-          console.error("Unexpected data format:", data)
+          console.error("Unexpected data format:", data);
         }
       } catch (error) {
-        console.error("Failed to fetch works:", error)
+        console.error("Failed to fetch works:", error);
       }
-      setLoading(false)
-    }
+      setLoading(false);
+    };
 
-    getWorks()
-  }, [limit])
+    getWorks();
+  }, [limit]);
 
   if (loading) {
-    return <h1>Loading...</h1>
+    return <h1>Loading...</h1>;
   }
 
   if (!contents || contents.length === 0) {
-    return <h1>No contents</h1>
+    return <h1>No contents</h1>;
   }
 
   return (
     <>
       <PageContent>
-        <section className="md:w-1200 mx-auto md:flex justify-between ">
-          <div className="md:w-[300px]"> 
+        <section className="md:max-w-[1200px] mx-auto md:flex justify-between ">
+          <div className="md:w-[300px]">
             <ContentHeadline
-              entitle="Blog"
-              maintitle="ブログ"
-              entitleClassName=""
+              enTitle="Blog"
+              mainTitle="ブログ"
+              enTitleClassName=""
               titleClassName=""
             />
             <div className="mt-10 md:mt-16 flex justify-center">
@@ -97,7 +97,7 @@ const Blog_04 = ({ limit = 3 }: BlogProps) => {
         </section>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Blog_04
+export default Blog_04;

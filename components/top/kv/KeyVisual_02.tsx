@@ -22,7 +22,7 @@ const KeyVisual_02 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <div className="w-[95%] mx-auto mt-40">
           <TopPageHeadline
-            maintitle={
+            mainTitle={
               <>
                 <span>Lorem Ipsum</span>
                 <br />

@@ -1,33 +1,33 @@
 // components/blog/Blog_02.tsx
 
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { microcms } from "@/lib/microcms"
-import { Work } from "@/types"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Autoplay } from "swiper/modules"
-import { CirclePlay, PauseCircle } from "lucide-react" // Lucideアイコンをインポート
-import MoreButton from "@/components/ui/button/MoreButton"
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { microcms } from "@/lib/microcms";
+import { Work } from "@/types";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { CirclePlay, PauseCircle } from "lucide-react"; // Lucideアイコンをインポート
+import MoreButton from "@/components/ui/button/MoreButton";
 
 // Swiper stylesをインポート
-import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/navigation"
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 interface BlogProps {
-  limit?: number
+  limit?: number;
 }
 
 const Blog_02 = ({ limit = 5 }: BlogProps) => {
-  const [contents, setContents] = useState<Work[]>([])
-  const [loading, setLoading] = useState(true)
-  const [isPlaying, setIsPlaying] = useState(true) // 再生/一時停止状態を管理
-  const swiperRef = useRef<any>(null) // Swiperインスタンスへの参照
+  const [contents, setContents] = useState<Work[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true); // 再生/一時停止状態を管理
+  const swiperRef = useRef<any>(null); // Swiperインスタンスへの参照
 
   useEffect(() => {
     const getWorks = async () => {
@@ -35,47 +35,47 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
         const data = await microcms.get({
           endpoint: "works",
           queries: { limit },
-        })
+        });
         if (data && Array.isArray(data.contents)) {
-          setContents(data.contents)
+          setContents(data.contents);
         } else {
-          console.error("Unexpected data format:", data)
+          console.error("Unexpected data format:", data);
         }
       } catch (error) {
-        console.error("Failed to fetch works:", error)
+        console.error("Failed to fetch works:", error);
       }
-      setLoading(false)
-    }
+      setLoading(false);
+    };
 
-    getWorks()
-  }, [limit])
+    getWorks();
+  }, [limit]);
 
   if (loading) {
-    return <h1>Loading...</h1>
+    return <h1>Loading...</h1>;
   }
 
   if (!contents || contents.length === 0) {
-    return <h1>No contents</h1>
+    return <h1>No contents</h1>;
   }
 
   // 再生/一時停止ボタンのクリックイベント
   const handlePlayPause = () => {
     if (isPlaying) {
-      swiperRef.current?.autoplay.stop() // 自動再生を停止
+      swiperRef.current?.autoplay.stop(); // 自動再生を停止
     } else {
-      swiperRef.current?.autoplay.start() // 自動再生を再開
+      swiperRef.current?.autoplay.start(); // 自動再生を再開
     }
-    setIsPlaying(!isPlaying) // 状態を切り替える
-  }
+    setIsPlaying(!isPlaying); // 状態を切り替える
+  };
 
   return (
     <>
       <PageContent className="bg-bgLightBlue">
-        <section className="md:w-1200 mx-auto relative">
+        <section className="md:max-w-[1200px] mx-auto relative">
           <ContentHeadline
-            entitle="Blog"
-            maintitle="ブログ"
-            entitleClassName=""
+            enTitle="Blog"
+            mainTitle="ブログ"
+            enTitleClassName=""
             titleClassName=""
           />
 
@@ -94,7 +94,7 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
             breakpoints={{
               768: {
                 slidesPerView: 1.5, // 768px以上では1.5スライド表示
-                spaceBetween: 40,  // 768px以上ではスライド間の余白を広げる
+                spaceBetween: 40, // 768px以上ではスライド間の余白を広げる
               },
             }}
             onSwiper={(swiper) => (swiperRef.current = swiper)} // Swiperインスタンスを取得して参照に保存
@@ -116,7 +116,9 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
                     )}
                   </div>
                   <div className="absolute bottom-0 left-0 w-full md:w-[400px] bg-black/50 py-3 md:py-8 px-3 md:px-10 text-white">
-                    <p className="md:text-lg font-bold min-h-12 md:min-h-0">{post.title}</p>
+                    <p className="md:text-lg font-bold min-h-12 md:min-h-0">
+                      {post.title}
+                    </p>
                     <p className="mt-2 md:mt-4 text-white text-xs min-h-8 md:min-h-0">
                       #
                       {Array.isArray(post.category) && post.category.length > 0
@@ -142,14 +144,13 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
               )}
             </button>
           </div>
-          
         </section>
         <div className="flex justify-center mt-16">
-            <MoreButton className="text-accentColor border-accentColor" />
-          </div>
+          <MoreButton className="text-accentColor border-accentColor" />
+        </div>
       </PageContent>
     </>
-  )
-}
+  );
+};
 
-export default Blog_02
+export default Blog_02;

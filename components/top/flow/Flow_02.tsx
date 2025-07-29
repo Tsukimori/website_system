@@ -8,19 +8,19 @@ import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import FlowCard from "@/components/ui/ItemCard/FlowCard_02"
 
-const Flow_02 = () => {
+const Flow_02 = ({ className = "" }) => {
   return (
     <>
-      <PageContent className="">
-        <section className="md:w-1200 mx-auto">
+      <PageContent className={className}>
+        <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
-            entitle="Flow"
-            maintitle="ご利用の流れ"
-            entitleClassName="text-center"
+            enTitle="Flow"
+            mainTitle="ご利用の流れ"
+            enTitleClassName="text-center"
             titleClassName="text-center"
           />
           <div className="mt-16 grid grid-cols-1 gap-y-10">
-          <FlowCard
+            <FlowCard
               number="01"
               title="ステップ見出し入りますステップ見出し入ります"
               description="ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。ステップ説明文はいります。"

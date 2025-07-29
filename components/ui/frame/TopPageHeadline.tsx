@@ -1,21 +1,21 @@
 // components/ui/frame/TopPageHeadline.tsx
-import classNames from "classnames"
+import classNames from "classnames";
 
 interface TopPageHeadlineProps {
-  maintitle: React.ReactNode
-  subtitleTop?: React.ReactNode
-  subtitleBottom?: React.ReactNode
-  discription?: React.ReactNode
-  parentDirectoryName?: string
-  parentDirectoryLink?: string
-  className?: string // 親要素のclassName
-  titleClassName?: string // h1用のclassName
-  subtitleClassName?: string // h2用のclassName
-  discriptionClassName?: string // p用のclassName
+  mainTitle: React.ReactNode;
+  subtitleTop?: React.ReactNode;
+  subtitleBottom?: React.ReactNode;
+  discription?: React.ReactNode;
+  parentDirectoryName?: string;
+  parentDirectoryLink?: string;
+  className?: string; // 親要素のclassName
+  titleClassName?: string; // h1用のclassName
+  subtitleClassName?: string; // h2用のclassName
+  discriptionClassName?: string; // p用のclassName
 }
 
 const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
-  maintitle,
+  mainTitle,
   subtitleTop,
   subtitleBottom,
   discription,
@@ -27,9 +27,14 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   discriptionClassName = "",
 }) => {
   return (
-    <section className={classNames("md:md:w-1200 w-full px-4 md:px-0", className)}>
+    <section
+      className={classNames(
+        "md:md:max-w-[1200px] w-full px-4 md:px-0",
+        className
+      )}
+    >
       {/* <Breadcrumb
-        maintitle={maintitle}
+        mainTitle={mainTitle}
         parentDirectoryName={parentDirectoryName}
         parentDirectoryLink={parentDirectoryLink}
       /> */}
@@ -47,23 +52,16 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
           titleClassName
         )}
       >
-        {maintitle}
+        {mainTitle}
       </h1>
-      <h3
-        className={classNames("md:text-lg mt-4", subtitleClassName)}
-      >
+      <h3 className={classNames("md:text-lg mt-4", subtitleClassName)}>
         {subtitleBottom}
       </h3>
-      <p
-        className={classNames(
-          "mt-4 md:text-lg ",
-          discriptionClassName
-        )}
-      >
+      <p className={classNames("mt-4 md:text-lg ", discriptionClassName)}>
         {discription}
       </p>
     </section>
-  )
-}
+  );
+};
 
-export default TopPageHeadline
+export default TopPageHeadline;
