@@ -23,7 +23,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
     const getWorks = async () => {
       try {
         const data = await microcms.get({
-          endpoint: "works",
+          endpoint: "cases",
           queries: { limit },
         });
         if (data && Array.isArray(data.contents)) {
@@ -32,7 +32,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
           console.error("Unexpected data format:", data);
         }
       } catch (error) {
-        console.error("Failed to fetch works:", error);
+        console.error("Failed to fetch cases:", error);
       }
       setLoading(false);
     };
@@ -78,7 +78,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
                     {post.title}
                   </p>
                   <p className="mt-2 text-[#5f5f5f] text-xs ">
-                    {contents[0].title}
+                    {post.content}
                   </p>
                 </div>
               </div>

@@ -1,14 +1,14 @@
 // ブログの型定義
-export interface Blog {
+export interface Cms {
   id: string
+  date?: string
   title: string
-  description: string
   content: string
   image?: {
     url: string
   }
-  date: string
-  category: string[]
+
+  category?: string[]
 }
 
 // 事例の型定義

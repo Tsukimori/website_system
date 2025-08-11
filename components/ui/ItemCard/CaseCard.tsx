@@ -17,7 +17,7 @@ const TopWorkCard = ({ limit = 5 }: TopWorkProps) => {
     const getWorks = async () => {
       try {
         const data = await microcms.get({
-          endpoint: 'works',
+          endpoint: 'cases',
           queries: { limit },
         })
         if (data && Array.isArray(data.contents)) {
@@ -26,7 +26,7 @@ const TopWorkCard = ({ limit = 5 }: TopWorkProps) => {
           console.error('Unexpected data format:', data)
         }
       } catch (error) {
-        console.error('Failed to fetch works:', error)
+        console.error('Failed to fetch cases:', error)
       }
       setLoading(false)
     }
