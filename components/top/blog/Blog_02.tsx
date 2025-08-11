@@ -33,7 +33,7 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
     const getWorks = async () => {
       try {
         const data = await microcms.get({
-          endpoint: "works",
+          endpoint: "blogs",
           queries: { limit },
         });
         if (data && Array.isArray(data.contents)) {
@@ -42,7 +42,7 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
           console.error("Unexpected data format:", data);
         }
       } catch (error) {
-        console.error("Failed to fetch works:", error);
+        console.error("Failed to fetch blogs:", error);
       }
       setLoading(false);
     };

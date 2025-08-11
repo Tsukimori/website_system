@@ -32,7 +32,7 @@ const News_02 = ({ limit = 5 }: NewsProps) => {
     const getWorks = async () => {
       try {
         const data = await microcms.get({
-          endpoint: "works",
+          endpoint: "news",
           queries: { limit },
         });
         if (data && Array.isArray(data.contents)) {
@@ -41,7 +41,7 @@ const News_02 = ({ limit = 5 }: NewsProps) => {
           console.error("Unexpected data format:", data);
         }
       } catch (error) {
-        console.error("Failed to fetch works:", error);
+        console.error("Failed to fetch news:", error);
       }
       setLoading(false);
     };
