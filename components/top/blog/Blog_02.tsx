@@ -127,12 +127,12 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
                     <p className="md:text-lg font-bold min-h-12 md:min-h-0">
                       {post.title}
                     </p>
-                    <p className="mt-2 md:mt-4 text-white text-xs min-h-8 md:min-h-0">
-                      #
-                      {Array.isArray(post.category) && post.category.length > 0
-                        ? post.category.join(", ")
-                        : "カテゴリーなし"}
-                    </p>
+                  <p className="mt-2 md:mt-4 text-white text-xs min-h-8 md:min-h-0">
+                    #
+                    {Array.isArray(post.category) && post.category.length > 0
+                      ? post.category.join(", ")
+                      : "カテゴリーなし"}
+                  </p>
                   </div>
                 </div>
               </SwiperSlide>

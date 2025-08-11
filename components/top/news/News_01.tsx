@@ -84,7 +84,7 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
               <div className="bg-white p-6">
                 <p className="text-lg font-bold">{post.title}</p>
                 <p className="mt-2 text-[#5f5f5f] text-xs">
-                  {contents[0]?.title}
+                  {post.description}
                 </p>
               </div>
             </div>

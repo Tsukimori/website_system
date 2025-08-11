@@ -9,6 +9,9 @@ import ContentHeadline from "@/components/ui/frame/ContentHeadline";
 import PageContent from "@/components/ui/frame/PageContent";
 import MoreButton from "@/components/ui/button/MoreButton";
 import { blogsFetch } from "@/lib/api/blogsFetch";
+import { format } from "date-fns"
+import { ja } from "date-fns/locale"
+
 
 interface BlogProps {
   limit?: number;
@@ -79,8 +82,10 @@ const Blog_06 = ({ limit = 9 }: BlogProps) => {
               key={post.id}
               className="w-full md:flex md:space-x-6 border-b border-[#eeeeee] pb-5"
             >
-              <p className="font-medium">{post.date}</p>
-              <p className="mt-1 md:mt-0 w-40 h-[25px] px-2 bg-accentColor rounded-[5px] text-white flex justify-center items-center text-xs">
+               {post.date
+                               ? format(new Date(post.date), "yyyy/MM/dd", { locale: ja })
+                               : ""}
+              <p className="mt-1 md:mt-0 w-40 h-[25px] px-2 bg-accentColor rounded-[5px] text-white flex justify-center items-center text-xs ml-2">
                 {Array.isArray(post.category) && post.category.length > 0
                   ? post.category.join(", ")
                   : "カテゴリーなし"}

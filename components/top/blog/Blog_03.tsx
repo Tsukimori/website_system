@@ -88,7 +88,7 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
               <div className="bg-white p-6">
                 <p className="text-lg font-bold md:min-h-14">{post.title}</p>
                 <p className="mt-2 text-[#5f5f5f] text-xs">
-                  {contents[0].title}
+                  {post.description}
                 </p>
                 <Link
                   href="/"

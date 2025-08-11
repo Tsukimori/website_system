@@ -9,6 +9,8 @@ import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import Image from "next/image"
 import { blogsFetch } from "@/lib/api/blogsFetch"
+import { format } from "date-fns"
+import { ja } from "date-fns/locale"
 
 interface BlogProps {
   limit?: number
@@ -85,13 +87,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                   {post.title}
                 </p>
                 <p className="mt-2 text-[#5f5f5f] text-xs">
-                  {post.date
-                    ? new Date(post.date).toLocaleDateString("ja-JP", {
-                        year: "numeric",
-                        month: "2-digit",
-                        day: "2-digit",
-                      })
-                    : ""}
+                  {post.date ? format(new Date(post.date), "yyyy/MM/dd", { locale: ja }) : ""}
                 </p>
               </div>
             </div>

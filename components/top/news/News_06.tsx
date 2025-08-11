@@ -8,6 +8,8 @@ import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { newsFetch } from "@/lib/api/newsFetch"
+import { format } from "date-fns"
+import { ja } from "date-fns/locale"
 
 interface NewsProps {
   limit?: number
@@ -79,14 +81,10 @@ const News_05 = ({ limit = 9 }: NewsProps) => {
             >
               <p className="font-medium">
                 {post.date
-                  ? new Date(post.date).toLocaleDateString("ja-JP", {
-                      year: "numeric",
-                      month: "2-digit",
-                      day: "2-digit",
-                    })
-                  : ""}
+                    ? format(new Date(post.date), "yyyy/MM/dd", { locale: ja })
+                    : ""}
               </p>
-              <p className=" w-40 h-[25px] px-2 bg-accentColor rounded-[5px] text-white flex justify-center items-center text-xs">
+              <p className=" w-44 h-[25px] px-2 bg-accentColor rounded-[5px] text-white flex justify-center items-center text-xs">
                 {Array.isArray(post.category) && post.category.length > 0
                   ? post.category.join(", ")
                   : "カテゴリーなし"}

@@ -11,6 +11,9 @@ import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import { newsFetch } from "@/lib/api/newsFetch"
+import { format } from "date-fns"
+import { ja } from "date-fns/locale"
+
 
 interface NewsProps {
   limit?: number
@@ -73,16 +76,10 @@ const News_03 = ({ limit = 3 }: NewsProps) => {
                 <p className="text-lg font-bold line-clamp-2">{post.title}</p>
                 <p className="mt-2 text-[#5f5f5f] text-xs">
                   {post.date
-                    ? new Date(post.date).toLocaleDateString("ja-JP", {
-                        year: "numeric",
-                        month: "2-digit",
-                        day: "2-digit",
-                      })
-                    : (post.content ?? "")
-                        .toString()
-                        .replace(/<[^>]*>/g, "")
-                        .substring(0, 60)}
+                    ? format(new Date(post.date), "yyyy/MM/dd", { locale: ja })
+                    : ""}
                 </p>
+
                 <Link
                   href={`/news/${post.id}`}
                   className="mt-6 inline-flex items-center text-accentColor font-semibold"

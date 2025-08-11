@@ -1,8 +1,9 @@
-// ブログの型定義
-export interface Cms {
+// 型定義
+export type Cms = {
   id: string
   date?: string
   title: string
+  description?: string
   content: string
   image?: {
     url: string
