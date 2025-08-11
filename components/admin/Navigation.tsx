@@ -52,6 +52,12 @@ const Navigation = () => {
           <Link href="/admin">
             <div>ホーム</div>
           </Link>
+          <Link href="/admin/blog">
+            <div>記事一覧</div>
+          </Link>
+          <Link href="/admin/blog/blogDetail">
+            <div>記事詳細</div>
+          </Link>
           <Link href="/admin/about">
             <div>私たちについて</div>
           </Link>
