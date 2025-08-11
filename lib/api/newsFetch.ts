@@ -1,4 +1,4 @@
-// lib/newsApi.ts
+// lib/newsFetch.ts
 import { apiClient } from "@/lib/api/apiClient"
 import { Cms } from "@/types"
 

@@ -1,20 +1,20 @@
 // components/blog/Blog_02.tsx
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { microcms } from "@/lib/microcms";
-import { Work } from "@/types";
+// import { microcms } from "@/lib/microcms";
+import { Cms } from "@/types";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
 import PageContent from "@/components/ui/frame/PageContent";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { CirclePlay, PauseCircle } from "lucide-react"; // Lucideアイコンをインポート
+import { CirclePlay, PauseCircle } from "lucide-react";
 import MoreButton from "@/components/ui/button/MoreButton";
+import { blogsFetch } from "@/lib/api/blogsFetch";
 
-// Swiper stylesをインポート
+// Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -24,12 +24,14 @@ interface BlogProps {
 }
 
 const Blog_02 = ({ limit = 5 }: BlogProps) => {
-  const [contents, setContents] = useState<Work[]>([]);
+  const [contents, setContents] = useState<Cms[]>([]);
   const [loading, setLoading] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(true); // 再生/一時停止状態を管理
-  const swiperRef = useRef<any>(null); // Swiperインスタンスへの参照
+  const [isPlaying, setIsPlaying] = useState(true);
+  const swiperRef = useRef<any>(null);
 
   useEffect(() => {
+    // 旧データ取得
+    /*
     const getWorks = async () => {
       try {
         const data = await microcms.get({
@@ -46,69 +48,75 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
       }
       setLoading(false);
     };
-
     getWorks();
+    */
+
+    // 新データ取得（共通化）
+    let mounted = true;
+    (async () => {
+      try {
+        setLoading(true);
+        const data = await blogsFetch.list(Math.min(limit ?? 100, 100));
+        if (mounted) setContents(data);
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+        if (mounted) setContents([]);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
   }, [limit]);
 
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
+  if (loading) return <h1>Loading...</h1>;
+  if (!contents || contents.length === 0) return <h1>No contents</h1>;
 
-  if (!contents || contents.length === 0) {
-    return <h1>No contents</h1>;
-  }
-
-  // 再生/一時停止ボタンのクリックイベント
   const handlePlayPause = () => {
     if (isPlaying) {
-      swiperRef.current?.autoplay.stop(); // 自動再生を停止
+      swiperRef.current?.autoplay.stop();
     } else {
-      swiperRef.current?.autoplay.start(); // 自動再生を再開
+      swiperRef.current?.autoplay.start();
     }
-    setIsPlaying(!isPlaying); // 状態を切り替える
+    setIsPlaying(!isPlaying);
   };
 
   return (
     <>
       <PageContent className="bg-bgLightBlue">
         <section className="md:max-w-[1200px] mx-auto relative">
-          <ContentHeadline
-            enTitle="Blog"
-            mainTitle="ブログ"
-            enTitleClassName=""
-            titleClassName=""
-          />
+          <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
 
-          {/* Swiper を追加 */}
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]} // Autoplayモジュールを追加
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={10}
             slidesPerView={1.3}
             centeredSlides={true}
             loop={true}
             pagination={{ clickable: true }}
             autoplay={{
-              delay: 3000, // 3秒ごとに自動スライド
-              disableOnInteraction: false, // ユーザーが操作しても自動再生が停止しない
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             breakpoints={{
               768: {
-                slidesPerView: 1.5, // 768px以上では1.5スライド表示
-                spaceBetween: 40, // 768px以上ではスライド間の余白を広げる
+                slidesPerView: 1.5,
+                spaceBetween: 40,
               },
             }}
-            onSwiper={(swiper) => (swiperRef.current = swiper)} // Swiperインスタンスを取得して参照に保存
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
             className="mt-16"
           >
-            {/* 全てのコンテンツをループで表示 */}
-            {contents.map((post: Work) => (
+            {contents.map((post) => (
               <SwiperSlide key={post.id} className="w-[700px]">
                 <div className="md:w-[800px] h-[250px] md:h-[400px] relative">
                   <div className="w-full h-[250px] md:h-[400px] mt-5 md:mt-0">
                     {post.image && (
                       <Image
                         src={post.image.url}
-                        alt="制作物サムネイル"
+                        alt={post.title ?? "ブログサムネイル"}
                         width={370}
                         height={223}
                         className="w-full h-full object-cover"
@@ -131,12 +139,9 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
             ))}
           </Swiper>
 
-          {/* ページネーションと一時停止ボタン */}
           <div className="absolute right-4 md:right-60 -bottom-3 z-10">
-            <div className="swiper-pagination"></div>{" "}
-            {/* Swiperのページネーション */}
-            <button onClick={handlePlayPause} className="focus:outline-none ">
-              {/* 再生/一時停止アイコンの切り替え */}
+            <div className="swiper-pagination"></div>
+            <button onClick={handlePlayPause} className="focus:outline-none">
               {isPlaying ? (
                 <PauseCircle size={30} className="text-gray-600" />
               ) : (
