@@ -20,8 +20,8 @@ const marcellus = Marcellus({
 
 export const metadata: Metadata = {
   title: {
-    template: "HP制作システム",
-    default: "HP制作システム",
+    template: "株式会社アセントビジョン",
+    default: "株式会社アセントビジョン",
   },
 }
 
