@@ -6,7 +6,7 @@ export const Menu = [
     href: "/#service",
   },
   {
-    name: "About us",
+    name: "About  us",
     nameJa: "会社概要",
     href: "/#about",
   },
