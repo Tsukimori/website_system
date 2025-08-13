@@ -18,7 +18,7 @@ const About_01 = () => {
 variant="dot"
       >
         {/* widthがフルサイズでない場合は指定する */}
-        <section className="w-full md:max-w-[1200px] mx-auto px-5">
+        <section className="w-full md:max-w-[1240px] mx-auto px-5">
           <ContentHeadline
             enTitle="Who we are"
             mainTitle="私たちについて"

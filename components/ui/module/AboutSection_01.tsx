@@ -30,12 +30,12 @@ const AboutSection_01 = ({
 
   return (
     <>
-      <div className="md:flex justify-between md:max-w-[1200px] mx-auto gap-10 text-white px-5">
+      <div className="md:flex items-start justify-between md:max-w-[1240px] mx-auto gap-10 text-white px-5">
         <h3 className="w-full md:max-w-[500px] text-2xl md:text-[40px] leading-relaxed md:leading-[160%] tracking-[0.03em]">
           {convertNewLines(title)}
         </h3>
         <div>
-          <p className="w-full md:max-w-[660px] leading-relaxed md:leading-[45px] text-base md:text-lg mt-10 md:mt-3 whitespace-pre-line">
+          <p className="w-full md:max-w-[660px] leading-relaxed md:leading-[45px] text-base md:text-lg mt-10 md:mt-0 whitespace-pre-line tracking-[0.03em]">
             {description}
           </p>
           {(position || name) && (
@@ -55,7 +55,7 @@ const AboutSection_01 = ({
           )}
         </div>
       </div>
-      <section className="md:w-full h-[250px] md:h-[480px] mx-auto mt-10 md:mt-24  flex justify-center relative ">
+      <section className="md:w-full h-[250px] md:h-[480px] mx-auto mt-10 md:mt-[120px]  flex justify-center relative ">
         <Image
           src="/top/message/message_img.png"
           alt="message"
