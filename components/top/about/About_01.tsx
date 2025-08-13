@@ -15,13 +15,7 @@ const About_01 = () => {
     <>
       <SectionContent
         className="!pb-0 !px-0"
-        style={{
-          backgroundColor: "#1b1b1b",
-          backgroundImage:
-            "radial-gradient(circle, #ffffff0d 1.5px, transparent 1.5px), radial-gradient(circle, #ffffff0d 1.5px, transparent 1.5px)",
-          backgroundPosition: "0 0, 5px 10px",
-          backgroundSize: "10px 20px",
-        }}
+variant="dot"
       >
         {/* widthがフルサイズでない場合は指定する */}
         <section className="w-full md:max-w-[1200px] mx-auto">
