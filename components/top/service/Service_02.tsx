@@ -31,7 +31,7 @@ const Service_02 = () => {
                 className="w-full h-full max-w-[580px] max-h-[853px] rounded-[10px]"
               />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 max-w-[540px]">
               <ContentHeadline
                 enTitle="Service"
                 mainTitle="事業内容"
