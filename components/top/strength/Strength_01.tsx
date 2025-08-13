@@ -15,7 +15,7 @@ import Image from "next/image"
 const Strength_01 = () => {
   return (
     <>
-      <SectionContent variant="dot">
+      <SectionContent className="rounded-t-[40px]" variant="dot">
         {/* widthがフルサイズでない場合は指定する */}
         <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadlineReverse
