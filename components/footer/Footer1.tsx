@@ -21,7 +21,6 @@ const Footer1 = () => {
             </h4>
             <p>株式会社アセントビジョン</p>
             <p>
-              <span className="">{companyPostalCode}</span>
               {companyAddress}
             </p>
           </div>
@@ -51,7 +50,7 @@ const Footer1 = () => {
               {Sns.map((item, index) => (
                 <li
                   key={index}
-                  className="-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
+                  className="w-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
                 >
                   <Link href={item.href} className="">
                     <Image

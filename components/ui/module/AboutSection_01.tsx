@@ -30,16 +30,16 @@ const AboutSection_01 = ({
 
   return (
     <>
-      <div className="md:flex justify-between md:max-w-[1200px] mx-auto gap-10 text-white">
-        <h3 className="w-full md:max-w-[500px] text-3xl md:text-[40px] leading-relaxed md:leading-[160%] tracking-[0.03em]">
+      <div className="md:flex justify-between md:max-w-[1200px] mx-auto gap-10 text-white px-5">
+        <h3 className="w-full md:max-w-[500px] text-2xl md:text-[40px] leading-relaxed md:leading-[160%] tracking-[0.03em]">
           {convertNewLines(title)}
         </h3>
         <div>
-          <p className="w-full md:max-w-[660px] leading-relaxed md:leading-[45px] md:text-lg mt-10 md:mt-3 whitespace-pre-line">
+          <p className="w-full md:max-w-[660px] leading-relaxed md:leading-[45px] text-base md:text-lg mt-10 md:mt-3 whitespace-pre-line">
             {description}
           </p>
           {(position || name) && (
-            <p className="mt-10 text-lg leading-[250%] tracking-[0.03em]">
+            <p className="mt-10 text-base md:text-lg leading-[250%] tracking-[0.03em]">
               {position}
               <br />
               {name}
