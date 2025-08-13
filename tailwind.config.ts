@@ -24,6 +24,7 @@ const config = {
       fontFamily: {
         marcellus: ["Marcellus", "serif"],
         zenKaku: ["'Zen Kaku Gothic New'", "sans-serif"],
+        en: ["Marcellus", "serif"],
       },
       colors: {
         accentColor: "#F2A629",
