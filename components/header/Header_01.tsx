@@ -46,12 +46,12 @@ const Header_01 = () => {
 
   return (
     <div className="">
-      <HeaderContent
-        className={` max-w-[1360px] fixed top-5 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300  rounded-[10px] ${
-          isScrolled ? "!bg-gray-800 !bg-opacity-30" : " bg-opacity-0"
-        }`}
-      >
-        <div className="w-full h-full flex items-center justify-between mx-auto p-5">
+      <HeaderContent className="max-w-[1360px] fixed top-5 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 rounded-[10px]">
+        <div
+          className={`w-full h-full flex items-center justify-between mx-auto p-3 md:p-5 rounded-[10px] transition-all duration-300 ${
+            isScrolled ? "bg-gray-800 bg-opacity-30" : "bg-transparent"
+          }`}
+        >
           {/* ロゴ */}
           <Link href="/" className="w-[150px] md:w-[200px]">
             <div className="text-lg font-bold ">
@@ -140,6 +140,17 @@ const Header_01 = () => {
                 </Link>
               </li>
             ))}
+            <div className="flex items-center ">
+              {SnsButton.slice(0, 3).map((sns, index) => (
+                <SnsIconButton
+                  key={index}
+                  href={sns.href}
+                  src={sns.name === "Line" ? sns.src : sns.src_w || sns.src}
+                  alt={sns.name}
+                  className="text-white hover:text-accentColor transition-colors duration-200"
+                />
+              ))}
+            </div>
             {/* ContactButton */}
             <li>
               <ContactButton className="w-full py-4 font-normal" />
