@@ -13,7 +13,7 @@ const Cta_03 = () => {
     <>
       <SectionContent className="!py-0 !px-0 " variant="dot">
         <section className="mx-auto grid md:grid-cols-2 rounded-t-[40px] overflow-hidden">
-          <div className="text-white text-center bg-accentColor py-10 md:py-16">
+          <div className="text-white text-center bg-accentColor py-10 md:py-16 px-5">
             <p className="md:text-lg font-semibold mb-1">事業紹介</p>
             <h4 className="text-3xl md:text-[40px] font-en leading-[120%]">Our Service</h4>
             <p className="md:text-lg my-3 md:my-6 leading-[160%]">人事・経営コンサルティングや就職支援、貿易事業など<br />
@@ -22,7 +22,7 @@ const Cta_03 = () => {
               <MoreLinkButton href="#service" />
             </div>
           </div>
-          <div className="bg-white text-baseColor text-center py-10 md:py-16">
+          <div className="bg-white text-baseColor text-center py-10 md:py-16 px-5">
             <p className="md:text-lg font-semibold mb-1">お問い合わせ</p>
             <h4 className="text-3xl md:text-[40px] font-en leading-[120%]">Contact us</h4>
             <p className="md:text-lg my-3 md:my-6 leading-[160%]">人事・経営に関することや、就職支援については<br />
