@@ -8,6 +8,7 @@ interface SectionContentProps {
   className?: string
   style?: React.CSSProperties
   variant?: "default" | "dot"
+  id?: string
 }
 
 const SectionContent: React.FC<SectionContentProps> = ({
@@ -15,6 +16,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
   className,
   style,
   variant = "default",
+  id,
 }) => {
   // バリアントに基づく背景スタイルを決定
   const getVariantStyle = () => {
@@ -33,6 +35,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
 
   return (
     <div
+      id={id}
       className={classNames(
         "mx-auto py-14 md:py-[120px] px-4 md:px-5 overflow-x-hidden",
         className

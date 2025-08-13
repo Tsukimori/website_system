@@ -7,6 +7,7 @@ import ServiceCard from "@/components/ui/ItemCard/ServiceCard_02"
 import { serviceData } from "@/components/data/top/ServiceData"
 import Image from "next/image"
 import MoreButton from "@/components/ui/button/MoreButton"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Service_02 = () => {
   // 表示するサービス数をserviceDataのIDを指定して表示
@@ -19,7 +20,7 @@ const Service_02 = () => {
 
   return (
     <>
-      <PageContent>
+      <SectionContent id="service">
         <section className="md:max-w-[1200px] mx-auto">
           <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-20">
             <div className="flex-1 flex items-center justify-center">
@@ -62,7 +63,7 @@ const Service_02 = () => {
             <MoreButton href="/service" variant="orange" />
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   )
 }
