@@ -24,8 +24,8 @@ const Strength_01 = () => {
             className="text-center text-white"
           />
 
-          {/* gridレイアウトを使用して4列に画像を配置 */}
-          <div className="grid grid-cols-4 gap-4 md:gap-6">
+          {/* gridレイアウトを使用して2列（モバイル）・4列（デスクトップ）に画像を配置 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {/* 8枚の画像を表示 */}
             {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
               <div

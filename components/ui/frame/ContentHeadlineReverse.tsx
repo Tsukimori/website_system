@@ -41,7 +41,7 @@ const ContentHeadlineReverse: React.FC<ContentHeadlineProps> = ({
       >
         {enTitle}
       </h3>
-      <h1 className={classNames("text-[40px] leading-[140%]", titleClassName)}>
+      <h1 className={classNames("text-2xl md:text-[40px] leading-[140%]", titleClassName)}>
         {typeof mainTitle === "string"
           ? mainTitle.split("\\n").map((text, i) => (
               <span key={i}>
