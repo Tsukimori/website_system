@@ -68,7 +68,7 @@ const HomePage = () => {
   return (
     <div>
       <KeyVisual_04 />
-      <About_03 />
+      <About_01 />
       <Service_02 />
       <Strength_01 />
       <Cta_03 />
