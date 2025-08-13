@@ -21,7 +21,7 @@ const Service_02 = () => {
     <>
       <PageContent>
         <section className="md:max-w-[1200px] mx-auto">
-          <div className=" flex gap-20">
+          <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-20">
             <div className="flex-1 flex items-center justify-center">
               <Image
                 src="/top/service/service_img.png"
@@ -38,7 +38,7 @@ const Service_02 = () => {
                 enTitleClassName=""
                 titleClassName=""
               />
-              <h3 className="text-[40px] tracking-[0.05em] leading-[160%] pb-6 border-b border-borderGray">
+              <h3 className=" text-2xl md:text-[40px] tracking-[0.05em] leading-[160%] pb-6 border-b border-borderGray">
                 人と会社と社会をつなぐ。
                 <br />
                 関わる全てに成長を。
