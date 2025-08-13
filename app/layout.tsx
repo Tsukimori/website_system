@@ -39,9 +39,13 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
     <html lang="ja">
       <body
         className="font-notoSansJP text-baseColor"
-        style={{
-          fontFamily: `${notoSansJP.style.fontFamily}, ${marcellus.style.fontFamily}, sans-serif`,
-        }}
+        style={
+          {
+            "--font-noto-sans-jp": notoSansJP.style.fontFamily,
+            "--font-marcellus": marcellus.style.fontFamily,
+            fontFamily: `${notoSansJP.style.fontFamily}, sans-serif`,
+          } as React.CSSProperties
+        }
       >
         <ToastProvider />
         {children}

@@ -6,18 +6,21 @@ import classNames from "classnames";
 interface SectionContentProps {
   children: ReactNode;
   className?: string;
+  style?: React.CSSProperties
 }
 
 const SectionContent: React.FC<SectionContentProps> = ({
   children,
   className,
+  style,
 }) => {
   return (
     <div
       className={classNames(
-        "mx-auto py-14 md:py-24 px-4 md:px-0 overflow-x-hidden",
+        "mx-auto py-14 md:py-[120px] px-4 md:px-5 overflow-x-hidden",
         className
       )}
+      style={style}
     >
       {children}
     </div>
