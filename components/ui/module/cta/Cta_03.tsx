@@ -19,7 +19,7 @@ const Cta_03 = () => {
             <p className="md:text-lg my-3 md:my-6 leading-[160%]">人事・経営コンサルティングや就職支援、貿易事業など<br />
             様々なサービスを提供しております。</p>
             <div className="flex justify-center">
-              <MoreLinkButton href="#service" />
+              <MoreLinkButton href="#service" className="md:!w-[350px]" />
             </div>
           </div>
           <div className="bg-white text-baseColor text-center py-10 md:py-16 px-5">
@@ -28,7 +28,7 @@ const Cta_03 = () => {
             <p className="md:text-lg my-3 md:my-6 leading-[160%]">人事・経営に関することや、就職支援については<br />
             お気軽にご相談ください。</p>
             <div className="flex justify-center">
-            <MoreLinkButton href="/contact" variant="black" >Contact us</MoreLinkButton>
+            <MoreLinkButton href="/contact" variant="black" className="md:!w-[350px]">Contact us</MoreLinkButton>
             </div>
           </div>
         </section>
