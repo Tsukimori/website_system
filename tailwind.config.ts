@@ -19,17 +19,16 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        'flow-arrow': "url('/flow/arrow-right.svg')"
+        "flow-arrow": "url('/flow/arrow-right.svg')",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        lato: ["Lato", "sans-serif"],
-        spectral: ['Spectral', 'serif'],
+        marcellus: ["Marcellus", "serif"],
         zenKaku: ["'Zen Kaku Gothic New'", "sans-serif"],
+        en: ["Marcellus", "serif"],
       },
       colors: {
-        accentColor: "#4270ED",
-        baseColor:"#393939",
+        accentColor: "#F2A629",
+        baseColor: "#393939",
         borderGray: "#393939",
         bgBlack: "#333333",
         bgLightBlue: "#f7fcff",

@@ -1,10 +1,10 @@
-// components/ui/frame/ContentHeadline.tsx
+// components/ui/frame/ContentHeadlineReverse.tsx
 import React from "react"
 import classNames from "classnames"
 import { ContentHeadlineProps } from "@/types"
 import Image from "next/image"
 
-const ContentHeadline: React.FC<ContentHeadlineProps> = ({
+const ContentHeadlineReverse: React.FC<ContentHeadlineProps> = ({
   mainTitle,
   subTitle,
   enTitle,
@@ -33,26 +33,28 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
           className="mb-4"
         />
       )}
-      <h1
-        className={classNames(
-          "text-sm md:text-lg font-semibold",
-          titleClassName
-        )}
-      >
-        {mainTitle}
-      </h1>
       <h3
         className={classNames(
-          "text-[40px] font-en leading-[120%] mt-1",
+          "text-lg font-en tracking-[0.03em] mb-1",
           enTitleClassName
         )}
       >
         {enTitle}
       </h3>
+      <h1 className={classNames("text-2xl md:text-[40px] leading-[140%]", titleClassName)}>
+        {typeof mainTitle === "string"
+          ? mainTitle.split("\\n").map((text, i) => (
+              <span key={i}>
+                {text}
+                {i !== mainTitle.split("\\n").length - 1 && <br />}
+              </span>
+            ))
+          : mainTitle}
+      </h1>
 
       {subTitle && <h2>{subTitle}</h2>}
     </section>
   )
 }
 
-export default ContentHeadline
+export default ContentHeadlineReverse

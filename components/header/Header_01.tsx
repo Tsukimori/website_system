@@ -1,62 +1,66 @@
 // components/header/Header_01
 
-"use client";
+"use client"
 
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import Menu from "@/components/ui/navigation/Menu";
-import ContactButton from "@/components/ui/button/ContactButton";
-import CompanyInfo from "@/components/ui/navigation/CompanyInfo";
-import HeaderContent from "../ui/frame/HeaderContent";
+import Link from "next/link"
+import { useState, useEffect } from "react"
+import Menu from "@/components/ui/navigation/Menu"
+import ContactButton from "@/components/ui/button/ContactButton"
+import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
+import HeaderContent from "../ui/frame/HeaderContent"
+import SnsIconButton from "@/components/ui/button/SnsIconButton"
+import { SnsButton } from "@/components/ui/button/SnsButton"
 
 const Header_01 = () => {
-  const { companyName } = CompanyInfo[0];
+  const { companyName } = CompanyInfo[0]
 
   // スクロール状態とメニュー開閉状態を管理
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // メニュー開閉状態
-  const [isAnimating, setIsAnimating] = useState(false); // フェードアニメーション用状態
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false) // メニュー開閉状態
+  const [isAnimating, setIsAnimating] = useState(false) // フェードアニメーション用状態
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50)
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const handleMenuToggle = () => {
     if (isMenuOpen) {
-      setIsAnimating(true);
+      setIsAnimating(true)
       setTimeout(() => {
-        setIsMenuOpen(false);
-        setIsAnimating(false);
-      }, 200); // アニメーションの長さに合わせて調整
+        setIsMenuOpen(false)
+        setIsAnimating(false)
+      }, 200) // アニメーションの長さに合わせて調整
     } else {
-      setIsMenuOpen(true);
+      setIsMenuOpen(true)
     }
-  };
+  }
 
-  const filteredMenu = Menu.filter((item) => item.name !== "お問い合わせ");
+  const filteredMenu = Menu.filter((item) => item.name !== "お問い合わせ")
 
   return (
-    <div className="h-[80px]">
-      <HeaderContent
-        className={`fixed h-20 top-0 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300   ${
-          isScrolled ? "!bg-gray-800 !bg-opacity-30" : " bg-opacity-0"
-        }`}
-      >
-        <div className="flex items-center justify-between md:justify-start  w-1400 mx-auto h-20 px-4">
+    <div className="">
+      <HeaderContent className="max-w-[1360px] fixed top-5 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 rounded-[10px]">
+        <div
+          className={`w-full h-full flex items-center justify-between mx-auto p-3 md:p-5 rounded-[10px] transition-all duration-300 ${
+            isScrolled ? "bg-gray-800 bg-opacity-30" : "bg-transparent"
+          }`}
+        >
           {/* ロゴ */}
-          <Link href="/"  className="w-[150px] md:w-[200px]">
-            <div className="text-lg font-bold ">{CompanyInfo[0].companyName("primary")}</div>
+          <Link href="/" className="w-[150px] md:w-[200px]">
+            <div className="text-lg font-bold ">
+              {CompanyInfo[0].companyName("primary")}
+            </div>
           </Link>
 
           {/* デスクトップ用メニュー */}
-          <ul className="hidden md:flex items-center space-x-10 ml-10">
+          <ul className="hidden md:flex items-center space-x-10 ml-10 font-en tracking-[0.03em]">
             {filteredMenu.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
@@ -64,8 +68,19 @@ const Header_01 = () => {
                 </Link>
               </li>
             ))}
+            <div className="flex items-center ">
+              {SnsButton.slice(0, 3).map((sns, index) => (
+                <SnsIconButton
+                  key={index}
+                  href={sns.href}
+                  src={sns.name === "Line" ? sns.src : sns.src_w || sns.src}
+                  alt={sns.name}
+                  className="text-white hover:text-accentColor transition-colors duration-200"
+                />
+              ))}
+            </div>
             <li className="">
-              <ContactButton className="h-20 absolute top-0 right-0 !w-52" />
+              <ContactButton className="" />
             </li>
           </ul>
 
@@ -86,7 +101,11 @@ const Header_01 = () => {
                 stroke="currentColor"
                 className="w-8 h-8"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
               <svg
@@ -97,7 +116,11 @@ const Header_01 = () => {
                 stroke="currentColor"
                 className="w-8 h-8"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
               </svg>
             )}
           </button>
@@ -117,6 +140,17 @@ const Header_01 = () => {
                 </Link>
               </li>
             ))}
+            <div className="flex items-center ">
+              {SnsButton.slice(0, 3).map((sns, index) => (
+                <SnsIconButton
+                  key={index}
+                  href={sns.href}
+                  src={sns.name === "Line" ? sns.src : sns.src_w || sns.src}
+                  alt={sns.name}
+                  className="text-white hover:text-accentColor transition-colors duration-200"
+                />
+              ))}
+            </div>
             {/* ContactButton */}
             <li>
               <ContactButton className="w-full py-4 font-normal" />
@@ -125,7 +159,7 @@ const Header_01 = () => {
         </div>
       </HeaderContent>
     </div>
-  );
-};
+  )
+}
 
 export default Header_01

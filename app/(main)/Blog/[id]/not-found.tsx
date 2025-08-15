@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 export default function NotFound() {
   return (
@@ -10,11 +10,11 @@ export default function NotFound() {
         </p>
         <Link
           href="/blog"
-          className="bg-accentColor text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+          className="bg-accent text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
         >
           ブログ一覧に戻る
         </Link>
       </div>
     </div>
-  );
+  )
 }
