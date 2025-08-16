@@ -73,7 +73,7 @@ const Purpose_01 = () => {
             alt="message"
             layout="fill"
             objectFit="cover"
-            className="block"
+            className="block cover"
           />
         </div>
       </section>
