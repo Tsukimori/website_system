@@ -1,26 +1,22 @@
-import React from "react";
-import { useStore } from "@/store/useStore";
-import { componentsConfig } from "@/lib/componentsConfig";
-import { headers } from "next/headers";
+// app/(main)/Blog/[id]/page.tsx
 
-interface BlogDetailProps {
-  params: {
-    id: string;
-  };
+import { headers } from 'next/headers'
+import { componentsConfig } from '@/lib/componentsConfig'
+import React from 'react'
+
+type Props = {
+  params: { id: string } 
 }
 
-export default function BlogDetail({ params }: BlogDetailProps) {
-  const headersList = headers();
-  const pathname = headersList.get("x-pathname") || "";
+export default async function Page({ params }: { params: { id: string } }) {
+  const headersList = await headers()
+  const pathname = headersList.get("x-pathname") || ""
 
-  // コンポーネントの設定を取得
-  const sections = componentsConfig.BlogDetail.sections;
-  const defaultTemplate = sections.blogDetail.options[1].id; // BlogDetail_02をデフォルトに
-
-  // 選択されたテンプレートまたはデフォルトのテンプレートを使用
-  const Component = sections.blogDetail.components[defaultTemplate];
+  const sections = componentsConfig.BlogDetail.sections
+  const defaultTemplate = sections.blogDetail.options[1].id
+  const Component = sections.blogDetail.components[defaultTemplate]
 
   return Component
     ? React.cloneElement(Component as React.ReactElement, { params })
-    : null;
+    : null
 }
