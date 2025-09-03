@@ -6,11 +6,22 @@ import classNames from "classnames"
 interface PageContentProps {
   children: ReactNode
   className?: string
+  style?: React.CSSProperties
 }
 
-const PageContent: React.FC<PageContentProps> = ({ children, className }) => {
+const PageContent: React.FC<PageContentProps> = ({
+  children,
+  className,
+  style,
+}) => {
   return (
-    <div className={classNames(" mx-auto py-14 md:py-24 border-b-2 px-4 md:px-0", className)}>
+    <div
+      className={classNames(
+        " mx-auto py-14 md:py-[120px] px-4 md:px-0",
+        className
+      )}
+      style={style}
+    >
       {children}
     </div>
   )

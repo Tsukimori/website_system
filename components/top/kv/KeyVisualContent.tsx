@@ -1,26 +1,56 @@
 // components/ui/frame/KeyVisualContent.tsx
-import classNames from "classnames";
-import Image from "next/image";
+"use client"
+
+import classNames from "classnames"
+import Image from "next/image"
+import { useState, useEffect } from "react"
 
 interface KeyVisualContentProps {
-  className?: string;
+  className?: string
 }
 
 const KeyVisualContent: React.FC<KeyVisualContentProps> = ({ className }) => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const slides = [
+    { src: "/top/kv/kv_img1.jpg", alt: "KV Image 1" },
+    { src: "/top/kv/kv_img2.jpg", alt: "KV Image 2" },
+    { src: "/top/kv/kv_img3.jpg", alt: "KV Image 3" },
+    { src: "/top/kv/kv_img4.jpg", alt: "KV Image 4" },
+    { src: "/top/kv/kv_img5.jpg", alt: "KV Image 5" },
+  ]
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 4000) // 4秒ごとに切り替え
+
+    return () => clearInterval(timer)
+  }, [slides.length])
+
   return (
     <div className={classNames("relative w-full", className)}>
-      <Image
-        src="/top/kv/kv_img.png"
-        alt="kv"
-        layout="fill" // 画像のサイズは親要素にフィット
-        objectFit="cover" // 画像を親要素に合わせてトリミング
-        priority
-        className="object-left"
-      />
-      {/* 黒30%のオーバーレイ */}
-      {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={slide.src}
+            alt={slide.alt}
+            layout="fill"
+            objectFit="cover"
+            priority={index === 0}
+            className="object-center"
+          />
+          {/* 黒20%のグラデーションオーバーレイ */}
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-black/20"></div> */}
+        </div>
+      ))}
     </div>
-  );
-};
+  )
+}
 
-export default KeyVisualContent;
+export default KeyVisualContent

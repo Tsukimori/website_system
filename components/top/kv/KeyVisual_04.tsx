@@ -23,17 +23,11 @@ const KeyVisual_04 = () => {
           <KeyVisualContent className="h-screen" />
         </section>
         <TopPageHeadline
-          mainTitle={
-            <>
-              <span>Lorem Ipsum</span>
-              <br />
-              <span>Lorem Ipsum</span>
-            </>
-          }
-          subtitleBottom="日本語のテキストが入ります。"
+          mainTitle={<>Create the next stage.</>}
+          subtitleBottom="企業と働く人。ステップアップのループへ。"
           className="w-full text-white text-center absolute left-1/2  transform -translate-x-1/2 top-1/2 -translate-y-1/2"
         />
-        <div className="absolute left-1/2  transform -translate-x-1/2 bottom-4 md:bottom-20">
+        <div className="absolute left-1/2  transform -translate-x-1/2 bottom-4 md:bottom-16">
           <ScrollButton onClick={scrollToNextSection} color="white" />
         </div>
       </FirstViewContent>
