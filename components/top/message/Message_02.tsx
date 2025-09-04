@@ -25,9 +25,8 @@ const Message_02 = () => {
               <Image
                 src="/top/message/message_img.png"
                 alt="message"
-                layout="fill" // 画像のサイズは親要素にフィット
-                objectFit="cover" // 画像を親要素に合わせてトリミング
-                className="block"
+                fill
+                className="object-cover"
               />
             </div>
             <div className="w-[600px]">

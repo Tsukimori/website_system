@@ -59,9 +59,8 @@ const AboutSection_01 = ({
         <Image
           src="/top/message/message_img.png"
           alt="message"
-          layout="fill" // 画像のサイズは親要素にフィット
-          objectFit="cover" // 画像を親要素に合わせてトリミング
-          className="block rounded-t-[40px]"
+          fill
+          className="object-cover rounded-t-[40px]"
         />
       </section>
     </>

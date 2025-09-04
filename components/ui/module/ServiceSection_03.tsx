@@ -33,9 +33,7 @@ const ServiceSection_03 = ({
         <Image
           src={imageUrl || "/service/service3.jpg"}
           alt={jaTitle || "message"}
-          layout="fill"
-          objectFit="cover"
-          className="block w-full h-full rounded-[15px]"
+          className="object-cover w-full h-full rounded-[15px]"
         />
       </div>
       <div className="flex flex-col md:flex-row gap-6">

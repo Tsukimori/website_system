@@ -35,9 +35,8 @@ const Strength_01 = () => {
                 <Image
                   src={`/top/instagram/instagram_img${index}.jpg`}
                   alt={`Instagram Image ${index}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
             ))}

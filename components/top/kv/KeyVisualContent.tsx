@@ -40,10 +40,9 @@ const KeyVisualContent: React.FC<KeyVisualContentProps> = ({ className }) => {
           <Image
             src={slide.src}
             alt={slide.alt}
-            layout="fill"
-            objectFit="cover"
             priority={index === 0}
-            className="object-center"
+            fill
+            className="object-cover"
           />
           {/* 黒20%のグラデーションオーバーレイ */}
           {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-black/20"></div> */}

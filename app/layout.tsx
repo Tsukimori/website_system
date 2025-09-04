@@ -1,8 +1,8 @@
 import "./globals.css"
 import type { Metadata, Viewport } from "next"
 import ToastProvider from "@/components/providers/ToastProvider"
-import { Noto_Sans_JP, Poppins, Lato, Spectral } from 'next/font/google'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { Noto_Sans_JP } from "next/font/google"
+import { GoogleTagManager } from "@next/third-parties/google"
 
 // Noto Sans JP フォントの設定
 const notoSansJP = Noto_Sans_JP({
@@ -20,18 +20,19 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | チョイスWeb制作',
-    default: 'チョイスのWeb制作は',
+    template: "%s | チョイスWeb制作",
+    default: "チョイスのWeb制作は",
   },
   icons: {
-    icon: '/common/favicon.ico',
+    icon: "/common/favicon.ico",
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 interface RootLayoutProps {
@@ -42,7 +43,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     <html lang="ja">
       <body className="font-notoSansJP text-baseColor">
-       <GoogleTagManager gtmId="GTM-5VZQPT43" />
+        <GoogleTagManager gtmId="GTM-5VZQPT43" />
         <ToastProvider />
         {children}
       </body>

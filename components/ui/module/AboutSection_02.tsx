@@ -34,9 +34,8 @@ const AboutSection_02 = ({
         <Image
           src={imageUrl || "/top/message/message_img.png"}
           alt={name || "message"}
-          layout="fill"
-          objectFit="cover"
-          className="block w-full h-full"
+          fill
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="md:max-w-[600px] ">
