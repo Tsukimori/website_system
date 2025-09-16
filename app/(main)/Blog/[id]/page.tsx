@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "@/store/useStore";
 import { componentsConfig } from "@/lib/componentsConfig";
-import { headers } from "next/headers";
 
 interface BlogDetailProps {
   params: {
@@ -10,15 +12,26 @@ interface BlogDetailProps {
 }
 
 export default function BlogDetail({ params }: BlogDetailProps) {
-  const headersList = headers();
-  const pathname = headersList.get("x-pathname") || "";
+  const [isHydrated, setIsHydrated] = useState(false);
+  const selectedSections = useStore((state) => state.selectedSections);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  if (!isHydrated) {
+    return null;
+  }
 
   // コンポーネントの設定を取得
   const sections = componentsConfig.BlogDetail.sections;
-  const defaultTemplate = sections.blogDetail.options[1].id; // BlogDetail_02をデフォルトに
-
+  
   // 選択されたテンプレートまたはデフォルトのテンプレートを使用
-  const Component = sections.blogDetail.components[defaultTemplate];
+  const selectedComponent = selectedSections.blogDetail;
+  const defaultTemplate = sections.blogDetail.options[1].id; // BlogDetail_02をデフォルトに
+  const templateToUse = selectedComponent || defaultTemplate;
+
+  const Component = sections.blogDetail.components[templateToUse];
 
   return Component
     ? React.cloneElement(Component as React.ReactElement, { params })
