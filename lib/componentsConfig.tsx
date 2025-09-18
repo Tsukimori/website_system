@@ -617,8 +617,8 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
         ],
         components: {
-          Flow_01: <Flow_01 className="bg-bgLightBlue" />,
-          Flow_02: <Flow_02 className="bg-bgLightBlue" />,
+          Flow_01: <Flow_01 className="bg-bgLight" />,
+          Flow_02: <Flow_02 className="bg-bgLight" />,
         },
       },
       cta: {

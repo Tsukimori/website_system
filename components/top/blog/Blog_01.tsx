@@ -65,7 +65,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   return (
-    <PageContent className="bg-bgLightBlue">
+    <PageContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto md:space-y-10">
         <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
@@ -87,7 +87,9 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                   {post.title}
                 </p>
                 <p className="mt-2 text-[#5f5f5f] text-xs">
-                  {post.date ? format(new Date(post.date), "yyyy/MM/dd", { locale: ja }) : ""}
+                  {post.date
+                    ? format(new Date(post.date), "yyyy/MM/dd", { locale: ja })
+                    : ""}
                 </p>
               </div>
             </div>

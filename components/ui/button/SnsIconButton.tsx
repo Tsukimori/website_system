@@ -17,11 +17,17 @@ const SnsIconButton = ({
   return (
     <Link
       href={href}
-      className={`inline-block p-[15px] ${className}`}
+      className={`w-[60px] p-[15px] ${className}`}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Image src={src} alt={alt} width={30} height={30} className="w-[30px] h-[30px]" />
+      <Image
+        src={src}
+        alt={alt}
+        width={30}
+        height={30}
+        className="w-[30px] h-[30px] object-contain"
+      />
     </Link>
   )
 }

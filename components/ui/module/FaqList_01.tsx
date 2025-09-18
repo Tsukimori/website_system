@@ -1,11 +1,11 @@
-import { useState } from "react";
-import Image from "next/image";
-import { faqData, FaqData } from "@/data/faqData";
+import { useState } from "react"
+import Image from "next/image"
+import { faqData, FaqData } from "@/data/faqData"
 
 const FaqList_01 = ({ hideTab = false }: { hideTab?: boolean }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [activeCategory, setActiveCategory] =
-    useState<keyof typeof faqData>("category1");
+    useState<keyof typeof faqData>("category1")
 
   return (
     <>
@@ -16,8 +16,8 @@ const FaqList_01 = ({ hideTab = false }: { hideTab?: boolean }) => {
             <button
               key={key}
               onClick={() => {
-                setActiveCategory(key as keyof typeof faqData);
-                setOpenIndex(null);
+                setActiveCategory(key as keyof typeof faqData)
+                setOpenIndex(null)
               }}
               className={`px-1 py-4 text-sm font-bold ${
                 activeCategory === key
@@ -36,7 +36,7 @@ const FaqList_01 = ({ hideTab = false }: { hideTab?: boolean }) => {
         {faqData[activeCategory].items.map((item, index) => (
           <div key={index} className="mb-6 last:mb-0">
             <div
-              className="flex justify-between py-6 px-10 bg-bgLightBlue cursor-pointer"
+              className="flex justify-between py-6 px-10 bg-bgLight cursor-pointer"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
               <div className="flex font-semibold text-lg">
@@ -90,7 +90,7 @@ const FaqList_01 = ({ hideTab = false }: { hideTab?: boolean }) => {
         ))}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default FaqList_01;
+export default FaqList_01
