@@ -1,52 +1,55 @@
 // components/kv/KeyVisual_01.tsx
 
-"use client";
+"use client"
 
-import FirstViewContent from "@/components/top/kv/FirstViewContent";
-import TopPageHeadline from "@/components/ui/frame/TopPageHeadline";
-import KeyVisualContent from "@/components/top/kv/KeyVisualContent";
+import FirstViewContent from "@/components/top/kv/FirstViewContent"
+import TopPageHeadline from "@/components/ui/frame/TopPageHeadline_01"
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
+import ScrollButton from "@/components/ui/button/ScrollButton"
+import MoreLinkButton from "@/components/ui/button/MoreButton"
 
 // キービジュアル
 const KeyVisual_01 = () => {
   return (
     <>
-      <FirstViewContent>
+      <FirstViewContent className="relative">
         {/* widthがフルサイズでない場合は指定する */}
-        <section>
+        <section className="relative h-screen">
           {/* KeyVisualContentに高さを指定 */}
-          <KeyVisualContent className="h-screen md:h-[810px]" />
+          <KeyVisualContent className="h-full" />
         </section>
-        <div className="relative  md:md:max-w-[1200px] mx-auto ">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-20 w-full md:max-w-[1200px] px-5">
           <TopPageHeadline
-            subtitleTop={
-              <>
-                <span>Optimal SolutionSolution</span>
-                <br />
-                <span>For your Company</span>
-              </>
-            }
             mainTitle={
               <>
-                <span>
-                  常にベストな
-                  <br className="block md:hidden" />
-                  決断を
+                <span className=" block text-[35px] md:text-[50px] leading-normal w-full md:w-[600px]">
+                  日本語見出し文日本語見出し文はいります
                 </span>
               </>
             }
-            subtitleBottom={
+            subtitleTop={
               <>
-                1,000社以上の実績で御社の決算も安心して
-                <br className="block md:hidden" />
-                お任せください
+                <span>Lorem Ipsum</span>
+                <br />
+                <span>Lorem Ipsum</span>
               </>
             }
-            className="absolute left-0 bottom-56 md:bottom-64 text-white text-left"
+            description={
+              <>
+                <span className="block  md:w-[600px]">
+                  日本語見出し文日本語見出し文はいります日本語見出し文日本語見出し文はいります日本語見出し文日本語見出し文はいります
+                </span>
+              </>
+            }
+            className="  text-white "
           />
+          <div className="mt-[58px]">
+            <ScrollButton color="white" />
+          </div>
         </div>
       </FirstViewContent>
     </>
-  );
-};
+  )
+}
 
-export default KeyVisual_01;
+export default KeyVisual_01
