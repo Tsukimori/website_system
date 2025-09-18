@@ -20,8 +20,8 @@ const KeyVisual_02 = () => {
     <>
       <FirstViewContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <div className="max-w-[1300px] mx-auto pt-20 px-5">
-          <div className=" flex justify-between items-end">
+        <div className="max-w-[1340px] mx-auto pt-40 px-5">
+          <div className=" md:flex justify-between items-end">
             <TopPageHeadline
               mainTitle={
                 <>
@@ -32,7 +32,7 @@ const KeyVisual_02 = () => {
               }
               description="日本語のテキストが入ります。"
             />
-            <div className="">
+            <div className="mt-10">
               <ScrollButton />
             </div>
           </div>

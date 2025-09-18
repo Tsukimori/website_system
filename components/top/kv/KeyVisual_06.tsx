@@ -22,11 +22,11 @@ const KeyVisual_06 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-screen md:h-[810px]" />
         </section>
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-20 w-full md:max-w-[1200px] px-5">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[120px] w-full md:max-w-[1240px] px-4 flex justify-end">
           <TopPageHeadline
-            mainTitle={<>Create the <br />next stage.</>}
-            description="企業と働く人。ステップアップのループへ。"
-            className="w-full text-white text-right absolute right-0 bottom-[120px]"
+            mainTitle={<>Lorem Ipsum Lorem Ipsum</>}
+            description="日本語見出し文日本語見出し文はいります"
+            className="text-white text-right"
           />
         </div>
       </FirstViewContent>

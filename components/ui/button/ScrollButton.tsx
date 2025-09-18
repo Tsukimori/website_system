@@ -28,8 +28,8 @@ const ScrollButton: React.FC<ScrollButtonProps> = ({
       <div onClick={handleClick} className="cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="105"
-          height="100"
+          width="80"
+          height="77"
           viewBox="0 0 105 100"
           fill="none"
         >

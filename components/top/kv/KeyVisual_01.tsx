@@ -18,11 +18,11 @@ const KeyVisual_01 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-full" />
         </section>
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-20 w-full md:max-w-[1200px] px-5">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-20 w-full md:max-w-[1200px] px-4">
           <TopPageHeadline
             mainTitle={
               <>
-                <span className=" block text-[35px] md:text-[50px] leading-normal w-full md:w-[600px]">
+                <span className="">
                   日本語見出し文日本語見出し文はいります
                 </span>
               </>
@@ -36,7 +36,7 @@ const KeyVisual_01 = () => {
             }
             description={
               <>
-                <span className="block  md:w-[600px]">
+                <span className="">
                   日本語見出し文日本語見出し文はいります日本語見出し文日本語見出し文はいります日本語見出し文日本語見出し文はいります
                 </span>
               </>
