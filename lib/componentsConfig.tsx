@@ -54,8 +54,9 @@ import Faq_01 from "@/components/top/faq/Faq_01"
 import Faq_02 from "@/components/top/faq/Faq_02"
 import Profile_01 from "@/components/top/profile/Profile_01"
 import Profile_02 from "@/components/top/profile/Profile_02"
-import Profile_03 from "@/components/top/profile/profile_03"
-import Profile_04 from "@/components/top/profile/profile_04"
+import Profile_03 from "@/components/top/profile/Profile_03"
+import Profile_04 from "@/components/top/profile/Profile_04"
+import Profile_05 from "@/components/top/profile/Profile_05"
 import Flow_01 from "@/components/top/flow/Flow_01"
 import Flow_02 from "@/components/top/flow/Flow_02"
 import Cta_01 from "@/components/ui/module/cta/Cta_01"
@@ -349,12 +350,14 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Profile_02", src: "/admin/2.png", alt: "Profile_02" },
           { id: "Profile_03", src: "/admin/3.png", alt: "Profile_03" },
           { id: "Profile_04", src: "/admin/4.png", alt: "Profile_04" },
+          { id: "Profile_05", src: "/admin/5.png", alt: "Profile_05" },
         ],
         components: {
           Profile_01: <Profile_01 />,
           Profile_02: <Profile_02 />,
           Profile_03: <Profile_03 />,
           Profile_04: <Profile_04 />,
+          Profile_05: <Profile_05 />,
         },
       },
       cta: {
