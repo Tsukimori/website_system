@@ -54,9 +54,7 @@ const ServiceSection_02 = ({
         <Image
           src={imageUrl || "/service/service2.jpg"}
           alt={jaTitle || "message"}
-          layout="fill"
-          objectFit="cover"
-          className="block w-full h-full rounded-[15px]"
+          className="object-cover w-full h-full rounded-[15px]"
         />
       </div>
     </div>

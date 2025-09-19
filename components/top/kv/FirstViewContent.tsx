@@ -13,7 +13,14 @@ const FirstViewContent: React.FC<FirstViewContentProps> = ({
   className,
 }) => {
   return (
-    <div className={classNames("w-full ", className)}>{children}</div>
+    <div
+      className={classNames(
+        "w-full ",
+        className
+      )}
+    >
+      {children}
+    </div>
   )
 }
 

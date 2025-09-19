@@ -55,9 +55,8 @@ const AboutSection_04 = ({
         <Image
           src={imageUrl || "/top/message/message_img.png"}
           alt={name || "message"}
-          layout="fill"
-          objectFit="cover"
-          className="block"
+          fill
+          className="object-cover"
         />
       </div>
     </div>

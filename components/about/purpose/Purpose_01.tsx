@@ -1,11 +1,11 @@
 // components/message/Purpose_01.tsx
 
-"use client";
+"use client"
 
-import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import SectionContent from "@/components/ui/frame/SectionContent";
-import Image from "next/image";
-import PurposeCard from "@/components/ui/ItemCard/PurposeCard";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import SectionContent from "@/components/ui/frame/SectionContent"
+import Image from "next/image"
+import PurposeCard from "@/components/ui/ItemCard/PurposeCard"
 
 const Purpose_01 = () => {
   const purposeData = {
@@ -51,7 +51,7 @@ const Purpose_01 = () => {
         },
       ],
     },
-  };
+  }
 
   return (
     <SectionContent>
@@ -71,14 +71,13 @@ const Purpose_01 = () => {
           <Image
             src="/about/purpose.jpg"
             alt="message"
-            layout="fill"
-            objectFit="cover"
-            className="block"
+            fill
+            className="object-cover"
           />
         </div>
       </section>
     </SectionContent>
-  );
-};
+  )
+}
 
-export default Purpose_01;
+export default Purpose_01

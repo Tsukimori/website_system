@@ -1,53 +1,53 @@
-"use client";
+"use client"
 
-import { useStore } from "@/store/useStore";
-import { Download, Upload, Trash2 } from "lucide-react";
-import Link from "next/link";
+import { useStore } from "@/store/useStore"
+import { Download, Upload, Trash2 } from "lucide-react"
+import Link from "next/link"
 
 // ナビゲーション
 const Navigation = () => {
-  const selectedSections = useStore((state) => state.selectedSections);
-  const clearSections = useStore((state) => state.clearSections);
-  const importSections = useStore((state) => state.importSections);
+  const selectedSections = useStore((state) => state.selectedSections)
+  const clearSections = useStore((state) => state.clearSections)
+  const importSections = useStore((state) => state.importSections)
 
   // エクスポート: JSONデータとして状態をエクスポートする
   const handleExport = () => {
-    const dataStr = JSON.stringify(selectedSections);
+    const dataStr = JSON.stringify(selectedSections)
     const dataUri =
-      "data:application/json;charset=utf-8," + encodeURIComponent(dataStr);
-    const exportFileDefaultName = "デザイン.json";
-    const linkElement = document.createElement("a");
+      "data:application/json;charset=utf-8," + encodeURIComponent(dataStr)
+    const exportFileDefaultName = "デザイン.json"
+    const linkElement = document.createElement("a")
 
-    linkElement.setAttribute("href", dataUri);
-    linkElement.setAttribute("download", exportFileDefaultName);
-    linkElement.click();
-  };
+    linkElement.setAttribute("href", dataUri)
+    linkElement.setAttribute("download", exportFileDefaultName)
+    linkElement.click()
+  }
 
   // インポート: JSONファイルをインポートし、状態を更新する
   const handleImport = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const fileReader = new FileReader();
+    const fileReader = new FileReader()
 
     if (event.target.files && event.target.files.length > 0) {
-      const file = event.target.files[0];
+      const file = event.target.files[0]
 
       fileReader.onload = (e) => {
         if (e.target && typeof e.target.result === "string") {
           try {
-            const importedData = JSON.parse(e.target.result);
-            importSections(importedData);
-            event.target.value = "";
+            const importedData = JSON.parse(e.target.result)
+            importSections(importedData)
+            event.target.value = ""
           } catch (error) {
-            console.error("Invalid JSON format:", error);
+            console.error("Invalid JSON format:", error)
           }
         }
-      };
-      fileReader.readAsText(file);
+      }
+      fileReader.readAsText(file)
     }
-  };
+  }
 
   return (
-    <div className="border-b h-12 fixed z-50 bg-gray-50 w-full text-sm">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between h-full px-4">
+    <div className="border-b h-12 fixed z-50 bg-gray-50 w-full text-xs">
+      <div className="flex items-center justify-between h-full px-4">
         <div className="flex items-center space-x-4">
           <Link href="/admin">
             <div>ホーム</div>
@@ -57,6 +57,18 @@ const Navigation = () => {
           </Link>
           <Link href="/admin/blog/blogDetail">
             <div>記事詳細</div>
+          </Link>
+          <Link href="/admin/case">
+            <div>事例一覧</div>
+          </Link>
+          <Link href="/admin/case/caseDetail">
+            <div>事例詳細</div>
+          </Link>
+          <Link href="/admin/news">
+            <div>News一覧</div>
+          </Link>
+          <Link href="/admin/news/newsDetail">
+            <div>News詳細</div>
           </Link>
           <Link href="/admin/about">
             <div>私たちについて</div>
@@ -108,7 +120,7 @@ const Navigation = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

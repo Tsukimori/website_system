@@ -1,11 +1,11 @@
 // components/message/Message_01.tsx
 
-"use client";
+"use client"
 
-import MoreLinkButton from "@/components/ui/button/MoreButton";
-import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
-import Image from "next/image";
+import MoreLinkButton from "@/components/ui/button/MoreButton"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import PageContent from "@/components/ui/frame/PageContent"
+import Image from "next/image"
 
 // メッセージ
 const Message_01 = () => {
@@ -33,14 +33,13 @@ const Message_01 = () => {
           <Image
             src="/top/message/message_img.png"
             alt="message"
-            layout="fill" // 画像のサイズは親要素にフィット
-            objectFit="cover" // 画像を親要素に合わせてトリミング
-            className="block"
+            fill
+            className="object-cover"
           />
         </section>
       </PageContent>
     </>
-  );
-};
+  )
+}
 
-export default Message_01;
+export default Message_01

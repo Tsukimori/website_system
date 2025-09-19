@@ -54,9 +54,8 @@ import Faq_01 from "@/components/top/faq/Faq_01"
 import Faq_02 from "@/components/top/faq/Faq_02"
 import Profile_01 from "@/components/top/profile/Profile_01"
 import Profile_02 from "@/components/top/profile/Profile_02"
-import Profile_03 from "@/components/top/profile/Profile_03"
-import Profile_04 from "@/components/top/profile/Profile_04"
-import Profile_05 from "@/components/top/profile/Profile_05"
+import Profile_03 from "@/components/top/profile/profile_03"
+import Profile_04 from "@/components/top/profile/profile_04"
 import Flow_01 from "@/components/top/flow/Flow_01"
 import Flow_02 from "@/components/top/flow/Flow_02"
 import Cta_01 from "@/components/ui/module/cta/Cta_01"
@@ -106,6 +105,16 @@ import LowerBlog_02 from "@/components/blog/blog/Blog_02"
 import LowerBlog_03 from "@/components/blog/blog/Blog_03"
 import BlogDetail_01 from "@/components/blog/blogDetail/BlogDetail_01"
 import BlogDetail_02 from "@/components/blog/blogDetail/BlogDetail_02"
+import LowerCase_01 from "@/components/case/case/LowerCase_01"
+import LowerCase_02 from "@/components/case/case/LowerCase_02"
+import LowerCase_03 from "@/components/case/case/LowerCase_03"
+import CaseDetail_01 from "@/components/case/caseDetail/CaseDetail_01"
+import CaseDetail_02 from "@/components/case/caseDetail/CaseDetail_02"
+import LowerNews_01 from "@/components/news/news/LowerNews_01"
+import LowerNews_02 from "@/components/news/news/LowerNews_02"
+import LowerNews_03 from "@/components/news/news/LowerNews_03"
+import NewsDetail_01 from "@/components/news/newsDetail/NewsDetail_01"
+import NewsDetail_02 from "@/components/news/newsDetail/NewsDetail_02"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -1092,6 +1101,204 @@ export const componentsConfig: ComponentsConfig = {
         components: {
           BlogDetail_01: <BlogDetail_01 params={{ id: "" }} />,
           BlogDetail_02: <BlogDetail_02 params={{ id: "" }} />,
+        },
+      },
+      footer: {
+        title: "フッター",
+        options: [
+          { id: "Footer1", src: "/admin/1.png", alt: "Footer1" },
+          { id: "Footer2", src: "/admin/2.png", alt: "Footer2" },
+        ],
+        components: {
+          Footer1: <Footer1 />,
+          Footer2: <Footer2 />,
+        },
+      },
+    },
+  },
+  Case: {
+    sections: {
+      header: {
+        title: "ヘッダー",
+        options: [
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+        ],
+        components: {
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
+        },
+      },
+      lowerkv: {
+        title: "下層キービジュアル",
+        options: [
+          { id: "Lowerkv_01", src: "/admin/1.png", alt: "Lowerkv_01" },
+          { id: "Lowerkv_02", src: "/admin/2.png", alt: "Lowerkv_02" },
+          { id: "Lowerkv_03", src: "/admin/3.png", alt: "Lowerkv_03" },
+          { id: "Lowerkv_04", src: "/admin/4.png", alt: "Lowerkv_04" },
+        ],
+        components: {
+          Lowerkv_01: <Lowerkv_01 />,
+          Lowerkv_02: <Lowerkv_02 />,
+          Lowerkv_03: <Lowerkv_03 />,
+          Lowerkv_04: <Lowerkv_04 />,
+        },
+      },
+      case: {
+        title: "事例一覧",
+        options: [
+          { id: "LowerCase_01", src: "/admin/1.png", alt: "LowerCase_01" },
+          { id: "LowerCase_02", src: "/admin/2.png", alt: "LowerCase_02" },
+          { id: "LowerCase_03", src: "/admin/3.png", alt: "LowerCase_03" },
+        ],
+        components: {
+          LowerCase_01: <LowerCase_01 />,
+          LowerCase_02: <LowerCase_02 />,
+          LowerCase_03: <LowerCase_03 />,
+        },
+      },
+      footer: {
+        title: "フッター",
+        options: [
+          { id: "Footer1", src: "/admin/1.png", alt: "Footer1" },
+          { id: "Footer2", src: "/admin/2.png", alt: "Footer2" },
+        ],
+        components: {
+          Footer1: <Footer1 />,
+          Footer2: <Footer2 />,
+        },
+      },
+    },
+  },
+  News: {
+    sections: {
+      header: {
+        title: "ヘッダー",
+        options: [
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+        ],
+        components: {
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
+        },
+      },
+      lowerkv: {
+        title: "下層キービジュアル",
+        options: [
+          { id: "Lowerkv_01", src: "/admin/1.png", alt: "Lowerkv_01" },
+          { id: "Lowerkv_02", src: "/admin/2.png", alt: "Lowerkv_02" },
+          { id: "Lowerkv_03", src: "/admin/3.png", alt: "Lowerkv_03" },
+          { id: "Lowerkv_04", src: "/admin/4.png", alt: "Lowerkv_04" },
+        ],
+        components: {
+          Lowerkv_01: <Lowerkv_01 />,
+          Lowerkv_02: <Lowerkv_02 />,
+          Lowerkv_03: <Lowerkv_03 />,
+          Lowerkv_04: <Lowerkv_04 />,
+        },
+      },
+      news: {
+        title: "お知らせ一覧",
+        options: [
+          { id: "LowerNews_01", src: "/admin/1.png", alt: "LowerNews_01" },
+          { id: "LowerNews_02", src: "/admin/2.png", alt: "LowerNews_02" },
+          { id: "LowerNews_03", src: "/admin/3.png", alt: "LowerNews_03" },
+        ],
+        components: {
+          LowerNews_01: <LowerNews_01 />,
+          LowerNews_02: <LowerNews_02 />,
+          LowerNews_03: <LowerNews_03 />,
+        },
+      },
+      footer: {
+        title: "フッター",
+        options: [
+          { id: "Footer1", src: "/admin/1.png", alt: "Footer1" },
+          { id: "Footer2", src: "/admin/2.png", alt: "Footer2" },
+        ],
+        components: {
+          Footer1: <Footer1 />,
+          Footer2: <Footer2 />,
+        },
+      },
+    },
+  },
+  CaseDetail: {
+    sections: {
+      header: {
+        title: "ヘッダー",
+        options: [
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+        ],
+        components: {
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
+        },
+      },
+      caseDetail: {
+        title: "事例詳細",
+        options: [
+          { id: "CaseDetail_01", src: "/admin/1.png", alt: "CaseDetail_01" },
+          { id: "CaseDetail_02", src: "/admin/2.png", alt: "CaseDetail_02" },
+        ],
+        components: {
+          CaseDetail_01: <CaseDetail_01 params={{ id: "" }} />,
+          CaseDetail_02: <CaseDetail_02 params={{ id: "" }} />,
+        },
+      },
+      footer: {
+        title: "フッター",
+        options: [
+          { id: "Footer1", src: "/admin/1.png", alt: "Footer1" },
+          { id: "Footer2", src: "/admin/2.png", alt: "Footer2" },
+        ],
+        components: {
+          Footer1: <Footer1 />,
+          Footer2: <Footer2 />,
+        },
+      },
+    },
+  },
+  NewsDetail: {
+    sections: {
+      header: {
+        title: "ヘッダー",
+        options: [
+          { id: "Header_01", src: "/admin/1.png", alt: "Header_01" },
+          { id: "Header_02", src: "/admin/2.png", alt: "Header_02" },
+          { id: "Header_03", src: "/admin/3.png", alt: "Header_03" },
+          { id: "Header_04", src: "/admin/4.png", alt: "Header_04" },
+        ],
+        components: {
+          Header_01: <Header_01 />,
+          Header_02: <Header_02 />,
+          Header_03: <Header_03 />,
+          Header_04: <Header_04 />,
+        },
+      },
+      newsDetail: {
+        title: "お知らせ詳細",
+        options: [
+          { id: "NewsDetail_01", src: "/admin/1.png", alt: "NewsDetail_01" },
+          { id: "NewsDetail_02", src: "/admin/2.png", alt: "NewsDetail_02" },
+        ],
+        components: {
+          NewsDetail_01: <NewsDetail_01 params={{ id: "" }} />,
+          NewsDetail_02: <NewsDetail_02 params={{ id: "" }} />,
         },
       },
       footer: {

@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import Image from "next/image";
+import Image from "next/image"
 
 // 私たちについて
 const Lowerkv_04 = () => {
@@ -16,14 +16,16 @@ const Lowerkv_04 = () => {
       </div>
 
       <div className="mt-10 md:mt-[120px] ">
-        <img
+        <Image
           src="/common/lowerkv.jpg"
           alt="キービジュアル"
+          width={1440}
+          height={600}
           className="w-full h-full object-cover aspect-[1440/600]"
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Lowerkv_04;
+export default Lowerkv_04

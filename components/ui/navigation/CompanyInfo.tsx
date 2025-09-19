@@ -6,7 +6,7 @@ export const CompanyInfo = [
       <Image
         src={
           type === "primary"
-            ? "/common/logo_wh.svg" // 1つ目のロゴパス（白色ロゴ）
+            ? "/common/logo_header.svg" // 1つ目のロゴパス（白色ロゴ）
             : type === "secondary"
             ? "/common/logo_bk.svg" // 2つ目のロゴパス（黒色ロゴ）
             : "/common/logo.svg" // 3つ目のロゴパス（テキストなし）
@@ -18,7 +18,7 @@ export const CompanyInfo = [
       />
     ),
     companyPostalCode: "107-0062",
-    companyAddress: "東京都港区南青山4-17-33グランカーサ南青山2F",
+    companyAddress: "東京都葛飾区青戸7-30-1-305号",
     companyTel: "03-6455-5380",
     companyTelHref: "tel:0364555380",
     companyEmail: "info@company.co.jp",

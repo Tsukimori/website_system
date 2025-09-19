@@ -5,13 +5,17 @@ import { useEffect, useState } from "react";
 import { useStore } from "@/store/useStore";
 import { componentsConfig } from "@/lib/componentsConfig";
 
-interface BlogDetailProps {
-  params: {
-    id: string;
-  };
+interface BlogDetailPageProps {
+  params: Promise<{ id: string }>
 }
 
-export default function BlogDetail({ params }: BlogDetailProps) {
+const BlogDetailPage = async ({ params }: BlogDetailPageProps) => {
+  const { id } = await params
+
+  return <BlogDetailClient id={id} />
+}
+
+function BlogDetailClient({ id }: { id: string }) {
   const [isHydrated, setIsHydrated] = useState(false);
   const selectedSections = useStore((state) => state.selectedSections);
 
@@ -34,6 +38,10 @@ export default function BlogDetail({ params }: BlogDetailProps) {
   const Component = sections.blogDetail.components[templateToUse];
 
   return Component
-    ? React.cloneElement(Component as React.ReactElement, { params })
-    : null;
+    ? React.cloneElement(Component as React.ReactElement, {
+        params: { id },
+      })
+    : null
 }
+
+export default BlogDetailPage

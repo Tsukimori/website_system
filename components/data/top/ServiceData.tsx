@@ -2,34 +2,34 @@ export const serviceData = [
     {
       id: 1,
       subTitle: "Service 01",
-      title: "Cloud Plan",
-      description: "クラウド会計の利用を前提としたプラン。やり取りは、原則としてメールや電話などになります。",
+      title: "コンサルティング事業",
+      description: "見出しテキストはいります。見出しテキストはいります。見出しテキストはいります。見出しテキストはいります。見出しテキストはいります。見出しテキストはいります。",
       image: "/top/service/service_img_01.png",
       href: "/service/1", // リンク先を追加
     },
     {
       id: 2,
       subTitle: "Service 02",
-      title: "Meeting Plan",
-      description: "毎月お会いして打ち合わせ。節税やフローの見直しを検討されている場合にお勧め",
+      title: "就職支援事業",
+      description: "就職支援事業は、求職者（学生・既卒者・転職希望者・留学生等）の就労支援を通じて、キャリア形成・社会的自立・人材流動性の促進を目的としています。",
       image: "/top/service/service_img_02.png",
       href: "/service/2",
     },
     {
       id: 3,
       subTitle: "Service 03",
-      title: "Full Plan",
-      description: "経理に関するすべての業務おまかせ。労力や時間を合理化",
+      title: "貿易事業",
+      description: "日本国内外の商材・製品・サービスの流通をグローバルに展開し、企業の収益拡大と国際競争力の向上を図ります！",
       image: "/top/service/service_img_03.png",
       href: "/service/3",
     },
-    {
-      id: 4,
-      subTitle: "Service 04",
-      title: "Custom Plan",
-      description: "ニーズをヒアリングのうえ、御社だけのPlanをカスタマイズ",
-      image: "/top/service/service_img_04.png",
-      href: "/service/3",
-    },
+    // {
+    //   id: 4,
+    //   subTitle: "Service 04",
+    //   title: "Custom Plan",
+    //   description: "ニーズをヒアリングのうえ、御社だけのPlanをカスタマイズ",
+    //   image: "/top/service/service_img_04.png",
+    //   href: "/service/3",
+    // },
     
   ]
