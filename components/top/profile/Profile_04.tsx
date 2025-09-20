@@ -1,4 +1,4 @@
-// components/profile/Profile_01.tsx
+// components/profile/Profile_04.tsx
 "use client"
 
 import { useState, useEffect } from "react"
@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
-import ProfileCard from "@/components/ui/ItemCard/ProfileCard"
+import ProfileCard from "@/components/ui/ItemCard/ProfileCard_01"
 
 const Profile_04 = () => {
   return (
