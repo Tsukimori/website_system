@@ -1,10 +1,10 @@
-import { useState } from "react";
-import Image from "next/image";
-import { faqData, FaqData } from "@/data/faqData";
+import { useState } from "react"
+import Image from "next/image"
+import { faqData, FaqData } from "@/data/faqData"
 
 const FaqList_02 = ({ hideTab = false }: { hideTab?: boolean }) => {
   const [activeCategory, setActiveCategory] =
-    useState<keyof typeof faqData>("category1");
+    useState<keyof typeof faqData>("category1")
 
   return (
     <>
@@ -15,7 +15,7 @@ const FaqList_02 = ({ hideTab = false }: { hideTab?: boolean }) => {
             <button
               key={key}
               onClick={() => {
-                setActiveCategory(key as keyof typeof faqData);
+                setActiveCategory(key as keyof typeof faqData)
               }}
               className={`px-1 py-4 text-sm font-bold ${
                 activeCategory === key
@@ -43,7 +43,7 @@ const FaqList_02 = ({ hideTab = false }: { hideTab?: boolean }) => {
               />
               {item.question}
             </div>
-            <div className="flex flex-col py-10 px-6 font-light bg-bgLightBlue rounded-b-lg">
+            <div className="flex flex-col py-10 px-6 font-light bg-bgLight rounded-b-lg">
               <div className="flex items-center">
                 <Image
                   src="/common/answer-red.svg"
@@ -62,7 +62,7 @@ const FaqList_02 = ({ hideTab = false }: { hideTab?: boolean }) => {
         ))}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default FaqList_02;
+export default FaqList_02

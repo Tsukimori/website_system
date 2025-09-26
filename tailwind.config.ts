@@ -31,7 +31,7 @@ const config = {
         baseColor: "#393939",
         borderGray: "#393939",
         bgBlack: "#333333",
-        bgLightBlue: "#f7fcff",
+        bgLight: "#f7fcff",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

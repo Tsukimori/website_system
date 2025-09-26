@@ -80,7 +80,7 @@ const BlogDetail_02 = ({ params }: BlogDetailProps) => {
 
   if (loading) {
     return (
-      <div className="bg-bgLightBlue pb-24">
+      <div className="bg-bgLight pb-24">
         <div className="max-w-[1200px] mx-auto pt-24 px-3">
           <div className="text-center">
             <p>読み込み中...</p>
@@ -92,7 +92,7 @@ const BlogDetail_02 = ({ params }: BlogDetailProps) => {
 
   if (error || !post) {
     return (
-      <div className="bg-bgLightBlue pb-24">
+      <div className="bg-bgLight pb-24">
         <div className="max-w-[1200px] mx-auto pt-24 px-3">
           <div className="text-center">
             <p>{error || "記事が見つかりませんでした"}</p>
@@ -103,7 +103,7 @@ const BlogDetail_02 = ({ params }: BlogDetailProps) => {
   }
 
   return (
-    <div className="bg-bgLightBlue pb-24">
+    <div className="bg-bgLight pb-24">
       {post.image && (
         <div className="w-full h-[40vh] max-h-[480px] relative">
           <Image

@@ -11,7 +11,7 @@ import ProfileCard from "@/components/ui/ItemCard/ProfileCard_01"
 const Profile_02 = () => {
   return (
     <>
-      <PageContent className="bg-bgLightBlue">
+      <PageContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
             enTitle="Profile"

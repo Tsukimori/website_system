@@ -64,7 +64,7 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   return (
-    <PageContent className="bg-bgLightBlue">
+    <PageContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto">
         <ContentHeadline enTitle="News" mainTitle="お知らせ" />
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">

@@ -7,7 +7,7 @@ interface SectionContentProps {
   children: ReactNode
   className?: string
   style?: React.CSSProperties
-  variant?: "default" | "dot"
+  variant?: "default" | "dot" | "light"
   id?: string
 }
 
@@ -27,6 +27,12 @@ const SectionContent: React.FC<SectionContentProps> = ({
           "radial-gradient(circle, #ffffff0d 1.5px, transparent 1.5px), radial-gradient(circle, #ffffff0d 1.5px, transparent 1.5px)",
         backgroundPosition: "0 0, 5px 10px",
         backgroundSize: "10px 20px",
+        ...style,
+      }
+    }
+    if (variant === "light") {
+      return {
+        backgroundColor: "#f7fcff",
         ...style,
       }
     }

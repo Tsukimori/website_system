@@ -15,7 +15,9 @@ interface BlogProps {
 const Blog_03 = ({ limit = 3 }: BlogProps) => {
   const [allContents, setAllContents] = useState<Cms[]>([])
   const [displayContents, setDisplayContents] = useState<Cms[]>([])
-  const [categories, setCategories] = useState<{ id: string; name: string }[]>([])
+  const [categories, setCategories] = useState<{ id: string; name: string }[]>(
+    []
+  )
   const [loading, setLoading] = useState(true)
   const [activeCategory, setActiveCategory] = useState("all")
 
@@ -71,7 +73,7 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
   }, [activeCategory, allContents, limit])
 
   return (
-    <PageContent className="bg-bgLightBlue">
+    <PageContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto">
         {/* カテゴリボタン */}
         <div className="flex flex-wrap justify-start md:justify-center gap-x-5 md:gap-20 rounded-full bg-white mx-auto px-5 md:px-20 w-fit">
