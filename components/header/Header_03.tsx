@@ -23,7 +23,7 @@ const Header_03 = () => {
     <header className=" md:border-r border-black w-full md:w-32 h-20 md:h-screen text-[#393939] tracking-wide py-6 bg-white fixed z-10 px-4 md:px-0 ">
       <div className="h-full flex md:flex-col items-center justify-between ">
         <div className="flex items-center">
-          <Link href="/" className="text-center ">
+          <Link href="/" className="text-center w-[60px] md:w-[100px]">
             {CompanyInfo[0].companyName("tertiary")}
           </Link>
         </div>

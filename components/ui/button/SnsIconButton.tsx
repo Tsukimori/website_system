@@ -21,7 +21,9 @@ const SnsIconButton = ({
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Image src={src} alt={alt} width={30} height={30} className="w-[30px] h-[30px]" />
+      <div className="relative w-[30px] h-[30px]">
+        <Image src={src} alt={alt} fill className="object-contain" />
+      </div>
     </Link>
   )
 }

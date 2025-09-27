@@ -22,25 +22,22 @@ const Header_02 = () => {
   const { companyName } = CompanyInfo[0]
 
   return (
-    <div className="h-[80px]">
-      <HeaderContent className="border-b border-borderGray">
-        <div className="flex items-center space-x-5  md:space-x-10">
-          <Link href="/" className="w-[60px] md:w-[200px]">
-            <div className="block md:hidden">
-              {CompanyInfo[0].companyName("tertiary")} {/* SP用ロゴ */}
-            </div>
-            <div className="hidden md:block">
-              {CompanyInfo[0].companyName("secondary")} {/* PC用ロゴ */}
-            </div>
-          </Link>
-        </div>
-
+    <HeaderContent className="border-b border-borderGray">
+      <div className="w-full flex items-center space-x-5  md:space-x-10 justify-between px-5 md:pl-10 md:pr-0 ">
+        <Link href="/" className="w-[150px] md:w-[200px]">
+          <div className="block md:hidden">
+            {CompanyInfo[0].companyName("primary")} {/* SP用ロゴ */}
+          </div>
+          <div className="hidden md:block">
+            {CompanyInfo[0].companyName("primary")} {/* PC用ロゴ */}
+          </div>
+        </Link>
         <div className="flex items-center space-x-3 md:space-x-10">
           <ul className="flex items-center justify-end font-semibold  space-x-2 md:space-x-0">
             {Sns.map((item, index) => (
               <li
                 key={index}
-                className="w-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
+                className="w-9 h-9 md:w-[60px] md:h-[60px] flex items-center justify-center"
               >
                 <Link href={item.href}>
                   <Image
@@ -67,10 +64,11 @@ const Header_02 = () => {
             />
           </div>
         </div>
-        {/* ハンバーガーメニューの表示 */}
-        <HamburgerMenu isOpen={MenuOpen} toggleMenu={toggleMenu} />
-      </HeaderContent>
-    </div>
+      </div>
+
+      {/* ハンバーガーメニューの表示 */}
+      <HamburgerMenu isOpen={MenuOpen} toggleMenu={toggleMenu} />
+    </HeaderContent>
   )
 }
 
