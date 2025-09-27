@@ -8,10 +8,10 @@ import Link from "next/link";
 // import { microcms } from "@/lib/microcms";
 import { Cms } from "@/types";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
 import MoreButton from "@/components/ui/button/MoreButton";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { blogsFetch } from "@/lib/api/blogsFetch";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 interface BlogProps {
   limit?: number;
@@ -67,7 +67,7 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>;
 
   return (
-    <PageContent>
+    <SectionContent>
       <section className="md:max-w-[1200px] mx-auto space-y-10">
         <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
 
@@ -106,7 +106,7 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   );
 };
 

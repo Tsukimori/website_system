@@ -3,13 +3,13 @@
 "use client";
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
 import FaqList_02 from "@/components/ui/module/FaqList_02";
 import MoreButton from "@/components/ui/button/MoreButton";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 const Faq_02 = () => {
   return (
-    <PageContent className="bg-white">
+    <SectionContent className="bg-white">
       <section className="md:max-w-[1200px] mx-auto">
         <ContentHeadline
           enTitle="FAQ"
@@ -22,7 +22,7 @@ const Faq_02 = () => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   );
 };
 

@@ -2,7 +2,6 @@
 "use client"
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import ServiceCard from "@/components/ui/ItemCard/ServiceCard_02"
 import { serviceData } from "@/components/data/top/ServiceData"
 import Image from "next/image"

@@ -7,9 +7,9 @@ import Image from "next/image";
 // import { microcms } from "@/lib/microcms";
 import { Cms } from "@/types";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
 import MoreButton from "@/components/ui/button/MoreButton";
 import { casesFetch } from "@/lib/api/casesFetch";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 interface CaseProps {
   limit?: number;
@@ -66,7 +66,7 @@ const Case_05 = ({ limit = 6 }: CaseProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>;
 
   return (
-    <PageContent>
+    <SectionContent>
       <section className="md:max-w-[1200px] mx-auto">
         <div className="md:w-[300px]">
           <ContentHeadline enTitle="Case study" mainTitle="導入事例" />
@@ -98,7 +98,7 @@ const Case_05 = ({ limit = 6 }: CaseProps) => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   );
 };
 

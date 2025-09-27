@@ -5,12 +5,12 @@ import { useState, useEffect } from "react"
 // import { microcms } from "@/lib/microcms"
 import { Cms } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import Image from "next/image"
 import { blogsFetch } from "@/lib/api/blogsFetch"
 import { format } from "date-fns"
 import { ja } from "date-fns/locale"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface BlogProps {
   limit?: number
@@ -65,7 +65,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   return (
-    <PageContent className="bg-bgLight">
+    <SectionContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto md:space-y-10">
         <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
@@ -99,7 +99,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   )
 }
 

@@ -5,15 +5,15 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import PlanCard from "@/components/ui/ItemCard/PlanCard_03"
 import PlanOption from "@/components/ui/module/PlanOption"
 import PlanList from "@/components/ui/ItemCard/PlanList_03"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Plan_03 = () => {
   return (
     <>
-      <PageContent className="bg-bgLight">
+      <SectionContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
             enTitle="Plan"
@@ -33,7 +33,7 @@ const Plan_03 = () => {
           </div>
         </section>
         <PlanOption />
-      </PageContent>
+      </SectionContent>
     </>
   )
 }

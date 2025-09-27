@@ -2,10 +2,10 @@
 "use client";
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
 import ServiceCard from "@/components/ui/ItemCard/ServiceCard_01";
 import { serviceData } from "@/components/data/top/ServiceData";
 import MoreLinkButton from "@/components/ui/button/MoreButton";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 const Service_04 = () => {
   // 表示するサービス数をserviceDataのIDを指定して表示
@@ -18,7 +18,7 @@ const Service_04 = () => {
 
   return (
     <>
-      <PageContent>
+      <SectionContent>
         <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadline
             enTitle="Service"
@@ -50,7 +50,7 @@ const Service_04 = () => {
             />
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   );
 };

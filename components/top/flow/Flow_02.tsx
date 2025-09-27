@@ -5,13 +5,13 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import FlowCard from "@/components/ui/ItemCard/FlowCard_02"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Flow_02 = ({ className = "" }) => {
   return (
     <>
-      <PageContent className={className}>
+      <SectionContent className={className}>
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
             enTitle="Flow"
@@ -42,7 +42,7 @@ const Flow_02 = ({ className = "" }) => {
             />
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   )
 }

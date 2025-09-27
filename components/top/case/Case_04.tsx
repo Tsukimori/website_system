@@ -7,10 +7,10 @@ import Image from "next/image";
 // import { microcms } from "@/lib/microcms";
 import { Cms } from "@/types";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
 import MoreButton from "@/components/ui/button/MoreButton";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { casesFetch } from "@/lib/api/casesFetch";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 interface CaseProps {
   limit?: number;
@@ -67,7 +67,7 @@ const Case_04 = ({ limit = 3 }: CaseProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>;
 
   return (
-    <PageContent>
+    <SectionContent>
       <section className="md:max-w-[1200px] mx-auto md:flex justify-between">
         <div className="md:w-[300px]">
           <ContentHeadline enTitle="Case study" mainTitle="導入事例" />
@@ -106,7 +106,7 @@ const Case_04 = ({ limit = 3 }: CaseProps) => {
           ))}
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   );
 };
 

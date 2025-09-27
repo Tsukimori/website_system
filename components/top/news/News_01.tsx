@@ -6,9 +6,9 @@ import Image from "next/image"
 // import { microcms } from "@/lib/microcms"
 import { Cms } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { newsFetch } from "@/lib/api/newsFetch"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface NewsProps {
   limit?: number
@@ -64,7 +64,7 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   return (
-    <PageContent className="bg-bgLight">
+    <SectionContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto">
         <ContentHeadline enTitle="News" mainTitle="お知らせ" />
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
@@ -94,7 +94,7 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   )
 }
 

@@ -7,7 +7,6 @@ import { useState, useEffect, useRef } from "react"
 // import { microcms } from "@/lib/microcms";
 import { Cms } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import { CirclePlay, PauseCircle } from "lucide-react"
@@ -18,6 +17,7 @@ import { casesFetch } from "@/lib/api/casesFetch"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface CaseProps {
   limit?: number
@@ -85,7 +85,7 @@ const Case_02 = ({ limit = 5 }: CaseProps) => {
   }
 
   return (
-    <PageContent className="bg-bgLight">
+    <SectionContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto relative">
         <ContentHeadline enTitle="Case study" mainTitle="導入事例" />
 
@@ -153,7 +153,7 @@ const Case_02 = ({ limit = 5 }: CaseProps) => {
       <div className="flex justify-center mt-16">
         <MoreButton className="text-accentColor border-accentColor" />
       </div>
-    </PageContent>
+    </SectionContent>
   )
 }
 

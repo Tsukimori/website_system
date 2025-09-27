@@ -5,11 +5,11 @@ import { useState, useEffect } from "react"
 // import { microcms } from "@/lib/microcms"
 import { Cms } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { newsFetch } from "@/lib/api/newsFetch"
 import { format } from "date-fns"
 import { ja } from "date-fns/locale"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface NewsProps {
   limit?: number
@@ -64,7 +64,7 @@ const News_05 = ({ limit = 9 }: NewsProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   return (
-    <PageContent>
+    <SectionContent>
       <section className="md:max-w-[1200px] mx-auto md:flex justify-between gap-x-20">
         <div className="w-[300px]">
           <ContentHeadline enTitle="News" mainTitle="お知らせ" />
@@ -94,7 +94,7 @@ const News_05 = ({ limit = 9 }: NewsProps) => {
           ))}
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   )
 }
 

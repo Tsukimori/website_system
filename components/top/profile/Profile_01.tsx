@@ -5,13 +5,13 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import ProfileCard from "@/components/ui/ItemCard/ProfileCard_01"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Profile_01 = () => {
   return (
     <>
-      <PageContent className="bg-bgLight">
+      <SectionContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
             enTitle="Profile"
@@ -64,7 +64,7 @@ const Profile_01 = () => {
             </p>
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   )
 }
