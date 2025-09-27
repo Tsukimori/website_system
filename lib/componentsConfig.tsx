@@ -4,8 +4,8 @@ import Header_03 from "@/components/header/Header_03"
 import Header_04 from "@/components/header/Header_04"
 // import About1 from "@/components/about/About1";
 // import About2 from "@/components/about/About_02";
-import Footer1 from "@/components/footer/Footer1"
-import Footer2 from "@/components/footer/Footer2"
+import Footer1 from "@/components/footer/Footer_01"
+import Footer2 from "@/components/footer/Footer_02"
 import KeyVisual_01 from "@/components/top/kv/KeyVisual_01"
 import KeyVisual_02 from "@/components/top/kv/KeyVisual_02"
 import KeyVisual_03 from "@/components/top/kv/KeyVisual_03"

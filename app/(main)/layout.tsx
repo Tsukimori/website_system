@@ -1,5 +1,5 @@
-import Footer1 from "@/components/footer/Footer1"
-import Footer2 from "@/components/footer/Footer2"
+import Footer_01 from "@/components/footer/Footer_01"
+import Footer_02 from "@/components/footer/Footer_02"
 import Header_01 from "@/components/header/Header_01"
 import Header_02 from "@/components/header/Header_02"
 import Header_03 from "@/components/header/Header_03"
@@ -15,7 +15,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <div className="flex min-h-screen flex-col">
       <Header_05 />
       <main className="flex-1">{children}</main>
-      <Footer1 />
+      <Footer_02 />
     </div>
   )
 }

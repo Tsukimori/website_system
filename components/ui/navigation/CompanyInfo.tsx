@@ -17,10 +17,11 @@ export const CompanyInfo = [
         className="w-full h-full object-contain"
       />
     ),
-    companyPostalCode: "107-0062",
-    companyAddress: "東京都葛飾区青戸7-30-1-305号",
-    companyTel: "03-6455-5380",
-    companyTelHref: "tel:0364555380",
+    companyNameText: "企業名企業名企業名企業名企業名",
+    companyPostalCode: "000-000",
+    companyAddress: "○○県○○市○○町00-00○○○○○ビル00F",
+    companyTel: "000-000-0000",
+    companyTelHref: "tel:0000000000",
     companyEmail: "info@company.co.jp",
   },
 ]
