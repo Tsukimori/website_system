@@ -68,11 +68,6 @@ const HomePage = () => {
   return (
     <div>
       <KeyVisual_01 />
-      <KeyVisual_02 />
-      <KeyVisual_03 />
-      <KeyVisual_04 />
-      <KeyVisual_05 />
-      <KeyVisual_06 />
       <About_01 />
       <Service_02 />
       <Strength_01 />
