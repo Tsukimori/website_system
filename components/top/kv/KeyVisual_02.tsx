@@ -20,7 +20,7 @@ const KeyVisual_02 = () => {
     <>
       <FirstViewContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <div className="max-w-[1340px] mx-auto pt-40 px-5">
+        <div className="max-w-[1240px] mx-auto pt-40 px-5">
           <div className=" md:flex justify-between items-end">
             <TopPageHeadline
               mainTitle={

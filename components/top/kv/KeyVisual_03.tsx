@@ -18,7 +18,7 @@ const KeyVisual_03 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-screen md:h-full" />
         </section>
-        <div className="md:max-w-screen-xl mx-auto flex flex-col justify-center gap-10 h-full relative px-5">
+        <div className="md:max-w-[1240px] mx-auto flex flex-col justify-center gap-10 h-full relative px-5">
           <TopPageHeadline
             mainTitle={
               <>

@@ -18,7 +18,7 @@ const KeyVisual_01 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-full" />
         </section>
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-20 w-full md:max-w-[1200px] px-4">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-20 w-full md:max-w-[1240px] px-5">
           <TopPageHeadline
             mainTitle={
               <>
