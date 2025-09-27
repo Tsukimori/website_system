@@ -14,9 +14,9 @@ const Profile_02 = () => {
       <SectionContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
-            enTitle="Profile"
+            subTitle="Profile"
             mainTitle="会社概要"
-            enTitleClassName=""
+            subTitleClassName=""
             titleClassName=""
           />
           <div className="mt-16 bg-white p-10 md:flex md:justify-between">

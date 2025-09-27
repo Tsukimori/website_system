@@ -21,9 +21,9 @@ const Service_04 = () => {
       <SectionContent>
         <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadline
-            enTitle="Service"
+            subTitle="Service"
             mainTitle="事業内容"
-            enTitleClassName=""
+            subTitleClassName=""
             titleClassName=""
           />
 

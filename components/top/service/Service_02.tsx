@@ -33,9 +33,9 @@ const Service_02 = () => {
             </div>
             <div className="flex-1 max-w-[540px]">
               <ContentHeadline
-                enTitle="Service"
+                subTitle="Service"
                 mainTitle="事業内容"
-                enTitleClassName=""
+                subTitleClassName=""
                 titleClassName=""
               />
               <h3 className=" text-2xl md:text-[40px] tracking-[0.05em] leading-[160%] pb-6 border-b border-borderGray">
@@ -59,7 +59,7 @@ const Service_02 = () => {
             </div>
           </div>
           <div className="mt-16 flex justify-center">
-            <MoreButton href="/service" variant="orange" />
+            <MoreButton href="/service" variant="accent" />
           </div>
         </section>
       </SectionContent>

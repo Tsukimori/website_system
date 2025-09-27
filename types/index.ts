@@ -58,12 +58,12 @@ export interface FrameProps {
 
 export interface ContentHeadlineProps extends FrameProps {
   mainTitle: React.ReactNode
-  subTitle?: React.ReactNode
-  enTitle?: string
+  description?: React.ReactNode
+  subTitle?: string
   parentDirectoryName?: string
   parentDirectoryLink?: string
   titleClassName?: string // h1用のclassName
-  enTitleClassName?: string // h2用のclassName
+  subTitleClassName?: string // h2用のclassName
 }
 
 export interface ButtonProps {

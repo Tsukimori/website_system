@@ -1,3 +1,4 @@
+import React from "react";
 import MoreButton from "@/components/ui/button/MoreButton"
 import Image from "next/image"
 
@@ -21,17 +22,17 @@ const AboutSection_01 = ({
   // 文字列内の\nを<br />に変換する関数
   const convertNewLines = (text: string) => {
     return text.split("\\n").map((line, i) => (
-      <span key={i}>
+      <React.Fragment key={i}>
         {line}
         {i !== text.split("\\n").length - 1 && <br />}
-      </span>
+      </React.Fragment>
     ))
   }
 
   return (
     <>
-      <div className="md:flex items-start justify-between md:max-w-[1240px] mx-auto gap-10 text-white px-5">
-        <h3 className="w-full md:max-w-[500px] text-2xl md:text-[40px] leading-relaxed md:leading-[160%] tracking-[0.03em]">
+      <div className="md:flex items-start justify-between md:max-w-[1240px] mx-auto gap-10 px-5">
+        <h3 className="w-full md:max-w-[500px] text-2xl md:text-[40px] leading-[160%] tracking-[0.03em]">
           {convertNewLines(title)}
         </h3>
         <div>
@@ -39,7 +40,7 @@ const AboutSection_01 = ({
             {description}
           </p>
           {(position || name) && (
-            <p className="mt-10 text-base md:text-lg leading-[250%] tracking-[0.03em]">
+            <p className="mt-10 text-base md:text-lg !leading-[250%] tracking-[0.03em]">
               {position}
               <br />
               {name}
@@ -48,7 +49,8 @@ const AboutSection_01 = ({
           {buttonHref && (
             <MoreButton
               href={buttonHref}
-              className="mt-10 text-accentColor border-accentColor"
+              className="mt-10"
+              variant="accent"
             >
               About us
             </MoreButton>

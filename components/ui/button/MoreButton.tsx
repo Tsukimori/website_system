@@ -12,12 +12,12 @@ const MoreLinkButton = ({
   href?: string
   className?: string
   children?: React.ReactNode
-  variant?: "white" | "orange" | "black"
+  variant?: "white" | "accent" | "black"
 }) => {
   // バリエーションに基づくスタイルを決定
   const getVariantStyles = () => {
     switch (variant) {
-      case "orange":
+      case "accent":
         return "bg-accentColor text-white border-accentColor"
       case "black":
         return "bg-transparent text-baseColor border-baseColor"
@@ -29,7 +29,7 @@ const MoreLinkButton = ({
   // 矢印の色を決定
   const getArrowColor = () => {
     switch (variant) {
-      case "orange":
+      case "accent":
         return "white"
       case "black":
         return "black"

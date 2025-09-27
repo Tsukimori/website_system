@@ -87,7 +87,7 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
     <>
       <SectionContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto relative">
-          <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
+          <ContentHeadline subTitle="Blog" mainTitle="ブログ" />
 
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}

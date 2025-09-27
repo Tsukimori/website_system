@@ -19,7 +19,7 @@ const Strength_01 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadlineReverse
-            enTitle="Instagram"
+            subTitle="Instagram"
             mainTitle="アセントビジョンの活動を\nご紹介します。"
             className="text-center text-white"
           />
@@ -43,7 +43,7 @@ const Strength_01 = () => {
           </div>
         </section>
         <div className="mt-16 flex justify-center">
-          <MoreLinkButton href="/" variant="orange">
+          <MoreLinkButton href="/" variant="accent">
             Follow us
           </MoreLinkButton>
         </div>

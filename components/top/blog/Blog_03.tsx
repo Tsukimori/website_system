@@ -69,7 +69,7 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
   return (
     <SectionContent>
       <section className="md:max-w-[1200px] mx-auto space-y-10">
-        <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
+        <ContentHeadline subTitle="Blog" mainTitle="ブログ" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
           {contents.map((post) => (

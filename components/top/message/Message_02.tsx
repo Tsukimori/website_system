@@ -15,9 +15,9 @@ const Message_02 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
           <ContentHeadline
-            enTitle="Who we are"
+            subTitle="Who we are"
             mainTitle="私たちについて"
-            enTitleClassName="text-center"
+            subTitleClassName="text-center"
             titleClassName="text-center"
           />
           <div className=" mt-16 flex justify-start space-x-20">

@@ -12,8 +12,8 @@ import KeyVisual_05 from "@/components/top/kv/KeyVisual_05"
 import KeyVisual_06 from "@/components/top/kv/KeyVisual_06"
 import About_01 from "@/components/top/about/About_01"
 import About_02 from "@/components/top/about/About_02"
-import About_03 from "@/components/top/about/About_04"
-import About_04 from "@/components/top/about/About_03"
+import About_03 from "@/components/top/about/About_03"
+import About_04 from "@/components/top/about/About_04"
 import Strength_01 from "@/components/top/strength/Strength_01"
 import Strength_02 from "@/components/top/strength/Strength_02"
 import Strength_03 from "@/components/top/strength/Strength_03"
@@ -69,9 +69,18 @@ const HomePage = () => {
     <div>
       <KeyVisual_01 />
       <About_01 />
-      <Service_02 />
       <Strength_01 />
-      <Cta_03 />
+      <Message_01 />
+      <Service_01 />
+      <News_01 />
+      <Case_01 />
+      <Blog_01 />
+      <Plan_01 />
+      <Faq_01 />
+      <Profile_01 />
+      <Flow_01 />
+      <Cta_01 />
+      <Aside_01 />
     </div>
   )
 }

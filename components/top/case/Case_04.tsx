@@ -70,7 +70,7 @@ const Case_04 = ({ limit = 3 }: CaseProps) => {
     <SectionContent>
       <section className="md:max-w-[1200px] mx-auto md:flex justify-between">
         <div className="md:w-[300px]">
-          <ContentHeadline enTitle="Case study" mainTitle="導入事例" />
+          <ContentHeadline subTitle="Case study" mainTitle="導入事例" />
           <div className="mt-0 md:mt-16 flex justify-center">
             <MoreButton className="text-accentColor border-accentColor" />
           </div>

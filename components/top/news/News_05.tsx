@@ -70,7 +70,7 @@ const News_05 = ({ limit = 6 }: NewsProps) => {
     <SectionContent>
       <section className="md:max-w-[1200px] mx-auto">
         <div className="w-[300px]">
-          <ContentHeadline enTitle="News" mainTitle="お知らせ" />
+          <ContentHeadline subTitle="News" mainTitle="お知らせ" />
         </div>
 
         <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-16">

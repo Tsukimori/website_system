@@ -14,9 +14,9 @@ const Flow_01 = ({ className = "" }) => {
       <SectionContent className={className}>
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
-            enTitle="Flow"
+            subTitle="Flow"
             mainTitle="ご利用の流れ"
-            enTitleClassName="text-center"
+            subTitleClassName="text-center"
             titleClassName="text-center"
           />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-6">

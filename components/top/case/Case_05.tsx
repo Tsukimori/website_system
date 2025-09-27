@@ -69,7 +69,7 @@ const Case_05 = ({ limit = 6 }: CaseProps) => {
     <SectionContent>
       <section className="md:max-w-[1200px] mx-auto">
         <div className="md:w-[300px]">
-          <ContentHeadline enTitle="Case study" mainTitle="導入事例" />
+          <ContentHeadline subTitle="Case study" mainTitle="導入事例" />
         </div>
         <div className="mt-0 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-y-10 gap-x-10 md:gap-x-16">
           {contents.map((post) => (

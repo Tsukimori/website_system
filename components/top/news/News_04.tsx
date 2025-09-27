@@ -70,7 +70,7 @@ const News_04 = ({ limit = 3 }: NewsProps) => {
     <SectionContent>
       <section className="md:max-w-[1200px] mx-auto md:flex justify-between">
         <div className="w-[300px]">
-          <ContentHeadline enTitle="News" mainTitle="お知らせ" />
+          <ContentHeadline subTitle="News" mainTitle="お知らせ" />
           <div className="mt-16 flex justify-center">
             <MoreButton className="text-accentColor border-accentColor" />
           </div>

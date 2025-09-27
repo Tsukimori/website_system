@@ -70,7 +70,7 @@ const Blog_04 = ({ limit = 3 }: BlogProps) => {
     <SectionContent>
       <section className="md:max-w-[1200px] mx-auto md:flex justify-between ">
         <div className="md:w-[300px]">
-          <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
+          <ContentHeadline subTitle="Blog" mainTitle="ブログ" />
           <div className="mt-10 md:mt-16 flex justify-center">
             <MoreButton className="text-accentColor border-accentColor" />
           </div>
