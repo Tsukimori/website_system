@@ -26,9 +26,9 @@ const Plan_01 = () => {
           </div>
 
           {/* <ContentHeadline
-            enTitle="Plan"
+            subTitle="Plan"
             mainTitle="料金プラン"
-            enTitleClassName=""
+            subTitleClassName=""
             titleClassName=""
           /> */}
           <PlanList />

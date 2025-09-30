@@ -10,9 +10,9 @@ const Plan_02 = () => {
     <SectionContent className="bg-bgLight">
       <section className="w-full md:max-w-[1200px] mx-auto overflow-hidden">
         <ContentHeadline
-          enTitle="Plan"
+          subTitle="Plan"
           mainTitle="料金プラン"
-          enTitleClassName=""
+          subTitleClassName=""
           titleClassName=""
         />
         <PlanList />

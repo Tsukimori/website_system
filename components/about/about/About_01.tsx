@@ -16,7 +16,7 @@ const About_01 = () => {
       <SectionContent className="pt-14 md:pt-24">
         {/* widthがフルサイズでない場合は指定する */}
         <section className="w-full md:max-w-[1200px] mx-auto">
-          {/* <ContentHeadline entitle="Who we are" maintitle="私たちについて" /> */}
+          {/* <ContentHeadline subTitle="Who we are" maintitle="私たちについて" /> */}
       
         </section>
         <AboutSection

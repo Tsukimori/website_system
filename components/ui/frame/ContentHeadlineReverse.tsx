@@ -7,10 +7,9 @@ import Image from "next/image"
 const ContentHeadlineReverse: React.FC<ContentHeadlineProps> = ({
   mainTitle,
   subTitle,
-  enTitle,
   className = "",
   titleClassName = "",
-  enTitleClassName = "",
+  subTitleClassName = "",
   ImageSrc,
   ImageWidth,
   ImageHeight,
@@ -33,15 +32,13 @@ const ContentHeadlineReverse: React.FC<ContentHeadlineProps> = ({
           className="mb-4"
         />
       )}
-      <h3
+
+      <h1
         className={classNames(
-          "text-lg font-en tracking-[0.03em] mb-1",
-          enTitleClassName
+          "text-2xl md:text-[40px] leading-[140%]",
+          titleClassName
         )}
       >
-        {enTitle}
-      </h3>
-      <h1 className={classNames("text-2xl md:text-[40px] leading-[140%]", titleClassName)}>
         {typeof mainTitle === "string"
           ? mainTitle.split("\\n").map((text, i) => (
               <span key={i}>
@@ -51,8 +48,14 @@ const ContentHeadlineReverse: React.FC<ContentHeadlineProps> = ({
             ))
           : mainTitle}
       </h1>
-
-      {subTitle && <h2>{subTitle}</h2>}
+      <h3
+        className={classNames(
+          "text-lg font-en tracking-[0.03em] mb-1",
+          subTitleClassName
+        )}
+      >
+        {subTitle}
+      </h3>
     </section>
   )
 }

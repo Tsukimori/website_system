@@ -57,9 +57,9 @@ const Purpose_01 = () => {
     <SectionContent>
       <section className="md:max-w-[1200px] mx-auto">
         <ContentHeadline
-          enTitle="Purpose"
+          subTitle="Purpose"
           mainTitle="私たちの想い"
-          enTitleClassName="text-center"
+          subTitleClassName="text-center"
           titleClassName="text-center"
         />
         <ul className="space-y-16">
