@@ -7,9 +7,9 @@ import { useState, useEffect } from "react"
 // import { microcms } from "@/lib/microcms";
 import { Cms } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { casesFetch } from "@/lib/api/casesFetch"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface CaseProps {
   limit?: number
@@ -66,9 +66,9 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   return (
-    <PageContent className="bg-bgLightBlue">
+    <SectionContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto md:space-y-10">
-        <ContentHeadline enTitle="Case study" mainTitle="導入事例" />
+        <ContentHeadline subTitle="Case study" mainTitle="導入事例" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
           {contents.map((post) => (
@@ -88,7 +88,9 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
                 <p className="text-lg font-bold break-words min-h-14">
                   {post.title}
                 </p>
-                <p className="mt-2 text-[#5f5f5f] text-xs">{post.description}</p>
+                <p className="mt-2 text-[#5f5f5f] text-xs">
+                  {post.description}
+                </p>
               </div>
             </div>
           ))}
@@ -97,7 +99,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   )
 }
 

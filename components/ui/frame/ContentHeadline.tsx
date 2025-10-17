@@ -6,11 +6,11 @@ import Image from "next/image"
 
 const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   mainTitle,
+  description,
   subTitle,
-  enTitle,
   className = "",
   titleClassName = "",
-  enTitleClassName = "",
+  subTitleClassName = "",
   ImageSrc,
   ImageWidth,
   ImageHeight,
@@ -20,7 +20,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
     <section
       id={id}
       className={classNames(
-        "w-full md:max-w-[1200px] mb-16 tracking-wide text-accentColor",
+        "w-full md:max-w-[1200px] mb-12 md:mb-16 tracking-wide",
         className
       )}
     >
@@ -33,24 +33,24 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
           className="mb-4"
         />
       )}
+      <p
+        className={classNames(
+          "text-sm md:text-lg font-extrabold tracking-[0.03em] font-en text-accentColor",
+          subTitleClassName
+        )}
+      >
+       {subTitle}
+      </p>
       <h1
         className={classNames(
-          "text-sm md:text-lg font-semibold",
+          "text-4xl md:text-[40px] leading-[120%] mt-1 tracking-[0.05em] font-semibold",
           titleClassName
         )}
       >
         {mainTitle}
       </h1>
-      <h3
-        className={classNames(
-          "text-[40px] font-en leading-[120%] mt-1",
-          enTitleClassName
-        )}
-      >
-        {enTitle}
-      </h3>
 
-      {subTitle && <h2>{subTitle}</h2>}
+      {description && <h2>{description}</h2>}
     </section>
   )
 }

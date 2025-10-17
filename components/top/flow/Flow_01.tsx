@@ -5,18 +5,18 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
 import FlowCard from "@/components/ui/ItemCard/FlowCard_01";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 const Flow_01 = ({ className = "" }) => {
   return (
     <>
-      <PageContent className={className}>
+      <SectionContent className={className}>
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
-            enTitle="Flow"
+            subTitle="Flow"
             mainTitle="ご利用の流れ"
-            enTitleClassName="text-center"
+            subTitleClassName="text-center"
             titleClassName="text-center"
           />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-6">
@@ -78,7 +78,7 @@ const Flow_01 = ({ className = "" }) => {
             />
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   );
 };

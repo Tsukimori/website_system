@@ -1,3 +1,4 @@
+import React from "react";
 import MoreButton from "@/components/ui/button/MoreButton";
 import Image from "next/image";
 
@@ -21,24 +22,24 @@ const AboutSection_03 = ({
   // 文字列内の\nを<br />に変換する関数
   const convertNewLines = (text: string) => {
     return text.split("\\n").map((line, i) => (
-      <span key={i}>
+      <React.Fragment key={i}>
         {line}
         {i !== text.split("\\n").length - 1 && <br />}
-      </span>
-    ));
-  };
+      </React.Fragment>
+    ))
+  }
 
   return (
-    <div className="w-full  md:flex justify-start md:space-x-20 border-b-2 pb-24">
+    <div className="w-full  md:flex justify-start md:space-x-20 pb-24">
       <div className="w-full">
-        <h3 className="text-3xl md:text-5xl  font-light leading-relaxed md:leading-[64px] mt-10 md:mt-0">
+        <h3 className="text-3xl md:text-[40px] font-light leading-[160%] tracking-[0.03em] mt-10 md:mt-0">
           {convertNewLines(title)}
         </h3>
-        <p className="mt-10 leading-relaxed md:leading-[45px] md:text-lg whitespace-pre-line">
+        <p className="mt-10 !leading-[250%] tracking-[0.03em] md:text-lg whitespace-pre-line">
           {description}
         </p>
         {(position || name) && (
-            <p className="mt-10 text-lg leading-[250%]">
+            <p className="mt-10 text-lg !leading-[250%] tracking-[0.03em]">
               {position}
               <br />
               {name}
@@ -47,7 +48,8 @@ const AboutSection_03 = ({
         {buttonHref && (
           <MoreButton
             href={buttonHref}
-            className="mt-10 text-accentColor border-accentColor"
+            className="mt-10"
+            variant="accent"
           />
         )}
       </div>

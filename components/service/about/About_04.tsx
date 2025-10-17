@@ -15,7 +15,7 @@ const About_04 = () => {
       <SectionContent className="![padding-bottom:0]">
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
-          <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" />
+          <ContentHeadline subTitle="Who we are" mainTitle="私たちについて" />
           <AboutSection
             title="無数の選択肢の中から\nベストな選択を"
             description={`経営者は日々悩んでいます。そして、日々決断しています。

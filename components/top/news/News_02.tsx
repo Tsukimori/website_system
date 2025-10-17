@@ -7,7 +7,6 @@ import Link from "next/link"
 // import { microcms } from "@/lib/microcms"
 import { Cms } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import { CirclePlay, PauseCircle } from "lucide-react"
@@ -18,6 +17,7 @@ import { newsFetch } from "@/lib/api/newsFetch"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface NewsProps {
   limit?: number
@@ -83,9 +83,9 @@ const News_02 = ({ limit = 5 }: NewsProps) => {
   }
 
   return (
-    <PageContent className="bg-bgLightBlue">
+    <SectionContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto relative">
-        <ContentHeadline enTitle="News" mainTitle="お知らせ" />
+        <ContentHeadline subTitle="News" mainTitle="お知らせ" />
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -144,7 +144,7 @@ const News_02 = ({ limit = 5 }: NewsProps) => {
       <div className="flex justify-center mt-16">
         <MoreButton className="text-accentColor border-accentColor" />
       </div>
-    </PageContent>
+    </SectionContent>
   )
 }
 

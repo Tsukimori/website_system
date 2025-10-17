@@ -7,12 +7,12 @@ import Link from "next/link"
 // import { microcms } from "@/lib/microcms"
 import { Cms } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import { newsFetch } from "@/lib/api/newsFetch"
 import { format } from "date-fns"
 import { ja } from "date-fns/locale"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface NewsProps {
   limit?: number
@@ -67,10 +67,10 @@ const News_05 = ({ limit = 6 }: NewsProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   return (
-    <PageContent>
+    <SectionContent>
       <section className="md:max-w-[1200px] mx-auto">
         <div className="w-[300px]">
-          <ContentHeadline enTitle="News" mainTitle="お知らせ" />
+          <ContentHeadline subTitle="News" mainTitle="お知らせ" />
         </div>
 
         <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-16">
@@ -110,7 +110,7 @@ const News_05 = ({ limit = 6 }: NewsProps) => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   )
 }
 

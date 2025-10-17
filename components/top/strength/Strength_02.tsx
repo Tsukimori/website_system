@@ -3,20 +3,20 @@
 "use client";
 
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
 import StrengthCard from "@/components/ui/ItemCard/StrengthCard_02";
 import { strengthData } from "@/components/data/top/StrengthData";
 import MoreLinkButton from "@/components/ui/button/MoreButton";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 // 強み
 const Strength_02 = () => {
   return (
     <>
-      <PageContent>
+      <SectionContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadline
-            enTitle="Strength"
+            subTitle="Strength"
             mainTitle="私たちの強み"
             className="text-center"
           />
@@ -39,7 +39,7 @@ const Strength_02 = () => {
           href="/"
           className="mt-16 text-accentColor border-accentColor mx-auto"
         />
-      </PageContent>
+      </SectionContent>
     </>
   );
 };

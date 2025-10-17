@@ -5,13 +5,13 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import ProfileCard from "@/components/ui/ItemCard/ProfileCard_01"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Profile_04 = () => {
   return (
     <>
-      <PageContent className="!pt-0">
+      <SectionContent className="!pt-0">
         <div className="mb-10 md:mb-20">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5201488915804!2d139.71568836148265!3d35.664192380795214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b4530b99601%3A0x86b1876ad2ed28c3!2z44Kw44Op44Oz4oCL44Kr44O844K14oCL5Y2X6Z2S5bGx!5e0!3m2!1sja!2sfr!4v1732195905422!5m2!1sja!2sfr"
@@ -27,9 +27,9 @@ const Profile_04 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div>
               <ContentHeadline
-                enTitle="Profile"
+                subTitle="Profile"
                 mainTitle="事務所概要"
-                enTitleClassName=""
+                subTitleClassName=""
                 titleClassName=""
               />
             </div>
@@ -55,7 +55,7 @@ const Profile_04 = () => {
             </div>
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   )
 }

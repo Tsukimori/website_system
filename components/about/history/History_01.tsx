@@ -1,6 +1,6 @@
 // components/message/History_01.tsx
 
-"use client";
+"use client"
 
 import MoreLinkButton from "@/components/ui/button/MoreButton";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
@@ -16,9 +16,9 @@ const History_01 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
           <ContentHeadline
-            enTitle="History"
+            subTitle="History"
             mainTitle="企業沿革"
-            enTitleClassName=""
+            subTitleClassName=""
             titleClassName=""
           />
 
@@ -47,7 +47,7 @@ const History_01 = () => {
         </section>
       </SectionContent>
     </>
-  );
-};
+  )
+}
 
-export default History_01;
+export default History_01

@@ -1,33 +1,33 @@
 // components/blog/Blog_02.tsx
-"use client";
+"use client"
 
-import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
+import Link from "next/link"
 // import { microcms } from "@/lib/microcms";
-import { Cms } from "@/types";
-import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { CirclePlay, PauseCircle } from "lucide-react";
-import MoreButton from "@/components/ui/button/MoreButton";
-import { blogsFetch } from "@/lib/api/blogsFetch";
+import { Cms } from "@/types"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination, Autoplay } from "swiper/modules"
+import { CirclePlay, PauseCircle } from "lucide-react"
+import MoreButton from "@/components/ui/button/MoreButton"
+import { blogsFetch } from "@/lib/api/blogsFetch"
 
 // Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface BlogProps {
-  limit?: number;
+  limit?: number
 }
 
 const Blog_02 = ({ limit = 5 }: BlogProps) => {
-  const [contents, setContents] = useState<Cms[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const swiperRef = useRef<any>(null);
+  const [contents, setContents] = useState<Cms[]>([])
+  const [loading, setLoading] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(true)
+  const swiperRef = useRef<any>(null)
 
   useEffect(() => {
     // 旧データ取得
@@ -52,42 +52,42 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
     */
 
     // 新データ取得（共通化）
-    let mounted = true;
-    (async () => {
+    let mounted = true
+    ;(async () => {
       try {
-        setLoading(true);
-        const data = await blogsFetch.list(Math.min(limit ?? 100, 100));
-        if (mounted) setContents(data);
+        setLoading(true)
+        const data = await blogsFetch.list(Math.min(limit ?? 100, 100))
+        if (mounted) setContents(data)
       } catch (error) {
-        console.error("Failed to fetch blogs:", error);
-        if (mounted) setContents([]);
+        console.error("Failed to fetch blogs:", error)
+        if (mounted) setContents([])
       } finally {
-        if (mounted) setLoading(false);
+        if (mounted) setLoading(false)
       }
-    })();
+    })()
 
     return () => {
-      mounted = false;
-    };
-  }, [limit]);
+      mounted = false
+    }
+  }, [limit])
 
-  if (loading) return <h1>Loading...</h1>;
-  if (!contents || contents.length === 0) return <h1>No contents</h1>;
+  if (loading) return <h1>Loading...</h1>
+  if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   const handlePlayPause = () => {
     if (isPlaying) {
-      swiperRef.current?.autoplay.stop();
+      swiperRef.current?.autoplay.stop()
     } else {
-      swiperRef.current?.autoplay.start();
+      swiperRef.current?.autoplay.start()
     }
-    setIsPlaying(!isPlaying);
-  };
+    setIsPlaying(!isPlaying)
+  }
 
   return (
     <>
-      <PageContent className="bg-bgLightBlue">
+      <SectionContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto relative">
-          <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
+          <ContentHeadline subTitle="Blog" mainTitle="ブログ" />
 
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -127,12 +127,12 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
                     <p className="md:text-lg font-bold min-h-12 md:min-h-0">
                       {post.title}
                     </p>
-                  <p className="mt-2 md:mt-4 text-white text-xs min-h-8 md:min-h-0">
-                    #
-                    {Array.isArray(post.category) && post.category.length > 0
-                      ? post.category.join(", ")
-                      : "カテゴリーなし"}
-                  </p>
+                    <p className="mt-2 md:mt-4 text-white text-xs min-h-8 md:min-h-0">
+                      #
+                      {Array.isArray(post.category) && post.category.length > 0
+                        ? post.category.join(", ")
+                        : "カテゴリーなし"}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -153,9 +153,9 @@ const Blog_02 = ({ limit = 5 }: BlogProps) => {
         <div className="flex justify-center mt-16">
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
-      </PageContent>
+      </SectionContent>
     </>
-  );
-};
+  )
+}
 
-export default Blog_02;
+export default Blog_02

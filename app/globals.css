@@ -85,7 +85,7 @@ body,
 }
 
 .font-en {
-  font-family: var(--font-marcellus), serif;
+  font-family: var(--font-en), sans-serif;
 }
 
 /* swiper */

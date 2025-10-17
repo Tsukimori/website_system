@@ -1,12 +1,12 @@
 // components/message/About_02.tsx
 
-"use client";
+"use client"
 
-import MoreLinkButton from "@/components/ui/button/MoreButton";
-import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import SectionContent from "@/components/ui/frame/SectionContent";
-import Image from "next/image";
-import AboutSection from "@/components/ui/module/AboutSection_02";
+import MoreLinkButton from "@/components/ui/button/MoreButton"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import SectionContent from "@/components/ui/frame/SectionContent"
+import Image from "next/image"
+import AboutSection from "@/components/ui/module/AboutSection_02"
 
 // メッセージ
 const About_02 = () => {
@@ -16,10 +16,10 @@ const About_02 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
           <ContentHeadline
-            enTitle="Who we are"
+            subTitle="Who we are"
             mainTitle="私たちについて"
-            enTitleClassName="text-center"
-            titleClassName="text-center"
+            subTitleClassName=""
+            titleClassName=""
           />
           <AboutSection
             title="無数の選択肢の中から\nベストな選択を"
@@ -41,7 +41,7 @@ const About_02 = () => {
         </section>
       </SectionContent>
     </>
-  );
-};
+  )
+}
 
-export default About_02;
+export default About_02

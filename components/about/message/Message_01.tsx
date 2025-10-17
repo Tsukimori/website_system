@@ -16,9 +16,9 @@ const Message_01 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className="w-full md:max-w-[1200px] mx-auto">
           <ContentHeadline
-            enTitle="Message"
+            subTitle="Message"
             mainTitle="代表挨拶"
-            enTitleClassName="text-center"
+            subTitleClassName="text-center"
             titleClassName="text-center"
           />
         </section>

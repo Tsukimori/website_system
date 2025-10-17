@@ -2,8 +2,8 @@ import Header_01 from "@/components/header/Header_01"
 import Header_02 from "@/components/header/Header_02"
 import Header_03 from "@/components/header/Header_03"
 import Header_04 from "@/components/header/Header_04"
-import Footer1 from "@/components/footer/Footer1"
-import Footer2 from "@/components/footer/Footer2"
+import Footer1 from "@/components/footer/Footer_01"
+import Footer2 from "@/components/footer/Footer_02"
 import KeyVisual_01 from "@/components/top/kv/KeyVisual_01"
 import KeyVisual_02 from "@/components/top/kv/KeyVisual_02"
 import KeyVisual_03 from "@/components/top/kv/KeyVisual_03"
@@ -12,8 +12,8 @@ import KeyVisual_05 from "@/components/top/kv/KeyVisual_05"
 import KeyVisual_06 from "@/components/top/kv/KeyVisual_06"
 import About_01 from "@/components/top/about/About_01"
 import About_02 from "@/components/top/about/About_02"
-import About_03 from "@/components/top/about/About_04"
-import About_04 from "@/components/top/about/About_03"
+import About_03 from "@/components/top/about/About_03"
+import About_04 from "@/components/top/about/About_04"
 import Strength_01 from "@/components/top/strength/Strength_01"
 import Strength_02 from "@/components/top/strength/Strength_02"
 import Strength_03 from "@/components/top/strength/Strength_03"
@@ -67,11 +67,20 @@ import Aside_02 from "@/components/ui/module/aside/Aside_02"
 const HomePage = () => {
   return (
     <div>
-      <KeyVisual_04 />
+      <KeyVisual_01 />
       <About_01 />
-      <Service_02 />
       <Strength_01 />
-      <Cta_03 />
+      <Message_01 />
+      <Service_01 />
+      <News_01 />
+      <Case_01 />
+      <Blog_01 />
+      <Plan_01 />
+      <Faq_01 />
+      <Profile_01 />
+      <Flow_01 />
+      <Cta_01 />
+      <Aside_01 />
     </div>
   )
 }

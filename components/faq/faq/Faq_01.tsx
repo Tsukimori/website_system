@@ -12,9 +12,9 @@ const Faq_01 = () => {
     <PageContent className="bg-white">
       <section className="md:max-w-[1200px] mx-auto">
         {/* <ContentHeadline
-          enTitle="FAQ"
+          subTitle="FAQ"
           mainTitle="よくある質問"
-          enTitleClassName="text-center"
+          subTitleClassName="text-center"
           titleClassName="text-center"
         /> */}
         <FaqList />

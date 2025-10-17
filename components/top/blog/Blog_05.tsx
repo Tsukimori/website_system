@@ -8,10 +8,9 @@ import Link from "next/link";
 // import { microcms } from "@/lib/microcms";
 import { Cms } from "@/types";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
 import MoreButton from "@/components/ui/button/MoreButton";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { blogsFetch } from "@/lib/api/blogsFetch";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 interface BlogProps {
   limit?: number;
@@ -66,10 +65,10 @@ const Blog_05 = ({ limit = 6 }: BlogProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>;
 
   return (
-    <PageContent>
+    <SectionContent>
       <section className="md:max-w-[1200px] mx-auto">
         <div className="md:w-[300px]">
-          <ContentHeadline enTitle="Blog" mainTitle="ブログ" />
+          <ContentHeadline subTitle="Blog" mainTitle="ブログ" />
         </div>
         <div className="mt-0 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-y-10 gap-x-10 md:gap-x-16">
           {contents.map((post) => (
@@ -98,7 +97,7 @@ const Blog_05 = ({ limit = 6 }: BlogProps) => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   );
 };
 

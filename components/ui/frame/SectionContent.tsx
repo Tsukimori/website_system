@@ -7,7 +7,7 @@ interface SectionContentProps {
   children: ReactNode
   className?: string
   style?: React.CSSProperties
-  variant?: "default" | "dot"
+  variant?: "default" | "dot" | "light"
   id?: string
 }
 
@@ -30,6 +30,12 @@ const SectionContent: React.FC<SectionContentProps> = ({
         ...style,
       }
     }
+    if (variant === "light") {
+      return {
+        backgroundColor: "#f7fcff",
+        ...style,
+      }
+    }
     return style
   }
 
@@ -37,7 +43,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
     <div
       id={id}
       className={classNames(
-        "mx-auto py-14 md:py-[120px] px-4 md:px-5 overflow-x-hidden",
+        "mx-auto py-16 md:py-[120px] px-4 md:px-5 overflow-x-hidden",
         className
       )}
       style={getVariantStyle()}

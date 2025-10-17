@@ -5,18 +5,18 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import ProfileCard from "@/components/ui/ItemCard/ProfileCard_01"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Profile_02 = () => {
   return (
     <>
-      <PageContent className="bg-bgLightBlue">
+      <SectionContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
-            enTitle="Profile"
+            subTitle="Profile"
             mainTitle="会社概要"
-            enTitleClassName=""
+            subTitleClassName=""
             titleClassName=""
           />
           <div className="mt-16 bg-white p-10 md:flex md:justify-between">
@@ -51,7 +51,7 @@ const Profile_02 = () => {
             </div>
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   )
 }

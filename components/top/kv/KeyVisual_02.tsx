@@ -3,7 +3,7 @@
 "use client"
 
 import FirstViewContent from "@/components/top/kv/FirstViewContent"
-import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
+import TopPageHeadline from "@/components/ui/frame/TopPageHeadline_02"
 import ScrollButton from "@/components/ui/button/ScrollButton"
 import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
 
@@ -20,22 +20,22 @@ const KeyVisual_02 = () => {
     <>
       <FirstViewContent>
         {/* widthがフルサイズでない場合は指定する */}
-        <div className="w-[95%] mx-auto mt-40">
-          <TopPageHeadline
-            mainTitle={
-              <>
-                <span>Lorem Ipsum</span>
-                <br />
-                <span>Lorem Ipsum</span>
-              </>
-            }
-            subtitleBottom="日本語のテキストが入ります。"
-          />
-          <section className="relative">
-            <div className="absolute right-0 -bottom-10">
-              <ScrollButton onClick={scrollToNextSection} />
+        <div className="max-w-[1240px] mx-auto pt-40 px-5">
+          <div className=" md:flex justify-between items-end">
+            <TopPageHeadline
+              mainTitle={
+                <>
+                  <span>Lorem Ipsum</span>
+                  <br />
+                  <span>Lorem Ipsum</span>
+                </>
+              }
+              description="日本語のテキストが入ります。"
+            />
+            <div className="mt-10">
+              <ScrollButton />
             </div>
-          </section>
+          </div>
 
           {/* キービジュアルの画像 */}
           <section className="mx-auto mt-16">

@@ -7,12 +7,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { Cms } from "@/types"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import { newsFetch } from "@/lib/api/newsFetch"
 import { format } from "date-fns"
 import { ja } from "date-fns/locale"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 
 interface NewsProps {
@@ -54,9 +54,9 @@ const News_03 = ({ limit = 3 }: NewsProps) => {
   if (!contents || contents.length === 0) return <h1>No contents</h1>
 
   return (
-    <PageContent>
+    <SectionContent>
       <section className="md:max-w-[1200px] mx-auto space-y-10">
-        <ContentHeadline enTitle="News" mainTitle="お知らせ" />
+        <ContentHeadline subTitle="News" mainTitle="お知らせ" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
           {contents.map((post) => (
@@ -96,7 +96,7 @@ const News_03 = ({ limit = 3 }: NewsProps) => {
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
       </section>
-    </PageContent>
+    </SectionContent>
   )
 }
 

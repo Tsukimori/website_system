@@ -4,17 +4,17 @@
 
 import MoreLinkButton from "@/components/ui/button/MoreButton"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
+import SectionContent from "@/components/ui/frame/SectionContent"
 import Image from "next/image"
 
 // メッセージ
 const Message_03 = () => {
   return (
     <>
-      <PageContent>
+      <SectionContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
-          <ContentHeadline enTitle="Who we are" mainTitle="私たちについて" />
+          <ContentHeadline subTitle="Who we are" mainTitle="私たちについて" />
           <div className=" mt-16 flex justify-start space-x-20">
             <div className="w-[600px]">
               <h3 className="text-5xl ">見出しテキスト</h3>
@@ -37,7 +37,7 @@ const Message_03 = () => {
             </div>
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   )
 }
