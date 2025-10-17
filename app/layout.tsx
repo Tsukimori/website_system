@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     template: "%s | チョイスWeb制作",
     default: "チョイスのWeb制作は",
   },
+  description: "チョイスは、",
   icons: {
     icon: "/common/favicon.ico",
   },
