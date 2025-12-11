@@ -2,7 +2,7 @@ import "./globals.css"
 import type { Metadata, Viewport } from "next"
 import ToastProvider from "@/components/providers/ToastProvider"
 import { Noto_Sans_JP, Lato } from "next/font/google"
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@/components/ui/module/GoogleTagManager'
 
 
 // Noto Sans JP フォントの設定
@@ -31,11 +31,13 @@ export const metadata: Metadata = {
   },
 }
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+export function generateViewport() {
+  return {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  }
 }
 
 interface RootLayoutProps {
