@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   description: "チョイスは、",
   icons: {
-    icon: "/common/favicon.ico",
+    icon: "/common/favicon.png",
   },
 }
 
