@@ -7,6 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { blogsFetch } from "@/lib/api/blogsFetch"
 import { Cms } from "@/types"
+import styles from '@/styles/microcms.module.css'
 
 interface BlogDetailProps {
   params: {
@@ -151,10 +152,11 @@ const BlogDetail_02 = ({ params }: BlogDetailProps) => {
             {post.title}
           </h1>
 
-          <div
-            className="prose max-w-none prose-lg"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+         <div
+                className={styles.content}
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+
         </article>
 
         {relatedPosts.length > 0 && (

@@ -20,7 +20,7 @@ const Strength_01 = () => {
         <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadlineReverse
             subTitle="Instagram"
-            mainTitle="アセントビジョンの活動を\nご紹介します。"
+            mainTitle="チョイスの活動を\nご紹介します。"
             className="text-center text-white"
           />
 

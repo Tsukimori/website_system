@@ -8,6 +8,7 @@ import Image from "next/image"
 import { NavigationArrow } from "@/components/ui/icons/NavigationArrow"
 import { Cms } from "@/types"
 import { blogsFetch } from "@/lib/api/blogsFetch"
+import styles from "@/styles/microcms.module.css"
 
 interface BlogDetailProps {
   params: {
@@ -139,7 +140,7 @@ const BlogDetail_01 = ({ params }: BlogDetailProps) => {
         )}
 
         <div
-          className="prose max-w-none prose-headings:font-bold prose-h2:text-[24px] prose-h2:mb-6 prose-h2:mt-12 prose-h2:font-medium prose-h2:leading-[160%] prose-h2:text-accentColor prose-h2:font-noto prose-h3:text-xl prose-h3:mb-4 prose-h3:mt-8 prose-p:leading-relaxed prose-p:text-base prose-li:text-base prose-li:leading-relaxed prose-ul:mt-4 prose-ul:mb-6 prose-ul:pl-6 prose-ol:mt-4 prose-ol:mb-6 prose-ol:list-decimal prose-ol:pl-6 prose-ul:list-disc prose-ul:marker:text-accentColor prose-ul:marker:text-[8px]"
+          className={styles.content}
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </article>
