@@ -1,6 +1,7 @@
 // components/blog/Blog_01.tsx
 "use client"
 
+import Link from "next/link"
 import { useState, useEffect } from "react"
 // import { microcms } from "@/lib/microcms"
 import { Cms } from "@/types"
@@ -14,6 +15,24 @@ import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface BlogProps {
   limit?: number
+}
+
+// HTMLタグを除去してプレーンテキストを取得する関数
+const stripHtmlTags = (html: string): string => {
+  if (!html) return ""
+  // HTMLタグを除去
+  let text = html.replace(/<[^>]*>/g, "")
+  // HTMLエンティティをデコード
+  text = text
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+  // 連続する空白や改行を整理
+  text = text.replace(/\s+/g, " ").trim()
+  return text
 }
 
 const Blog_01 = ({ limit = 3 }: BlogProps) => {
@@ -68,33 +87,52 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
     <SectionContent className="bg-bgLight">
       <section className="md:max-w-[1200px] mx-auto md:space-y-10">
         <ContentHeadline subTitle="Blog" mainTitle="ブログ" />
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
+     <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10">
           {contents.map((post) => (
-            <div key={post.id} className="w-full">
-              <div className="w-full h-[250px] mt-5 md:mt-0 rounded-t-2xl overflow-hidden">
-                {post.image && (
-                  <Image
-                    src={post.image.url}
-                    alt={post.title ?? "ブログサムネイル"}
-                    width={370}
-                    height={223}
-                    className="w-full h-full rounded-t-2xl object-cover"
-                  />
-                )}
-              </div>
-              <div className="bg-white p-6">
-                <p className="text-lg font-bold break-words min-h-14">
-                  {post.title}
-                </p>
-                <p className="mt-2 text-[#5f5f5f] text-xs">
-                  {post.date
-                    ? format(new Date(post.date), "yyyy/MM/dd", { locale: ja })
-                    : ""}
-                </p>
-              </div>
-            </div>
+            <ul key={post.id} className="w-full">
+              <Link href={`/blog/${post.id}`} className="block group">
+                <li className="flex flex-row md:flex-col items-center rounded-2xl overflow-hidden">
+                  <figure className="w-1/2 md:w-full h-[120px] md:h-[223px]">
+                    {post.image && (
+                      <Image
+                        src={post.image.url}
+                        alt={post.title ?? "ブログサムネイル"}
+                        width={370}
+                        height={223}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    )}
+                  </figure>
+                  <div className="w-1/2 md:w-full p-4 flex flex-col justify-between">
+                    <div>
+                      <p className=" text-base md:text-lg font-medium break-words leading-[160%] group-hover:text-accent transition-colors">
+                        {post.title}
+                      </p>
+                      {post.content && (
+                        <p className="mt-2 text-sm md:text-base line-clamp-2 leading-[160%] text-gray-700">
+                          {Array.from(stripHtmlTags(post.content))
+                            .slice(0, 100)
+                            .join("")}
+                          ...
+                        </p>
+                      )}
+                    </div>
+                    {post.category && post.category.length > 0 && (
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {post.category.map((cat, index) => (
+                          <span key={index} className="text-xs text-gray-500">
+                            #{cat}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </li>
+              </Link>
+            </ul>
           ))}
         </div>
+
         <div className="flex justify-center mt-16">
           <MoreButton className="text-accentColor border-accentColor" />
         </div>
